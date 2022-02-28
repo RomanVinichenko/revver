@@ -1,0 +1,106 @@
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 48px 0 16px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 27px;
+  }
+  &__rules {
+    margin-right: auto;
+  }
+  &__rules-item {
+    transition: color 0.2s;
+    &:hover {
+      color: $green;
+    }
+  }
+  &__address {
+    max-width: 150px;
+    margin-right: 90px;
+  }
+  &__social-item {
+    transition: color 0.2s;
+    &:hover {
+      color: $green;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 17px;
+    border-top: 1px solid rgba($white, 0.5);
+  }
+  &__bottom-text {
+    opacity: 0.5;
+  }
+  &__bottom-link {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 93px;
+    &__item {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      max-width: 220px;
+      width: 100%;
+      transition: color 0.2s;
+      &:hover {
+        color: $green;
+      }
+    }
+    &__item--active {
+      color: $green;
+    }
+    &__items {
+      max-height: 200px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    &__button {
+      cursor: pointer;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      color: $white;
+      border: 0;
+    }
+    &__button-text {
+      margin-right: 12px;
+    }
+    &__burger {
+      display: inline-block;
+      border: 1px solid rgba($white, 0.25);
+      padding: 33px;
+      border-radius: 50%;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $white;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+    }
+  }
+}
