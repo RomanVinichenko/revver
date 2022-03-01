@@ -1,6 +1,121 @@
 .terms {
     z-index: 1;
     margin: -24px 0;
+    padding: 176px 0 150px;
     border-radius: 24px;
     background-color: $grey-white;
+
+    &__global {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 91px;
+        max-width: 387px;
+    }
+
+    &__subtitle {
+        margin-bottom: 71px;
+        max-width: 614px;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: -0.02em;
+        color: $black;
+    }
+
+    &__descr-wrapper {
+        display: flex;
+    }
+
+    &__descr {
+        width: 100%;
+        max-width: 200px;
+
+        &:first-child {
+            margin-right: 27px;
+        }
+    }
+
+    &__page {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    &__date-title,
+    &__page-title {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $grey-text;
+    }
+
+    &__date,
+    &__page {
+        font-weight: 600;
+        line-height: 28px;
+    }
+}
+
+.info {
+    max-width: 552px;
+
+    &__general {
+        margin-bottom: 62px;
+
+        p:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__advise {
+        margin-bottom: 62px;
+    }
+
+    &__advise-item {
+        position: relative;
+        padding-left: 18px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 13px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $green;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__solution-item {
+        margin-left: 22px;
+        padding-left: 2px;
+
+        &::marker {
+            font-weight: 700;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__general-title,
+    &__advise-title,
+    &__solution-title {
+        margin-bottom: 14px;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: -0.02em;
+    }
+
+    &__advise-title,
+    &__solution-title {
+        margin-bottom: 34px;
+    }
 }
