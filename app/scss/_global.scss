@@ -21,6 +21,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 0 15px;
+    max-width: 1552px;
 
     &--large {
         margin: 0 auto;
@@ -33,4 +34,11 @@ body {
         padding: 0 15px;
         max-width: 1902px;
     }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 80px;
+    color: $black;
 }
