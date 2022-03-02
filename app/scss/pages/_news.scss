@@ -67,9 +67,10 @@
         line-height: 20px;
         text-align: center;
         transition: background-color 0.2s, color 0.2s;
+
         &:hover {
-            background-color: $green;
             color: $white;
+            background-color: $green;
         }
     }
 
