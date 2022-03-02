@@ -66,6 +66,12 @@
         font-size: 14px;
         line-height: 20px;
         text-align: center;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            color: $white;
+            background-color: $green;
+        }
     }
 
     &__pagination {
