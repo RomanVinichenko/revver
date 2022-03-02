@@ -16,12 +16,19 @@ body {
 
 .main {
     flex-grow: 1;
+    background-color: $grey-white;
 }
 
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1552px;
+    max-width: 1422px;
+
+    &--technical {
+        margin: 0 auto;
+        padding: 0 15px;
+        max-width: 1552px;
+    }
 
     &--large {
         margin: 0 auto;
@@ -38,7 +45,7 @@ body {
 
 .title {
     font-weight: 700;
-    font-size: 72px;
-    line-height: 80px;
-    color: $black;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
 }
