@@ -11,28 +11,38 @@
     &__title {
         margin-bottom: 45px;
         max-width: 676px;
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    &__nav {
+        position: relative;
     }
 
     &__items {
-        position: relative;
         display: flex;
         margin-bottom: 112px;
         padding-top: 40px;
         border-top: 1px solid $black;
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: -57px;
-            width: 24px;
-            height: 24px;
-            background-image: url("../images/search.svg");
-        }
+    &__search {
+        position: absolute;
+        right: 0;
+        top: -57px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     &__item {
-        padding: 6px 16px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        min-height: 32px;
         border: 1px solid $black;
         border-radius: 32px;
         font-size: 14px;
@@ -45,10 +55,194 @@
         }
     }
 
+    &__link {
+        display: block;
+        margin: 66px auto 13px;
+        padding: 14px 56px;
+        max-width: 192px;
+        border: 2px solid $green;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    &__pagination {
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
     &__item--selected,
     &__item:hover {
         border: 1px solid $green;
         color: $white;
         background-color: $green;
+    }
+}
+
+.suggest {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 88px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: $black;
+
+    &__img-wrapper {
+        max-width: 50%;
+    }
+
+    &__img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 35px 48px 42px;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    &__descr {
+        width: 100%;
+        max-width: 453px;
+        text-align: left;
+    }
+
+    &__topic {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        color: $green;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+        max-width: 405px;
+        font-size: 32px;
+        line-height: 40px;
+        color: $white;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        color: $grey-text;
+    }
+}
+
+.date {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+
+    &__calendar {
+        position: relative;
+        padding-right: 44px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 11px;
+            top: 50%;
+            width: 20px;
+            height: 1px;
+            background-color: $white;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__calendar--article {
+        &::after {
+            background-color: $black;
+        }
+    }
+
+    &--suggest {
+        color: $white;
+    }
+
+    &--article {
+        color: $black;
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+
+    &__item {
+        width: 100%;
+        max-width: 312px;
+
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+    }
+
+    &__img-wrapper {
+        margin-bottom: 11px;
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    &__group {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $green;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+
+    &__date {
+        display: flex;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    }
+
+    &__calendar {
+        position: relative;
+        padding-right: 44px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 11px;
+            top: 50%;
+            width: 20px;
+            height: 1px;
+            background-color: $white;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__item--big {
+        width: 100%;
+        max-width: 672px;
     }
 }
