@@ -21,25 +21,25 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
-    max-width: 1422px;
+    padding: 0 24px;
+    max-width: 1440px;
 
     &--technical {
         margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1552px;
-    }
-
-    &--large {
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1878px;
+        padding: 0 24px;
+        max-width: 1320px;
     }
 
     &--footer {
         margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1902px;
+        padding: 0 24px;
+        max-width: 1920px;
+    }
+
+    &--header {
+        margin: 0 auto;
+        padding: 0 36px;
+        max-width: 1920px;
     }
 }
 

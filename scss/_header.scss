@@ -1,5 +1,5 @@
 .header {
-    padding: 24px 0 52px;
+    padding: 23px 0 48px;
     background-color: $black;
 
     .menu {
@@ -12,6 +12,7 @@
         }
 
         &__item {
+            position: relative;
             opacity: 0.25;
             font-weight: 700;
             line-height: 28px;
@@ -27,6 +28,14 @@
             }
         }
 
+        &__item-count {
+            position: absolute;
+            right: -19px;
+            top: 0;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
         &__item--active {
             opacity: 1;
         }
@@ -34,6 +43,8 @@
         &__button {
             display: flex;
             align-items: center;
+            padding: 0;
+            max-height: 44px;
             border: 0;
             color: $white;
             background-color: transparent;
@@ -42,6 +53,10 @@
 
         &__button-text {
             margin-right: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.07em;
             text-transform: uppercase;
         }
 

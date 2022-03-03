@@ -1,22 +1,28 @@
 .technical {
-    padding: 176px 0 150px;
+    padding: 143px 0 175px;
+    letter-spacing: -0.02em;
 
     &__global {
         display: flex;
         justify-content: space-between;
     }
 
+    &__part {
+        max-width: 432px;
+        font-weight: 600;
+    }
+
     &__title {
-        margin-bottom: 91px;
+        margin-bottom: 92px;
         max-width: 490px;
-        font-size: 72px;
-        line-height: 80px;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 72px;
+        letter-spacing: -0.02em;
     }
 
     &__subtitle {
-        margin-bottom: 71px;
-        max-width: 614px;
-        font-weight: 700;
+        margin-bottom: 58px;
         font-size: 24px;
         letter-spacing: -0.02em;
         color: $black;
@@ -36,22 +42,24 @@
     }
 
     &__page {
+        font-size: 16px;
+        line-height: 24px;
         text-decoration: underline;
         text-underline-offset: 4px;
     }
 
     &__date-title,
     &__page-title {
-        margin-bottom: 5px;
-        font-size: 16px;
-        line-height: 24px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
         color: $grey-text;
     }
 
     &__date,
     &__page {
-        font-weight: 600;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -106,14 +114,14 @@
     &__general-title,
     &__advise-title,
     &__solution-title {
-        margin-bottom: 14px;
+        margin-bottom: 9px;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 20px;
         letter-spacing: -0.02em;
     }
 
     &__advise-title,
     &__solution-title {
-        margin-bottom: 34px;
+        margin-bottom: 25px;
     }
 }

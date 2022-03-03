@@ -13,7 +13,7 @@
 <header class="header">
     <div class="container container--header">
         <nav class="menu">
-            <a class="logo" href="#">
+            <a class="logo" href="index.html">
                 <svg class="" width="137px" height="36px">
                     <use xlink:href="images/sprite.svg#logo"></use>
                 </svg>
@@ -21,15 +21,19 @@
             <ul class="menu__items">
                 <li class="menu__item">
                     <a class="menu__link" href="#">News</a>
+                    <span class="menu__item-count">32</span>
                 </li>
                 <li class="menu__item menu__item--active">
                     <a class="menu__link" href="#">PR - Releases</a>
+                    <span class="menu__item-count">32</span>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#">Case studies</a>
+                    <span class="menu__item-count">32</span>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#">Dates sheets</a>
+                    <span class="menu__item-count">32</span>
                 </li>
             </ul>
             <button class="menu__button">
@@ -38,16 +42,28 @@
             </button>
         </nav>
     </div>
-
 </header>
 
-<main class="main round" style="padding-top: 22px; display: flex; padding-left: 50px; flex-direction: column">
-    <a href="terms.html">7.2.1.D. Terms and Conditions</a>
-    <a href="policy.html">7.1.1.D. Privacy Policy</a>
-    <a href="news.html">4.1.1.D. News</a>
-    <a href="case.html">4.3.1.D. Case Studies</a>
-    <a href="pr.html">4.2.1.D. PR Releases</a>
-    <a href="news-inner.html">4.4.1.D. News / Case inner page</a>
+<main class="main round news-inner">
+    <div class="container">
+        <div class="propose">
+            <div class="propose__img-wrapper">
+                <img class="propose__img" src="images/propose.jpg" alt="Propose cover">
+            </div>
+            <div class="propose__info">
+                <div class="propose__descr">
+                    <p class="propose__topic suggest__topic">Case</p>
+                    <h3 class="title propose__title suggest__title">The future of retail is about to take off: into the Cloud</h3>
+                    <p class="propose__subtitle suggest__subtitle">Control everything from a single platform: your Point of Sale, back office & advertising.
+                    </p>
+                </div>
+                <div class="date date--propose">
+                    <span class="date__calendar date__calendar--article">20.12.2021</span>
+                    <span class="date__time">5 min read</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer class="footer">
@@ -90,7 +106,8 @@
                     <a class="footer__rules-link" href="#">Privacy Policy</a>
                 </li>
             </ul>
-            <a class="footer__address" href="https://goo.gl/maps/v4xGNYtRYcWqCUZCA" target="_blank">Bahnhofstrasse 10, 6300 Zug, Switzerland
+            <a class="footer__address" href="https://goo.gl/maps/v4xGNYtRYcWqCUZCA" target="_blank">Bahnhofstrasse 10,
+                6300 Zug, Switzerland
             </a>
             <ul class="footer__social">
                 <li class="footer__social-item">
@@ -110,7 +127,8 @@
         <div class="footer__bottom">
             <p class="footer__bottom-text">2022 ® Revver. All rights reserved.</p>
             <div>
-            <p class="footer__bottom-text" style="display: inline; margin-right: 4px">Website by</p><a class="footer__bottom-link" href="#">Celerart</a>
+                <p class="footer__bottom-text" style="display: inline; margin-right: 4px">
+                    Website by</p><a class="footer__bottom-link" href="#">Celerart</a>
             </div>
         </div>
     </div>

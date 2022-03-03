@@ -120,7 +120,6 @@
     }
 
     &__topic {
-        display: block;
         margin-bottom: 5px;
         font-weight: 700;
         font-size: 12px;
@@ -176,6 +175,11 @@
 
     &--article {
         color: $black;
+    }
+
+    &--propose {
+        margin: 0 auto;
+        max-width: 591px;
     }
 }
 
@@ -247,5 +251,68 @@
     &__item--big {
         width: 100%;
         max-width: 672px;
+    }
+}
+
+.pr {
+    .suggest {
+        margin-bottom: 48px;
+    }
+
+    .news__link {
+        margin: 40px auto 13px;
+    }
+}
+
+.read {
+    margin: 0 auto;
+    max-width: 912px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 27px 36px 21px 32px;
+        border-radius: 16px;
+        background: $white;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__group {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: $grey-text;
+    }
+
+    &__title {
+        margin-bottom: 11px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &__date {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    &__button-text {
+        margin-right: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
