@@ -4,7 +4,7 @@
     .propose {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 144px;
+        margin-bottom: 136px;
         border-radius: 24px;
         background: #fff;
 
@@ -42,6 +42,120 @@
 
         &__subtitle {
             margin-bottom: 24px;
+        }
+    }
+
+    .story {
+        display: flex;
+
+        .sidebar {
+            width: 100%;
+            max-width: 240px;
+
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 18px;
+                }
+            }
+
+            &__data {
+                font-size: 14px;
+                line-height: 20px;
+                color: $grey-text;
+            }
+
+            &__name {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        &__wrapper {
+            width: 100%;
+            max-width: 912px;
+        }
+
+        &__inner {
+            margin: 0 auto;
+            max-width: 672px;
+
+            p:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 25px;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        &__img-wrapper {
+            position: relative;
+            margin: 55px 0 45px;
+            width: 100%;
+        }
+
+        &__img {
+            margin-bottom: 12px;
+            border: 24px;
+            object-fit: cover;
+        }
+
+        &__author {
+            position: absolute;
+            left: 16px;
+            bottom: 40px;
+            font-size: 12px;
+            line-height: 16px;
+            color: $white;
+        }
+
+        &__description {
+            font-weight: 300;
+            font-style: italic;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+        }
+
+        &__naming {
+            margin: 62px 0 18px;
+            font-size: 24px;
+        }
+
+        &__notice {
+            margin-bottom: 48px;
+            padding: 20px 20px 20px 24px;
+            border-radius: 12px;
+            color: $white;
+            background-color: $black;
+        }
+
+        &__naming--small {
+            margin: 0 0 9px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        &__quote-box {
+            margin: 79px auto 76px;
+            padding-left: 20px;
+            border-left: 2px solid $green;
+        }
+
+        &__quote-title {
+            margin-bottom: 11px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__quote-text {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
         }
     }
 }
