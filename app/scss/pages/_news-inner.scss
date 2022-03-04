@@ -1,48 +1,14 @@
 .news-inner {
-    padding: 50px 0;
+    padding: 148px 0 0;
 
-    .propose {
+    &__bottom {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 136px;
-        border-radius: 24px;
-        background: #fff;
-
-        &__img-wrapper {
-            width: 100%;
-            max-width: 520px;
-            border-radius: 24px;
-        }
-
-        &__img {
-            height: 100%;
-            border-radius: 24px;
-            object-fit: cover;
-        }
-
-        &__info {
-            margin: 0 24px;
-            padding: 171px 0 138px;
-            width: 100%;
-        }
-
-        &__descr {
-            margin: 0 auto;
-            max-width: 591px;
-        }
-
-        &__topic {
-            text-transform: uppercase;
-        }
-
-        &__title {
-            max-width: 100%;
-            color: $black;
-        }
-
-        &__subtitle {
-            margin-bottom: 24px;
-        }
+        align-items: center;
+        justify-content: center;
+        margin-top: 311px;
+        min-height: 464px;
+        border-radius: 0 0 24px 24px;
+        background-color: $white;
     }
 
     .story {
@@ -157,5 +123,58 @@
             font-size: 12px;
             line-height: 16px;
         }
+    }
+}
+
+.propose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 136px;
+    width: 100%;
+    border-radius: 24px;
+    background: #fff;
+
+    &__img-wrapper {
+        width: 100%;
+        max-width: 520px;
+        border-radius: 24px;
+    }
+
+    &__img {
+        height: 100%;
+        border-radius: 24px;
+        object-fit: cover;
+    }
+
+    &__info {
+        margin: 0 24px;
+        padding: 171px 0 138px;
+        width: 100%;
+    }
+
+    &__descr {
+        margin: 0 auto;
+        max-width: 591px;
+    }
+
+    &__topic {
+        text-transform: uppercase;
+    }
+
+    &__title {
+        max-width: 100%;
+        color: $black;
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+    }
+
+    &__img-wrapper--bottom {
+        max-width: 432px;
+    }
+
+    &__img--bottom {
+        margin-top: -140px;
     }
 }
