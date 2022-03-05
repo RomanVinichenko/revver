@@ -70,29 +70,34 @@
         justify-content: space-between;
         margin-bottom: 93px;
 
-        &__item {
+        &__items {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             width: 100%;
             max-width: 220px;
+            max-height: 200px;
+        }
+
+        &__item {
+            margin-right: 20px;
+            width: 100%;
             font-weight: 600;
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.02em;
-            transition: color 0.2s;
-
-            &:hover {
-                color: $green;
-            }
         }
 
         &__item--active {
             color: $green;
         }
 
-        &__items {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            max-height: 200px;
+        &__link {
+            transition: color 0.2s;
+
+            &:hover {
+                color: $green;
+            }
         }
 
         &__button {
