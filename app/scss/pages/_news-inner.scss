@@ -1,12 +1,12 @@
 .news-inner {
-    padding: 148px 0 0;
+    padding: 112px 0 0;
 
     &__bottom {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 311px;
-        min-height: 464px;
+        margin-top: 239px;
+        min-height: 384px;
         border-radius: 0 0 24px 24px;
         background-color: $white;
     }
@@ -32,7 +32,6 @@
 
             &__name {
                 font-weight: 700;
-                font-size: 18px;
                 line-height: 28px;
             }
         }
