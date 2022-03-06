@@ -114,7 +114,7 @@
         color: $grey-text;
     }
 
-    &__img-wrapper {
+    &__img {
         max-width: 50%;
 
         img {
@@ -185,7 +185,7 @@
 
     &--propose {
         margin: 0 auto;
-        max-width: 591px;
+        max-width: 496px;
     }
 }
 
@@ -222,10 +222,6 @@
         text-transform: capitalize;
     }
 
-    &__img--big {
-        max-width: 576px;
-    }
-
     &__group {
         display: block;
         margin-bottom: 4px;
@@ -241,10 +237,6 @@
         font-size: 16px;
         line-height: 24px;
         color: $black;
-    }
-
-    &__item--big {
-        max-width: 576px;
     }
 }
 
