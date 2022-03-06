@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta property="og:title" content="REVVER"/>
     <meta property="og:description" content="Time to move on with a powerful, modern POS system."/>
-    <meta property="og:image" content="images/revver.jpg"/>
-    <title>REVVER</title>
+    <meta property="og:image" content="images/revver.png"/>
+    <title>REVVER: Join</title>
     <link rel="icon" type="image/svg" href="images/fav.svg" sizes="42x36">
     <link rel="stylesheet" href="css/style.min.css"/>
 </head>
@@ -17,7 +17,7 @@
 <header class="header">
     <div class="container container--header">
         <nav class="menu">
-            <a class="logo" href="#">
+            <a class="logo" href="index.html">
                 <svg class="" width="137px" height="36px">
                     <use xlink:href="images/sprite.svg#logo"></use>
                 </svg>
@@ -25,15 +25,19 @@
             <ul class="menu__items">
                 <li class="menu__item">
                     <a class="menu__link" href="#">News</a>
+                    <span class="menu__item-count">32</span>
                 </li>
                 <li class="menu__item menu__item--active">
                     <a class="menu__link" href="#">PR - Releases</a>
+                    <span class="menu__item-count">32</span>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#">Case studies</a>
+                    <span class="menu__item-count">32</span>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#">Dates sheets</a>
+                    <span class="menu__item-count">32</span>
                 </li>
             </ul>
             <button class="menu__button">
@@ -42,25 +46,80 @@
             </button>
         </nav>
     </div>
-
 </header>
 
-<main class="main round" style="padding-top: 22px; display: flex; padding-left: 50px; flex-direction: column">
-    <a href="terms.html">7.2.1.D. Terms and Conditions</a>
-    <a href="policy.html">7.1.1.D. Privacy Policy</a>
-    <a href="news.html">4.1.1.D. News</a>
-    <a href="case.html">4.3.1.D. Case Studies</a>
-    <a href="pr.html">4.2.1.D. PR Releases</a>
-    <a href="news-inner.html" target="_blank">4.4.1.D. News / Case inner page</a>
-    <a href="join.html" target="_blank">5.1.1.D. Join Us</a>
-    <a href="contact.html" target="_blank">6.1.1.D. Contacts Us</a>
+<main class="main round contact">
+
+    <div class="container container--technical">
+        <h1>Nice too meet you.</h1>
+        <p>If you have a question, please send us a note, and we’ll get back to you as soon as possible.
+        </p>
+        <h3>Send us a message or fill form below:</h3>
+        <ul>
+            <li>
+                <span>Call us:</span>
+                <a href="tel:448314123134">+44 (831) 412 313 4</a>
+            </li>
+            <li>
+                <span>Media inquiries</span>
+                <a href="mailto:press@tech.com">press@tech.com</a>
+            </li>
+            <li>
+                <span>Write to us (Ukraine)</span>
+                <a href="tel:448314123134">Dorohozhytska St, 3 04119 Kyiv</a>
+            </li>
+            <li>
+                <span>Write to us (Switzerland)</span>
+                <a href="tel:448314123134">Bahnhofstrasse 10, 6300 Zug, Switzerland</a>
+            </li>
+        </ul>
+        <form class="form" action="">
+            <div class="form__box">
+                <label for="first">
+                    <span>First Name</span>
+                    <input type="text" placeholder="First Name" name="first" id="first">
+                </label>
+                <label for="last">
+                    <span>Last Name</span>
+                    <input type="text" placeholder="Last Name" name="last" id="last">
+                </label>
+            </div>
+            <label for="mail">
+                <span>Enter your email address</span>
+                <input type="text" placeholder="example@gmail.com" name="mail" id="mail">
+            </label>
+            <label for="organization">
+                <span>Name of Organization</span>
+                <input type="text" placeholder="Name of Organization" name="organization" id="organization">
+            </label>
+            <label for="textarea" style="margin-bottom: 27px">
+                <span style="margin-bottom: 18px">Your message</span>
+                <textarea id="textarea"></textarea>
+            </label>
+            <div class="form__agree">
+                <label for="agree">
+                    <input type="checkbox" id="agree"/>
+                    <span>By submit, you confirm you have read ad accept our <span class="form__policy">privacy policy.</span></span>
+                </label>
+                <button type="submit">
+                    <span>Submit</span>
+                    <svg width="32px" height="32px">
+                        <use xlink:href="images/sprite.svg#read"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
 </main>
 
 <footer class="footer">
     <div class="container container--footer">
         <nav class="menu">
             <ul class="menu__items">
-                <li class="menu__item menu__item--active">
+                <li class="menu__item">
                     <a class="menu__link" href="#">Home</a>
                 </li>
                 <li class="menu__item">
@@ -96,7 +155,8 @@
                     <a class="footer__rules-link" href="#">Privacy Policy</a>
                 </li>
             </ul>
-            <a class="footer__address" href="https://goo.gl/maps/v4xGNYtRYcWqCUZCA" target="_blank">Bahnhofstrasse 10, 6300 Zug, Switzerland
+            <a class="footer__address" href="https://goo.gl/maps/v4xGNYtRYcWqCUZCA" target="_blank">Bahnhofstrasse 10,
+                6300 Zug, Switzerland
             </a>
             <ul class="footer__social">
                 <li class="footer__social-item">
@@ -116,15 +176,16 @@
         <div class="footer__bottom">
             <p class="footer__bottom-text">2022 ® Revver. All rights reserved.</p>
             <div>
-            <p class="footer__bottom-text" style="display: inline; margin-right: 4px">Website by</p><a class="footer__bottom-link" href="#">Celerart</a>
+                <p class="footer__bottom-text" style="display: inline; margin-right: 4px">
+                    Website by</p><a class="footer__bottom-link" href="#">Celerart</a>
             </div>
         </div>
     </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>-->
 
 <script src='js/main.js'></script>
 

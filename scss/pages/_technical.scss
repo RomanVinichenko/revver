@@ -55,68 +55,68 @@
             }
         }
     }
+}
 
-    .info {
-        max-width: 552px;
+.info {
+    max-width: 552px;
 
-        h3 {
-            margin-bottom: 9px;
-            font-weight: 700;
-            font-size: 20px;
-            letter-spacing: -0.02em;
+    h3 {
+        margin-bottom: 9px;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    h4 {
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    &__general {
+        margin-bottom: 62px;
+
+        p:not(:last-child) {
+            margin-bottom: 32px;
         }
+    }
 
-        h4 {
-            margin-bottom: 25px;
-            font-weight: 700;
-            font-size: 20px;
-            letter-spacing: -0.02em;
-        }
+    &__advise {
+        margin-bottom: 62px;
 
-        &__general {
-            margin-bottom: 62px;
+        li {
+            position: relative;
+            padding-left: 18px;
 
-            p:not(:last-child) {
-                margin-bottom: 32px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 13px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $green;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
             }
         }
+    }
 
-        &__advise {
-            margin-bottom: 62px;
+    &__solution {
+        li {
+            margin-left: 22px;
+            padding-left: 2px;
 
-            li {
-                position: relative;
-                padding-left: 18px;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 13px;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background-color: $green;
-                }
-
-                &:not(:last-child) {
-                    margin-bottom: 24px;
-                }
+            &::marker {
+                font-weight: 700;
             }
-        }
 
-        &__solution {
-            li {
-                margin-left: 22px;
-                padding-left: 2px;
-
-                &::marker {
-                    font-weight: 700;
-                }
-
-                &:not(:last-child) {
-                    margin-bottom: 24px;
-                }
+            &:not(:last-child) {
+                margin-bottom: 24px;
             }
         }
     }
