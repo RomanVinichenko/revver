@@ -1,5 +1,5 @@
 .news { // + styles for CASE
-    padding: 111px 0 163px;
+    padding: 111px 0 195px;
 
     h1 {
         margin-bottom: 45px;
@@ -17,17 +17,10 @@
             position: absolute;
             right: 0;
             top: -57px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 0;
             border: 0;
             background-color: transparent;
             cursor: pointer;
-
-            img {
-                width: 24px;
-                height: 24px;
-            }
         }
 
         ul {
@@ -40,12 +33,13 @@
         li {
             display: flex;
             align-items: center;
-            padding: 0 16px;
+            padding: 0 15px;
             min-height: 32px;
             border: 1px solid $black;
             border-radius: 32px;
             font-size: 14px;
             line-height: 20px;
+            letter-spacing: -0.01em;
             transition: color 0.2s, border 0.2s, background-color 0.2s;
             cursor: pointer;
 
@@ -61,24 +55,25 @@
         }
     }
 
-    &__item {
+    .active {
         border: 1px solid $green !important;
         color: $white;
         background-color: $green;
     }
 
-    &__link {
+    &__button {
         display: block;
-        margin: 66px auto 13px;
-        padding: 14px 56px;
-        max-width: 192px;
+        margin: 82px auto 13px;
+        padding: 14px;
+        width: 192px;
         border: 2px solid $green;
         border-radius: 25px;
         font-weight: 700;
         font-size: 14px;
         line-height: 20px;
-        text-align: center;
+        background-color: transparent;
         transition: background-color 0.2s, color 0.2s;
+        cursor: pointer;
 
         &:hover {
             color: $white;
@@ -97,27 +92,10 @@
 
 .suggest {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 88px;
     overflow: hidden;
     border-radius: 24px;
     background-color: $black;
-
-    h2 {
-        margin-bottom: 14px;
-        max-width: 405px;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: -0.02em;
-        color: $white;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 24px;
-        color: $grey-text;
-    }
 
     &__img {
         max-width: 50%;
@@ -131,32 +109,45 @@
     &__info {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         padding: 35px 48px 26px;
         width: 100%;
         max-width: 50%;
     }
 
-    &__descr {
-        width: 100%;
-        max-width: 453px;
-        text-align: left;
+    h4 {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        color: $green;
+    }
 
-        span {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 16px;
-            color: $green;
-        }
+    h2 {
+        margin-bottom: 14px;
+        max-width: 405px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        color: $white;
+    }
+
+    p {
+        max-width: 453px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
     }
 }
 
 .date {
     display: flex;
+    margin-top: auto;
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: -0.01em;
 
     &__calendar {
         position: relative;
@@ -169,23 +160,19 @@
             top: 50%;
             width: 20px;
             height: 1px;
-            background-color: $white;
+            background-color: $black;
             transform: translateY(-50%);
         }
     }
 
-    &__calendar--article {
+    &__calendar--suggest {
         &::after {
-            background-color: $black;
+            background-color: $white;
         }
     }
 
     &--suggest {
         color: $white;
-    }
-
-    &--article {
-        color: $black;
     }
 
     &--propose {
@@ -197,10 +184,9 @@
 .article {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 90px;
+    margin-bottom: 82px;
 
     li {
-        width: 100%;
         max-width: 264px;
 
         &:not(:last-child) {
@@ -210,7 +196,6 @@
 
     &__img {
         margin-bottom: 11px;
-        width: 100%;
 
         img {
             width: 100%;
@@ -220,15 +205,7 @@
         }
     }
 
-    h4 {
-        margin-bottom: 15px;
-        font-weight: 700;
-        font-size: 24px;
-        text-transform: capitalize;
-    }
-
-    &__group {
-        display: block;
+    p {
         margin-bottom: 4px;
         font-weight: 700;
         font-size: 12px;
@@ -237,11 +214,11 @@
         color: $green;
     }
 
-    &__date {
-        display: flex;
-        font-size: 16px;
-        line-height: 24px;
-        color: $black;
+    h4 {
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: capitalize;
     }
 }
 
