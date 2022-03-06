@@ -1,5 +1,8 @@
 .footer {
     padding: 48px 0 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
     color: $white;
     background-color: $black;
 
@@ -21,7 +24,7 @@
         li {
             margin-right: 20px;
             width: 100%;
-            font-weight: 600;
+            font-weight: 600; // Dima Z
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.02em;
@@ -44,19 +47,17 @@
             align-items: center;
             padding: 0;
             border: 0;
-            color: $white;
             background-color: transparent;
             cursor: pointer;
 
             p {
-                margin-right: 12px;
-                font-size: 14px;
-                line-height: 20px;
+                margin-right: 16px;
+                letter-spacing: -0.01em;
+                color: $white;
             }
 
             span {
                 position: relative;
-                display: inline-block;
                 padding: 33px;
                 border: 1px solid rgba($white, 0.25);
                 border-radius: 50%;
@@ -81,8 +82,6 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 27px;
-        font-size: 14px;
-        line-height: 20px;
     }
 
     &__rules {
@@ -118,8 +117,6 @@
         justify-content: space-between;
         padding-top: 17px;
         border-top: 1px solid rgba($white, 0.5);
-        font-size: 14px;
-        line-height: 20px;
 
         p {
             opacity: 0.5;
