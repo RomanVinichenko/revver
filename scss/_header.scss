@@ -2,33 +2,40 @@
     padding: 23px 0 48px;
     background-color: $black;
 
-    .menu {
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        &__items {
+        a {
+            img {
+                width: 137px;
+                height: 36px;
+            }
+        }
+
+        ul {
             display: flex;
+
+            li {
+                position: relative;
+                opacity: 0.25;
+                font-weight: 700;
+                line-height: 28px;
+                color: $white;
+                transition: opacity 0.2s;
+
+                &:not(:last-child) {
+                    margin-right: 60px;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
 
-        &__item {
-            position: relative;
-            opacity: 0.25;
-            font-weight: 700;
-            line-height: 28px;
-            color: $white;
-            transition: opacity 0.2s;
-
-            &:not(:last-child) {
-                margin-right: 60px;
-            }
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-
-        &__item-count {
+        .count {
             position: absolute;
             right: -19px;
             top: 0;
@@ -36,11 +43,11 @@
             line-height: 16px;
         }
 
-        &__item--active {
+        .active {
             opacity: 1;
         }
 
-        &__button {
+        button {
             display: flex;
             align-items: center;
             padding: 0;
@@ -49,40 +56,40 @@
             color: $white;
             background-color: transparent;
             cursor: pointer;
-        }
 
-        &__button-text {
-            margin-right: 12px;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-        }
-
-        &__burger {
-            position: relative;
-            display: inline-block;
-            padding: 21px;
-            border: 1px solid rgba($white, 0.25);
-            border-radius: 50%;
-
-            &::after,
-            &::before {
-                content: "";
-                position: absolute;
-                left: 9px;
-                width: 24px;
-                height: 1px;
-                background-color: $white;
+            p {
+                margin-right: 12px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
             }
 
-            &::before {
-                top: 24px;
-            }
+            span {
+                position: relative;
+                display: inline-block;
+                padding: 21px;
+                border: 1px solid rgba($white, 0.25);
+                border-radius: 50%;
 
-            &::after {
-                top: 17px;
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 9px;
+                    width: 24px;
+                    height: 1px;
+                    background-color: $white;
+                }
+
+                &::before {
+                    top: 24px;
+                }
+
+                &::after {
+                    top: 17px;
+                }
             }
         }
     }
