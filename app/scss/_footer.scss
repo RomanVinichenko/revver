@@ -3,6 +3,79 @@
     color: $white;
     background-color: $black;
 
+    nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 93px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 220px;
+            max-height: 200px;
+        }
+
+        li {
+            margin-right: 20px;
+            width: 100%;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            transition: color 0.2s;
+
+            &:hover {
+                color: $green;
+            }
+        }
+
+        .active {
+            color: $green;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            border: 0;
+            color: $white;
+            background-color: transparent;
+            cursor: pointer;
+
+            p {
+                margin-right: 12px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            span {
+                position: relative;
+                display: inline-block;
+                padding: 33px;
+                border: 1px solid rgba($white, 0.25);
+                border-radius: 50%;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
     &__box {
         display: flex;
         align-items: flex-end;
@@ -14,13 +87,13 @@
 
     &__rules {
         margin-right: auto;
-    }
 
-    &__rules-item {
-        transition: color 0.2s;
+        li {
+            transition: color 0.2s;
 
-        &:hover {
-            color: $green;
+            &:hover {
+                color: $green;
+            }
         }
     }
 
@@ -29,11 +102,13 @@
         max-width: 150px;
     }
 
-    &__social-item {
-        transition: color 0.2s;
+    &__social {
+        li {
+            transition: color 0.2s;
 
-        &:hover {
-            color: $green;
+            &:hover {
+                color: $green;
+            }
         }
     }
 
@@ -45,94 +120,21 @@
         border-top: 1px solid rgba($white, 0.5);
         font-size: 14px;
         line-height: 20px;
-    }
 
-    &__bottom-text {
-        opacity: 0.5;
-    }
-
-    &__bottom-link {
-        opacity: 0.5;
-        line-height: 10px;
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        transition: opacity 0.2s, text-decoration 0.2s;
-
-        &:hover {
-            opacity: 1;
-            text-decoration-color: $white;
-        }
-    }
-
-    .menu {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-bottom: 93px;
-
-        &__items {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 220px;
-            max-height: 200px;
+        p {
+            opacity: 0.5;
         }
 
-        &__item {
-            margin-right: 20px;
-            width: 100%;
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: -0.02em;
-        }
-
-        &__item--active {
-            color: $green;
-        }
-
-        &__link {
-            transition: color 0.2s;
+        a {
+            opacity: 0.5;
+            line-height: 10px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: opacity 0.2s, text-decoration 0.2s;
 
             &:hover {
-                color: $green;
-            }
-        }
-
-        &__button {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            border: 0;
-            color: $white;
-            background-color: transparent;
-            cursor: pointer;
-        }
-
-        &__button-text {
-            margin-right: 12px;
-            font-size: 14px;
-            line-height: 20px;
-        }
-
-        &__burger {
-            position: relative;
-            display: inline-block;
-            padding: 33px;
-            border: 1px solid rgba($white, 0.25);
-            border-radius: 50%;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                width: 4px;
-                height: 4px;
-                border-radius: 50%;
-                background-color: $white;
-                transform: translate(-50%, -50%);
+                opacity: 1;
+                text-decoration-color: $white;
             }
         }
     }

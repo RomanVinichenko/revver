@@ -1,5 +1,5 @@
-.technical {
-    padding: 143px 0 175px;
+.terms-policy {
+    padding: 143px 0 207px;
     letter-spacing: -0.02em;
 
     h1 {
@@ -71,20 +71,14 @@
         margin-bottom: 25px;
         font-weight: 700;
         font-size: 20px;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.01em;
     }
 
-    &__general {
-        margin-bottom: 62px;
-
-        p:not(:last-child) {
-            margin-bottom: 32px;
-        }
+    p:not(:last-child) {
+        margin-bottom: 32px;
     }
 
-    &__advise {
-        margin-bottom: 62px;
-
+    ul {
         li {
             position: relative;
             padding-left: 18px;
@@ -106,7 +100,7 @@
         }
     }
 
-    &__solution {
+    ol {
         li {
             margin-left: 22px;
             padding-left: 2px;
