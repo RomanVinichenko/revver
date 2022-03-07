@@ -58,7 +58,8 @@
             background-color: transparent;
             cursor: pointer;
 
-            p {
+            .header__text {
+                display: block;
                 margin-right: 12px;
                 font-weight: 600;
                 font-size: 14px;
@@ -67,7 +68,7 @@
                 text-transform: uppercase;
             }
 
-            span {
+            .header__burger {
                 position: relative;
                 padding: 21px;
                 border: 1px solid rgba($white, 0.25);

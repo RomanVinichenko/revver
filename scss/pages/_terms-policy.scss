@@ -18,41 +18,59 @@
 
     &__part {
         max-width: 432px;
-        font-weight: 600;
 
         h4 {
             margin-bottom: 58px;
             font-weight: 600;
             font-size: 24px;
             letter-spacing: -0.02em;
-            color: $black;
+        }
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__date {
+        margin-right: 20px;
+        width: 100%;
+        max-width: 172px;
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            color: $grey-text;
         }
 
-        ul {
-            display: flex;
+        span {
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__block {
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            color: $grey-text;
         }
 
-        li {
-            width: 100%;
-            max-width: 200px;
+        a {
+            display: block;
+            max-width: 160px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+        }
 
-            p {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 20px;
-                color: $grey-text;
-            }
-
-            span {
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: -0.01em;
-            }
-
-            &:first-child {
-                margin-right: 27px;
-            }
+        a:not(:last-child) {
+            margin-bottom: 15px;
         }
     }
 }
@@ -102,11 +120,23 @@
 
     ol {
         li {
-            margin-left: 22px;
-            padding-left: 2px;
+            position: relative;
+            padding-left: 28px;
+            list-style: none;
 
-            &::marker {
+            &::after {
+                content: "" counter(section) ".";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 26px;
+                height: 32px;
+                counter-increment: section;
                 font-weight: 700;
+                font-size: 18px;
+                line-height: 32px;
+                letter-spacing: -0.01em;
+                text-align: center;
             }
 
             &:not(:last-child) {

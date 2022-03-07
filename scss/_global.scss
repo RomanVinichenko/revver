@@ -6,12 +6,17 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    counter-reset: section;
     font-family: "Manrope", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
     color: $black;
     background-color: $grey-white;
+}
+
+strong {
+    font-weight: 700;
 }
 
 .main {
@@ -23,11 +28,6 @@ body {
     margin: 0 auto;
     padding: 0 24px;
     max-width: 1248px;
-
-    &--technical {
-        padding: 0 24px;
-        max-width: 1320px;
-    }
 
     &--footer {
         padding: 0 24px;

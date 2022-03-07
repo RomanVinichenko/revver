@@ -50,13 +50,13 @@
             background-color: transparent;
             cursor: pointer;
 
-            p {
+            .footer__text {
                 margin-right: 16px;
                 letter-spacing: -0.01em;
                 color: $white;
             }
 
-            span {
+            .footer__dot {
                 position: relative;
                 padding: 33px;
                 border: 1px solid rgba($white, 0.25);
