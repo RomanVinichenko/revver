@@ -4,6 +4,7 @@ body {
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     counter-reset: section;
@@ -29,12 +30,7 @@ strong {
     padding: 0 24px;
     max-width: 1248px;
 
-    &--footer {
-        padding: 0 24px;
-        max-width: 1920px;
-    }
-
-    &--header {
+    &--technical {
         padding: 0 36px;
         max-width: 1920px;
     }
@@ -63,4 +59,14 @@ strong {
     line-height: 20px;
     text-align: center;
     cursor: pointer;
+}
+
+blockquote {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 2px solid  #2fba56;
+    font-weight: 700;
+    font-size: 32px;
 }
