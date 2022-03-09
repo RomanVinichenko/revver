@@ -34,10 +34,15 @@ strong {
         padding: 0 36px;
         max-width: 1920px;
     }
+
+    &--main {
+        padding: 0 24px;
+        max-width: 1448px;
+    }
 }
 
 .round {
-    z-index: 1;
+    z-index: 3;
     margin: -24px 0;
     border-radius: 24px;
 }

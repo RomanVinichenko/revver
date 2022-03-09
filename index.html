@@ -14,25 +14,11 @@
 
 <body>
 
-<header class="header">
+<header class="header header--main">
     <nav class="container container--technical">
         <a href="#">
             <img src="images/logo.svg" alt="Logo">
         </a>
-        <ul>
-            <li>
-                <a href="#">News</a>
-            </li>
-            <li class="active">
-                <a href="#">PR - Releases</a>
-            </li>
-            <li>
-                <a href="#">Case studies</a>
-            </li>
-            <li>
-                <a href="#">Dates sheets</a>
-            </li>
-        </ul>
         <button>
             <span class="header__text">Menu</span>
             <span class="header__burger">
@@ -43,18 +29,44 @@
     </nav>
 </header>
 
-<main class="main round" style="padding-top: 22px; display: flex; padding-left: 50px; flex-direction: column">
-    <a href="about.html">3.1.1.D. About</a>
-    <a href="terms.html">7.2.1.D. Terms and Conditions</a>
-    <a href="policy.html">7.1.1.D. Privacy Policy</a>
-    <a href="news.html">4.1.1.D. News</a>
-    <a href="case.html">4.3.1.D. Case Studies</a>
-    <a href="pr.html">4.2.1.D. PR Releases</a>
-    <a href="news-inner.html" target="_blank">4.4.1.D. News / Case inner page</a>
-    <a href="join.html" target="_blank">5.1.1.D. Join Us</a>
-    <a href="contact.html" target="_blank">6.1.1.D. Contacts Us</a>
-    <a href="thank.html" target="_blank">6.2.1.D. Thank you</a>
-    <a href="404.html" target="_blank">7.3.1.D. 404</a>
+<main class="main">
+    <section class="home-top">
+        <div class="container container--main">
+            <div class="home-top__wrapper">
+                <h1>Time to move on with a powerful, modern <span>POS system.</span></h1>
+                <a href="#">
+                    <span>Explore</span>
+                    <img src="images/read.svg" alt="Read button" style="width: 36px; height: 36px;">
+                </a>
+                <div class="home-top__control">
+                    <h4>Fuel Station</h4>
+                    <div class="home-top__slider home-top__slider--active">
+                        <span></span>
+                    </div>
+                    <p>Convenience Retail</p>
+                </div>
+            </div>
+        </div>
+        <img class="home-top__img" src="images/thank.png" alt="Visa">
+        <div class="home-top__scroll">
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+
+    <div style="display: none">
+        <a href="about.html">3.1.1.D. About</a>
+        <a href="terms.html">7.2.1.D. Terms and Conditions</a>
+        <a href="policy.html">7.1.1.D. Privacy Policy</a>
+        <a href="news.html">4.1.1.D. News</a>
+        <a href="case.html">4.3.1.D. Case Studies</a>
+        <a href="pr.html">4.2.1.D. PR Releases</a>
+        <a href="news-inner.html" target="_blank">4.4.1.D. News / Case inner page</a>
+        <a href="join.html" target="_blank">5.1.1.D. Join Us</a>
+        <a href="contact.html" target="_blank">6.1.1.D. Contacts Us</a>
+        <a href="thank.html" target="_blank">6.2.1.D. Thank you</a>
+        <a href="404.html" target="_blank">7.3.1.D. 404</a>
+    </div>
 </main>
 
 <footer class="footer">
@@ -83,7 +95,7 @@
                     <a href="#">Contact us</a>
                 </li>
             </ul>
-            <button>
+            <button class="scroll">
                 <span class="footer__text">Back to top</span>
                 <span class="footer__dot"></span>
             </button>
@@ -118,7 +130,8 @@
         <div class="footer__bottom">
             <p>2022 ® Revver. All rights reserved.</p>
             <div>
-                <p style="display: inline; margin-right: 4px">Website by</p><a href="https://celerart.com/" target="_blank">Celerart</a>
+                <p style="display: inline; margin-right: 4px">Website by</p><a href="https://celerart.com/"
+                                                                               target="_blank">Celerart</a>
             </div>
         </div>
     </div>
