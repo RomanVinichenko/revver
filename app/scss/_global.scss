@@ -75,3 +75,223 @@ blockquote {
     font-weight: 700;
     font-size: 32px;
 }
+
+.general__link {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    background-color: transparent;
+
+    span {
+        display: block;
+        margin-right: 12px;
+        font-size: 20px;
+        letter-spacing: -0.01em;
+    }
+}
+
+.integration {
+    margin-bottom: 152px;
+
+    &__text {
+        margin-bottom: 50px;
+        max-width: 620px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            position: relative;
+            padding: 32px 36px;
+            width: 100%;
+            min-height: 560px;
+            overflow: hidden;
+            border-radius: 24px;
+            background-color: $white;
+
+            h3 {
+                margin-bottom: 14px;
+                max-width: 286px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: -0.02em;
+            }
+
+            p {
+                max-width: 538px;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.01em;
+                color: $grey-text;
+            }
+
+            img {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                max-width: 500px;
+                object-fit: cover;
+            }
+
+            &:first-child {
+                margin-right: 24px;
+                max-width: 70%;
+            }
+
+            &:last-child {
+                max-width: 30%;
+            }
+        }
+    }
+}
+
+.category {
+    display: inline-block;
+    margin: auto 0 10px;
+    padding: 0 12px;
+    width: fit-content;
+    height: 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: $white;
+    background-color: $green;
+}
+
+.business {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 232px;
+
+    &__wrapper {
+        max-width: 50%;
+    }
+
+    h4 {
+        margin-bottom: 22px;
+        max-width: 450px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        margin-bottom: 24px;
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
+    }
+
+    img {
+        max-width: 50%;
+        object-fit: cover;
+    }
+}
+
+.retail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 152px;
+    padding: 64px 0 50px 64px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: $white;
+
+    &__wrapper {
+        max-width: 50%;
+    }
+
+    img {
+        max-width: 50%;
+        object-fit: cover;
+    }
+
+    h3 {
+        max-width: 456px;
+    }
+
+    .retail__text {
+        margin-bottom: 53px;
+        max-width: 557px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
+    }
+
+    ul {
+        li {
+            padding-left: 60px;
+            max-width: 480px;
+            background-position: top left;
+            background-size: 40px;
+            background-repeat: no-repeat;
+
+            h4 {
+                margin-bottom: 7px;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: -0.01em;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.01em;
+                color: $grey-text;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 37px;
+            }
+        }
+    }
+}
+
+.more {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px 36px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 472px;
+        border-radius: 24px;
+        background-color: $white;
+
+        h2 {
+            margin-bottom: 23px;
+            max-width: 376px;
+        }
+
+        .general__link {
+            span {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        &:first-child {
+            margin-right: 24px;
+        }
+    }
+}
