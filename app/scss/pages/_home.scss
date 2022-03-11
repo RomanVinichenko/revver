@@ -808,6 +808,7 @@
 }
 
 .answer {
+    margin-bottom: 152px;
     padding: 42px 48px;
     border-radius: 24px;
     background-color: $white;
@@ -921,6 +922,126 @@
             &::after {
                 background-image: url("../images/slick-left.svg");
             }
+        }
+    }
+}
+
+.particle {
+    position: relative;
+    margin: 0 36px 120px;
+    min-height: 864px;
+    border-radius: 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .home__link {
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__block {
+        position: absolute;
+        left: 228px;
+        bottom: 112px;
+        padding: 26px 27px 26px 36px;
+        width: 100%;
+        max-width: 684px;
+        border-radius: 24px;
+        background-color: $green;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+
+    &__date {
+        display: flex;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+
+        span {
+            display: block;
+        }
+
+        span:first-child {
+            position: relative;
+            padding-right: 45px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                width: 20px;
+                height: 1px;
+                background-color: $black;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__main {
+        h4 {
+            margin-bottom: 14px;
+            max-width: 591px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            max-width: 439px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+        }
+    }
+}
+
+.more {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px 36px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 472px;
+        border-radius: 24px;
+        background-color: $white;
+
+        h2 {
+            margin-bottom: 23px;
+            max-width: 376px;
+        }
+
+        .home__link {
+            span {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        &:first-child {
+            margin-right: 24px;
         }
     }
 }
