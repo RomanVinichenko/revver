@@ -76,6 +76,29 @@ blockquote {
     font-size: 32px;
 }
 
+.date {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+
+    &__calendar {
+        position: relative;
+        padding-right: 44px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 11px;
+            top: 50%;
+            width: 20px;
+            height: 1px;
+            background-color: $black;
+            transform: translateY(-50%);
+        }
+    }
+}
+
 .general__link {
     display: flex;
     align-items: center;
@@ -120,7 +143,6 @@ blockquote {
                 max-width: 286px;
                 font-weight: 700;
                 font-size: 24px;
-                line-height: 32px;
                 letter-spacing: -0.02em;
             }
 
@@ -161,7 +183,6 @@ blockquote {
     border-radius: 6px;
     font-weight: 600;
     font-size: 14px;
-    line-height: 32px;
     letter-spacing: -0.01em;
     text-align: center;
     color: $white;

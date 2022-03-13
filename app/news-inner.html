@@ -15,81 +15,82 @@
 <body>
 
 <header class="header">
-        <nav class="container container--technical">
-            <a href="index.html">
-                <img src="images/svg/logo.svg" alt="Logo">
-            </a>
-            <ul>
-                <li>
-                    <a href="#">News</a>
-                    <span class="count">32</span>
-                </li>
-                <li class="active">
-                    <a href="#">PR - Releases</a>
-                    <span class="count">32</span>
-                </li>
-                <li>
-                    <a href="#">Case studies</a>
-                    <span class="count">32</span>
-                </li>
-                <li>
-                    <a href="#">Dates sheets</a>
-                    <span class="count">32</span>
-                </li>
-            </ul>
-            <button>
-                <span class="header__text">Menu</span>
-                <span class="header__burger">
-                        <span></span>
-                        <span></span>
-                    </span>
-            </button>
-        </nav>
+    <nav class="container container--technical">
+        <a href="index.html">
+            <img src="images/svg/logo.svg" alt="Logo">
+        </a>
+        <ul>
+            <li>
+                <a href="news.html">News
+                    <span>32</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">PR - Releases
+                    <span>12</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">Case studies
+                    <span>4</span>
+                </a>
+            </li>
+        </ul>
+        <button>
+            <span class="menu__text">Menu</span>
+            <span class="header__burger">
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </nav>
 </header>
 
 <main class="main round news-inner">
     <div class="container">
         <a class="propose" href="#">
             <div class="propose__img">
-                <img src="images/propose.jpg" alt="Propose cover">
+                <img src="images/jpg/propose.jpg" alt="Propose cover">
             </div>
             <div class="propose__info">
-                <div class="propose__descr">
-                    <p class="suggest__topic" style="text-transform: uppercase;">Case</p>
-                    <h3 class="propose__title suggest__title">The future of retail is about to take off: into the
-                        Cloud
-                    </h3>
-                    <p class="propose__subtitle suggest__subtitle">Control everything from a single platform: your Point
-                        of Sale, back office & advertising.
-                    </p>
-                </div>
-                <div class="date date--propose">
+                <h4>Case</h4>
+                <h3>The future of retail is about to take off: into the
+                    Cloud
+                </h3>
+                <p>Control everything from a single platform: your Point
+                    of Sale, back office & advertising.
+                </p>
+                <div class="date">
                     <span class="date__calendar">20.12.2021</span>
                     <span>5 min read</span>
                 </div>
             </div>
         </a>
+
         <section class="story">
-            <ul class="story__sidebar">
-                <li>
-                    <span>Author</span>
-                    <p>Jennifer Alsever</p>
-                </li>
-                <li>
-                    <span>Category</span>
-                    <p>The Open Office Thread</p>
-                </li>
-                <li>
-                    <span>Share</span>
-                    <p>Facebook</p>
-                    <p>Twitter</p>
-                </li>
-                <li>
-                    <span>Tags</span>
-                    <p>Facebook, Twitter,</p>
-                    <p>Pinterest</p>
-                </li>
-            </ul>
+            <div class="story__sidebar">
+                <ul>
+                    <li>
+                        <p>Author</p>
+                        <span>Jennifer Alsever</span>
+                    </li>
+                    <li>
+                        <p>Category</p>
+                        <span>The Open Office Thread</span>
+                    </li>
+                    <li>
+                        <p>Tags</p>
+                        <span>Facebook</span>, <span>Twitter</span>, <span>Pinterest</span>
+                    </li>
+                    <li>
+                        <p style="margin-bottom: 4px">Share</p>
+                        <img src="images/svg/facebook.svg" alt="Facebook">
+                        <img src="images/svg/twitter.svg" alt="Twitter">
+                        <img src="images/svg/linkedin.svg" alt="LinkedIn">
+                        <img src="images/svg/link.svg" alt="Link">
+                    </li>
+                </ul>
+            </div>
             <div class="story__wrapper">
                 <div class="story__inner">
                     <h3>The athletic brand double-downs on a single office to fuel
@@ -109,7 +110,7 @@
                         many executives are treading cautiously.
                     </p>
                     <div class="story__img">
-                        <img src="images/gas.jpg" alt="Story img">
+                        <img src="images/jpg/gas.jpg" alt="Story img">
                         <span>Photo by <a href="#" style="text-decoration: underline">Unsplash</a></span>
                         <p>Philion: Flexibility is certainly key. We’re doing three days in
                             the office and two days remote.</p>
@@ -147,7 +148,7 @@
                     </p>
                 </div>
                 <div class="story__img">
-                    <img src="images/gas-big.jpg" alt="Story img">
+                    <img src="images/jpg/gas-big.jpg" alt="Story img">
                     <span>Photo by <a href="#" style="text-decoration: underline">Unsplash</a></span>
                     <p>Philion: Flexibility is certainly key. We’re doing three days in the
                         office and two days remote.</p>
@@ -220,18 +221,14 @@
             </div>
         </section>
     </div>
-    <a class="news-inner__bottom" href="#">
-        <div class="container propose" style="margin-bottom: 0">
-            <div class="propose__img" style="max-width: 432px">
-                <img style="margin-top: -140px" src="images/news-bottom.jpg" alt="News cover">
-            </div>
+
+    <a class="next" href="#">
+        <div class="container">
+            <img src="images/jpg/news-bottom.jpg" alt="News cover">
             <div class="propose__info">
-                <div class="propose__descr">
-                    <p class="suggest__topic" style="text-transform: uppercase">Up next</p>
-                    <h3 class="propose__title suggest__title">The future of retail is about to take off: into the
-                        Cloud</h3>
-                </div>
-                <div class="date date--propose">
+                <h4>Up next</h4>
+                <h3>The future of retail is about to take off: into the Cloud</h3>
+                <div class="date">
                     <span class="date__calendar">20.12.2021</span>
                     <span>5 min read</span>
                 </div>
@@ -266,8 +263,8 @@
                     <a href="#">Contact us</a>
                 </li>
             </ul>
-            <button class="scroll">
-                <span class="footer__text">Back to top</span>
+            <button>
+                <span class="back__text">Back to top</span>
                 <span class="footer__dot"></span>
             </button>
         </nav>
@@ -310,7 +307,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script src='js/main.js'></script>
 
