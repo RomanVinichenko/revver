@@ -15,6 +15,15 @@
         line-height: 48px;
         letter-spacing: -0.02em;
     }
+
+    &__text {
+        margin: 0 auto 66px;
+        max-width: 714px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
+    }
 }
 
 .product-top {
@@ -40,7 +49,6 @@
 
     p {
         margin-bottom: 26px;
-        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.01em;
@@ -70,15 +78,6 @@
     h3 {
         margin: 0 auto 20px;
         max-width: 657px;
-    }
-
-    &__text {
-        margin: 0 auto 66px;
-        max-width: 714px;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        color: $grey-text;
     }
 
     img {
@@ -155,6 +154,192 @@
                 font-weight: 700;
                 line-height: 28px;
                 letter-spacing: -0.01em;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.01em;
+                color: $grey-text;
+            }
+        }
+    }
+}
+
+.sales-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 152px;
+
+    &__left {
+        margin-right: 24px;
+        max-width: 30%;
+    }
+
+    &__left-img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        object-fit: cover;
+        transform: translateX(-50%);
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 70%;
+
+        ul {
+            li {
+                position: relative;
+                padding-left: 48px;
+
+                &::after {
+                    content: url("../images/svg/sales-bottom.svg");
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 32px;
+                    height: 32px;
+                    transform: translateY(-50%);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+
+                h4 {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                }
+            }
+        }
+    }
+
+    &__right-img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        object-fit: cover;
+        transform: translateY(-50%);
+    }
+
+    &__right-wrapper {
+        max-width: 352px;
+    }
+
+    &__left,
+    &__right {
+        position: relative;
+        padding: 32px;
+        width: 100%;
+        min-height: 560px;
+        overflow: hidden;
+        border-radius: 24px;
+        color: $white;
+        background-color: $black;
+
+        .general__link {
+            span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        h4 {
+            margin-bottom: 14px;
+            max-width: 319px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+            color: $grey-text;
+        }
+    }
+}
+
+.office {
+    margin: 0 36px 120px;
+    padding: 80px 0 120px;
+    border-radius: 24px;
+    text-align: center;
+    color: $white;
+    background-color: $black;
+
+    .business {
+        margin-bottom: 50px;
+    }
+
+    .business__wrapper {
+        text-align: left;
+    }
+
+    h4 {
+        margin-bottom: 14px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        text-align: left;
+    }
+
+    &__text {
+        margin-bottom: 42px;
+        max-width: 538px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        color: $grey-text;
+    }
+
+    ul {
+        display: flex;
+        text-align: left;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px;
+            width: 100%;
+            min-height: 328px;
+            max-width: 383px;
+            border: 1px solid #4a4b54;
+            border-radius: 20px;
+
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+
+            span {
+                display: block;
+                margin-bottom: 4px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+            }
+
+            div {
+                max-width: 225px;
+            }
+
+            h5 {
+                margin-bottom: 7px;
+                font-weight: 700;
+                font-size: 24px;
+                letter-spacing: -0.02em;
             }
 
             p {
