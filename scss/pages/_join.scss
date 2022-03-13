@@ -162,16 +162,6 @@
     justify-content: space-between;
     margin-top: 300px;
 
-    p {
-        font-weight: 600;
-        line-height: 28px;
-        letter-spacing: -0.01em;
-    }
-
-    &__info {
-        max-width: 552px;
-    }
-
     h2 {
         margin-bottom: 32px;
         max-width: 417px;
@@ -179,6 +169,13 @@
         font-size: 64px;
         line-height: 72px;
         letter-spacing: -0.02em;
+    }
+
+    p {
+        max-width: 472px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $grey-text;
     }
 
     &__list {
@@ -189,9 +186,9 @@
         max-width: 624px;
 
         li {
-            margin-right: 28px;
+            margin-right: 62px;
             width: 100%;
-            max-width: 264px;
+            max-width: 250px;
         }
 
         li:nth-child(-n+2) {
@@ -214,6 +211,7 @@
         }
 
         p {
+            font-weight: 400;
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.01em;

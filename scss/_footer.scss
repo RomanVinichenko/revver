@@ -1,5 +1,5 @@
 .footer {
-    padding: 47px 0 18px;
+    padding: 45px 0 19px;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.01em;
@@ -28,28 +28,33 @@
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.02em;
+            transition: color 0.2s;
+
+            a {
+                transition: color 0.2s;
+            }
+
+            &:hover {
+                a {
+                    color: $green;
+                }
+            }
         }
 
         .active {
             color: $green;
         }
 
-        .scroll {
-            position: fixed;
-            right: 24px;
-            bottom: 200px;
-            z-index: 2;
+        button {
             display: flex;
             align-items: center;
-            opacity: 0;
             padding: 0;
             border: 0;
-            border-radius: 24px;
-            background-color: rgba($black, 0.85);
-            transition: opacity 0.2s;
+            background-color: transparent;
             cursor: pointer;
 
-            .footer__text {
+            .back__text {
+                display: block;
                 margin-right: 16px;
                 letter-spacing: -0.01em;
                 color: $white;
@@ -73,18 +78,6 @@
                     transform: translate(-50%, -50%);
                 }
             }
-        }
-
-        .scroll--active {
-            opacity: 1;
-        }
-    }
-
-    li {
-        transition: color 0.2s;
-
-        &:hover {
-            color: $green;
         }
     }
 

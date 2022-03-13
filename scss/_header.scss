@@ -20,10 +20,10 @@
             display: flex;
 
             li {
-                position: relative;
                 opacity: 0.25;
-                font-weight: 700;
-                line-height: 28px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
                 letter-spacing: -0.01em;
                 color: $white;
                 transition: opacity 0.2s;
@@ -32,18 +32,27 @@
                     margin-right: 80px;
                 }
 
+                a {
+                    position: relative;
+                }
+
                 &:hover {
                     opacity: 1;
                 }
             }
-        }
 
-        .count {
-            position: absolute;
-            right: -19px;
-            top: 0;
-            font-size: 12px;
-            line-height: 16px;
+            span {
+                position: absolute;
+                right: -16px;
+                top: 0;
+                width: 12px;
+                height: 12px;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
         }
 
         .active {
@@ -59,8 +68,7 @@
             background-color: transparent;
             cursor: pointer;
 
-            .header__text {
-                display: block;
+            .menu__text {
                 margin-right: 12px;
                 font-weight: 600;
                 font-size: 14px;
@@ -84,9 +92,9 @@
                     width: 0;
                     height: 0;
                     border-radius: 100%;
-                    background-color: rgba($white, 0.25);
+                    background-color: $white;
                     transform: translate(-50%, -50%);
-                    transition: ease-in 0.4s;
+                    transition: ease-in 0.2s;
                 }
 
                 span {
@@ -98,6 +106,7 @@
                         width: 24px;
                         height: 1px;
                         background-color: $white;
+                        transition: ease-in 0.2s;
                     }
 
                     &::before {
@@ -108,10 +117,21 @@
                         top: 17px;
                     }
                 }
+            }
 
-                &:hover::before {
-                    width: 100%;
-                    height: 100%;
+            &:hover {
+                .header__burger {
+                    &::before {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    span {
+                        &::after,
+                        &::before {
+                            background-color: $black;
+                        }
+                    }
                 }
             }
         }
