@@ -289,126 +289,6 @@
     }
 }
 
-.sales {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 152px;
-    padding: 64px 32px 64px 64px;
-    overflow: hidden;
-    border-radius: 24px;
-    color: $white;
-    background-color: $black;
-
-    &__wrapper {
-        max-width: 50%;
-    }
-
-    h3 {
-        max-width: 406px;
-    }
-
-    p {
-        margin-bottom: 50px;
-        max-width: 405px;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        color: $grey-text;
-    }
-
-    img {
-        max-width: 50%;
-        object-fit: cover;
-    }
-
-    ul {
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            height: 100%;
-            border-radius: 8px;
-            background-color: rgba($white, 0.15);
-        }
-
-        li {
-            position: relative;
-            padding-left: 64px;
-            cursor: pointer;
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                width: 2px;
-                height: 100%;
-                border-radius: 8px;
-                background-color: $green;
-            }
-
-            &::after {
-                content: "0" counter(section) "";
-                position: absolute;
-                left: 36px;
-                bottom: 9px;
-                opacity: 0.15;
-                width: 16px;
-                height: 16px;
-                counter-increment: section;
-                font-size: 12px;
-                line-height: 16px;
-                text-align: center;
-                color: $white;
-            }
-
-            h4 {
-                opacity: 0.15;
-                font-weight: 700;
-                font-size: 32px;
-                line-height: 40px;
-                letter-spacing: -0.02em;
-            }
-
-            a {
-                //display: inline-block;
-                position: relative;
-                display: none;
-                padding-right: 27px;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: -0.01em;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    width: 14px;
-                    height: 11px;
-                    background-image: url("../images/arrow-right.svg");
-                    transform: translateY(-50%);
-                }
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 32px;
-            }
-
-            &:hover {
-
-            }
-        }
-    }
-}
-
 .testimonials {
     margin-bottom: 152px;
 
@@ -724,7 +604,7 @@
                 top: 50%;
                 width: 20px;
                 height: 20px;
-                background-image: url("../images/slick-right.svg");
+                background-image: url("../images/svg/slick-right.svg");
                 background-repeat: no-repeat;
                 transform: translate(-50%, -50%);
             }
@@ -738,7 +618,7 @@
             right: 44px;
 
             &::after {
-                background-image: url("../images/slick-left.svg");
+                background-image: url("../images/svg/slick-left.svg");
             }
         }
     }
@@ -786,7 +666,6 @@
 
     &__date {
         display: flex;
-        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.01em;
@@ -824,7 +703,6 @@
 
         p {
             max-width: 439px;
-            font-weight: 400;
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.01em;
