@@ -16,6 +16,36 @@ body {
     background-color: $grey-white;
 }
 
+.links {
+    position: absolute;
+    left: 400px;
+    top: 20px;
+    z-index: 200;
+    width: 5px;
+    height: 20px;
+}
+
+.bunch {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    padding: 8px;
+    background-color: $white;
+
+    a {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
 strong {
     font-weight: 700;
 }
