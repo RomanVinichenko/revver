@@ -603,7 +603,7 @@
                 top: 50%;
                 width: 20px;
                 height: 20px;
-                background-image: url("../images/svg/slick-right.svg");
+                background-image: url("../images/slick-right.svg");
                 background-repeat: no-repeat;
                 transform: translate(-50%, -50%);
             }
@@ -617,7 +617,7 @@
             right: 44px;
 
             &::after {
-                background-image: url("../images/svg/slick-left.svg");
+                background-image: url("../images/slick-left.svg");
             }
         }
     }
