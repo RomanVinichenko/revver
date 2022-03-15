@@ -97,10 +97,16 @@
 
     &__img {
         max-width: 50%;
+        overflow: hidden;
 
         img {
             height: 100%;
             object-fit: cover;
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -127,7 +133,14 @@
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -0.02em;
+        text-decoration: underline 2px rgba(255, 255, 255, 0);
         color: $white;
+        transition: text-decoration-color 0.2s;
+        text-underline-offset: 2px;
+
+        &:hover {
+            text-decoration-color: rgba(255, 255, 255, 1);
+        }
     }
 
     p {
