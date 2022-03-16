@@ -100,19 +100,7 @@
     }
 
     &__info {
-        p {
-            padding: 7px 15px;
-            border: 1px solid #2fba56;
-            border-radius: 32px;
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 16px;
-            text-transform: uppercase;
 
-            &:not(:last-child) {
-                margin-right: 12px;
-            }
-        }
 
         h3 {
             margin-bottom: 12px;
@@ -123,8 +111,5 @@
         }
     }
 
-    &__type {
-        display: flex;
-        margin-bottom: 10px;
-    }
+
 }
