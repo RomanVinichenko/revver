@@ -1,0 +1,132 @@
+.data-sheets {
+    padding: 111px 0 384px;
+
+    .data-sheets__top {
+        margin-bottom: 96px;
+    }
+
+    &__text {
+        margin-bottom: 120px;
+        max-width: 743px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-tabs {
+        width: 100%;
+        max-width: 35%;
+
+        li {
+            position: relative;
+            opacity: 0.15;
+            max-width: fit-content;
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: -0.01em;
+
+            span {
+                position: absolute;
+                right: -16px;
+                top: 6px;
+                width: 12px;
+                height: 12px;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+        }
+
+        .active {
+            opacity: 1;
+        }
+    }
+
+    .tab-content {
+        padding-top: 26px;
+        width: 100%;
+        max-width: 65%;
+        border-top: 1px solid rgba($black, 0.15);
+    }
+
+    .tab-pane {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 26px;
+        border-bottom: 1px solid rgba($black, 0.15);
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+            color: $grey-text;
+        }
+
+        &__item {
+            position: relative;
+            padding: 0 25px 0 20px;
+
+            &::before {
+                content: url("../images/file.svg");
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 16px;
+                height: 16px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $grey-text;
+                transform: translateY(-50%);
+            }
+        }
+
+        button {
+            padding: 0 55px;
+            min-height: 56px;
+            border: 2px solid $green;
+            border-radius: 32px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: transparent;
+            transition: background-color 0.2s, color 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                color: $white;
+                background-color: $green;
+            }
+        }
+    }
+}
