@@ -555,3 +555,31 @@ blockquote {
         }
     }
 }
+
+.location {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: $grey-text;
+
+    span {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -15px;
+                top: 50%;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $grey-text;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
