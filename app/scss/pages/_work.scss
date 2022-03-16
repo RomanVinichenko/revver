@@ -1,0 +1,199 @@
+.work {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 144px;
+
+    .apply {
+        max-width: 556px;
+
+        label {
+            position: relative;
+            display: block;
+            margin-bottom: 22px;
+
+            img {
+                position: absolute;
+                right: 0;
+                bottom: 13px;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+        }
+
+        span {
+            display: block;
+            margin-bottom: 9px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        input {
+            display: block;
+            padding: 0 0 9px;
+            width: 100%;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid $black;
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: -0.02em;
+            background-color: transparent;
+
+            &::placeholder {
+                opacity: 0.25;
+                color: $black;
+            }
+        }
+
+        button {
+            margin-right: 16px;
+            padding: 0 52px;
+            min-height: 52px;
+            border: 2px solid $black;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.vacancy {
+    padding: 63px 80px 95px;
+    max-width: 960px;
+    width: 100%;
+    height: fit-content;
+    border-radius: 24px;
+    background-color: $green;
+
+    h3 {
+        margin-bottom: 12px;
+        max-width: 676px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 72px;
+        letter-spacing: -0.02em;
+    }
+
+    .location {
+        margin-bottom: 75px;
+        color: $black;
+
+        span {
+            &:not(:last-child) {
+                &::after {
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}
+
+.work-info {
+    padding: 34px 38px;
+    width: 100%;
+
+    button {
+        border: 0;
+        background-color: transparent;
+        margin-left: auto;
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 66px;
+        padding-left: 36px;
+        letter-spacing: -0.01em;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            position: absolute;
+            content: url("../images/arrow-left.svg");
+            width: 24px;
+            height: 24px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+    }
+    h4 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 34px;
+        letter-spacing: -0.02em;
+    }
+
+    ol {
+        list-style: none;
+        margin-bottom: 40px;
+        li {
+            font-weight: 600;
+            padding-left: 18px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $green;
+                border-radius: 50%;
+            }
+            &:not(:last-child){
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .job-type {
+        margin-bottom: 33px;
+    }
+    &__wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+        border-bottom: 1px solid $black;
+
+    }
+    &__place {
+        display: flex;
+        margin-bottom: 50px;
+        li {
+            max-width: 200px;
+            width: 100%;
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+            span {
+                font-size: 14px;
+                line-height: 16px;
+                color: $grey-text;
+                letter-spacing: -0.01em;
+            }
+            p {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: -0.01em
+            }
+        }
+    }
+
+}
