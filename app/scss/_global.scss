@@ -113,14 +113,14 @@ blockquote {
 
     &__calendar {
         position: relative;
-        padding-right: 44px;
+        padding-right: 28px;
 
         &::after {
             content: "";
             position: absolute;
-            right: 11px;
+            right: 8px;
             top: 50%;
-            width: 20px;
+            width: 12px;
             height: 1px;
             background-color: $black;
             transform: translateY(-50%);
@@ -586,6 +586,7 @@ blockquote {
 .job-type {
     display: flex;
     margin-bottom: 10px;
+
     p {
         padding: 7px 15px;
         border: 1px solid #2fba56;
