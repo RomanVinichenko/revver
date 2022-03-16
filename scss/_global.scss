@@ -58,7 +58,16 @@ strong {
 .container {
     margin: 0 auto;
     padding: 0 24px;
+    width: 100%;
     max-width: 1248px;
+
+    &::before {
+        display: none;
+    }
+
+    &::after {
+        display: none;
+    }
 
     &--technical {
         padding: 0 36px;
