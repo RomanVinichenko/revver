@@ -93,7 +93,7 @@
     margin-bottom: 88px;
     overflow: hidden;
     border-radius: 24px;
-    background-color: $black;
+    background-color: $white;
 
     &__img {
         max-width: 50%;
@@ -102,10 +102,10 @@
         img {
             height: 100%;
             object-fit: cover;
-            transition: transform 0.2s;
+            transition: transform 0.5s;
 
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.08);
             }
         }
     }
@@ -123,7 +123,7 @@
         font-weight: 700;
         font-size: 12px;
         line-height: 16px;
-        color: $green;
+        color: $white;
     }
 
     h2 {
@@ -133,13 +133,20 @@
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -0.02em;
-        text-decoration: underline 2px rgba(255, 255, 255, 0);
-        color: $white;
-        transition: text-decoration-color 0.2s;
-        text-underline-offset: 2px;
+        color: $black;
+
+        span {
+            width: calc(100%);
+            background-image: linear-gradient(transparent calc(100% - 10px), black 10px);
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 1s;
+        }
 
         &:hover {
-            text-decoration-color: rgba(255, 255, 255, 1);
+            span {
+                background-size: 100% 100%;
+            }
         }
     }
 
@@ -178,12 +185,19 @@
 
     &__img {
         margin-bottom: 11px;
+        overflow: hidden;
+        border-radius: 24px;
 
         img {
             width: 100%;
             max-width: 264px;
             border-radius: 15px;
             object-fit: cover;
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: scale(1.08);
+            }
         }
     }
 
@@ -200,7 +214,14 @@
         margin-bottom: 15px;
         font-weight: 700;
         font-size: 24px;
+        text-decoration: underline 2px rgba(0, 0, 0, 0);
         text-transform: capitalize;
+        transition: text-decoration-color 0.2s;
+        text-underline-offset: 2px;
+
+        &:hover {
+            text-decoration-color: rgba(0, 0, 0, 1);
+        }
     }
 }
 

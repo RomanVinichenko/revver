@@ -86,6 +86,14 @@
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 27px;
+
+        a {
+            transition: color 0.2s;
+
+            &:hover {
+                color: $green;
+            }
+        }
     }
 
     &__rules {

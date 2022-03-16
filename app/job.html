@@ -15,42 +15,54 @@
 <body>
 
 <header class="header">
-        <nav class="container container--technical">
-            <a href="index.html">
-                <img src="images/logo.svg" alt="Logo">
-            </a>
-            <button>
-                <span class="menu__text">Menu</span>
-                <span class="header__burger">
+    <nav class="container container--technical">
+        <a href="index.html">
+            <img src="images/logo.svg" alt="Logo">
+        </a>
+        <button>
+            <span class="menu__text">Menu</span>
+            <span class="header__burger">
                         <span></span>
                         <span></span>
                     </span>
-            </button>
-        </nav>
+        </button>
+    </nav>
 </header>
 
-<main class="main round">
+<main class="main round work">
 
     <div class="vacancy">
         <h3>Senior Frontend Developer</h3>
-        <span>Office</span>
-        <span>Kyiv, Ukraine</span>
+        <div class="location">
+            <span>Office</span>
+            <span>Kyiv, Ukraine</span>
+        </div>
         <form class="apply">
-            <label for="apply-name">Full Name
+            <label for="apply-name">
+                <span>Full Name</span>
                 <input type="text" placeholder="Enter your full name" name="apply-name" id="apply-name">
             </label>
-            <label for="apply-email">Email adress
+            <label for="apply-email">
+                <span>Email address</span>
                 <input type="email" placeholder="example@gmail.com" name="apply-email" id="apply-email">
             </label>
-            <label for="apply-phone">Phone
+            <label for="apply-phone">
+                <span>Phone</span>
                 <input type="tel" placeholder="Enter your Phone" name="apply-phone" id="apply-phone">
             </label>
-            <label for="apply-cv">Submit your CV
+            <label for="apply-cv" style="margin-bottom: 32px">
+                <span>Submit your CV</span>
                 <input type="text" placeholder="Drag here or click on upload icon" name="apply-cv" id="apply-cv">
+                <img src="images/upload.svg" alt="Upload">
             </label>
-            <button type="submit">
-                Apply Now
-            </button>
+            <div style="display: flex">
+                <button type="submit">
+                    Apply Now
+                </button>
+                <a href="#">
+                    <img src="images/link-apply.svg" alt="Link">
+                </a>
+            </div>
         </form>
     </div>
 
