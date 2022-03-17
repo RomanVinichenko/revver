@@ -61,7 +61,7 @@
 
   &__button {
     display: block;
-    margin: 69px auto 13px;
+    margin: 48px auto 13px;
     padding: 14px;
     width: 192px;
     border: 2px solid $green;
@@ -248,7 +248,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 27px 48px 21px 32px;
+    padding: 27px 32px 21px;
     border-radius: 16px;
     background: $white;
 
@@ -259,6 +259,8 @@
     a {
       display: flex;
       align-items: center;
+      justify-content: center;
+      min-width: 146px;
       background-color: transparent;
 
       span {
@@ -273,10 +275,9 @@
   }
 
   &__info {
-    max-width: 370px;
+    margin-right: 31px;
 
-    p,
-    span {
+    p {
       margin-bottom: 5px;
       font-weight: 600;
       font-size: 12px;

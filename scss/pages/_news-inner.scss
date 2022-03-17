@@ -17,7 +17,7 @@
     img {
       height: 100%;
       min-height: 472px;
-      border-radius: 24px;
+      border-radius: 24px 0 0 24px;
       object-fit: cover;
     }
   }
@@ -31,7 +31,7 @@
     width: 100%;
     max-width: 548px;
 
-    h3 {
+    a {
       margin-bottom: 14px;
       font-weight: 700;
       font-size: 32px;
@@ -58,7 +58,6 @@
       font-weight: 700;
       font-size: 12px;
       line-height: 16px;
-      text-transform: uppercase;
       color: $green;
     }
 
@@ -78,8 +77,10 @@
 
 .story {
   display: flex;
+  justify-content: space-between;
 
   &__sidebar {
+    top: 0;
     width: 100%;
     max-width: 240px;
 
@@ -104,6 +105,7 @@
     }
 
     svg {
+      display: inline-block;
       transition: all 0.2s;
       cursor: pointer;
 

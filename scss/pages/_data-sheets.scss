@@ -20,16 +20,31 @@
   }
 
   .nav-tabs {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 35%;
+    border-bottom: none;
 
     li {
-      position: relative;
-      opacity: 0.15;
+      opacity: 0.2;
+      margin: 0;
       max-width: fit-content;
-      font-weight: 600;
-      font-size: 20px;
-      letter-spacing: -0.01em;
+      transition: opacity 0.2s;
+
+      a {
+        margin: 0;
+        padding: 0;
+        border: none !important;
+        border-radius: 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        color: $black !important;
+        background-color: transparent !important;
+        cursor: pointer !important;
+      }
 
       span {
         position: absolute;
@@ -42,6 +57,10 @@
         line-height: 12px;
         letter-spacing: -0.02em;
         text-align: left;
+      }
+
+      &:hover {
+        opacity: 1;
       }
     }
 
