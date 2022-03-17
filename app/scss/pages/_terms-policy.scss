@@ -1,157 +1,197 @@
 .terms-policy {
-    padding: 143px 0 207px;
+  padding: 143px 0 135px;
+
+  h1 {
+    margin-bottom: 92px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
     letter-spacing: -0.02em;
 
-    h1 {
-        margin-bottom: 92px;
-        max-width: 490px;
-        font-weight: 600;
-        font-size: 64px;
-        line-height: 72px;
-        letter-spacing: -0.02em;
+    @include r($xl) {
+      margin-bottom: 39px;
+      font-size: 50px;
+      line-height: 58px;
     }
 
-    &__global {
-        display: flex;
-        justify-content: space-between;
+    @include r($lg) {
+      font-size: 40px;
+      line-height: 48px;
     }
+  }
 
-    &__part {
-        max-width: 432px;
+  &__global {
+    display: flex;
+    justify-content: space-between;
 
-        h4 {
-            margin-bottom: 58px;
-            font-weight: 600;
-            font-size: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        ul {
-            display: flex;
-        }
-
-        li {
-            width: 100%;
-            max-height: 50px;
-
-            p {
-                margin-bottom: 1px;
-                font-size: 14px;
-                line-height: 20px;
-                letter-spacing: -0.01em;
-                color: $grey-text;
-            }
-
-            span {
-                display: block;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: -0.01em;
-            }
-
-            a {
-                position: relative;
-                display: block;
-                max-width: fit-content;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: -0.01em;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 1px;
-                    background-color: $black;
-                    transform: scaleX(0);
-                    transform-origin: bottom right;
-                    transition: transform 0.3s ease-out;
-                }
-
-                &:hover::after {
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
-                }
-            }
-
-            a:not(:last-child) {
-                margin-bottom: 15px;
-            }
-        }
+    @include r($lg) {
+      flex-direction: column;
     }
-}
+  }
 
-.info {
-    max-width: 576px;
-
-    h3 {
-        margin-bottom: 9px;
-        font-weight: 700;
-        font-size: 20px;
-        letter-spacing: -0.02em;
-    }
+  &__part {
+    margin-right: 40px;
+    max-width: 432px;
 
     h4 {
-        margin-bottom: 25px;
-        font-weight: 700;
-        font-size: 20px;
-        letter-spacing: -0.01em;
-    }
+      margin-bottom: 58px;
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: -0.02em;
 
-    p:not(:last-child) {
-        margin-bottom: 32px;
+      @include r($xl) {
+        margin-bottom: 41px;
+        font-size: 20px;
+      }
     }
 
     ul {
-        li {
-            position: relative;
-            padding-left: 18px;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 13px;
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background-color: $green;
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 24px;
-            }
-        }
+      display: flex;
+      letter-spacing: -0.01em;
     }
 
-    ol {
-        li {
-            position: relative;
-            padding-left: 28px;
-            list-style: none;
+    li {
+      width: 100%;
+      max-width: 170px;
 
-            &::after {
-                content: "" counter(section) ".";
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 26px;
-                height: 32px;
-                counter-increment: section;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 32px;
-                letter-spacing: -0.01em;
-                text-align: center;
-            }
+      &:not(:last-child) {
+        margin-right: 22px;
+      }
 
-            &:not(:last-child) {
-                margin-bottom: 24px;
-            }
+      p {
+        margin-bottom: 1px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $grey-text;
+      }
+
+      span {
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
         }
+      }
+
+      a {
+        display: block;
+        max-width: fit-content;
+        line-height: 24px;
+
+        span {
+          display: inline;
+          width: calc(100%);
+          background-image: linear-gradient(transparent calc(100% - 1px), $black 1px);
+          background-size: 0 90%;
+          background-repeat: no-repeat;
+          transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        &:hover {
+          span {
+            background-size: 100% 90%;
+          }
+        }
+      }
+
+      &:first-child {
+        @include r($lg) {
+          max-width: 130px;
+        }
+      }
     }
+
+    @include r($lg) {
+      margin-right: 0;
+      margin-bottom: 50px;
+      max-width: 100%;
+    }
+  }
+
+  @include r($xl) {
+    padding: 90px 0 95px;
+  }
+
+  @include r($lg) {
+    padding: 65px 0 95px;
+  }
+}
+
+.info {
+  max-width: 576px;
+
+  h3,
+  h4 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  h4 {
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 18px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $green;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  ol {
+    li {
+      position: relative;
+      padding-left: 28px;
+      list-style: none;
+
+      &::after {
+        content: "" counter(section) ".";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 26px;
+        height: 32px;
+        counter-increment: section;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include r($lg) {
+    max-width: 100%;
+  }
 }
