@@ -97,7 +97,8 @@
     border-radius: 24px;
     background-color: $black;
 
-    .suggest__img {
+    .suggest__link {
+        display: block;
         max-width: 50%;
         overflow: hidden;
 
@@ -115,6 +116,31 @@
         padding: 35px 48px 29px;
         width: 100%;
         max-width: 50%;
+
+        a {
+            display: block;
+            margin-bottom: 14px;
+            max-width: 385px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.02em;
+            color: $white;
+
+            //span {
+            //  width: calc(100%);
+            //  background-image: linear-gradient(transparent calc(100% - 2px), $white 2px);
+            //  background-size: 0 90%;
+            //  background-repeat: no-repeat;
+            //  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+            //}
+            //
+            //&:hover {
+            //  span {
+            //    background-size: 100% 90%;
+            //  }
+            //}
+        }
     }
 
     h4 {
@@ -123,31 +149,6 @@
         font-size: 12px;
         line-height: 16px;
         color: $green;
-    }
-
-    a {
-        display: block;
-        margin-bottom: 14px;
-        max-width: 385px;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: -0.02em;
-        color: $white;
-
-        span {
-            width: calc(100%);
-            background-image: linear-gradient(transparent calc(100% - 2px), $white 2px);
-            background-size: 0 90%;
-            background-repeat: no-repeat;
-            transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-        }
-
-        &:hover {
-            span {
-                background-size: 100% 90%;
-            }
-        }
     }
 
     p {
@@ -184,7 +185,8 @@
         }
     }
 
-    &__img {
+    &__link {
+        display: block;
         margin-bottom: 11px;
         overflow: hidden;
         border-radius: 24px;
@@ -206,25 +208,25 @@
         color: $green;
     }
 
-    a {
+    &__title {
         display: block;
         margin-bottom: 12px;
         font-weight: 700;
         font-size: 24px;
 
-        span {
-            width: calc(100%);
-            background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
-            background-size: 0 90%;
-            background-repeat: no-repeat;
-            transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-        }
-
-        &:hover {
-            span {
-                background-size: 100% 90%;
-            }
-        }
+        //span {
+        //  width: calc(100%);
+        //  background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
+        //  background-size: 0 90%;
+        //  background-repeat: no-repeat;
+        //  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        //}
+        //
+        //&:hover {
+        //  span {
+        //    background-size: 100% 90%;
+        //  }
+        //}
     }
 }
 
