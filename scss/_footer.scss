@@ -1,130 +1,130 @@
 .footer {
-    padding: 45px 0 19px;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.01em;
-    color: $white;
-    background-color: $black;
+  padding: 45px 0 19px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: $white;
+  background-color: $black;
 
-    nav {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-bottom: 90px;
+  nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 90px;
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 220px;
-            max-height: 200px;
-        }
-
-        li {
-            margin-right: 20px;
-            width: 100%;
-            font-weight: 600; // Dima Z
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: -0.02em;
-            transition: color 0.2s;
-
-            a {
-                transition: color 0.2s;
-            }
-
-            &:hover {
-                a {
-                    color: $green;
-                }
-            }
-        }
-
-        .active {
-            color: $green;
-        }
-
-        button {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            border: 0;
-            background-color: transparent;
-            cursor: pointer;
-
-            .back__text {
-                display: block;
-                margin-right: 16px;
-                letter-spacing: -0.01em;
-                color: $white;
-            }
-
-            .footer__dot {
-                position: relative;
-                padding: 33px;
-                border: 1px solid rgba($white, 0.25);
-                border-radius: 50%;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    width: 4px;
-                    height: 4px;
-                    border-radius: 50%;
-                    background-color: $white;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 220px;
+      max-height: 200px;
     }
 
-    &__box {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-bottom: 27px;
+    li {
+      margin-right: 20px;
+      width: 100%;
+      font-weight: 600; // Dima Z
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      transition: color 0.2s;
 
+      a {
+        transition: color 0.2s;
+      }
+
+      &:hover {
         a {
-            transition: color 0.2s;
-
-            &:hover {
-                color: $green;
-            }
+          color: $green;
         }
+      }
     }
 
-    &__rules {
-        margin-right: auto;
+    .active {
+      color: $green;
     }
 
-    &__address {
-        margin-right: 90px;
-        max-width: 150px;
-    }
+    button {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
 
-    &__bottom {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 17px;
-        border-top: 1px solid rgba($white, 0.5);
+      .back__text {
+        display: block;
+        margin-right: 16px;
+        letter-spacing: -0.01em;
+        color: $white;
+      }
 
-        p {
-            opacity: 0.5;
+      .footer__dot {
+        position: relative;
+        padding: 33px;
+        border: 1px solid rgba($white, 0.25);
+        border-radius: 50%;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $white;
+          transform: translate(-50%, -50%);
         }
-
-        a {
-            display: inline-block;
-            opacity: 0.5;
-            text-decoration: underline transparent;
-            transition: opacity 0.2s, text-decoration 0.2s;
-
-            &:hover {
-                opacity: 1;
-                text-decoration-color: $white;
-            }
-        }
+      }
     }
+  }
+
+  &__box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 27px;
+
+    a {
+      transition: color 0.2s;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &__rules {
+    margin-right: auto;
+  }
+
+  &__address {
+    margin-right: 90px;
+    max-width: 150px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+    border-top: 1px solid rgba($white, 0.5);
+
+    p {
+      opacity: 0.5;
+    }
+
+    a {
+      display: inline-block;
+      opacity: 0.5;
+      text-decoration: underline transparent;
+      transition: opacity 0.2s, text-decoration 0.2s;
+
+      &:hover {
+        opacity: 1;
+        text-decoration-color: $white;
+      }
+    }
+  }
 }

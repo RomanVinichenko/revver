@@ -1,34 +1,34 @@
 .error {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        height: calc(100vh - 91px);
-        max-width: 966px;
-    }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 91px);
+    max-width: 966px;
+  }
 
-    &__box {
-        width: 100%;
-        max-width: 918px;
-    }
+  &__box {
+    width: 100%;
+    max-width: 918px;
+  }
 
-    h1,
-    p {
-        max-width: 509px;
-    }
+  h1,
+  p {
+    max-width: 509px;
+  }
 
-    h1 {
-        font-size: 264px;
-        line-height: 342px;
-        letter-spacing: 0.015em;
-        text-transform: uppercase;
-    }
+  h1 {
+    font-size: 264px;
+    line-height: 342px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+  }
 
-    p {
-        margin-bottom: 52px;
-        font-weight: 700;
-        font-size: 72px;
-        line-height: 80px;
-        letter-spacing: -0.02em;
-    }
+  p {
+    margin-bottom: 52px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+  }
 }

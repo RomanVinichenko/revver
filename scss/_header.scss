@@ -1,148 +1,168 @@
 .header {
-    z-index: 3;
-    padding: 24px 0 48px;
-    background-color: $black;
+  z-index: 3;
+  padding: 24px 0 48px;
+  background-color: $black;
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      img {
+        width: 137px;
+        height: 36px;
+        object-fit: cover;
+      }
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        opacity: 0.25;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $white;
+        transition: opacity 0.2s;
+
+        &:not(:last-child) {
+          margin-right: 80px;
+        }
 
         a {
-            img {
-                width: 137px;
-                height: 36px;
-                object-fit: cover;
-            }
+          position: relative;
         }
 
-        ul {
-            display: flex;
-
-            li {
-                opacity: 0.25;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: -0.01em;
-                color: $white;
-                transition: opacity 0.2s;
-
-                &:not(:last-child) {
-                    margin-right: 80px;
-                }
-
-                a {
-                    position: relative;
-                }
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-
-            span {
-                position: absolute;
-                right: -16px;
-                top: 0;
-                width: 12px;
-                height: 12px;
-                font-weight: 700;
-                font-size: 10px;
-                line-height: 12px;
-                letter-spacing: -0.02em;
-                text-align: left;
-            }
+        &:hover {
+          opacity: 1;
         }
+      }
 
-        .active {
-            opacity: 1;
-        }
-
-        button {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            border: 0;
-            color: $white;
-            background-color: transparent;
-            cursor: pointer;
-
-            .menu__text {
-                margin-right: 12px;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 16px;
-                letter-spacing: 0.07em;
-                text-transform: uppercase;
-            }
-
-            .header__burger {
-                position: relative;
-                padding: 21px;
-                border: 1px solid rgba($white, 0.25);
-                border-radius: 50%;
-                transition: background-color 0.5s, border 0.5s;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    width: 0;
-                    height: 0;
-                    border-radius: 100%;
-                    background-color: $white;
-                    transform: translate(-50%, -50%);
-                    transition: ease-in 0.2s;
-                }
-
-                span {
-                    &::after,
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 9px;
-                        width: 24px;
-                        height: 1px;
-                        background-color: $white;
-                        transition: ease-in 0.2s;
-                    }
-
-                    &::before {
-                        top: 24px;
-                    }
-
-                    &::after {
-                        top: 17px;
-                    }
-                }
-            }
-
-            &:hover {
-                .header__burger {
-                    &::before {
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    span {
-                        &::after,
-                        &::before {
-                            background-color: $black;
-                        }
-                    }
-                }
-            }
-        }
+      span {
+        position: absolute;
+        right: -16px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.02em;
+        text-align: left;
+      }
     }
+
+    .active {
+      opacity: 1;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: 0;
+      color: $white;
+      background-color: transparent;
+      cursor: pointer;
+
+      .menu__text {
+        margin-right: 12px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .header__burger {
+        position: relative;
+        padding: 21px;
+        border: 1px solid rgba($white, 0.25);
+        border-radius: 50%;
+        transition: background-color 0.5s, border 0.5s;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 0;
+          height: 0;
+          border-radius: 100%;
+          background-color: $white;
+          transform: translate(-50%, -50%);
+          transition: ease-in 0.2s;
+        }
+
+        span {
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            left: 9px;
+            width: 24px;
+            height: 1px;
+            background-color: $white;
+            transition: ease-in 0.2s;
+
+            @include r($lg) {
+              width: 20px;
+            }
+          }
+
+          &::before {
+            top: 24px;
+
+            @include r($lg) {
+              top: 22px;
+            }
+          }
+
+          &::after {
+            top: 17px;
+
+            @include r($lg) {
+              top: 15px;
+            }
+          }
+        }
+
+        @include r($lg) {
+          padding: 19px;
+        }
+      }
+
+      &:hover {
+        .header__burger {
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
+
+          span {
+            &::after,
+            &::before {
+              background-color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include r($lg) {
+    padding: 16px 0 40px;
+  }
 }
 
 .header--main {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 24px 0;
-    background-color: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 24px 0;
+  background-color: transparent;
 }
