@@ -50,7 +50,8 @@
     color: $grey-text;
   }
 
-  span {
+  a {
+    display: inline-block;
     text-decoration: underline;
     color: $black;
   }
