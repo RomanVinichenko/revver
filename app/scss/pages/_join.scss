@@ -69,6 +69,30 @@
     letter-spacing: -0.01em;
   }
 
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+
+    span {
+      width: calc(100%);
+      background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
+      background-size: 0 86%;
+      background-repeat: no-repeat;
+      transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    }
+
+    &:hover {
+      span {
+        background-size: 100% 86%;
+      }
+    }
+  }
+
   ul {
     &:not(:last-child) {
       margin-bottom: 97px;
@@ -86,7 +110,7 @@
       margin-bottom: 24px;
     }
 
-    a {
+    .green-link {
       display: flex;
       align-items: center;
       background-color: transparent;
@@ -98,16 +122,6 @@
         line-height: 24px;
         letter-spacing: -0.01em;
       }
-    }
-  }
-
-  &__info {
-    h3 {
-      margin-bottom: 12px;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 56px;
-      letter-spacing: -0.02em;
     }
   }
 }

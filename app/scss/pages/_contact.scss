@@ -7,6 +7,18 @@
     font-size: 64px;
     line-height: 72px;
     letter-spacing: -0.02em;
+
+    @include r($xl) {
+      font-size: 50px;
+      line-height: 58px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 27px;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
   p {
@@ -15,6 +27,10 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
+
+    @include r($xl) {
+      margin-bottom: 56px;
+    }
   }
 
   h3 {
@@ -24,17 +40,34 @@
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -0.02em;
+
+    @include r($lg) {
+      margin-bottom: 48px;
+      padding-bottom: 0;
+      border-bottom: none;
+      font-size: 20px;
+    }
   }
 
   ul {
     display: flex;
     justify-content: space-between;
     margin-bottom: 143px;
+
+    @include r($lg) {
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    @include r($md) {
+      padding-bottom: 7px;
+      border-bottom: 1px solid $black;
+    }
   }
 
   li {
     width: 100%;
-    max-width: 312px;
+    max-width: 340px;
 
     span {
       display: block;
@@ -44,23 +77,55 @@
       line-height: 24px;
       letter-spacing: -0.01em;
       color: $grey-text;
+
+      @include r($lg) {
+        margin-bottom: 3px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include r($lg) {
+        margin-right: 0;
+      }
     }
 
     a {
       display: block;
-      max-width: 270px;
+      max-width: 264px;
       font-weight: 700;
       font-size: 24px;
       letter-spacing: -0.02em;
+
+      @include r($lg) {
+        max-width: 100%;
+      }
     }
+
+    @include r($lg) {
+      margin-bottom: 33px;
+    }
+
+    @include r($md) {
+      max-width: 100%;
+    }
+  }
+
+  @include r($xl) {
+    padding: 100px 0;
+  }
+
+  @include r($lg) {
+    padding: 70px 0 80px;
   }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 1152px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -71,7 +136,23 @@
 
     label {
       width: 100%;
-      max-width: 552px;
+      max-width: 576px;
+
+      @include r($md) {
+        max-width: 100%;
+      }
+    }
+
+    label:first-child {
+      margin-right: 30px;
+
+      @include r($md) {
+        margin-right: 0;
+      }
+    }
+
+    @include r($md) {
+      flex-direction: column;
     }
   }
 
@@ -79,6 +160,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 46px;
+
+    @include r($md) {
+      margin-bottom: 38px;
+    }
   }
 
   span {
@@ -87,18 +172,18 @@
   }
 
   input {
-    padding: 0;
-    padding-bottom: 16px;
+    padding: 0 0 16px;
     outline: none;
     border: 0;
     border-bottom: 1px solid $black;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
     background-color: transparent;
   }
 
   input::placeholder {
     opacity: 0.25;
-    font-size: 24px;
-    letter-spacing: -0.02em;
   }
 
   textarea {
@@ -147,21 +232,10 @@
       position: absolute;
       appearance: none;
     }
-  }
 
-  &__policy {
-    position: relative;
-    padding-bottom: 3px;
-    color: $grey-text;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 8px;
-      bottom: 0;
-      width: 106px;
-      height: 1px;
-      background-color: $grey-text;
+    @include r($md) {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -175,6 +249,10 @@
 
     span {
       margin-right: 12px;
+    }
+
+    @include r($md) {
+      margin-top: 24px;
     }
   }
 }
