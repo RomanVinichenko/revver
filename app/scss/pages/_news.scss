@@ -1,5 +1,5 @@
-.news { // + styles for CASE
-  padding: 105px 0 99px;
+.news { // + styles for CASE + PR
+  padding: 105px 0 100px;
 
   h1 {
     margin-bottom: 45px;
@@ -59,129 +59,126 @@
     }
   }
 
-  &__button {
-    display: block;
-    margin: 48px auto 13px;
-    padding: 14px;
-    width: 192px;
-    border: 2px solid $green;
-    border-radius: 25px;
-    font-weight: 700;
+  &__control {
     font-size: 14px;
     line-height: 20px;
-    text-transform: uppercase;
-    background-color: transparent;
-    transition: background-color 0.2s, color 0.2s;
-    cursor: pointer;
 
-    &:hover {
-      color: $white;
-      background-color: $green;
-    }
-  }
-
-  &__pagination {
-    display: block;
-    margin: 0 auto;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-  }
-}
-
-.suggest {
-  display: flex;
-  margin-bottom: 80px;
-  min-height: 560px;
-  overflow: hidden;
-  border-radius: 24px;
-  background-color: $black;
-
-  .suggest__link {
-    display: block;
-    max-width: 50%;
-    overflow: hidden;
-
-    img {
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1);
-      transition: transform 0.5s;
-    }
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    padding: 35px 48px 29px;
-    width: 100%;
-    max-width: 50%;
-
-    a {
+    button {
       display: block;
-      margin-bottom: 14px;
-      max-width: 385px;
+      margin: 0 auto 13px;
+      padding: 14px;
+      width: 192px;
+      border: 2px solid $green;
+      border-radius: 25px;
       font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
-      letter-spacing: -0.02em;
-      color: $white;
-
-      span {
-        width: calc(100%);
-        background-image: linear-gradient(transparent calc(100% - 2px), $white 2px);
-        background-size: 0 90%;
-        background-repeat: no-repeat;
-        transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-      }
+      text-transform: uppercase;
+      background-color: transparent;
+      transition: background-color 0.2s, color 0.2s;
+      cursor: pointer;
 
       &:hover {
-        span {
-          background-size: 100% 90%;
-        }
+        color: $white;
+        background-color: $green;
       }
     }
-  }
 
-  h4 {
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: $green;
-  }
-
-  p {
-    max-width: 453px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
-  }
-
-  .date {
-    margin-top: auto;
-    color: $grey-white;
-
-    .date__calendar {
-      &::after {
-        background-color: $white;
-      }
+    p {
+      letter-spacing: -0.01em;
+      text-align: center;
     }
   }
 }
 
 .article {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 80px;
 
   li {
+    display: inline-block;
+    margin-bottom: 80px;
     width: 100%;
-    max-width: 264px;
+  }
 
-    &:not(:last-child) {
-      margin-right: 48px;
+  li:first-child {
+    display: flex;
+    margin-bottom: 80px;
+    min-height: 560px;
+    max-height: 560px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: $black;
+
+    .article__info-first {
+      display: block;
+      width: 100%;
+      max-width: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 0.5s;
+      }
+    }
+
+    .article__info {
+      display: flex;
+      flex-direction: column;
+      padding: 35px 48px 29px;
+      width: 100%;
+      max-width: 50%;
+
+      h4 {
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $green;
+      }
+
+      a {
+        margin-bottom: 14px;
+        max-width: 385px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        color: $white;
+
+        span {
+          width: calc(100%);
+          background-image: linear-gradient(transparent calc(100% - 2px), $white 2px);
+          background-size: 0 90%;
+          background-repeat: no-repeat;
+          transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        }
+
+        &:hover {
+          span {
+            background-size: 100% 90%;
+          }
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
+      }
+
+      .date {
+        margin-top: auto;
+        color: $grey-white;
+
+        .date__calendar {
+          &::after {
+            background-color: $grey-white;
+          }
+        }
+      }
     }
   }
 
@@ -189,18 +186,18 @@
     display: block;
     margin-bottom: 11px;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 20px;
 
     img {
       width: 100%;
-      max-width: 264px;
-      border-radius: 24px;
+      height: 264px;
       object-fit: cover;
+      transform: scale(1);
       transition: transform 0.5s;
     }
   }
 
-  p {
+  h4 {
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 12px;
@@ -230,16 +227,6 @@
   }
 }
 
-.pr {
-  .suggest {
-    margin-bottom: 48px;
-  }
-
-  .news__link {
-    margin: 40px auto 13px;
-  }
-}
-
 .read {
   margin: 0 auto;
   max-width: 784px;
@@ -254,6 +241,22 @@
 
     &:not(:last-child) {
       margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: $grey-text;
+    }
+
+    h4 {
+      margin-bottom: 11px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.01em;
     }
 
     a {
@@ -271,31 +274,6 @@
         line-height: 24px;
         letter-spacing: -0.01em;
       }
-    }
-  }
-
-  &__info {
-    margin-right: 31px;
-
-    p {
-      margin-bottom: 5px;
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 16px;
-      color: $grey-text;
-    }
-
-    h4 {
-      margin-bottom: 11px;
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: -0.01em;
-    }
-
-    span {
-      display: block;
-      margin-bottom: 0;
-      color: $black;
     }
   }
 }
