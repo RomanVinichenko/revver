@@ -547,24 +547,53 @@ blockquote {
   justify-content: space-between;
   margin: 0 36px 36px;
 
-  &__item {
+  li {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     min-height: 472px;
     border-radius: 24px;
     background-color: $white;
+    transition: background-color 0.2s;
 
     h2 {
       margin-bottom: 23px;
-      max-width: 376px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.02em;
     }
 
-    .general__link {
+    a {
       span {
         font-size: 16px;
         line-height: 24px;
+      }
+    }
+
+    svg {
+      path {
+        transition: stroke 0.2s;
+      }
+
+      circle {
+        transition: fill 0.2s;
+      }
+    }
+
+    &:hover {
+      background-color: $green;
+
+      svg {
+        circle {
+          fill: $black;
+        }
+
+        path {
+          stroke: $white;
+        }
       }
     }
 
