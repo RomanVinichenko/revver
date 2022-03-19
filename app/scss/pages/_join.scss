@@ -1,5 +1,5 @@
 .join {
-  padding: 111px 0 250px;
+  padding: 111px 0 236px;
 
   &__open {
     display: flex;
@@ -7,23 +7,57 @@
     margin-bottom: 177px;
 
     span {
+      max-width: 50%;
       font-weight: 700;
       line-height: 28px;
       letter-spacing: -0.01em;
+
+      @include r($xl) {
+        max-width: 40%;
+      }
+
+      @include r($md) {
+        margin-bottom: 40px;
+        max-width: 100%;
+      }
     }
 
     p {
+      max-width: 50%;
       font-weight: 600;
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
+
+      @include r($xl) {
+        max-width: 60%;
+      }
+
+      @include r($md) {
+        max-width: 100%;
+      }
     }
 
     span,
     p {
       width: 100%;
-      max-width: 50%;
     }
+
+    @include r($xl) {
+      margin-bottom: 87px;
+    }
+
+    @include r($md) {
+      flex-direction: column;
+    }
+  }
+
+  @include r($xl) {
+    padding: 80px 0 120px;
+  }
+
+  @include r($lg) {
+    padding: 65px 0 70px;
   }
 }
 
@@ -42,18 +76,52 @@
     font-size: 64px;
     line-height: 72px;
     letter-spacing: -0.02em;
+
+    @include r($xl) {
+      margin-right: 40px;
+      font-size: 50px;
+      line-height: 58px;
+    }
+
+    @include r($lg) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include r($md) {
+      margin-right: 0;
+      margin-bottom: 21px;
+    }
   }
 
   p {
+    width: 100%;
+    max-width: 300px;
     font-size: 16px;
     line-height: 24px;
+    text-align: right;
     color: $grey-text;
+
+    @include r($md) {
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   a {
     display: inline-block;
     text-decoration: underline;
     color: $black;
+  }
+
+  @include r($xl) {
+    margin-bottom: 51px;
+  }
+
+  @include r($md) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 34px;
   }
 }
 
@@ -91,11 +159,21 @@
         background-size: 100% 86%;
       }
     }
+
+    @include r($lg) {
+      margin-bottom: 8px;
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   ul {
     &:not(:last-child) {
       margin-bottom: 97px;
+
+      @include r($xl) {
+        margin-bottom: 75px;
+      }
     }
   }
 
@@ -121,6 +199,10 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.01em;
+      }
+
+      @include r($md) {
+        display: none;
       }
     }
   }
