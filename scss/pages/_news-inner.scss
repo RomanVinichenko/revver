@@ -80,34 +80,38 @@
   justify-content: space-between;
 
   &__sidebar {
-    top: 0;
     width: 100%;
     max-width: 240px;
 
     li {
+      font-size: 0;
+      letter-spacing: -0.01em;
+
       &:not(:last-child) {
-        margin-bottom: 18px;
+        margin-bottom: 14px;
       }
     }
 
     p {
       font-size: 14px;
-      line-height: 16px; // MY
-      letter-spacing: -0.01em;
+      line-height: 20px;
       color: $grey-text;
     }
 
     span {
-      display: inline-block;
       font-weight: 700;
-      line-height: 26px; // MY
-      letter-spacing: -0.01em;
+      font-size: 18px;
+      line-height: 28px;
     }
 
     svg {
       display: inline-block;
       transition: all 0.2s;
       cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
 
       &:hover {
         fill: #0f0f11;

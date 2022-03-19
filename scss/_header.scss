@@ -1,5 +1,5 @@
 .header {
-  z-index: 3;
+  z-index: 2;
   padding: 24px 0 48px;
   background-color: $black;
 
@@ -154,7 +154,7 @@
   }
 
   @include r($lg) {
-    padding: 16px 0 40px;
+    padding: 16px 0 36px;
   }
 }
 

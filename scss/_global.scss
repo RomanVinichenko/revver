@@ -19,7 +19,7 @@ body {
 
 .links {
   position: absolute;
-  left: 400px;
+  left: 200px;
   top: 20px;
   z-index: 200;
   width: 5px;
@@ -47,19 +47,18 @@ body {
   }
 }
 
-strong {
-  font-weight: 700;
-}
-
 .main {
   flex-grow: 1;
   background-color: $grey-white;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 24px;
-  width: 100%;
   max-width: 1248px;
 
   &::before {
@@ -97,22 +96,39 @@ strong {
 }
 
 .round-thank {
-  z-index: 1;
+  z-index: 4;
   margin: -24px 0 0;
   border-radius: 24px 24px 0 0;
+
+  @include r($lg) {
+    margin: -20px 0 0;
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .button-home {
-  display: block;
-  padding: 16px;
-  max-width: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  min-height: 52px;
   border: 2px solid $black;
   border-radius: 25px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+
+  @include r($lg) {
+    margin: 0 auto;
+  }
 }
 
 blockquote {
@@ -120,7 +136,7 @@ blockquote {
   margin-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
-  border-left: 2px solid  #2fba56;
+  border-left: 2px solid #2fba56;
   font-weight: 700;
   font-size: 32px;
 }
@@ -152,20 +168,48 @@ blockquote {
   justify-content: space-between;
   margin-top: 300px;
 
+  div {
+    margin-right: 30px;
+    max-width: 470px;
+
+    @include r($xl) {
+      margin-right: 0;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
   h2 {
     margin-bottom: 32px;
-    max-width: 417px;
     font-weight: 700;
     font-size: 64px;
     line-height: 72px;
     letter-spacing: -0.02em;
+
+    @include r($xl) {
+      margin-bottom: 26px;
+      font-size: 50px;
+      line-height: 58px;
+    }
+
+    @include r($lg) {
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
-  p {
-    max-width: 472px;
+  h5 {
     font-weight: 400;
+    font-size: 18px;
     line-height: 28px;
+    letter-spacing: -0.01em;
     color: $grey-text;
+
+    @include r($xl) {
+      margin-bottom: 74px;
+      font-weight: 600;
+      color: $black;
+    }
   }
 
   &__list {
@@ -176,13 +220,25 @@ blockquote {
     max-width: 624px;
 
     li {
-      margin-right: 76px;
+      margin-right: 56px;
       width: 100%;
       max-width: 236px;
+
+      @include r($md) {
+        margin-right: 0;
+        max-width: 100%;
+        text-align: center;
+      }
     }
 
     li:nth-child(-n+2) {
       margin-bottom: 67px;
+    }
+
+    li:not(:last-child) {
+      @include r($md) {
+        margin-bottom: 50px;
+      }
     }
 
     span {
@@ -190,6 +246,12 @@ blockquote {
       margin-bottom: 5px;
       font-weight: 700;
       letter-spacing: -0.01em;
+
+      @include r($lg) {
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
 
     h4 {
@@ -199,6 +261,10 @@ blockquote {
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
+
+      @include r($md) {
+        max-width: 100%;
+      }
     }
 
     p {
@@ -207,6 +273,17 @@ blockquote {
       letter-spacing: -0.01em;
       color: $grey-text;
     }
+
+    @include r($md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @include r($xl) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
   }
 }
 
@@ -628,6 +705,11 @@ blockquote {
         transform: translateY(-50%);
       }
     }
+  }
+
+  @include r($md) {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

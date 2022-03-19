@@ -1,27 +1,40 @@
 .error {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: calc(100vh - 91px);
-    max-width: 966px;
-  }
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: calc(100vh - 92px);
+  max-width: 992px;
 
   &__box {
     width: 100%;
-    max-width: 918px;
-  }
+    max-width: 520px;
 
-  h1,
-  p {
-    max-width: 509px;
+    @include r($lg) {
+      max-width: 320px;
+    }
   }
 
   h1 {
     font-size: 264px;
-    line-height: 342px;
+    line-height: 284px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
+
+    @include r($xl) {
+      font-size: 214px;
+      line-height: 234px;
+    }
+
+    @include r($lg) {
+      font-size: 168px;
+      line-height: 218px;
+    }
+
+    @include r($sm) {
+      font-size: 140px;
+      line-height: 185px;
+    }
   }
 
   p {
@@ -30,5 +43,23 @@
     font-size: 72px;
     line-height: 80px;
     letter-spacing: -0.02em;
+
+    @include r($xl) {
+      margin-bottom: 28px;
+      font-size: 60px;
+      line-height: 68px;
+    }
+
+    @include r($lg) {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  @include r($lg) {
+    justify-content: center;
+    height: calc(100vh - 72px);
+    text-align: center;
   }
 }
