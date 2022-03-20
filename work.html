@@ -31,47 +31,50 @@
 <main class="main round work">
 
     <section class="vacancy">
-        <h3>Senior Frontend Developer</h3>
+        <h2>Senior Frontend Developer</h2>
         <div class="location">
             <span>Office</span>
             <span>Kyiv, Ukraine</span>
         </div>
         <form class="apply">
-            <label for="apply-name">
+            <label for="apply-name-mobile">
                 <span>Full Name</span>
-                <input type="text" placeholder="Enter your full name" name="apply-name" id="apply-name">
+                <input type="text" placeholder="Enter your full name" name="apply-name" id="apply-name-mobile">
             </label>
-            <label for="apply-email">
+            <label for="apply-email-mobile">
                 <span>Email address</span>
-                <input type="email" placeholder="example@gmail.com" name="apply-email" id="apply-email">
+                <input type="email" placeholder="example@gmail.com" name="apply-email" id="apply-email-mobile">
             </label>
-            <label for="apply-phone">
+            <label for="apply-phone-mobile">
                 <span>Phone</span>
-                <input type="tel" placeholder="Enter your Phone" name="apply-phone" id="apply-phone">
+                <input type="tel" placeholder="Enter your Phone" name="apply-phone" id="apply-phone-mobile">
             </label>
-            <label for="apply-cv" style="margin-bottom: 32px">
+            <label for="apply-cv-mobile" style="margin-bottom: 32px">
                 <span>Submit your CV</span>
-                <input type="text" placeholder="Drag here or click on upload icon" name="apply-cv" id="apply-cv">
+                <input type="text" placeholder="Drag here or click on upload icon" name="apply-cv" id="apply-cv-mobile">
                 <img src="images/upload.svg" alt="Upload">
             </label>
             <div style="display: flex">
                 <button type="submit">
                     Apply Now
                 </button>
-                <a href="#">
-                    <img src="images/link-apply.svg" alt="Link">
+                <a class="attach-form" href="#">
+                    <img src="images/vacation.svg" alt="Link">
                 </a>
             </div>
         </form>
+        <a class="attach-global" href="#">
+            <img src="images/link-apply.svg" alt="Link">
+        </a>
     </section>
 
     <section class="work-info">
-        <button>
+        <button class="work-info__back">
             Back to Careers
         </button>
         <div class="work-info__wrapper">
             <h3>We are looking for a strong Senior Frontend Developer to expand the existing team with skills and
-                experience. </h3>
+                experience.</h3>
             <div class="job-type">
                 <p>Part-time</p>
                 <p>Full-time</p>
@@ -86,51 +89,84 @@
                     <p>Permanent</p>
                 </li>
             </ul>
-            <p style="letter-spacing: -0.01em; margin-bottom: 54px">
-                We are looking for a strong Senior Frontend Developer to expand the existing team with his/her skills
-                and experience. Key responsibilities include the timely delivery of the new complex features with high
-                code quality standards, modifying of existing functionality, peers code reviews, confident
-                understanding.
-            </p>
-            <h4>
-                Here is what you should avoid or ask your
-                colleagues to avoid:
-            </h4>
-            <ol>
-                <li>
-                    Deliver new or amend existing features
-                </li>
-                <li>
-                    Ensure high code quality standards
-                </li>
-                <li>
-                    Provide vision and judgement
-                </li>
-                <li>
-                    Perform code reviews
-                </li>
-                <li>
-                    Collaborate with CTO/Solution Architect
-                </li>
-                <li>
-                    Collaborate with team members and solution stakeholders
-                </li>
-            </ol>
-            <p style="letter-spacing: -0.01em; margin-bottom: 54px">
-                We are looking for a strong Senior Frontend Developer to expand the existing team with his/her skills
-                and experience. Key responsibilities include the timely delivery of the new complex features with high
-                code quality standards, modifying of existing functionality, peers code reviews, confident
-                understanding.
-            </p>
-            <p style="letter-spacing: -0.01em; margin-bottom: 54px">
-                We are looking for a strong Senior Frontend Developer to expand the existing team with his/her skills
-                and experience. Key responsibilities include the timely delivery of the new complex features with high
-                code quality standards, modifying of existing functionality, peers code reviews, confident
-                understanding.
-            </p>
+            <div class="work-info__descr">
+                <p>
+                    We are looking for a strong Senior Frontend Developer to expand the existing team with his/her
+                    skills
+                    and experience. Key responsibilities include the timely delivery of the new complex features with
+                    high
+                    code quality standards, modifying of existing functionality, peers code reviews, confident
+                    understanding.
+                </p>
+                <br>
+                <h4>
+                    Here is what you should avoid or ask your
+                    colleagues to avoid:
+                </h4>
+                <ul>
+                    <li>
+                        Deliver new or amend existing features
+                    </li>
+                    <li>
+                        Ensure high code quality standards
+                    </li>
+                    <li>
+                        Provide vision and judgement
+                    </li>
+                    <li>
+                        Perform code reviews
+                    </li>
+                    <li>
+                        Collaborate with CTO/Solution Architect
+                    </li>
+                    <li>
+                        Collaborate with team members and solution stakeholders
+                    </li>
+                </ul>
+                <p>
+                    We are looking for a strong Senior Frontend Developer to expand the existing team with his/her
+                    skills
+                    and experience. Key responsibilities include the timely delivery of the new complex features with
+                    high
+                    code quality standards, modifying of existing functionality, peers code reviews, confident
+                    understanding.
+                </p>
+                <p>
+                    We are looking for a strong Senior Frontend Developer to expand the existing team with his/her
+                    skills
+                    and experience. Key responsibilities include the timely delivery of the new complex features with
+                    high
+                    code quality standards, modifying of existing functionality, peers code reviews, confident
+                    understanding.
+                </p>
+                <br>
+            </div>
+            <form class="apply apply--mobile">
+                <label for="apply-name">
+                    <span>Full Name</span>
+                    <input type="text" placeholder="Enter your full name" name="apply-name" id="apply-name">
+                </label>
+                <label for="apply-email">
+                    <span>Email address</span>
+                    <input type="email" placeholder="example@gmail.com" name="apply-email" id="apply-email">
+                </label>
+                <label for="apply-phone">
+                    <span>Phone</span>
+                    <input type="tel" placeholder="Enter your Phone" name="apply-phone" id="apply-phone">
+                </label>
+                <label for="apply-cv" style="margin-bottom: 32px">
+                    <span>Submit your CV</span>
+                    <input type="text" placeholder="Drag here or click on upload icon" name="apply-cv" id="apply-cv">
+                    <img src="images/upload.svg" alt="Upload">
+                </label>
+                <div>
+                    <button type="submit">
+                        Apply Now
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
-
 </main>
 
 <footer class="footer">
@@ -200,12 +236,6 @@
         </div>
     </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-<script src='js/main.js'></script>
 
 </body>
 
