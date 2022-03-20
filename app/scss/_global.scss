@@ -703,11 +703,21 @@ blockquote {
         border-radius: 50%;
         background-color: $grey-text;
         transform: translateY(-50%);
+
+        @include r($lg) {
+          right: -8px;
+          width: 2px;
+          height: 2px;
+        }
+      }
+
+      @include r($lg) {
+        margin-right: 14px;
       }
     }
   }
 
-  @include r($md) {
+  @include r($lg) {
     font-size: 14px;
     line-height: 20px;
   }
