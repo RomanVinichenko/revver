@@ -76,11 +76,15 @@
 }
 
 .story {
+  position: relative;
   display: flex;
   justify-content: space-between;
 
   &__sidebar {
+    position: sticky;
+    top: 10px;
     width: 100%;
+    height: fit-content;
     max-width: 240px;
 
     li {

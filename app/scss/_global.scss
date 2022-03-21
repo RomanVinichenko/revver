@@ -20,7 +20,7 @@ body {
 .links {
   position: absolute;
   left: 200px;
-  top: 20px;
+  top: 700px;
   z-index: 200;
   width: 5px;
   height: 20px;
@@ -86,13 +86,19 @@ strong {
 
 .round {
   z-index: 3;
+  visibility: visible;
   margin: -24px 0;
   border-radius: 24px;
+  transition: all 0.5s;
 
   @include r($lg) {
     margin: -20px 0;
     border-radius: 20px;
   }
+}
+
+.round--inactive {
+  z-index: 2;
 }
 
 .round-thank {
@@ -740,4 +746,10 @@ blockquote {
       margin-right: 12px;
     }
   }
+}
+
+.address {
+  width: 100%;
+  height: fit-content;
+  max-width: 150px;
 }
