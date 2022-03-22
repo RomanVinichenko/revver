@@ -4,14 +4,11 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    margin-bottom: 176px;
-    padding: 0 0 125px 71px;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     overflow: hidden;
-    border-radius: 0 0 50px 24px;
-    font-weight: 700;
+    border-radius: 0 0 24px 24px;
     color: $white;
     background-position: center;
     background-size: cover;
@@ -34,18 +31,49 @@
     }
 
     p {
-      margin-top: auto;
-      margin-bottom: 15px;
-      font-size: 12px;
-      line-height: 16px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 1373px;
-      font-size: 48px;
-      line-height: 56px;
+      max-width: 635px;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 88px;
       letter-spacing: -0.02em;
+      text-align: center;
+    }
+
+    button {
+      position: absolute;
+      left: 50%;
+      bottom: 48px;
+      padding: 0 38px 0 16px;
+      min-height: 44px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      color: $white;
+      background-color: rgba($white, 0.3);
+      transform: translateX(-50%);
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        background-image: url("../images/arrow-white-down.svg");
+        background-position: center right;
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -63,36 +91,32 @@
 }
 
 .approach {
-  margin-bottom: 408px;
+  padding: 240px 0;
 
-  &__pretitle {
-    margin-bottom: 14px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
+  p {
+    margin-bottom: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
+    color: $green;
   }
 
   h2 {
-    margin-bottom: 126px;
-    max-width: 898px;
+    margin-bottom: 240px;
+    max-width: 845px;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
     letter-spacing: -0.02em;
   }
 
-  &__descr {
-    margin-left: auto;
-    max-width: 834px;
-
-    p {
-      letter-spacing: -0.01em;
-
-      &:not(:last-child) {
-        margin-bottom: 32px;
-      }
-    }
+  img {
+    width: 100%;
+    max-height: 654px;
+    border-radius: 24px;
+    object-fit: cover;
   }
 }
 

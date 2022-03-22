@@ -100,11 +100,6 @@
     margin-right: auto;
   }
 
-  &__address {
-    margin-right: 90px;
-    max-width: 150px;
-  }
-
   &__bottom {
     display: flex;
     justify-content: space-between;
@@ -126,5 +121,9 @@
         text-decoration-color: $white;
       }
     }
+  }
+
+  .address {
+    margin-right: 90px;
   }
 }
