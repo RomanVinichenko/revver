@@ -22,7 +22,7 @@ const browsersync = () => {
 const watching = () => {
     watch(['app/*.html']).on('change', browserSync.reload);
     watch(['app/scss/**/*.scss'], styles);
-    watch(['!app/js/main.js', '!app/js/faq.js', '!app/js/inner.js'], scripts);
+    watch(['!app/js/main.js', '!app/js/faq.js', '!app/js/inner.js', 'app/js/home.js', 'app/js/about.js'], scripts);
 };
 
 const htmls = () => {
@@ -48,7 +48,7 @@ const styles = () => {
 };
 
 const scripts = () => {
-    return src(['app/js/main.js', 'app/js/faq.js', 'app/js/inner.js',  'app/js/home.js'])
+    return src(['app/js/main.js', 'app/js/faq.js', 'app/js/inner.js',  'app/js/home.js', 'app/js/about.js'])
         .pipe(dest('app/js'))
         .pipe(browserSync.stream());
 };
