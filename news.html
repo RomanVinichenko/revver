@@ -22,7 +22,7 @@
                 <img src="images/logo.svg" alt="Logo"/>
             </a>
             <div class="menu__main">
-                <ul class="menu__main-list" >
+                <ul class="menu__main-list">
                     <li class="active">
                         <a href="index.html">
                             Home
@@ -100,9 +100,12 @@
     <div class="container">
         <h1>Market News & Industry Insights</h1>
         <nav>
-            <button>
-                <img src="images/search.svg" alt="Search button"/>
-            </button>
+            <label for="serach">
+                <input type="text" id="serach">
+                <button>
+                    <img src="images/search.svg" alt="Search button"/>
+                </button>
+            </label>
             <ul>
                 <li class="active">All</li>
                 <li>Corporate Culture</li>
@@ -119,41 +122,28 @@
                     <img src="images/propose.jpg" alt="Article cover"/>
                 </a>
                 <div class="article__info">
-                    <h4>Industry News</h4>
-                    <a href="news-inner.html">
-                    <span>
+                    <div class="article__info-inner">
+                        <h4>Industry News</h4>
+                        <a href="news-inner.html">
+                            <span>
                         Artificial Intelligence determining prices – a real game changer
-                    </span>
-                    </a>
-                    <p>
-                        “The upcoming game changer will be personalized pricing for customer loyalty” - Gary
-                        Szendzielarz.
-                        Timeboxing for discounts will become a trendsetter.
-                    </p>
+                            </span>
+                        </a>
+                        <p>
+                            “The upcoming game changer will be personalized pricing for customer loyalty” - Gary
+                            Szendzielarz.
+                            Timeboxing for discounts will become a trendsetter.
+                        </p>
+                    </div>
                     <div class="date">
                         <span class="date__calendar">February 2, 2022</span>
                         <span>4 min read</span>
                     </div>
                 </div>
             </li>
-            <li style="max-width: 264px; margin-right: 48px">
+            <li style="max-width: 264px">
                 <a class="article__link" href="news-inner.html">
-                    <img src="images/article.jpg" alt="Article cover"/>
-                </a>
-                <h4>Industry News</h4>
-                <a class="article__title" href="news-inner.html">
-                    <span>
-                        In conversation with Alen Greys
-                    </span>
-                </a>
-                <div class="date">
-                    <span class="date__calendar">February 2, 2022</span>
-                    <span>5 min read</span>
-                </div>
-            </li>
-            <li style="max-width: 264px; margin-right: 48px">
-                <a class="article__link" href="news-inner.html">
-                    <img src="images/article.jpg" alt="Article cover"/>
+                    <img src="images/article-1.jpg" alt="Article cover"/>
                 </a>
                 <h4>Industry News</h4>
                 <a class="article__title" href="news-inner.html">
@@ -168,7 +158,7 @@
             </li>
             <li style="max-width: 264px">
                 <a class="article__link" href="news-inner.html">
-                    <img src="images/article.jpg" alt="Article cover"/>
+                    <img src="images/article-2.jpg" alt="Article cover"/>
                 </a>
                 <h4>Industry News</h4>
                 <a class="article__title" href="news-inner.html">
@@ -181,11 +171,40 @@
                     <span>5 min read</span>
                 </div>
             </li>
-            <li style="max-width: 576px; margin-right: 48px">
+            <li style="max-width: 264px">
+                <a class="article__link" href="news-inner.html">
+                    <img src="images/article-3.jpg" alt="Article cover"/>
+                </a>
+                <h4>Industry News</h4>
+                <a class="article__title" href="news-inner.html">
+                    <span>
+                        In conversation with Alen Greys
+                    </span>
+                </a>
+                <div class="date">
+                    <span class="date__calendar">February 2, 2022</span>
+                    <span>5 min read</span>
+                </div>
+            </li> <li style="max-width: 264px; margin-right: 0">
+                <a class="article__link" href="news-inner.html">
+                    <img src="images/article-4.jpg" alt="Article cover"/>
+                </a>
+                <h4>Industry News</h4>
+                <a class="article__title" href="news-inner.html">
+                    <span>
+                        In conversation with Alen Greys
+                    </span>
+                </a>
+                <div class="date">
+                    <span class="date__calendar">February 2, 2022</span>
+                    <span>5 min read</span>
+                </div>
+            </li>
+            <li style="max-width: 576px">
                 <a class="article__link" href="news-inner.html">
                     <img
                             style="height: 576px"
-                            src="images/article-big.jpg"
+                            src="images/article-big-1.jpg"
                             alt="Article cover"
                     />
                 </a>
@@ -200,9 +219,9 @@
                     <span>5 min read</span>
                 </div>
             </li>
-            <li style="max-width: 576px">
+            <li style="max-width: 576px; margin-right: 0">
                 <a class="article__link" href="news-inner.html">
-                    <img style="height: 576px" src="images/article-big2.jpg" alt="Article cover"/>
+                    <img style="height: 576px" src="images/article-big-2.jpg" alt="Article cover"/>
                 </a>
                 <h4>Industry News</h4>
                 <a class="article__title" href="news-inner.html">
@@ -215,22 +234,7 @@
                     <span>5 min read</span>
                 </div>
             </li>
-            <li style="max-width: 264px; margin-right: 48px">
-                <a class="article__link" href="news-inner.html">
-                    <img src="images/article.jpg" alt="Article cover"/>
-                </a>
-                <h4>Industry News</h4>
-                <a class="article__title" href="news-inner.html">
-                    <span>
-                        In conversation with Alen Greys
-                    </span>
-                </a>
-                <div class="date">
-                    <span class="date__calendar">February 2, 2022</span>
-                    <span>5 min read</span>
-                </div>
-            </li>
-            <li style="max-width: 264px; margin-right: 48px">
+            <li style="max-width: 264px">
                 <a class="article__link" href="news-inner.html">
                     <img src="images/article.jpg" alt="Article cover"/>
                 </a>
@@ -246,6 +250,21 @@
                 </div>
             </li>
             <li style="max-width: 264px">
+                <a class="article__link" href="news-inner.html">
+                    <img src="images/article.jpg" alt="Article cover"/>
+                </a>
+                <h4>Industry News</h4>
+                <a class="article__title" href="news-inner.html">
+                    <span>
+                        In conversation with Alen Greys
+                    </span>
+                </a>
+                <div class="date">
+                    <span class="date__calendar">February 2, 2022</span>
+                    <span>5 min read</span>
+                </div>
+            </li>
+            <li style="max-width: 264px; margin-right: 0">
                 <a class="article__link" href="news-inner.html">
                     <img src="images/article.jpg" alt="Article cover"/>
                 </a>
