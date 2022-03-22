@@ -48,7 +48,7 @@ const styles = () => {
 };
 
 const scripts = () => {
-    return src(['app/js/main.js', 'app/js/faq.js', 'app/js/inner.js',  'app/js/home.js', 'app/js/about.js'])
+    return src(['app/js/main.js', 'app/js/faq.js', 'app/js/inner.js'])
         .pipe(dest('app/js'))
         .pipe(browserSync.stream());
 };
