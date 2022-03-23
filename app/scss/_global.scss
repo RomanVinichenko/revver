@@ -405,7 +405,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 232px;
+  margin-bottom: 216px;
 
   &__wrapper {
     max-width: 50%;
@@ -599,86 +599,37 @@ blockquote {
   }
 
   &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 592px;
     border-radius: 24px;
     background-color: $white;
+
+    h4 {
+      position: relative;
+      max-width: 317px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.01em;
+      text-align: center;
+
+      &::after {
+        content: url("../images/retail-1.svg");
+        position: absolute;
+        left: 50%;
+        top: -52px;
+        width: 40px;
+        height: 40px;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   img {
     max-width: 50%;
     object-fit: cover;
-  }
-
-  h3 {
-    max-width: 456px;
-  }
-
-  h4 {
-    margin-bottom: 7px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: -0.01em;
-  }
-}
-
-.more {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 36px 36px;
-
-  li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 472px;
-    border-radius: 24px;
-    background-color: $white;
-    transition: background-color 0.2s;
-
-    h2 {
-      margin-bottom: 23px;
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 56px;
-      letter-spacing: -0.02em;
-      text-align: left;
-    }
-
-    a {
-      span {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    svg {
-      path {
-        transition: stroke 0.2s;
-      }
-
-      circle {
-        transition: fill 0.2s;
-      }
-    }
-
-    &:hover {
-      background-color: $green;
-
-      svg {
-        circle {
-          fill: $black;
-        }
-
-        path {
-          stroke: $white;
-        }
-      }
-    }
-
-    &:first-child {
-      margin-right: 24px;
-    }
   }
 }
 
@@ -748,4 +699,66 @@ blockquote {
   width: 100%;
   height: fit-content;
   max-width: 150px;
+}
+
+.more {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 36px 36px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 472px;
+    border-radius: 24px;
+    background-color: $white;
+    transition: background-color 0.2s;
+
+    h2 {
+      margin-bottom: 23px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+
+    a {
+      span {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    svg {
+      path {
+        transition: stroke 0.2s;
+      }
+
+      circle {
+        transition: fill 0.2s;
+      }
+    }
+
+    &:hover {
+      background-color: $green;
+
+      svg {
+        circle {
+          fill: $black;
+        }
+
+        path {
+          stroke: $white;
+        }
+      }
+    }
+
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
 }

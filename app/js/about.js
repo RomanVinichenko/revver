@@ -31,3 +31,8 @@ $(function () {
     });
 
 });
+
+function ScrollAbout1(){
+    var myElem = $('#about-sec-2').offset().top;
+    $('html').animate({ scrollTop: myElem }, 1000);
+}

@@ -267,10 +267,11 @@
   top: 0;
   padding: 24px 0;
   background-color: transparent;
-  transition: background-color 0.3s;
+  transition: padding-bottom 0.2s, background-color 0.3s;
 }
 
 .header__main--active {
+  padding: 10px 0;
   background-color: rgba($black, 0.8);
 }
 
