@@ -436,23 +436,24 @@ blockquote {
 }
 
 .sales {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 152px;
-  max-height: 800px;
+  margin-bottom: 272px;
   overflow: hidden;
   border-radius: 24px;
   color: $white;
   background-color: $black;
 
+  .category {
+    margin: 0 auto 10px 0;
+  }
+
   &__wrapper {
-    margin: 64px 0 109px 64px;
-    max-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 0;
   }
 
   h3 {
+    margin-bottom: 13px;
     max-width: 406px;
   }
 
