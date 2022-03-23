@@ -36,3 +36,9 @@ function ScrollAbout1(){
     var myElem = $('#about-sec-2').offset().top;
     $('html').animate({ scrollTop: myElem }, 1000);
 }
+
+const test = document.getElementById('about-counting');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY >= test.offsetTop - test.offsetHeight) console.log('yes');
+})

@@ -19,6 +19,14 @@
       width: 100%;
       max-width: 220px;
       max-height: 200px;
+
+      @include r($lg) {
+        max-width: 160px;
+      }
+
+      @include r($sm) {
+        max-width: 130px;
+      }
     }
 
     li {
@@ -38,6 +46,24 @@
         a {
           color: $green;
         }
+      }
+
+      @include r($lg) {
+        margin-right: 15px;
+      }
+
+      @include r($sm) {
+        margin-right: 10px;
+      }
+
+      @include r($lg) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      @include r($md) {
+        font-size: 24px;
+        line-height: 32px;
       }
     }
 
@@ -79,6 +105,10 @@
         }
       }
     }
+
+    @include r($md) {
+      margin-bottom: 34px;
+    }
   }
 
   &__box {
@@ -94,10 +124,29 @@
         color: $green;
       }
     }
+
+    @include r($md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__rules {
     margin-right: auto;
+
+    @include r($md) {
+      margin-bottom: 68px;
+    }
+  }
+
+  &__box-inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include r($md) {
+      width: 100%;
+    }
   }
 
   &__bottom {
@@ -125,5 +174,9 @@
 
   .address {
     margin-right: 90px;
+  }
+
+  @include r($lg) {
+    padding: 35px 0 22px;
   }
 }
