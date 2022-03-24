@@ -3,16 +3,19 @@ const menuMain = document.querySelector(".menu__main");
 const menuText = document.querySelector(".menu__text");
 const curMenuText = menuText.innerText;
 const blur = document.querySelector(".blur");
-// const menuSecond = document.querySelector(".menu__second");
+const menuSecond = document.querySelector(".menu__second");
+const header = document.querySelector(".header");
 
-// const round = document.querySelector(".round");
 
 menuButton.addEventListener('click', function () {
     menuMain.classList.toggle('menu__main--active');
     menuButton.classList.toggle('menu__button--active');
     blur.classList.toggle('blur--active');
-    // round.classList.toggle('round--inactive');
-    // menuSecond.classList.toggle('menu__second--inactive');
+    header.classList.toggle('header--active');
+
+    if(menuSecond) {
+        menuSecond.classList.toggle('menu__second--inactive');
+    }
 });
 
 menuButton.addEventListener('click', function () {
@@ -33,3 +36,16 @@ $(function () {
         }
     });
 });
+
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+            $('.header').addClass('header--scroll');
+        } else {
+            $('.header').removeClass('header--scroll');
+        }
+    });
+
+
+});
+
