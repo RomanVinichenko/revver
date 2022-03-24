@@ -1,6 +1,10 @@
 .data-sheets {
   padding: 111px 0 384px;
 
+  a {
+    text-decoration: none !important;
+  }
+
   .data-sheets__top {
     margin-bottom: 96px;
   }

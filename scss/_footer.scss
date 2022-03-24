@@ -6,6 +6,10 @@
   color: $white;
   background-color: $black;
 
+  a {
+    text-decoration: none !important;
+  }
+
   nav {
     display: flex;
     align-items: flex-start;
@@ -162,12 +166,13 @@
     a {
       display: inline-block;
       opacity: 0.5;
-      text-decoration: underline transparent;
+      text-decoration: underline transparent !important;
+      color: $white;
       transition: opacity 0.2s, text-decoration 0.2s;
 
       &:hover {
         opacity: 1;
-        text-decoration-color: $white;
+        text-decoration-color: $white !important;
       }
     }
   }
