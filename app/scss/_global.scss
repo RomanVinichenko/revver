@@ -20,7 +20,7 @@ body {
 .links {
   position: absolute;
   left: 200px;
-  top: 700px;
+  top: 40px;
   z-index: 200;
   width: 5px;
   height: 20px;
@@ -80,8 +80,12 @@ strong {
   }
 
   &--main {
-    padding: 0 24px;
-    max-width: 1448px;
+    padding: 0 36px;
+    max-width: 1548px;
+
+    @include r($lg) {
+      padding: 0 24px;
+    }
   }
 }
 
@@ -300,6 +304,12 @@ blockquote {
     margin-right: 12px;
     font-size: 20px;
     letter-spacing: -0.01em;
+
+    @include r($md) {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   svg {
@@ -309,6 +319,11 @@ blockquote {
 
     circle {
       transition: fill 0.2s;
+    }
+
+    @include r($md) {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -333,6 +348,10 @@ blockquote {
     line-height: 24px;
     letter-spacing: -0.01em;
     color: $grey-text;
+
+    @include r($lg) {
+      margin-bottom: 40px;
+    }
   }
 
   ul {
@@ -354,6 +373,12 @@ blockquote {
         font-size: 28px;
         line-height: 36px;
         letter-spacing: -0.02em;
+
+        @include r($lg) {
+          margin-bottom: 8px;
+          font-size: 24px;
+          line-height: 32px;
+        }
       }
 
       p {
@@ -370,16 +395,56 @@ blockquote {
         bottom: 0;
         max-width: 500px;
         object-fit: cover;
+
+        @include r($lg) {
+          max-width: 300px;
+        }
+
+        @include r($sm) {
+          max-width: 200px;
+        }
       }
 
       &:first-child {
         margin-right: 24px;
         max-width: 70%;
+
+        @include r($lg) {
+          max-width: 50%;
+        }
+
+        @include r($md) {
+          margin-right: 0;
+          max-width: 100%;
+        }
       }
 
       &:last-child {
         max-width: 30%;
+
+        @include r($lg) {
+          max-width: 50%;
+        }
+
+        @include r($md) {
+          max-width: 100%;
+        }
       }
+
+      @include r($lg) {
+        min-height: 500px;
+        max-height: 500px;
+      }
+
+      @include r($md) {
+        padding: 23px 28px;
+        min-height: 432px;
+        max-height: 432px;
+      }
+    }
+
+    @include r($md) {
+      flex-direction: column;
     }
   }
 }
@@ -395,16 +460,25 @@ blockquote {
   letter-spacing: -0.01em;
   color: $white;
   background-color: $green;
+
+  @include r($md) {
+    margin: 0 auto 10px 0;
+  }
 }
 
 .business {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 216px;
 
   &__wrapper {
+    margin: 0 0 0 20px;
     max-width: 50%;
+
+    @include r($md) {
+      margin: 0 0 40px;
+      max-width: 100%;
+    }
   }
 
   h4 {
@@ -414,6 +488,16 @@ blockquote {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.02em;
+
+    @include r($lg) {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @include r($md) {
+      max-width: 100%;
+    }
   }
 
   p {
@@ -423,11 +507,27 @@ blockquote {
     line-height: 24px;
     letter-spacing: -0.01em;
     color: $grey-text;
+
+    @include r($lg) {
+      margin-bottom: 18px;
+    }
+
+    @include r($md) {
+      max-width: 100%;
+    }
   }
 
   img {
     max-width: 50%;
     object-fit: cover;
+
+    @include r($md) {
+      max-width: 100%;
+    }
+  }
+
+  @include r($md) {
+    flex-direction: column-reverse;
   }
 }
 
@@ -581,8 +681,19 @@ blockquote {
 .retail {
   margin-bottom: 208px;
 
+  .category {
+    @include r($md) {
+      margin: 0 auto 10px;
+    }
+  }
+
   h2 {
     max-width: 535px;
+
+    @include r($md) {
+      margin: 0 auto 15px;
+      text-align: center;
+    }
   }
 
   .retail__text {
@@ -593,6 +704,10 @@ blockquote {
     letter-spacing: -0.01em;
     text-align: center;
     color: $grey-text;
+
+    @include r($lg) {
+      margin-bottom: 40px;
+    }
   }
 
   &__wrapper {
@@ -621,12 +736,43 @@ blockquote {
         height: 40px;
         transform: translateX(-50%);
       }
+
+      @include r($md) {
+        margin-bottom: 40px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    @include r($lg) {
+      min-height: 538px;
+    }
+
+    @include r($md) {
+      flex-direction: column;
+      padding: 120px 24px 50px;
     }
   }
 
   img {
     max-width: 50%;
     object-fit: cover;
+
+    @include r($md) {
+      max-width: 80%;
+    }
+
+    @include r($sm) {
+      max-width: 90%;
+    }
+  }
+
+  @include r($xl) {
+    margin-bottom: 100px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 70px;
   }
 }
 

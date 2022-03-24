@@ -6,6 +6,21 @@
     line-height: 56px;
     letter-spacing: -0.02em;
     text-align: center;
+
+    @include r($lg) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include r($lg) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include r($md) {
+      margin: 0 auto 15px 0;
+      text-align: left;
+    }
   }
 
   .integration {
@@ -19,15 +34,51 @@
       margin: 0 auto 20px 0;
       max-width: 684px;
       text-align: left;
+
+      @include r($md) {
+        margin: 0 auto 15px 0;
+      }
+    }
+
+    @include r($xl) {
+      margin-bottom: 120px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 55px;
     }
   }
 
   .business {
+    margin-bottom: 216px;
+
     .general__link {
       span {
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @include r($lg) {
+      margin-bottom: 100px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 88px;
+    }
+  }
+
+  .retail {
+    h2 {
+      @include r($md) {
+        margin: 0 auto 15px;
+        text-align: center;
       }
     }
   }
@@ -43,38 +94,90 @@
   &::after {
     content: "";
     position: absolute;
-    right: -348px;
-    top: -276px;
+    right: -500px;
+    top: -476px;
     opacity: 0.85;
     width: 1123px;
     height: 1123px;
     border-radius: 50%;
     background-color: $green;
-    filter: blur(1200px);
+    filter: blur(1000px);
+
+    @include r($xl) {
+      filter: blur(800px);
+    }
+
+    @include r($md) {
+      display: none;
+    }
+  }
+
+  .general__link {
+    &:hover {
+      svg {
+        circle {
+          fill: $green;
+        }
+
+        path {
+          stroke: $white;
+        }
+      }
+    }
+
+    @include r($md) {
+      margin: 0 auto;
+    }
   }
 
   &__wrapper {
+    position: relative;
     z-index: 2;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 56px 0;
-    height: 100%;
+    align-items: center;
+    justify-content: space-between;
     min-height: 100vh;
+    max-height: 100vh;
+
+    @include r($md) {
+      flex-direction: column;
+    }
   }
 
-  .container {
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100%;
+  &__inner {
+    z-index: 2;
+
+    @include r($md) {
+      padding-top: 136px;
+    }
+  }
+
+  &__img {
+    z-index: 1;
+    align-self: flex-end;
+    margin-left: -50px;
+    max-width: 50%;
+    object-fit: cover;
+
+    @include r($xl) {
+      margin-left: -80px;
+      max-width: 60%;
+    }
+
+    @include r($lg) {
+      margin-left: -100px;
+      max-width: 70%;
+    }
+
+    @include r($md) {
+      margin-left: 0;
+      max-width: 100%;
+    }
   }
 
   h1 {
     margin-bottom: 19px;
+    width: 100%;
     max-width: 670px;
     font-weight: 700;
     font-size: 64px;
@@ -84,24 +187,36 @@
     span {
       color: $green;
     }
-  }
 
-  a {
-    margin-bottom: 282px;
-  }
+    @include r($xxl) {
+      font-size: 50px;
+      line-height: 58px;
+    }
 
-  &__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    object-fit: cover;
+    @include r($xl) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include r($lg) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include r($md) {
+      margin-bottom: 26px;
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+    }
   }
 
   &__control {
+    position: absolute;
+    left: 0;
+    bottom: 48px;
     display: flex;
     align-items: center;
-    padding: 16px 24px;
     max-width: fit-content;
     border-radius: 13px;
     font-size: 14px;
@@ -115,6 +230,10 @@
 
     p {
       color: #4a4b54;
+    }
+
+    @include r($md) {
+      display: none;
     }
   }
 
@@ -155,7 +274,7 @@
 
   &__scroll {
     position: absolute;
-    left: -26px;
+    left: -53px;
     bottom: 64px;
 
     p {
@@ -176,14 +295,26 @@
         transform: translateY(-50%);
       }
     }
+
+    @include r($lg) {
+      left: -59px;
+    }
+
+    @include r($md) {
+      display: none;
+    }
   }
 }
 
 .cloud {
-  margin: 144px 0 160px;
+  padding: 144px 0 160px;
 
   h2 {
     max-width: 839px;
+
+    @include r($md) {
+      margin: 0 auto 32px 0;
+    }
   }
 
   &__text {
@@ -194,29 +325,49 @@
     letter-spacing: -0.01em;
     text-align: center;
     color: $grey-text;
+
+    @include r($md) {
+      display: none;
+    }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
     padding: 50px 0 50px 55px;
+    overflow: hidden;
     border-radius: 24px;
     background-color: $white;
+
+    @include r($lg) {
+      flex-direction: column;
+      padding: 32px 28px 0;
+    }
   }
 
   ul {
+    margin: 0 20px 0 0;
     width: 100%;
     max-width: 628px;
     letter-spacing: -0.01em;
 
     li {
-      padding-left: 88px;
+      padding: 0 0 0 88px;
       background-position: top left;
       background-size: 64px;
       background-repeat: no-repeat;
 
       &:not(:last-child) {
         margin-bottom: 37px;
+
+        @include r($lg) {
+          margin-bottom: 33px;
+        }
+      }
+
+      @include r($lg) {
+        padding: 62px 0 0;
+        background-size: 48px;
       }
     }
 
@@ -225,18 +376,56 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 28px;
+
+      @include r($lg) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     p {
       font-size: 16px;
       line-height: 24px;
       color: $grey-text;
+
+      @include r($lg) {
+        font-size: 14px;
+        letter-spacing: 0;
+      }
+    }
+
+    @include r($lg) {
+      margin: 0 0 60px;
+      max-width: 100%;
     }
   }
 
-  img {
+  &__img {
+    margin: auto 0;
+    width: 100%;
     max-width: 393px;
-    object-fit: contain;
+
+    img {
+      width: 100%;
+      text-align: center;
+      object-fit: contain;
+
+      @include r($lg) {
+        transform: rotate(90deg);
+      }
+    }
+
+    @include r($lg) {
+      margin: 0 auto;
+    }
+  }
+
+  @include r($xl) {
+    padding: 80px 0 120px;
+  }
+
+  @include r($lg) {
+    padding: 40px 0 72px;
   }
 }
 
