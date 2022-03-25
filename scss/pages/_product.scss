@@ -423,6 +423,7 @@
 
       &:not(:last-child) {
         margin-right: 25px;
+
         @include r($lg) {
           margin: 0 0 24px;
         }
@@ -453,8 +454,6 @@
         letter-spacing: -0.01em;
         color: $grey-text;
       }
-
-
 
       @include r($lg) {
         margin: 0;

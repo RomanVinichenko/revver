@@ -156,23 +156,31 @@
   &__img {
     z-index: 1;
     align-self: flex-end;
-    margin-right: -120px;
-    margin-left: -50px;
+    margin: 0 -100px 0 -50px;
     max-width: 55%;
     object-fit: cover;
 
+    @include r($xxl) {
+      margin: 0 -40px 0 -30px;
+    }
+
     @include r($xl) {
-      margin-left: -80px;
+      margin: 0 -20px 0 -80px;
       max-width: 60%;
     }
 
     @include r($lg) {
-      margin-left: -100px;
-      max-width: 70%;
+      margin: 0 -20px 0 -40px;
+      max-width: 62%;
     }
 
     @include r($md) {
-      margin-left: 0;
+      margin: 30px auto 0;
+      max-width: 80%;
+    }
+
+    @include r($sm) {
+      margin: 30px auto 0;
       max-width: 100%;
     }
   }
@@ -190,7 +198,7 @@
       color: $green;
     }
 
-    @include r($xxl) {
+    @include r($extra) {
       font-size: 50px;
       line-height: 58px;
     }
@@ -298,8 +306,8 @@
       }
     }
 
-    @include r($lg) {
-      left: -59px;
+    @include r($xxl) {
+      left: -60px;
     }
 
     @include r($md) {
@@ -645,11 +653,11 @@
   .category {
     margin: 0 auto 10px 0;
     background-color: #e8552e;
+
     @include r($md) {
       margin: 0 auto 10px;
     }
   }
-
 
   h2 {
     margin: 0 auto 14px 0;
@@ -673,8 +681,6 @@
       text-align: center;
     }
   }
-
-
 
   ul {
     display: flex;
