@@ -6,6 +6,21 @@
     line-height: 56px;
     letter-spacing: -0.02em;
     text-align: center;
+
+    @include r($lg) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @include r($lg) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include r($md) {
+      margin: 0 auto 15px 0;
+      text-align: left;
+    }
   }
 
   h3 {
@@ -13,6 +28,11 @@
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.02em;
+
+    @include r($xl) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__text {
@@ -22,10 +42,33 @@
     line-height: 24px;
     letter-spacing: -0.01em;
     color: $grey-text;
+
+    @include r($lg) {
+      margin: 0 auto 30px;
+    }
   }
 
   .integration {
     margin-bottom: 152px;
+
+    @include r($md) {
+      margin-bottom: 106px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 56px;
+    }
+  }
+
+  .retail {
+    margin-bottom: 136px;
+
+    h2 {
+      @include r($md) {
+        margin: 0 auto 15px;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -40,58 +83,112 @@
   }
 
   h1 {
+    z-index: 2;
     margin-bottom: 33px;
     font-weight: 700;
     font-size: 80px;
     line-height: 88px;
     letter-spacing: -0.02em;
-    z-index: 2;
 
     @include r($lg) {
+      font-size: 56px;
+      line-height: 64px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 23px;
       font-size: 40px;
       line-height: 48px;
+    }
+
+    @include r($md) {
+      text-align: center;
     }
   }
 
   p {
+    z-index: 2;
     margin-bottom: 26px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
     color: $grey-text;
-    z-index: 2;
+
+    @include r($lg) {
+      margin-bottom: 25px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    @include r($md) {
+      text-align: center;
+    }
   }
 
   &__wrapper {
-    max-width: 538px;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    z-index: 2;
+    max-width: 538px;
+
+    @include r($lg) {
+      max-width: 420px;
+    }
+
+    @include r($md) {
+      align-items: center;
+      justify-content: flex-start;
+      padding: 136px 0 0;
+      max-width: 100%;
+    }
   }
 
   &__img {
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 800px;
     z-index: 1;
+    max-width: 750px;
+
     @include r($xl) {
-      max-width: 600px;
+      max-width: 630px;
     }
+
+    @include r($lg) {
+      max-width: 530px;
+    }
+
+    @include r($md) {
+      max-width: 420px;
+    }
+  }
+
+  @include r($xl) {
+    margin-bottom: 100px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 56px;
   }
 }
 
 .interface {
   margin: 0 36px 152px;
-  padding: 80px 0;
+  padding: 80px 24px;
   border-radius: 24px;
   text-align: center;
   color: $white;
   background-color: $black;
+
+  .category {
+    @include r($md) {
+      margin: 0 auto 10px;
+    }
+  }
 
   h3 {
     margin: 0 auto 20px;
@@ -100,8 +197,13 @@
 
   img {
     margin: 0 auto 84px;
+    width: 100%;
     max-width: 662px;
     object-fit: cover;
+
+    @include r($lg) {
+      margin: 0 auto 50px;
+    }
   }
 
   ul {
@@ -132,9 +234,39 @@
       }
 
       &:not(:last-child) {
-        margin-right: 40px;
+        margin: 0 30px 0 0;
+
+        @include r($lg) {
+          margin: 0 15px 30px;
+        }
+
+        @include r($md) {
+          margin: 0 0 30px;
+        }
+      }
+
+      @include r($lg) {
+        margin: 0 15px;
+      }
+
+      @include r($md) {
+        margin: 0;
+        max-width: 100%;
       }
     }
+
+    @include r($lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  @include r($xl) {
+    margin: 0 36px 100px;
+  }
+
+  @include r($lg) {
+    margin: 0 0 56px;
+    padding: 32px 24px 38px;
   }
 }
 
@@ -153,11 +285,25 @@
 
   img {
     max-width: 50%;
-    object-fit: cover;
+    object-fit: contain;
+
+    @include r($lg) {
+      margin: 0 auto;
+      max-width: 70%;
+    }
+
+    @include r($md) {
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
+    margin-left: 20px;
     max-width: 500px;
+
+    @include r($lg) {
+      max-width: 100%;
+    }
   }
 
   ul {
@@ -176,6 +322,129 @@
         font-weight: 700;
         line-height: 28px;
         letter-spacing: -0.01em;
+
+        @include r($xl) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
+
+        @include r($xl) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+
+      @include r($xl) {
+        padding-left: 68px;
+        background-size: 48px;
+      }
+    }
+  }
+
+  @include r($xl) {
+    margin-bottom: 100px;
+  }
+
+  @include r($lg) {
+    flex-direction: column;
+    margin-bottom: 56px;
+  }
+}
+
+.office {
+  margin-bottom: 120px;
+  padding: 80px 0 120px;
+  border-radius: 24px;
+  text-align: center;
+  color: $white;
+  background-color: $black;
+
+  &__text {
+    margin: 0 auto;
+    max-width: 582px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: $grey-text;
+
+    @include r($xl) {
+      padding: 0 24px;
+    }
+  }
+
+  .business {
+    margin-bottom: 50px;
+  }
+
+  .business__wrapper {
+    text-align: left;
+
+    @include r($md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .category {
+    @include r($md) {
+      margin: 0 auto 10px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 20px;
+
+    @include r($xl) {
+      padding: 0 24px;
+    }
+  }
+
+  ul {
+    display: flex;
+    text-align: left;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      width: 100%;
+      min-height: 328px;
+      max-width: 383px;
+      border: 1px solid #4a4b54;
+      border-radius: 20px;
+
+      &:not(:last-child) {
+        margin-right: 25px;
+        @include r($lg) {
+          margin: 0 0 24px;
+        }
+      }
+
+      span {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      div {
+        max-width: 225px;
+      }
+
+      h5 {
+        margin-bottom: 7px;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: -0.02em;
       }
 
       p {
@@ -184,7 +453,216 @@
         letter-spacing: -0.01em;
         color: $grey-text;
       }
+
+
+
+      @include r($lg) {
+        margin: 0;
+        min-height: 300px;
+        max-width: 100%;
+      }
     }
+
+    @include r($lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @include r($xl) {
+    margin-bottom: 80px;
+    padding: 60px 0 80px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 53px;
+    padding: 40px 0 28px;
+  }
+}
+
+.sales {
+  margin: 0 0 24px;
+  padding: 65px;
+  overflow: hidden;
+  border-radius: 24px;
+  color: $white;
+  background-color: $black;
+
+  .category {
+    margin: 0 auto 10px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  h3 {
+    margin-bottom: 13px;
+    max-width: 406px;
+
+    span {
+      max-width: 100%;
+    }
+
+    @include r($lg) {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+    max-width: 405px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: $grey-text;
+
+    @include r($lg) {
+      max-width: 100%;
+    }
+  }
+
+  img {
+    max-width: 50%;
+    object-fit: contain;
+
+    @include r($lg) {
+      align-self: center;
+      max-width: 400px;
+    }
+
+    @include r($md) {
+      max-width: 300px;
+    }
+
+    @include r($sm) {
+      max-width: 250px;
+    }
+  }
+
+  ul {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      min-height: 286px;
+      border-radius: 8px;
+      background-color: rgba($white, 0.15);
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 64px;
+    transition: margin-bottom 0.3s;
+    cursor: help;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 2px;
+      height: 70px;
+      border-radius: 8px;
+      background-color: transparent;
+      transform: translateY(-30px);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    &::after {
+      content: "0" counter(section) "";
+      position: absolute;
+      left: 34px;
+      top: 15px;
+      opacity: 0.15;
+      width: 16px;
+      height: 16px;
+      counter-increment: section;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: $white;
+      transition: opacity 0.3s;
+    }
+
+    h4 {
+      z-index: 500;
+      opacity: 0.15;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      background-color: $black;
+      transition: opacity 0.3s;
+    }
+
+    a {
+      position: absolute;
+      left: 64px;
+      top: 46px;
+      opacity: 0;
+      padding-right: 27px;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      transition: opacity 0.3s, top 0.3s;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 14px;
+        height: 11px;
+        background-image: url("../images/arrow-right.svg");
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__item--active {
+    margin-bottom: 62px;
+    cursor: default;
+
+    &::before {
+      background-color: $green;
+      transform: translateY(0);
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    a {
+      opacity: 1;
+    }
+
+    h4 {
+      opacity: 1;
+    }
+  }
+
+  @include r($lg) {
+    padding: 28px;
+    border-radius: 20px;
+  }
+
+  @include r($md) {
+    padding: 28px;
   }
 }
 
@@ -195,7 +673,15 @@
 
   &__left {
     margin-right: 24px;
+    padding: 32px;
     max-width: 30%;
+
+    @include r($lg) {
+      margin-right: 0;
+      margin-bottom: 24px;
+      padding: 22px 28px;
+      max-width: 100%;
+    }
   }
 
   &__left-img {
@@ -209,7 +695,8 @@
   &__right {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 32px 32px 32px 0;
     max-width: 70%;
 
     ul {
@@ -239,24 +726,45 @@
         }
       }
     }
+
+    @include r($lg) {
+      padding: 22px 28px 22px 0;
+      max-width: 100%;
+    }
+
+    @include r($md) {
+      flex-direction: column-reverse;
+      padding: 22px 28px 0;
+    }
   }
 
   &__right-img {
-    position: absolute;
-    left: 0;
-    top: 50%;
     object-fit: cover;
-    transform: translateY(-50%);
+
+    @include r($lg) {
+      max-width: 300px;
+    }
+
+    @include r($md) {
+      margin-bottom: -54px;
+      transform: rotate(-90deg);
+    }
   }
 
   &__right-wrapper {
+    margin-left: 15px;
     max-width: 352px;
+
+    @include r($md) {
+      margin-bottom: 20px;
+      margin-left: 0;
+      max-width: 100%;
+    }
   }
 
   &__left,
   &__right {
     position: relative;
-    padding: 32px;
     width: 100%;
     min-height: 560px;
     overflow: hidden;
@@ -279,6 +787,11 @@
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
+
+      @include r($lg) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
 
     p {
@@ -288,73 +801,18 @@
       letter-spacing: -0.01em;
       color: $grey-text;
     }
-  }
-}
 
-.office {
-  margin-bottom: 120px;
-  padding: 80px 0 120px;
-  border-radius: 24px;
-  text-align: center;
-  color: $white;
-  background-color: $black;
-
-  .business {
-    margin-bottom: 50px;
-  }
-
-  .business__wrapper {
-    text-align: left;
-  }
-
-  h3 {
-    margin-bottom: 20px;
-  }
-
-  ul {
-    display: flex;
-    text-align: left;
-
-    li {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 24px;
-      width: 100%;
-      min-height: 328px;
-      max-width: 383px;
-      border: 1px solid #4a4b54;
+    @include r($lg) {
       border-radius: 20px;
-
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
-
-      span {
-        display: block;
-        margin-bottom: 4px;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 16px;
-      }
-
-      div {
-        max-width: 225px;
-      }
-
-      h5 {
-        margin-bottom: 7px;
-        font-weight: 700;
-        font-size: 24px;
-        letter-spacing: -0.02em;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        color: $grey-text;
-      }
     }
+  }
+
+  @include r($xl) {
+    margin-bottom: 100px;
+  }
+
+  @include r($lg) {
+    flex-direction: column;
+    margin-bottom: 63px;
   }
 }

@@ -75,6 +75,8 @@
   }
 
   .retail {
+    margin-bottom: 208px;
+
     h2 {
       @include r($md) {
         margin: 0 auto 15px;
@@ -643,7 +645,11 @@
   .category {
     margin: 0 auto 10px 0;
     background-color: #e8552e;
+    @include r($md) {
+      margin: 0 auto 10px;
+    }
   }
+
 
   h2 {
     margin: 0 auto 14px 0;
@@ -668,11 +674,7 @@
     }
   }
 
-  .category {
-    @include r($md) {
-      margin: 0 auto 10px;
-    }
-  }
+
 
   ul {
     display: flex;
