@@ -70,6 +70,10 @@ strong {
     display: none;
   }
 
+  &--home {
+    max-width: 1216px;
+  }
+
   &--technical {
     padding: 0 36px;
     max-width: 1920px;
