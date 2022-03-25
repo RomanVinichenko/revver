@@ -325,6 +325,11 @@ blockquote {
       width: 32px;
       height: 32px;
     }
+
+    @include r($md) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &:hover {
@@ -406,7 +411,7 @@ blockquote {
       }
 
       &:first-child {
-        margin-right: 24px;
+        margin: 0 24px 0 0;
         max-width: 70%;
 
         @include r($lg) {
@@ -414,7 +419,7 @@ blockquote {
         }
 
         @include r($md) {
-          margin-right: 0;
+          margin: 0 0 24px;
           max-width: 100%;
         }
       }
@@ -440,6 +445,7 @@ blockquote {
         padding: 23px 28px;
         min-height: 432px;
         max-height: 432px;
+        border-radius: 20px;
       }
     }
 
@@ -860,13 +866,41 @@ blockquote {
     background-color: $white;
     transition: background-color 0.2s;
 
+    .general__link {
+      width: 100%;
+      max-width: 376px;
+
+      @include r($xl) {
+        max-width: 300px;
+      }
+
+      @include r($lg) {
+        max-width: 240px;
+      }
+    }
+
     h2 {
-      margin-bottom: 23px;
+      margin: 0 auto 23px;
+      width: 100%;
+      max-width: 376px;
       font-weight: 700;
       font-size: 48px;
       line-height: 56px;
       letter-spacing: -0.02em;
       text-align: left;
+
+      @include r($xl) {
+        max-width: 300px;
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      @include r($lg) {
+        margin: 0 auto 10px;
+        max-width: 240px;
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     a {
@@ -901,7 +935,28 @@ blockquote {
     }
 
     &:first-child {
-      margin-right: 24px;
+      margin: 0 24px 0 0;
+
+      @include r($md) {
+        margin: 0 0 24px;
+      }
     }
+
+    @include r($lg) {
+      min-height: 328px;
+    }
+  }
+
+  @include r($xl) {
+    margin: 0 24px 36px;
+  }
+
+  @include r($lg) {
+    margin: 0 24px 24px;
+  }
+
+  @include r($md) {
+    flex-direction: column;
+    align-items: center;
   }
 }

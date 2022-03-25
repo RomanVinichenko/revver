@@ -343,6 +343,10 @@
       flex-direction: column;
       padding: 32px 28px 0;
     }
+
+    @include r($md) {
+      border-radius: 20px;
+    }
   }
 
   ul {
@@ -434,6 +438,17 @@
 
   h2 {
     margin: 0 auto 13px;
+
+    @include r($md) {
+      margin: 0 auto 15px;
+      text-align: center;
+    }
+  }
+
+  .category {
+    @include r($md) {
+      margin: 0 auto 10px;
+    }
   }
 
   &__text {
@@ -444,9 +459,14 @@
     letter-spacing: -0.01em;
     text-align: center;
     color: $grey-text;
+
+    @include r($lg) {
+      margin-bottom: 41px;
+    }
   }
 
   ul {
+    position: relative;
     display: flex;
     justify-content: space-between;
 
@@ -458,6 +478,14 @@
       border-radius: 24px;
       background-position: center;
       background-size: cover;
+
+      @include r($lg) {
+        min-height: 540px;
+      }
+
+      @include r($md) {
+        min-height: 240px;
+      }
     }
 
     li:first-child {
@@ -471,6 +499,15 @@
         width: 128px;
         height: 30px;
       }
+
+      @include r($lg) {
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      @include r($md) {
+        z-index: 2;
+      }
     }
 
     li:last-child {
@@ -483,16 +520,40 @@
         width: 128px;
         height: 30px;
       }
+
+      @include r($lg) {
+        display: none;
+      }
     }
   }
 
+  &__area {
+    position: relative;
+  }
+
   &__block {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     padding: 23px;
+    width: 100%;
     max-width: 540px;
     border-radius: 24px;
     background-color: $green;
+
+    @include r($md) {
+      position: relative;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      margin-top: -24px;
+      padding: 40px 23px 23px;
+      max-width: 100%;
+      border-radius: 0 0 24px 24px;
+    }
   }
 
   &__head {
@@ -502,6 +563,10 @@
       font-weight: 700;
       font-size: 24px;
       letter-spacing: -0.02em;
+
+      @include r($md) {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -509,12 +574,18 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include r($md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__author {
     h5 {
       margin-bottom: 1px;
       font-weight: 600;
+      font-size: 18px;
       line-height: 28px;
       letter-spacing: -0.01em;
     }
@@ -522,6 +593,10 @@
     p {
       font-size: 12px;
       line-height: 16px;
+    }
+
+    @include r($md) {
+      margin-bottom: 24px;
     }
   }
 
@@ -554,6 +629,10 @@
       margin-right: 40px;
     }
   }
+
+  @include r($lg) {
+    margin-bottom: 128px;
+  }
 }
 
 .coming {
@@ -570,18 +649,34 @@
     margin: 0 auto 14px 0;
     max-width: 644px;
     text-align: left;
+
+    @include r($md) {
+      margin: 0 auto 15px;
+      text-align: center;
+    }
   }
 
   &__text {
-    margin-bottom: 56px;
+    margin: 0 0 56px;
     max-width: 600px;
     text-align: left;
     color: $grey-text;
+
+    @include r($md) {
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+  }
+
+  .category {
+    @include r($md) {
+      margin: 0 auto 10px;
+    }
   }
 
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     li {
       position: relative;
@@ -618,13 +713,53 @@
         line-height: 20px;
         letter-spacing: -0.01em;
       }
+
+      &:not(:last-child) {
+        margin: 0 24px 0 0;
+
+        @include r($lg) {
+          margin: 0 12px 24px;
+        }
+
+        @include r($lg) {
+          margin: 0 0 24px;
+        }
+      }
+
+      @include r($lg) {
+        margin: 0 12px 24px;
+        max-width: 328px;
+      }
+
+      @include r($md) {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      @include r($md) {
+        height: 280px;
+      }
     }
+
+    @include r($lg) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  @include r($xl) {
+    padding: 104px 0 200px;
+  }
+
+  @include r($lg) {
+    padding: 72px 0 128px;
   }
 }
 
 .answer {
   margin-top: -150px;
-  margin-bottom: 274px;
+  margin-bottom: 252px;
   padding: 42px 48px;
   border-radius: 24px;
   background-color: $white;
@@ -653,6 +788,12 @@
     margin-bottom: 40px;
     padding-bottom: 56px;
     border-bottom: 1px solid $black;
+
+    @include r($md) {
+      margin-bottom: 35px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
   }
 
   .question {
@@ -743,27 +884,67 @@
       }
     }
   }
+
+  @include r($lg) {
+    margin-top: -90px;
+    margin-bottom: 120px;
+  }
+
+  @include r($md) {
+    margin-bottom: 56px;
+    padding: 24px 28px;
+    border-radius: 20px;
+  }
 }
 
 .particle {
   position: relative;
   margin: 0 36px 120px;
-  min-height: 864px;
-  border-radius: 24px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  img {
+    width: 100%;
+    height: 864px;
+    border-radius: 24px;
+    object-fit: cover;
+
+    @include r($xl) {
+      height: 664px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 50px;
+      height: 420px;
+      border-radius: 20px;
+    }
+  }
 
   .general__link {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
     span {
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
     }
 
-    img {
-      width: 32px;
-      height: 32px;
+    &:hover {
+      svg {
+        circle {
+          fill: $white;
+        }
+
+        path {
+          stroke: $green;
+        }
+      }
+    }
+
+    @include r($sm) {
+      align-self: flex-end;
+      margin-bottom: 25px;
     }
   }
 
@@ -776,6 +957,18 @@
     max-width: 684px;
     border-radius: 24px;
     background-color: $green;
+
+    @include r($xl) {
+      left: 80px;
+    }
+
+    @include r($lg) {
+      position: relative;
+      left: 0;
+      top: 0;
+      padding: 28px;
+      max-width: 100%;
+    }
   }
 
   &__info {
@@ -783,6 +976,14 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 70px;
+
+    @include r($md) {
+      margin-bottom: 40px;
+    }
+
+    @include r($sm) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__date {
@@ -810,6 +1011,10 @@
         transform: translateY(-50%);
       }
     }
+
+    @include r($sm) {
+      align-self: flex-start;
+    }
   }
 
   &__main {
@@ -828,5 +1033,9 @@
       line-height: 24px;
       letter-spacing: -0.01em;
     }
+  }
+
+  @include r($xl) {
+    margin: 0 24px 80px;
   }
 }

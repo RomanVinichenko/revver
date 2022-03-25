@@ -1,3 +1,4 @@
+
 const menuButton = document.querySelector(".menu__button");
 const menuMain = document.querySelector(".menu__main");
 const menuText = document.querySelector(".menu__text");
@@ -45,7 +46,10 @@ $(function () {
             $('.header').removeClass('header--scroll');
         }
     });
-
-
 });
+
+$("#btn").click(function()
+{
+    jQuery('html,body').animate({scrollTop:0},800);
+})
 

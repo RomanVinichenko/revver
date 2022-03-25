@@ -164,7 +164,7 @@
                     </li>
                 </ul>
                 <div class="cloud__img">
-                <img src="images/cloud.png" alt="Tablet">
+                    <img src="images/cloud.png" alt="Tablet">
                 </div>
             </div>
         </section>
@@ -230,35 +230,37 @@
             <h2>What companies say about us</h2>
             <p class="testimonials__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.</p>
-            <ul>
-                <li style="background-image: url('images/socar-1.jpg')">
-                    <div class="testimonials__block">
-                        <div class="testimonials__head">
-                            <p>“A modern cloud-native POS platformto rev up your sales operation.”</p>
+            <div class="testimonials__area">
+                <ul>
+                    <li style="background-image: url('images/socar-1.jpg')">
+                        <img src="images/socar.svg" alt="Socar">
+                    </li>
+                    <li style="background-image: url('images/socar-2.jpg')">
+                        <img src="images/socar.svg" alt="Socar">
+                    </li>
+                </ul>
+                <div class="testimonials__block">
+                    <div class="testimonials__head">
+                        <p>“A modern cloud-native POS platformto rev up your sales operation.”</p>
+                    </div>
+                    <div class="testimonials__box">
+                        <div class="testimonials__author">
+                            <h5>Joe Hawkins</h5>
+                            <p>CEO Socar</p>
                         </div>
-                        <div class="testimonials__box">
-                            <div class="testimonials__author">
-                                <h5>Joe Hawkins</h5>
-                                <p>CEO Socar</p>
+                        <div class="testimonials__info">
+                            <div class="testimonials__info-item">
+                                <h5>40%</h5>
+                                <p>More sales in 2021</p>
                             </div>
-                            <div class="testimonials__info">
-                                <div class="testimonials__info-item">
-                                    <h5>40%</h5>
-                                    <p>More sales in 2021</p>
-                                </div>
-                                <div class="testimonials__info-item">
-                                    <h5>70%</h5>
-                                    <p>Increase in productivity</p>
-                                </div>
+                            <div class="testimonials__info-item">
+                                <h5>70%</h5>
+                                <p>Increase in productivity</p>
                             </div>
                         </div>
                     </div>
-                    <img src="images/socar.svg" alt="Socar">
-                </li>
-                <li style="background-image: url('images/socar-2.jpg')">
-                    <img src="images/socar.svg" alt="Socar">
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -328,7 +330,8 @@
         </section>
     </div>
 
-    <section class="particle" style="background-image: url('images/particle.jpg')">
+    <div class="particle">
+        <img src="images/particle.jpg" alt="Particle">
         <div class="particle__block">
             <div class="particle__info">
                 <div class="particle__date">
@@ -337,7 +340,11 @@
                 </div>
                 <a class="general__link" href="#">
                     <span>Our Blog</span>
-                    <img src="images/read-black.svg" alt="Read button" style="width: 32px; height: 32px;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" transform="rotate(90 16 16)" fill="#0F0F11"/>
+                        <path d="M11 11L21 11M21 11V21M21 11L11 21" stroke="white" stroke-width="1.5"/>
+                    </svg>
+
                 </a>
             </div>
             <div class="particle__main">
@@ -345,41 +352,38 @@
                 <p>Control everything from a single platform: your Point of Sale, back office & advertising.</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <ul class="more">
         <li>
-            <div style="max-width: 376px; width: 100%">
-                <h2>Explore more<br> Features</h2>
-                <a class="general__link" href="#">
-                    <span>Watch all Features</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="18" cy="18" r="18" transform="rotate(90 18 18)" fill="#2FBA56"/>
-                        <path d="M13 13L23 13M23 13V23M23 13L13 23" stroke="#0F0F11" stroke-width="1.5"/>
-                    </svg>
-                </a>
-            </div>
+            <h2>Explore more<br> Features</h2>
+            <a class="general__link" href="#">
+                <span>Watch all Features</span>
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" transform="rotate(90 18 18)" fill="#2FBA56"/>
+                    <path d="M13 13L23 13M23 13V23M23 13L13 23" stroke="#0F0F11" stroke-width="1.5"/>
+                </svg>
+            </a>
+
         </li>
         <li>
-            <div style="max-width: 376px; width: 100%">
-                <h2>Just <br>Book a call</h2>
-                <a class="general__link" href="#">
-                    <span>Contact Us</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="18" cy="18" r="18" transform="rotate(90 18 18)" fill="#2FBA56"/>
-                        <path d="M13 13L23 13M23 13V23M23 13L13 23" stroke="#0F0F11" stroke-width="1.5"/>
-                    </svg>
-                </a>
-            </div>
+            <h2>Just <br>Book a call</h2>
+            <a class="general__link" href="#">
+                <span>Contact Us</span>
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" transform="rotate(90 18 18)" fill="#2FBA56"/>
+                    <path d="M13 13L23 13M23 13V23M23 13L13 23" stroke="#0F0F11" stroke-width="1.5"/>
+                </svg>
+            </a>
         </li>
     </ul>
 </main>
 
 <footer class="footer">
-    <div class="container container--technical">
+    <div class="container container--technical ">
         <nav>
             <ul>
-                <li class="active">
+                <li>
                     <a href="#">Home</a>
                 </li>
                 <li>
@@ -392,7 +396,7 @@
                     <a href="#">Team</a>
                 </li>
                 <li>
-                    <a href="#">Blog</a>
+                    <a href="#">News</a>
                 </li>
                 <li>
                     <a href="#">Careers</a>
@@ -415,23 +419,25 @@
                     <a href="policy.html">Privacy Policy</a>
                 </li>
             </ul>
-            <a class="address" href="https://goo.gl/maps/v4xGNYtRYcWqCUZCA" target="_blank">Bahnhofstrasse 10,
-                6300 Zug, Switzerland
-            </a>
-            <ul>
-                <li>
-                    <a href="#">Facebook</a>
-                </li>
-                <li>
-                    <a href="#">Twitter</a>
-                </li>
-                <li>
-                    <a href="#">Linkedin</a>
-                </li>
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-            </ul>
+            <div class="footer__box-inner">
+                <a class="address" href="https://goo.gl/maps/v4xGNYtRYcWqCUZCA" target="_blank">Bahnhofstrasse 10,
+                    6300 Zug, Switzerland
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="#">Instagram</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="footer__bottom">
             <p>2022 ® Revver. All rights reserved.</p>
@@ -439,9 +445,13 @@
                 <p style="display: inline; margin-right: 4px">Website by</p><a href="https://celerart.com/"
                                                                                target="_blank">Celerart</a>
             </div>
+            <button class="footer__bottom-button" id="btn">
+                <img src="images/button-footer.svg" alt="Button footer">
+            </button>
         </div>
     </div>
 </footer>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
