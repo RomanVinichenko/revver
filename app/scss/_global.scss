@@ -70,22 +70,13 @@ strong {
     display: none;
   }
 
-  &--home {
+  &--main {
     max-width: 1216px;
   }
 
   &--technical {
     padding: 0 36px;
     max-width: 1920px;
-
-    @include r($lg) {
-      padding: 0 24px;
-    }
-  }
-
-  &--main {
-    padding: 0 36px;
-    max-width: 1548px;
 
     @include r($lg) {
       padding: 0 24px;
