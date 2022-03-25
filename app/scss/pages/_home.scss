@@ -87,7 +87,6 @@
 .home-top {
   position: relative;
   overflow: hidden;
-  border-radius: 0 0 24px 24px;
   color: $white;
   background-color: $black;
 
@@ -155,8 +154,9 @@
   &__img {
     z-index: 1;
     align-self: flex-end;
+    margin-right: -120px;
     margin-left: -50px;
-    max-width: 50%;
+    max-width: 55%;
     object-fit: cover;
 
     @include r($xl) {
@@ -178,7 +178,7 @@
   h1 {
     margin-bottom: 19px;
     width: 100%;
-    max-width: 670px;
+    max-width: 647px;
     font-weight: 700;
     font-size: 64px;
     line-height: 72px;
@@ -274,7 +274,7 @@
 
   &__scroll {
     position: absolute;
-    left: -53px;
+    left: -32px;
     bottom: 64px;
 
     p {
