@@ -378,8 +378,16 @@
 }
 
 .read {
-  margin: 0 auto;
+  margin: 90px auto 0;
   max-width: 784px;
+
+  &__info {
+    margin: 0 15px 0 0;
+
+    @include r($md) {
+      margin: 0 0 30px;
+    }
+  }
 
   li {
     display: flex;
@@ -424,5 +432,14 @@
         letter-spacing: -0.01em;
       }
     }
+
+    @include r($md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @include r($xl) {
+    margin: 60px auto 0;
   }
 }
