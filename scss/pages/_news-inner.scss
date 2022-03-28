@@ -444,21 +444,31 @@
     }
   }
 
-  img {
+  &__img {
     margin-top: -85px;
-    width: 368px;
-    height: 368px;
+    overflow: hidden;
+    max-height: 368px;
     border-radius: 24px;
-    object-fit: cover;
 
-    @include r($lg) {
-      width: 328px;
-      height: 328px;
-    }
 
-    @include r($md) {
-      margin-top: 0;
-      margin-bottom: 43px;
+    img {
+      width: 368px;
+      height: 368px;
+      object-fit: cover;
+      transition: transform 0.5s;
+
+      @include r($lg) {
+        width: 328px;
+        height: 328px;
+      }
+
+      @include r($md) {
+        margin-top: 0;
+        margin-bottom: 43px;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
