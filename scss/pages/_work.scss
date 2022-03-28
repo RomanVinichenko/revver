@@ -1,4 +1,5 @@
 .work {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-bottom: 144px;
@@ -13,7 +14,8 @@
 }
 
 .vacancy {
-  position: relative; //need
+  position: sticky;
+  top: 0;
   padding: 50px;
   width: 100%;
   height: fit-content;
@@ -73,6 +75,7 @@
   }
 
   @include r($lg) {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -378,6 +381,14 @@
   .work {
     padding-bottom: 0;
     background-color: #fff;
+  }
+
+  .vacancy {
+    top: -200px;
+
+    @include r($lg) {
+      top: 0;
+    }
   }
 
   &__close {

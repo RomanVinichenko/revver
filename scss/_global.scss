@@ -107,6 +107,12 @@ strong {
   }
 }
 
+.round-only {
+  z-index: 2;
+  margin-bottom: -24px;
+  border-radius: 0 0 24px 24px;
+}
+
 .button-home {
   display: flex;
   align-items: center;
@@ -297,13 +303,12 @@ blockquote {
   span {
     display: block;
     margin-right: 12px;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: -0.01em;
 
     @include r($md) {
       font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
     }
   }
 
