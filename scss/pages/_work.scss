@@ -343,3 +343,50 @@
     max-width: 100%;
   }
 }
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 200px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(#0f0f11, 0.25);
+  transition: all 0.5s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(#0f0f11, 0.25);
+  }
+
+  &__active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .work {
+    padding-bottom: 0;
+    background-color: #fff;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}

@@ -22,7 +22,7 @@
                 <img src="images/logo.svg" alt="Logo">
             </a>
             <div class="menu__main">
-                <ul class="menu__main-list" >
+                <ul class="menu__main-list">
                     <li class="active">
                         <a href="index.html">
                             Home
@@ -109,10 +109,10 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <div>
@@ -125,27 +125,10 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
-                </li>
-                <li>
-                    <div>
-                        <div class="job-type">
-                            <p>Part-time</p>
-                            <p>Full-time</p>
-                        </div>
-                        <a class="job__title" href="#"><span>Legal Engineer</span></a>
-                        <div class="location">
-                            <span>Office</span>
-                            <span>Kyiv, Ukraine</span>
-                        </div>
-                    </div>
-                    <a class="green-link" href="#">
-                        <span>Apply now</span>
-                        <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <div>
@@ -159,10 +142,10 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <div>
@@ -176,10 +159,27 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
+                </li>
+                <li>
+                    <div>
+                        <div class="job-type">
+                            <p>Part-time</p>
+                            <p>Full-time</p>
+                        </div>
+                        <a class="job__title" href="#"><span>Legal Engineer</span></a>
+                        <div class="location">
+                            <span>Office</span>
+                            <span>Kyiv, Ukraine</span>
+                        </div>
+                    </div>
+                    <button class="green-link" href="#">
+                        <span>Apply now</span>
+                        <img src="images/read.svg" alt="Read Button">
+                    </button>
                 </li>
             </ul>
             <div class="job__category">Managment</div>
@@ -196,10 +196,10 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <div>
@@ -213,10 +213,10 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
                 </li>
                 <li>
                     <div>
@@ -230,10 +230,10 @@
                             <span>Kyiv, Ukraine</span>
                         </div>
                     </div>
-                    <a class="green-link" href="#">
+                    <button class="green-link" href="#">
                         <span>Apply now</span>
                         <img src="images/read.svg" alt="Read Button">
-                    </a>
+                    </button>
                 </li>
             </ul>
         </section>
@@ -338,7 +338,7 @@
             <p>2022 ® Revver. All rights reserved.</p>
             <div>
                 <p style="display: inline; margin-right: 4px">Designed by</p><a href="https://celerart.com/"
-                                                                               target="_blank">Celerart</a>
+                                                                                target="_blank">Celerart</a>
             </div>
             <button class="footer__bottom-button" id="btn">
                 <img src="images/button-footer.svg" alt="Button footer">
@@ -347,9 +347,158 @@
     </div>
 </footer>
 
+<div class="popup ">
+    <div class="work">
+        <section class="vacancy">
+            <h2>Senior Frontend Developer</h2>
+            <div class="location">
+                <span>Office</span>
+                <span>Kyiv, Ukraine</span>
+            </div>
+            <form class="apply">
+                <label for="apply-name-mobile">
+                    <span>Full Name</span>
+                    <input type="text" placeholder="Enter your full name" name="apply-name" id="apply-name-mobile">
+                </label>
+                <label for="apply-email-mobile">
+                    <span>Email address</span>
+                    <input type="email" placeholder="example@gmail.com" name="apply-email" id="apply-email-mobile">
+                </label>
+                <label for="apply-phone-mobile">
+                    <span>Phone</span>
+                    <input type="tel" placeholder="Enter your Phone" name="apply-phone" id="apply-phone-mobile">
+                </label>
+                <label for="apply-cv-mobile" style="margin-bottom: 32px">
+                    <span>Submit your CV</span>
+                    <input type="text" placeholder="Drag here or click on upload icon" name="apply-cv"
+                           id="apply-cv-mobile">
+                    <img src="images/upload.svg" alt="Upload">
+                </label>
+                <div style="display: flex">
+                    <button type="submit">
+                        Apply Now
+                    </button>
+                    <a class="attach-form" href="#">
+                        <img src="images/vacation.svg" alt="Link">
+                    </a>
+                </div>
+            </form>
+            <a class="attach-global" href="#">
+                <img src="images/link-apply.svg" alt="Link">
+            </a>
+        </section>
 
+        <section class="work-info">
+            <button class="popup__close">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.25" cx="22" cy="22" r="21.5" stroke="#0F0F11"/>
+                    <path d="M30 14L22 22M14 30L22 22M22 22L14 14M22 22L30 30" stroke="#0F0F11" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <div class="work-info__wrapper">
+                <h3>We are looking for a strong Senior Frontend Developer to expand the existing team with skills and
+                    experience.</h3>
+                <div class="job-type">
+                    <p>Part-time</p>
+                    <p>Full-time</p>
+                </div>
+                <ul class="work-info__place">
+                    <li>
+                        <span>Location</span>
+                        <p>Kyiv, Ukraine</p>
+                    </li>
+                    <li>
+                        <span>Job Type</span>
+                        <p>Permanent</p>
+                    </li>
+                </ul>
+                <div class="work-info__descr">
+                    <p>
+                        We are looking for a strong Senior Frontend Developer to expand the existing team with his/her
+                        skills
+                        and experience. Key responsibilities include the timely delivery of the new complex features
+                        with
+                        high
+                        code quality standards, modifying of existing functionality, peers code reviews, confident
+                        understanding.
+                    </p>
+                    <br>
+                    <h4>
+                        Here is what you should avoid or ask your
+                        colleagues to avoid:
+                    </h4>
+                    <ul>
+                        <li>
+                            Deliver new or amend existing features
+                        </li>
+                        <li>
+                            Ensure high code quality standards
+                        </li>
+                        <li>
+                            Provide vision and judgement
+                        </li>
+                        <li>
+                            Perform code reviews
+                        </li>
+                        <li>
+                            Collaborate with CTO/Solution Architect
+                        </li>
+                        <li>
+                            Collaborate with team members and solution stakeholders
+                        </li>
+                    </ul>
+                    <p>
+                        We are looking for a strong Senior Frontend Developer to expand the existing team with his/her
+                        skills
+                        and experience. Key responsibilities include the timely delivery of the new complex features
+                        with
+                        high
+                        code quality standards, modifying of existing functionality, peers code reviews, confident
+                        understanding.
+                    </p>
+                    <p>
+                        We are looking for a strong Senior Frontend Developer to expand the existing team with his/her
+                        skills
+                        and experience. Key responsibilities include the timely delivery of the new complex features
+                        with
+                        high
+                        code quality standards, modifying of existing functionality, peers code reviews, confident
+                        understanding.
+                    </p>
+                    <br>
+                </div>
+                <form class="apply apply--mobile">
+                    <label for="apply-name">
+                        <span>Full Name</span>
+                        <input type="text" placeholder="Enter your full name" name="apply-name" id="apply-name">
+                    </label>
+                    <label for="apply-email">
+                        <span>Email address</span>
+                        <input type="email" placeholder="example@gmail.com" name="apply-email" id="apply-email">
+                    </label>
+                    <label for="apply-phone">
+                        <span>Phone</span>
+                        <input type="tel" placeholder="Enter your Phone" name="apply-phone" id="apply-phone">
+                    </label>
+                    <label for="apply-cv" style="margin-bottom: 32px">
+                        <span>Submit your CV</span>
+                        <input type="text" placeholder="Drag here or click on upload icon" name="apply-cv"
+                               id="apply-cv">
+                        <img src="images/upload.svg" alt="Upload">
+                    </label>
+                    <div>
+                        <button type="submit">
+                            Apply Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<script src='js/join.js'></script>
 <script src='js/main.js'></script>
 
 </body>
