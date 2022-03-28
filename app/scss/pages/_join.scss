@@ -1,6 +1,13 @@
 .join {
   padding: 111px 0 236px;
 
+  .green-link {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
   &__open {
     display: flex;
     justify-content: space-between;
