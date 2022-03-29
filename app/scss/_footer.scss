@@ -81,7 +81,7 @@
     }
   }
 
-  &__back {
+  .footer-back {
     display: flex;
     align-items: center;
     padding: 0;
@@ -89,14 +89,14 @@
     background-color: transparent;
     cursor: pointer;
 
-    .back__text {
+    &__text {
       display: block;
       margin-right: 16px;
       letter-spacing: -0.01em;
       color: $white;
     }
 
-    .footer__dot {
+    &__dot {
       position: relative;
       width: 68px;
       height: 68px;
@@ -120,7 +120,7 @@
     }
 
     &:hover {
-      .footer__dot {
+      .footer-back__dot {
         border: 1px solid transparent;
 
         &::before {
@@ -205,7 +205,7 @@
     }
   }
 
-  &__bottom-button {
+  .footer-back__mobile {
     display: none;
 
     @include r($md) {

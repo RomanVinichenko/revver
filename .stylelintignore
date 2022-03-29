@@ -2,3 +2,4 @@
 /src/sass/libs
 *.html
 *.min.css
+_mixins.scss

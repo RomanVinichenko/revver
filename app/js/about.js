@@ -4,12 +4,11 @@ $(function () {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2500,
         dots: false,
         arrows: true
     });
-
 });
 
 function ScrollAbout1(){
