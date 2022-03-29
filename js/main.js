@@ -43,6 +43,9 @@ $(function () {
 $("#btn").click(function () {
     jQuery('html,body').animate({scrollTop: 0}, 800);
 })
+$(".footer__back").click(function () {
+    jQuery('html,body').animate({scrollTop: 0}, 800);
+})
 
 
 var prevScrollpos = window.pageYOffset;
@@ -55,17 +58,6 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
-
-// let currentScrollPosition = 0;
-// $(window).scroll(function () {
-//     let newScrollPosition = $(this).scrollTop();
-//     if (newScrollPosition > currentScrollPosition){
-//         // меняем класс по скроллу вниз
-//     } else {
-//         // меняем класс по скроллу вверх
-//     }
-//     currentScrollPosition = newScrollPosition;
-// });
 
 
 

@@ -3,7 +3,6 @@ const popUp = document.querySelector('.popup')
 const close = document.querySelector('.popup__close')
 const body = document.body
 
-const sale = document.querySelectorAll('.sales__item');
 buttonVacancy.forEach((buttonVacancy) => {
     buttonVacancy.addEventListener('click', function () {
         popUp.classList.add('popup__active');
