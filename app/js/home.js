@@ -1,28 +1,3 @@
-const control = document.querySelector('.home-top__slider');
-const textOne = document.querySelector('.text-one')
-const topImg = document.querySelector('.home-top__img')
-const currentText = textOne.innerText;
-const currentImg = topImg.attributes;
-
-control.addEventListener('click', function () {
-    this.classList.toggle('home-top__slider--active');
-
-    if(textOne.innerText === currentText){
-        textOne.innerText = "A POS system that works efficiently with";
-    }
-    else{
-        textOne.innerText = currentText;
-    }
-
-    if(topImg.attributes === currentImg){
-        topImg.setAttribute('src', 'images/thank-1.png');
-    }
-    else{
-        topImg.attributes = currentImg;
-    }
-}, false);
-
-
 const link = document.querySelector('.links');
 const bunch = document.querySelector('.bunch');
 link.addEventListener('click', function () {
@@ -35,7 +10,6 @@ $(function () {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
         autoplaySpeed: 2000,
         dots: false,
         arrows: true,
@@ -69,4 +43,18 @@ $(function () {
         );
     });
 });
+
+const questionItem = document.querySelectorAll('.question__item')
+const questPop = document.querySelector('.quest-pop')
+
+questionItem.forEach((questionItem) => {
+    questionItem.addEventListener('click', function () {
+        questPop.classList.add('quest-pop--active');
+    });
+});
+
+const questClose = document.querySelector('.quest-pop__close')
+questClose.addEventListener('click', function () {
+    questPop.classList.remove('quest-pop--active');
+})
 
