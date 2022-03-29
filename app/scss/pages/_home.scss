@@ -87,12 +87,12 @@
 }
 
 .quest-pop {
-  z-index: 5;
-  display: flex;
-  justify-content: flex-end;
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
   visibility: hidden;
   opacity: 0;
   width: 100%;
@@ -101,22 +101,25 @@
   transition: all 0.3s;
 
   &__wrapper {
-    background-color: #fff;
-    max-width: 858px;
     padding: 112px 80px;
-    border-radius: 24px 0 0 0;
+    max-width: 858px;
+    border-radius: 24px 0 0;
+    background-color: #fff;
+
     h4 {
+      margin-bottom: 69px;
+      padding-top: 36px;
+      border-top: 1px solid #000;
       font-weight: 600;
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
-      margin-bottom: 69px;
-      padding-top: 36px;
-      border-top: 1px solid #000;
     }
+
     p {
       letter-spacing: -0.01em;
-      +p{
+
+      +p {
         margin-top: 32px;
       }
     }
@@ -124,18 +127,19 @@
 
   &__close {
     position: absolute;
-    top: 24px;
     right: 24px;
-    border: none;
+    top: 24px;
     padding: 0;
     width: 24px;
     height: 24px;
+    border: none;
     background-color: transparent;
     cursor: pointer;
   }
+
   &--active {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
   }
 }
 
