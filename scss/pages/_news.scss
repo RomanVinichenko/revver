@@ -352,6 +352,8 @@
   }
 
   &__title {
+    @include text-clamp;
+
     display: block;
     margin-bottom: 12px;
     font-weight: 700;

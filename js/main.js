@@ -5,6 +5,13 @@ const curMenuText = menuText.innerText;
 const blur = document.querySelector(".blur");
 const menuSecond = document.querySelector(".menu__second");
 const header = document.querySelector(".header");
+// const copiedClose = document.querySelector(".copied__close");
+// const copied = document.querySelector(".copied");
+//
+// copiedClose.addEventListener('click', () => {
+//     copied.classList.add('copied--hide');
+//
+// })
 
 menuButton.addEventListener('click', function () {
     menuMain.classList.toggle('menu__main--active');
@@ -40,13 +47,9 @@ $(function () {
     });
 });
 
-$("#btn").click(function () {
+$(".footer-back__mobile, .footer-back, .logo").click(function () {
     jQuery('html,body').animate({scrollTop: 0}, 800);
 })
-$(".footer__back").click(function () {
-    jQuery('html,body').animate({scrollTop: 0}, 800);
-})
-
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
