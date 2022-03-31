@@ -11,9 +11,6 @@
   -webkit-line-clamp: 2;
 }
 
-//@include text-clamp;
-//-webkit-line-clamp: ;
-
 @mixin slick {
   .slick-next,
   .slick-prev {

@@ -1,44 +1,6 @@
 .home {
-  h2 {
-    margin: 0 auto 20px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -0.02em;
-    text-align: center;
-
-    @include r($lg) {
-      font-size: 40px;
-      line-height: 48px;
-    }
-
-    @include r($lg) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-
-    @include r($md) {
-      margin: 0 auto 15px 0;
-      text-align: left;
-    }
-  }
-
   .integration {
     margin-bottom: 192px;
-
-    .category {
-      margin: 0 auto 10px 0;
-    }
-
-    h2 {
-      margin: 0 auto 20px 0;
-      max-width: 684px;
-      text-align: left;
-
-      @include r($md) {
-        margin: 0 auto 15px 0;
-      }
-    }
 
     @include r($xl) {
       margin-bottom: 120px;
@@ -50,24 +12,7 @@
   }
 
   .business {
-    margin-bottom: 216px;
-
-    .general__link {
-      span {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      svg {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
-    @include r($lg) {
-      margin-bottom: 100px;
-    }
+    margin-bottom: 176px;
 
     @include r($lg) {
       margin-bottom: 88px;
@@ -75,13 +20,18 @@
   }
 
   .retail {
-    margin-bottom: 208px;
+    margin-bottom: 248px;
 
-    h2 {
-      @include r($md) {
-        margin: 0 auto 15px;
-        text-align: center;
-      }
+    h3 {
+      padding: 0 24px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 100px;
+    }
+
+    @include r($md) {
+      margin-bottom: 80px;
     }
   }
 }
@@ -90,7 +40,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: 7;
   display: flex;
   justify-content: flex-end;
   visibility: hidden;
@@ -114,14 +64,27 @@
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
+
+      @include r($xl) {
+        margin-bottom: 40px;
+        padding-top: 32px;
+      }
     }
 
     p {
       letter-spacing: -0.01em;
 
-      +p {
+      + p {
         margin-top: 32px;
       }
+    }
+
+    @include r($xl) {
+      padding: 96px 24px;
+    }
+
+    @include r($lg) {
+      border-radius: 0;
     }
   }
 
@@ -145,32 +108,33 @@
 
 .home-top {
   position: relative;
+  z-index: 2;
   overflow: hidden;
   color: $white;
-  background-color: $black;
+  background-color: $green;
 
-  &::after {
-    content: "";
-    position: absolute;
-    right: -500px;
-    top: -476px;
-    opacity: 0.85;
-    width: 1123px;
-    height: 1123px;
-    border-radius: 50%;
-    background-color: $green;
-    filter: blur(1000px);
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  right: -500px;
+  //  top: -476px;
+  //  opacity: 0.85;
+  //  width: 1123px;
+  //  height: 1123px;
+  //  border-radius: 50%;
+  //  background-color: $green;
+  //  filter: blur(1000px);
+  //
+  //  @include r($xl) {
+  //    filter: blur(800px);
+  //  }
+  //
+  //  @include r($md) {
+  //    display: none;
+  //  }
+  //}
 
-    @include r($xl) {
-      filter: blur(800px);
-    }
-
-    @include r($md) {
-      display: none;
-    }
-  }
-
-  .general__link {
+  .green-link {
     &:hover {
       svg {
         circle {
@@ -194,8 +158,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 100vh;
-    max-height: 100vh;
 
     @include r($md) {
       flex-direction: column;
@@ -316,25 +278,24 @@
   padding: 144px 0 160px;
 
   h2 {
-    max-width: 839px;
+    max-width: 750px;
 
     @include r($md) {
       margin: 0 auto 32px 0;
+      text-align: left;
     }
   }
 
   &__text {
-    margin: 0 auto 42px;
-    max-width: 547px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: $grey-text;
-
     @include r($md) {
       display: none;
     }
+  }
+
+  .general-text {
+    margin: 0 auto 42px;
+    max-width: 540px;
+    text-align: center;
   }
 
   &__info {
@@ -348,6 +309,10 @@
     @include r($lg) {
       flex-direction: column;
       padding: 32px 28px 0;
+
+      .general-text {
+        margin: 0 auto 42px 0;
+      }
     }
 
     @include r($md) {
@@ -381,9 +346,8 @@
       }
     }
 
-    h4 {
+    h5 {
       margin-bottom: 7px;
-      font-weight: 700;
       font-size: 18px;
       line-height: 28px;
 
@@ -393,10 +357,9 @@
       }
     }
 
-    p {
-      font-size: 16px;
-      line-height: 24px;
-      color: $grey-text;
+    .general-text {
+      margin-bottom: 0;
+      text-align: left;
 
       @include r($lg) {
         font-size: 14px;
@@ -413,7 +376,7 @@
   &__img {
     margin: auto 0;
     width: 100%;
-    max-width: 393px;
+    max-width: 450px;
 
     img {
       width: 100%;
@@ -443,8 +406,6 @@
   margin-bottom: 184px;
 
   h2 {
-    margin: 0 auto 13px;
-
     @include r($md) {
       margin: 0 auto 15px;
       text-align: center;
@@ -457,18 +418,18 @@
     }
   }
 
-  &__text {
+  .general-text {
     margin: 0 auto 58px;
     max-width: 618px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
     text-align: center;
-    color: $grey-text;
 
     @include r($lg) {
       margin-bottom: 41px;
     }
+  }
+
+  &__area {
+    position: relative;
   }
 
   ul {
@@ -478,12 +439,18 @@
 
     li {
       position: relative;
-      padding: 20px;
       width: 100%;
       min-height: 680px;
       border-radius: 24px;
       background-position: center;
       background-size: cover;
+
+      img {
+        position: absolute;
+        width: 128px;
+        height: 30px;
+        object-fit: contain;
+      }
 
       @include r($lg) {
         min-height: 540px;
@@ -496,14 +463,11 @@
 
     li:first-child {
       margin-right: 24px;
-      max-width: 70%;
+      max-width: 67%;
 
       img {
-        position: absolute;
         left: 28px;
         bottom: 28px;
-        width: 128px;
-        height: 30px;
       }
 
       @include r($lg) {
@@ -517,14 +481,11 @@
     }
 
     li:last-child {
-      max-width: 30%;
+      max-width: 33%;
 
       img {
-        position: absolute;
         right: 28px;
         top: 28px;
-        width: 128px;
-        height: 30px;
       }
 
       @include r($lg) {
@@ -533,15 +494,11 @@
     }
   }
 
-  &__area {
-    position: relative;
-  }
-
   &__block {
     position: absolute;
     left: 20px;
     top: 20px;
-    z-index: 5;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     padding: 23px;
@@ -656,7 +613,7 @@
   }
 
   h2 {
-    margin: 0 auto 14px 0;
+    margin: 0 auto 20px 0;
     max-width: 644px;
     text-align: left;
 
@@ -666,11 +623,10 @@
     }
   }
 
-  &__text {
-    margin: 0 0 56px;
+  .general-text {
+    margin-bottom: 56px;
     max-width: 600px;
     text-align: left;
-    color: $grey-text;
 
     @include r($md) {
       margin: 0 auto 50px;
@@ -697,20 +653,18 @@
 
       h4 {
         margin-bottom: 7px;
-        font-weight: 700;
         font-size: 24px;
         letter-spacing: -0.02em;
       }
 
-      p {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        color: $grey-text;
+      .general-text {
+        @include r($md) {
+          margin: 0 auto 0 0;
+          text-align: left;
+        }
       }
 
       span {
-        display: block;
         margin-top: auto;
         font-weight: 600;
         font-size: 14px;
@@ -769,16 +723,11 @@
   background-color: $white;
 
   h2 {
-    margin: 0 auto 20px 0;
     text-align: left;
   }
 
-  p {
+  .general-text {
     max-width: 540px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
   }
 
   &__info {
@@ -825,16 +774,29 @@
 
       a {
         display: block;
+        width: fit-content;
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.01em;
-        text-decoration: underline;
-        text-underline-offset: 2px;
+
+        span {
+          width: calc(100%);
+          background-image: linear-gradient(transparent calc(100% - 1px), $black 1px);
+          background-size: 0 90%;
+          background-repeat: no-repeat;
+          transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        }
       }
 
       &:hover {
         opacity: 1;
+
+        a {
+          span {
+            background-size: 100% 90%;
+          }
+        }
       }
     }
 
@@ -891,7 +853,7 @@
     }
   }
 
-  .general__link {
+  .green-link {
     svg {
       width: 32px;
       height: 32px;

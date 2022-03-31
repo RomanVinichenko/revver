@@ -1,10 +1,11 @@
-const menuButton = document.querySelector(".menu__button");
-const menuMain = document.querySelector(".menu__main");
-const menuText = document.querySelector(".menu__text");
-const curMenuText = menuText.innerText;
-const blur = document.querySelector(".blur");
-const menuSecond = document.querySelector(".menu__second");
-const header = document.querySelector(".header");
+// 0. GLOBAL START
+
+if (typeof browser === "undefined") {
+    var browser = chrome;
+}
+
+// COPIED
+
 // const copiedClose = document.querySelector(".copied__close");
 // const copied = document.querySelector(".copied");
 //
@@ -13,11 +14,50 @@ const header = document.querySelector(".header");
 //
 // })
 
+// HEADER MOVEMENT
+
+// $(window).scroll(function () {
+//     if ($(this).scrollTop() > 1) {
+//         $('.').addClass('');
+//     } else {
+//         $('.').removeClass('');
+//     }
+// });
+
+// MOVE TO TOP
+
+$(".footer-back__mobile, .footer-back, .logo").click(function () {
+    jQuery('html,body').animate({scrollTop: 0}, 800);
+})
+
+// HEADER HIDE
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".header").classList.add('header--active');
+    } else {
+        document.querySelector(".header").classList.remove('header--active');
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+// MENU TOGGLE
+
+const menuButton = document.querySelector(".menu__button");
+const menuMain = document.querySelector(".menu__main");
+const menuText = document.querySelector(".menu__text");
+const curMenuText = menuText.innerText;
+const blur = document.querySelector(".blur");
+const menuSecond = document.querySelector(".menu__second");
+const header = document.querySelector(".header");
+
 menuButton.addEventListener('click', function () {
     menuMain.classList.toggle('menu__main--active');
     menuButton.classList.toggle('menu__button--active');
     blur.classList.toggle('blur--active');
-    header.classList.toggle('header--active');
+    header.classList.toggle('header--go');
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -30,37 +70,154 @@ menuButton.addEventListener('click', function () {
     }
 }, false);
 
-$(function () {
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 120) {
-            $('.header__main').addClass('header__main--active');
-        } else {
-            $('.header__main').removeClass('header__main--active');
-        }
+// 0. GLOBAL FINISH
+
+// 1. HOME START
+
+// HOME PAGES BAR (FOR DEV)
+
+const link = document.querySelector('.links');
+const bunch = document.querySelector('.bunch');
+
+if (link) {
+    link.addEventListener('click', function () {
+        bunch.classList.toggle('bunch--active');
     });
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1) {
-            $('.header').addClass('header--scroll');
-        } else {
-            $('.header').removeClass('header--scroll');
+}
+
+// HOME-CAROUSEL (ANSWER)
+
+$('.question').slick({
+    loop: true,
+    infinite: true,
+    slidesToShow: 3,
+    swipe: false,
+    slidesToScroll: 1,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 624,
+            settings: {
+                slidesToShow: 1,
+            },
         }
+    ]
+});
+
+// HOME POPUP
+
+const questionItem = document.querySelectorAll('.question__item')
+const questPop = document.querySelector('.quest-pop')
+const questClose = document.querySelector('.quest-pop__close')
+
+if (questionItem) {
+    questionItem.forEach((questionItem) => {
+        questionItem.addEventListener('click', function () {
+            questPop.classList.add('quest-pop--active');
+        });
+    });
+}
+
+if (questClose) {
+    questClose.addEventListener('click', function () {
+        questPop.classList.remove('quest-pop--active');
+    })
+}
+
+// FOOTER ANIMATION
+
+function calcFooterHeight() {
+    const footerAnim = document.querySelector('.footer').scrollHeight;
+    const footerPusher = document.querySelector('.footer__pusher');
+
+    footerPusher.style.minHeight = footerAnim + 'px';
+}
+
+window.addEventListener('DOMContentLoaded', calcFooterHeight);
+window.addEventListener('resize', calcFooterHeight);
+
+// 1. HOME FINISH
+
+// 2. PRODUCT START
+// 2. PRODUCT FINISH
+
+// 3. ABOUT
+
+$(function () {
+    $('.review__items').slick({
+        loop: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        dots: false,
+        arrows: true
     });
 });
 
-$(".footer-back__mobile, .footer-back, .logo").click(function () {
-    jQuery('html,body').animate({scrollTop: 0}, 800);
-})
+// 3. ABOUT FINISH
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".header").style.top = "0";
-    } else {
-        document.querySelector(".header").style.top = "-92px";
-    }
-    prevScrollpos = currentScrollPos;
+// 4. NEWS INNER PAGE START
+
+$('.propose__info a').on('click', function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top - 20;
+    $('body,html').animate(
+        {
+            scrollTop: top,
+        },
+        800,
+    );
+});
+
+// 4. NEWS INNER PAGE FINISH
+
+// 5. JOIN US START
+
+const buttonVacancy = document.querySelectorAll('.green-link')
+const popUp = document.querySelector('.popup')
+const close = document.querySelector('.popup__close')
+const body = document.body
+
+buttonVacancy.forEach((buttonVacancy) => {
+    buttonVacancy.addEventListener('click', function () {
+        popUp.classList.add('popup__active');
+        body.style.overflow = 'hidden';
+    });
+});
+
+if(close) {
+    close.addEventListener('click', function () {
+        popUp.classList.remove('popup__active');
+        body.style.overflow = 'auto';
+    })
 }
+
+buttonVacancy.forEach((buttonVacancy) => {
+    buttonVacancy.addEventListener('click', function () {
+        OpenPopUpInJoinUs(this, dadAr);
+        body.style.overflow = 'hidden';
+    });
+});
+
+// 5. JOIN US FINISH
+
+
+
+
+
+
+
 
 
 

@@ -368,11 +368,13 @@
 
   .work {
     padding-bottom: 0;
+    border-radius: 24px;
     background-color: #fff;
   }
 
   .vacancy {
     top: -200px;
+    height: auto;
 
     @include r($lg) {
       top: 0;

@@ -1,21 +1,46 @@
 .header {
-  z-index: 3;
-  padding: 24px 0 48px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  padding: 24px 0;
   background-color: $black;
   transition: all 0.5s;
 
-  &--scroll {
-    position: fixed;
-    left: 0;
+  &::before {
+    content: "";
+    position: absolute;
     right: 0;
-    top: 0;
-    z-index: 4;
-    padding: 10px 0;
-    transition: padding 0.5s;
+    bottom: -24px;
+    width: 24px;
+    height: 24px;
+    background-image: radial-gradient(circle at 0 100%, transparent 24px, $black 25px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 24px;
+    height: 24px;
+    background-image: radial-gradient(circle at 100% 100%, transparent 24px, $black 25px);
+  }
+
+  &__pusher {
+    display: block;
+    min-height: 92px;
+    background-color: $black;
+    pointer-events: auto;
   }
 
   &--active {
-    z-index: 4;
+    z-index: 6;
+  }
+
+  &--go {
+    z-index: 6;
   }
 
   @include r($lg) {
@@ -312,21 +337,6 @@
   &__second--inactive {
     opacity: 0;
   }
-}
-
-.header__main {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding: 24px 0;
-  background-color: transparent;
-  transition: padding-bottom 0.2s, background-color 0.3s;
-}
-
-.header__main--active {
-  padding: 10px 0;
-  background-color: rgba($black, 0.8);
 }
 
 .blur {
