@@ -48,8 +48,34 @@ body {
 }
 
 .main {
+  position: relative;
+  z-index: 5;
   flex-grow: 1;
+  margin: 0 0 -24px;
+  border-radius: 24px;
   background-color: $grey-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    background-image: radial-gradient(circle at 0 100%, transparent 24px, $black 25px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    background-image: radial-gradient(circle at 100% 100%, transparent 24px, $black 25px);
+  }
 }
 
 .copied {
@@ -150,12 +176,6 @@ strong {
     margin: -20px 0 0;
     border-radius: 20px 20px 0 0;
   }
-}
-
-.round-only {
-  z-index: 2;
-  margin-bottom: -24px;
-  border-radius: 0 0 24px 24px;
 }
 
 .button-home {
@@ -339,22 +359,16 @@ blockquote {
   }
 }
 
-.general__link {
+.green-link {
   display: flex;
   align-items: center;
-  max-width: fit-content;
-  background-color: transparent;
 
   span {
-    display: block;
     margin-right: 12px;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
-
-    @include r($md) {
-      font-weight: 600;
-    }
   }
 
   svg {
@@ -365,19 +379,11 @@ blockquote {
     circle {
       transition: fill 0.2s;
     }
-
-    @include r($md) {
-      width: 32px;
-      height: 32px;
-    }
-
-    @include r($md) {
-      width: 32px;
-      height: 32px;
-    }
   }
 
   &:hover {
+    color: inherit;
+
     svg {
       circle {
         fill: $black;
@@ -387,312 +393,6 @@ blockquote {
         stroke: $white;
       }
     }
-  }
-}
-
-.integration {
-  &__text {
-    margin-bottom: 50px;
-    max-width: 620px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
-
-    @include r($lg) {
-      margin-bottom: 40px;
-    }
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-
-    li {
-      position: relative;
-      padding: 32px 36px;
-      width: 100%;
-      min-height: 560px;
-      overflow: hidden;
-      border-radius: 24px;
-      background-color: $white;
-
-      h3 {
-        margin-bottom: 19px;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: -0.02em;
-
-        @include r($lg) {
-          margin-bottom: 8px;
-          font-size: 24px;
-          line-height: 32px;
-        }
-      }
-
-      p {
-        max-width: 538px;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        color: $grey-text;
-      }
-
-      img {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        max-width: 450px;
-        object-fit: cover;
-
-        @include r($lg) {
-          max-width: 350px;
-        }
-
-        @include r($sm) {
-          max-width: 200px;
-        }
-      }
-
-      &:first-child {
-        margin: 0 24px 0 0;
-        max-width: 70%;
-
-        @include r($lg) {
-          max-width: 50%;
-        }
-
-        @include r($md) {
-          margin: 0 0 24px;
-          max-width: 100%;
-        }
-      }
-
-      &:last-child {
-        max-width: 30%;
-
-        @include r($lg) {
-          max-width: 50%;
-        }
-
-        @include r($md) {
-          max-width: 100%;
-        }
-      }
-
-      @include r($lg) {
-        min-height: 500px;
-        max-height: 500px;
-        border-radius: 20px;
-      }
-
-      @include r($md) {
-        padding: 23px 28px;
-        min-height: 432px;
-        max-height: 432px;
-      }
-    }
-
-    @include r($md) {
-      flex-direction: column;
-    }
-  }
-
-  .product__unique {
-    max-width: 50%;
-
-    @include r($md) {
-      max-width: 100%;
-    }
-  }
-
-  .product__unique-next {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-
-    @include r($md) {
-      max-width: 100%;
-    }
-  }
-}
-
-.category {
-  display: block;
-  margin: 0 auto 10px;
-  padding: 0 12px;
-  width: fit-content;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: -0.01em;
-  color: $white;
-  background-color: $green;
-
-  @include r($md) {
-    margin: 0 auto 10px 0;
-  }
-}
-
-.business {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &__wrapper {
-    margin: 0 0 0 20px;
-    max-width: 50%;
-
-    @include r($md) {
-      margin: 0 0 40px;
-      max-width: 100%;
-    }
-  }
-
-  h4 {
-    margin-bottom: 22px;
-    max-width: 450px;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.02em;
-
-    @include r($lg) {
-      margin-bottom: 15px;
-      font-size: 24px;
-      line-height: 32px;
-    }
-
-    @include r($md) {
-      max-width: 100%;
-    }
-  }
-
-  p {
-    margin-bottom: 24px;
-    max-width: 500px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
-
-    @include r($lg) {
-      margin-bottom: 18px;
-    }
-
-    @include r($md) {
-      max-width: 100%;
-    }
-  }
-
-  img {
-    max-width: 50%;
-    object-fit: cover;
-
-    @include r($md) {
-      max-width: 100%;
-    }
-  }
-
-  @include r($md) {
-    flex-direction: column-reverse;
-  }
-}
-
-.retail {
-  .category {
-    @include r($md) {
-      margin: 0 auto 10px;
-    }
-  }
-
-  h2 {
-    max-width: 535px;
-
-    @include r($md) {
-      margin: 0 auto 15px;
-      text-align: center;
-    }
-  }
-
-  .retail__text {
-    margin: 0 auto 50px;
-    max-width: 557px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: $grey-text;
-
-    @include r($lg) {
-      margin-bottom: 40px;
-    }
-  }
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 592px;
-    border-radius: 24px;
-    background-color: $white;
-
-    h4 {
-      position: relative;
-      max-width: 317px;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 28px;
-      letter-spacing: -0.01em;
-      text-align: center;
-
-      &::after {
-        content: url("../images/retail-1.svg");
-        position: absolute;
-        left: 50%;
-        top: -52px;
-        width: 40px;
-        height: 40px;
-        transform: translateX(-50%);
-      }
-
-      @include r($md) {
-        margin-bottom: 40px;
-        font-size: 24px;
-        line-height: 32px;
-      }
-    }
-
-    @include r($lg) {
-      min-height: 538px;
-    }
-
-    @include r($md) {
-      flex-direction: column;
-      padding: 120px 24px 50px;
-    }
-  }
-
-  img {
-    max-width: 50%;
-    object-fit: cover;
-
-    @include r($md) {
-      max-width: 80%;
-    }
-
-    @include r($sm) {
-      max-width: 90%;
-    }
-  }
-
-  @include r($xl) {
-    margin-bottom: 100px;
-  }
-
-  @include r($lg) {
-    margin-bottom: 70px;
   }
 }
 
@@ -780,7 +480,7 @@ blockquote {
     background-color: $white;
     transition: background-color 0.2s;
 
-    .general__link {
+    .green-link {
       margin: 0 auto;
       width: 100%;
       max-width: 376px;

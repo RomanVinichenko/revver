@@ -9,12 +9,16 @@
     <meta property="og:image" content="images/cover.jpg"/>
     <title>REVVER: Product</title>
     <link rel="icon" type="image/svg" href="images/fav.svg" sizes="42x36">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.min.css"/>
 </head>
 
 <body>
 
-<header class="header header__main">
+<div class="header__pusher">
+</div>
+
+<header class="header">
     <div class="blur"></div>
     <div class="container container--technical">
         <nav class="menu">
@@ -79,15 +83,14 @@
     </div>
 </header>
 
-<main class="main round-only product">
-
+<main class="main product general">
     <section class="product-top">
         <div class="container">
             <div class="product-top__wrapper">
                 <h1>Fully-featured <br><span style="color: #2FBA56;">POS system.</span></h1>
                 <p>We can speak about existing integrations in this sub-sections, but most importantly we need to talk
                     about a possibility of seamless integration with other systems going forward.</p>
-                <a class="general__link" href="#">
+                <a class="green-link" href="#">
                     <span>Scroll down to Explore</span>
                     <img src="images/read-down.svg" alt="Read button" style="width: 36px; height: 36px;">
                 </a>
@@ -166,7 +169,7 @@
 
     <div class="container">
         <section class="management">
-            <img src="images/business.png" alt="Business">
+            <img src="images/business-product.png" alt="Business">
             <div class="management__wrapper">
                 <span class="category">Managment</span>
                 <h3>Analyze. Manage. Adapt.</h3>
@@ -209,27 +212,38 @@
                     <h3>Let <span style="color: #2FBA56">powerful data
                 lead</span> your business.</h3>
                     <p>Creating a data culture is one of the keys to building a datadriven
-                        organization.</p>
-                    <ul>
-                        <li class="sales__item sales__item--active">
-                            <h4>Transaction</h4>
-                            <a>Learn more</a>
+                        organization.
+                    </p>
+                    <ul class="nav nav-tabs">
+                        <li class="sales__item active">
+                            <h4 data-toggle="tab" href="#home">Transaction</h4>
                         </li>
                         <li class="sales__item">
-                            <h4>Cash management</h4>
-                            <a>Learn more</a>
+                            <h4 data-toggle="tab" href="#menu1">Cash management</h4>
                         </li>
                         <li class="sales__item">
-                            <h4>Sales reports</h4>
-                            <a>Learn more</a>
+                            <h4 data-toggle="tab" href="#menu2">Sales reports</h4>
                         </li>
                         <li class="sales__item">
-                            <h4>Sales analysis</h4>
-                            <a>Learn more</a>
+                            <h4 data-toggle="tab" href="#menu3">Sales analysis</h4>
                         </li>
                     </ul>
                 </div>
-                <img src="images/sales.png" alt="Sales">
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <img src="images/sales.png" alt="Sales">
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <img src="images/sales.png" alt="Sales">
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <img src="images/sales.png" alt="Sales">
+
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <img src="images/sales.png" alt="Sales">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -238,7 +252,7 @@
                 <h4>Boost sales transparency and performance</h4>
                 <p>With multiple integrations and native business add-ons to expand your
                     business,</p>
-                <a class="general__link" href="#">
+                <a class="green-link" href="#">
                     <span>Book a call</span>
                     <img src="images/read-diagonal.svg" alt="Read button" style="width: 32px; height: 32px;">
                 </a>
@@ -274,15 +288,14 @@
                 <p>With multiple integrations and native business add-ons to expand your business is one of Revver`s
                     upcoming projects which will allow businesses to take sales to the floor or off-site as needed.
                 </p>
-                <a class="general__link" href="#">
+                <a class="green-link" href="#">
                     <span>Book a call</span>
                     <img src="images/read.svg" alt="Read button" style="width: 36px; height: 36px;">
                 </a>
             </div>
-            <img src="images/business.png" alt="Business">
+            <img src="images/business-product.png" alt="Business">
         </section>
     </div>
-
 
     <section class="office">
         <span class="category">Back Office</span>
@@ -296,12 +309,12 @@
                     <p>The Revver back-office system is a web-based interface developed to configure the POS and manage
                         sales operations. We are continuously improving it and adding new features.
                     </p>
-                    <a class="general__link" href="#">
+                    <a class="green-link" href="#">
                         <span>Book a call</span>
                         <img src="images/read.svg" alt="Read button" style="width: 36px; height: 36px;">
                     </a>
                 </div>
-                <img src="images/business.png" alt="Business">
+                <img src="images/business-product.png" alt="Business">
             </section>
             <ul>
                 <li>
@@ -339,7 +352,7 @@
         <li>
             <div style="max-width: 376px; width: 100%">
                 <h2>Explore more<br> Features</h2>
-                <a class="general__link" href="#">
+                <a class="green-link" href="#">
                     <span>Watch all Features</span>
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="18" cy="18" r="18" transform="rotate(90 18 18)" fill="#2FBA56"/>
@@ -351,7 +364,7 @@
         <li>
             <div style="max-width: 376px; width: 100%">
                 <h2>Just <br>Book a call</h2>
-                <a class="general__link" href="#">
+                <a class="green-link" href="#">
                     <span>Contact Us</span>
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="18" cy="18" r="18" transform="rotate(90 18 18)" fill="#2FBA56"/>
@@ -428,7 +441,7 @@
             <p>2022 ® Revver. All rights reserved.</p>
             <div>
                 <p style="display: inline; margin-right: 4px">Designed by</p><a href="https://celerart.com/"
-                                                                               target="_blank">Celerart</a>
+                                                                                target="_blank">Celerart</a>
             </div>
             <button class="footer-back__mobile">
                 <img src="images/button-footer.svg" alt="Button footer">
@@ -437,10 +450,14 @@
     </div>
 </footer>
 
+<div class="footer__pusher">
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<script src="js/faq.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
 
 <script src="js/main.js"></script>
 

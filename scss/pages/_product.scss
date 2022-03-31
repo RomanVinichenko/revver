@@ -1,40 +1,4 @@
 .product {
-  h2 {
-    margin: 0 auto 20px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -0.02em;
-    text-align: center;
-
-    @include r($lg) {
-      font-size: 40px;
-      line-height: 48px;
-    }
-
-    @include r($lg) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-
-    @include r($md) {
-      margin: 0 auto 15px 0;
-      text-align: left;
-    }
-  }
-
-  h3 {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.02em;
-
-    @include r($xl) {
-      font-size: 32px;
-      line-height: 40px;
-    }
-  }
-
   &__text {
     margin: 0 auto 66px;
     max-width: 714px;
@@ -70,6 +34,10 @@
       }
     }
   }
+
+  a {
+    text-decoration: none !important;
+  }
 }
 
 .product-top {
@@ -78,7 +46,7 @@
   color: $white;
   background-color: $black;
 
-  .general__link {
+  .green-link {
     z-index: 2;
   }
 
@@ -132,7 +100,7 @@
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    height: calc(100vh - 92px);
     max-width: 538px;
 
     @include r($lg) {
@@ -481,8 +449,7 @@
 
 .sales {
   margin: 0 0 24px;
-  padding: 65px;
-  overflow: hidden;
+  padding: 56px 65px;
   border-radius: 24px;
   color: $white;
   background-color: $black;
@@ -493,6 +460,7 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     @include r($lg) {
@@ -500,6 +468,10 @@
       align-items: flex-start;
       justify-content: flex-start;
     }
+  }
+
+  &__block {
+    max-width: 406px;
   }
 
   h3 {
@@ -528,26 +500,17 @@
     }
   }
 
-  img {
-    max-width: 50%;
-    object-fit: contain;
+  .tab-content {
+    height: 100%;
 
-    @include r($lg) {
-      align-self: center;
-      max-width: 400px;
-    }
-
-    @include r($md) {
-      max-width: 300px;
-    }
-
-    @include r($sm) {
-      max-width: 250px;
+    .tab-pane {
+      //width: 500px;
     }
   }
 
-  ul {
+  .nav-tabs {
     position: relative;
+    border-bottom: none;
 
     &::before {
       content: "";
@@ -556,7 +519,6 @@
       top: 0;
       width: 2px;
       height: 100%;
-      min-height: 286px;
       border-radius: 8px;
       background-color: rgba($white, 0.15);
     }
@@ -564,28 +526,25 @@
 
   &__item {
     position: relative;
-    margin-bottom: 32px;
     padding-left: 64px;
-    transition: margin-bottom 0.3s;
-    cursor: help;
+    cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
       left: 0;
       width: 2px;
-      height: 70px;
+      height: 100%;
       border-radius: 8px;
       background-color: transparent;
-      transform: translateY(-30px);
-      transition: background-color 0.3s, transform 0.3s;
+      transition: background-color 0.3s;
     }
 
     &::after {
       content: "0" counter(section) "";
       position: absolute;
-      left: 34px;
-      top: 15px;
+      left: 32px;
+      top: 50%;
       opacity: 0.15;
       width: 16px;
       height: 16px;
@@ -594,59 +553,30 @@
       line-height: 16px;
       text-align: center;
       color: $white;
+      transform: translateY(-50%);
       transition: opacity 0.3s;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
     }
 
     h4 {
-      z-index: 500;
       opacity: 0.15;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
       letter-spacing: -0.02em;
-      background-color: $black;
       transition: opacity 0.3s;
-    }
-
-    a {
-      position: absolute;
-      left: 64px;
-      top: 46px;
-      opacity: 0;
-      padding-right: 27px;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.01em;
-      transition: opacity 0.3s, top 0.3s;
-      cursor: pointer;
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 14px;
-        height: 11px;
-        background-image: url("../images/arrow-right.svg");
-        transform: translateY(-50%);
-      }
     }
   }
 
-  &__item--active {
-    margin-bottom: 62px;
-    cursor: default;
-
+  .active {
     &::before {
       background-color: $green;
-      transform: translateY(0);
     }
 
     &::after {
-      opacity: 1;
-    }
-
-    a {
       opacity: 1;
     }
 
@@ -771,7 +701,7 @@
     color: $white;
     background-color: $black;
 
-    .general__link {
+    .green-link {
       span {
         font-weight: 600;
       }
