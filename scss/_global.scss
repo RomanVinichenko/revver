@@ -1,11 +1,4 @@
-html,
 body {
-  height: 100%;
-  cursor: default;
-}
-
-body {
-  position: relative;
   display: flex;
   flex-direction: column;
   counter-reset: section;
@@ -15,7 +8,10 @@ body {
   line-height: 32px;
   color: $black;
   background-color: $grey-white;
+  cursor: default;
 }
+
+// ** For open pages (dev point) **
 
 .links {
   position: absolute;
@@ -46,6 +42,8 @@ body {
     display: block;
   }
 }
+
+// ** MAIN **
 
 .main {
   position: relative;
@@ -78,60 +76,13 @@ body {
   }
 }
 
-.copied {
-  position: absolute;
-  top: 50px;
-  z-index: 5;
-  padding: 20px 131px 20px 56px;
-  border-radius: 14px;
-  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.06);
-  background-color: $white;
-
-  &::after {
-    content: url("../images/copied-done.svg");
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    width: 24px;
-    height: 24px;
-    transform: translateY(-50%);
-  }
-
-  p {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-  }
-
-  button {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    padding: 0;
-    width: 16px;
-    height: 16px;
-    border: none;
-    line-height: 16px;
-    background-color: transparent;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-
-  &--hide {
-    display: none;
-  }
-}
-
-strong {
-  font-weight: 700;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
   max-width: 1248px;
+
+  // ** Reset Bootstrap **
 
   &::before {
     display: none;
@@ -142,7 +93,7 @@ strong {
   }
 
   &--main {
-    max-width: 1216px;
+    max-width: 1514px;
   }
 
   &--technical {
@@ -152,29 +103,6 @@ strong {
     @include r($lg) {
       padding: 0 24px;
     }
-  }
-}
-
-.round {
-  z-index: 3;
-  margin: -24px 0;
-  border-radius: 24px;
-  transition: all 0.5s;
-
-  @include r($lg) {
-    margin: -20px 0;
-    border-radius: 20px;
-  }
-}
-
-.round-thank {
-  z-index: 3;
-  margin: -24px 0 0;
-  border-radius: 24px 24px 0 0;
-
-  @include r($lg) {
-    margin: -20px 0 0;
-    border-radius: 20px 20px 0 0;
   }
 }
 
@@ -203,16 +131,6 @@ strong {
   }
 }
 
-blockquote {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-left: 2px solid #2fba56;
-  font-weight: 700;
-  font-size: 32px;
-}
-
 .date {
   display: flex;
   font-size: 12px;
@@ -231,6 +149,49 @@ blockquote {
       height: 1px;
       background-color: $black;
       transform: translateY(-50%);
+    }
+  }
+}
+
+*::selection {
+  color: $white;
+  background-color: $green;
+}
+
+.green-link {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+
+  span {
+    margin-right: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  svg {
+    path {
+      transition: stroke 0.2s;
+    }
+
+    circle {
+      transition: fill 0.2s;
+    }
+  }
+
+  &:hover {
+    color: inherit;
+
+    svg {
+      circle {
+        fill: $black;
+      }
+
+      path {
+        stroke: $white;
+      }
     }
   }
 }
@@ -356,43 +317,6 @@ blockquote {
     flex-direction: column;
     align-items: center;
     margin-top: 90px;
-  }
-}
-
-.green-link {
-  display: flex;
-  align-items: center;
-
-  span {
-    margin-right: 12px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-  }
-
-  svg {
-    path {
-      transition: stroke 0.2s;
-    }
-
-    circle {
-      transition: fill 0.2s;
-    }
-  }
-
-  &:hover {
-    color: inherit;
-
-    svg {
-      circle {
-        fill: $black;
-      }
-
-      path {
-        stroke: $white;
-      }
-    }
   }
 }
 
@@ -574,4 +498,69 @@ blockquote {
     flex-direction: column;
     align-items: center;
   }
+}
+
+// ** Styles for blockquote **
+
+blockquote {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #2fba56;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+// ** Styles for copied block **
+
+.copied {
+  position: absolute;
+  top: 50px;
+  z-index: 5;
+  padding: 20px 131px 20px 56px;
+  border-radius: 14px;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.06);
+  background-color: $white;
+
+  &::after {
+    content: url("../images/copied-done.svg");
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  button {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    border: none;
+    line-height: 16px;
+    background-color: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+// ** Styles for font **
+
+strong {
+  font-weight: 700;
 }

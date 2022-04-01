@@ -1,17 +1,4 @@
 .product {
-  &__text {
-    margin: 0 auto 66px;
-    max-width: 714px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
-
-    @include r($lg) {
-      margin: 0 auto 30px;
-    }
-  }
-
   .integration {
     margin-bottom: 152px;
 
@@ -24,68 +11,73 @@
     }
   }
 
-  .retail {
-    margin-bottom: 136px;
-
-    h2 {
-      @include r($md) {
-        margin: 0 auto 15px;
-        text-align: center;
-      }
-    }
-  }
-
   a {
     text-decoration: none !important;
+  }
+
+  .business {
+    margin-bottom: 160px;
   }
 }
 
 .product-top {
   position: relative;
   margin-bottom: 152px;
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
   color: $white;
   background-color: $black;
 
   .green-link {
     z-index: 2;
+
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &:hover {
+      svg {
+        circle {
+          fill: $white;
+        }
+
+        path {
+          stroke: $green;
+        }
+      }
+    }
   }
 
   h1 {
     z-index: 2;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
     font-weight: 700;
     font-size: 80px;
     line-height: 88px;
     letter-spacing: -0.02em;
 
     @include r($lg) {
+      margin-bottom: 23px;
       font-size: 56px;
       line-height: 64px;
     }
 
-    @include r($lg) {
-      margin-bottom: 23px;
+    @include r($md) {
       font-size: 40px;
       line-height: 48px;
-    }
-
-    @include r($md) {
       text-align: center;
     }
   }
 
-  p {
+  h5 {
     z-index: 2;
-    margin-bottom: 26px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
+    margin-bottom: 32px;
 
     @include r($lg) {
       margin-bottom: 25px;
       font-size: 14px;
-      line-height: 24px;
     }
 
     @include r($md) {
@@ -115,23 +107,23 @@
     }
   }
 
-  &__img {
+  img {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 1;
-    max-width: 750px;
+    max-width: 720px;
 
     @include r($xl) {
-      max-width: 630px;
+      max-width: 610px;
     }
 
     @include r($lg) {
-      max-width: 530px;
+      max-width: 500px;
     }
 
     @include r($md) {
-      max-width: 420px;
+      max-width: 350px;
     }
   }
 
@@ -158,15 +150,28 @@
     }
   }
 
-  h3 {
+  h5 {
+    margin-bottom: 66px;
+
+    @include r($md) {
+      margin-bottom: 45px;
+    }
+  }
+
+  h4 {
     margin: 0 auto 20px;
-    max-width: 657px;
+    max-width: 659px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: center;
   }
 
   img {
     margin: 0 auto 84px;
     width: 100%;
-    max-width: 662px;
+    max-width: 900px;
     object-fit: cover;
 
     @include r($lg) {
@@ -187,9 +192,10 @@
       background-size: 40px;
       background-repeat: no-repeat;
 
-      h4 {
+      h6 {
         margin-bottom: 7px;
         font-weight: 700;
+        font-size: 18px;
         line-height: 28px;
         letter-spacing: -0.01em;
       }
@@ -327,8 +333,8 @@
 }
 
 .office {
-  margin-bottom: 120px;
-  padding: 80px 0 120px;
+  margin-bottom: 288px;
+  padding: 120px 0;
   border-radius: 24px;
   text-align: center;
   color: $white;
@@ -337,15 +343,15 @@
   &__text {
     margin: 0 auto;
     max-width: 582px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: $grey-text;
 
     @include r($xl) {
       padding: 0 24px;
     }
+  }
+
+  h5 {
+    margin: 0 auto 90px;
+    max-width: 792px;
   }
 
   .business {
@@ -409,14 +415,16 @@
         max-width: 225px;
       }
 
-      h5 {
+      h6 {
         margin-bottom: 7px;
         font-weight: 700;
         font-size: 24px;
+        line-height: 32px;
         letter-spacing: -0.02em;
       }
 
       p {
+        max-width: 274px;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.01em;
@@ -428,6 +436,11 @@
         min-height: 300px;
         max-width: 100%;
       }
+    }
+
+    img {
+      width: 36px;
+      height: 36px;
     }
 
     @include r($lg) {
@@ -474,13 +487,13 @@
     max-width: 406px;
   }
 
-  h3 {
+  h4 {
     margin-bottom: 13px;
     max-width: 406px;
-
-    span {
-      max-width: 100%;
-    }
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
 
     @include r($lg) {
       max-width: 100%;
@@ -502,10 +515,6 @@
 
   .tab-content {
     height: 100%;
-
-    .tab-pane {
-      //width: 500px;
-    }
   }
 
   .nav-tabs {
@@ -561,7 +570,7 @@
       margin-bottom: 16px;
     }
 
-    h4 {
+    h6 {
       opacity: 0.15;
       font-weight: 600;
       font-size: 24px;
@@ -580,7 +589,7 @@
       opacity: 1;
     }
 
-    h4 {
+    h6 {
       opacity: 1;
     }
   }
@@ -615,17 +624,16 @@
 
   &__left-img {
     position: absolute;
-    left: 50%;
+    left: 20px;
     bottom: 0;
     object-fit: cover;
-    transform: translateX(-50%);
+    transform: scale(1.5);
   }
 
   &__right {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 32px 32px 0;
     max-width: 70%;
 
     ul {
@@ -668,6 +676,8 @@
   }
 
   &__right-img {
+    align-self: flex-end;
+    max-width: 50%;
     object-fit: cover;
 
     @include r($lg) {
@@ -700,12 +710,6 @@
     border-radius: 24px;
     color: $white;
     background-color: $black;
-
-    .green-link {
-      span {
-        font-weight: 600;
-      }
-    }
 
     h4 {
       margin-bottom: 14px;
