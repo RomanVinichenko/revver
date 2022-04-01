@@ -18,92 +18,6 @@
       margin-bottom: 88px;
     }
   }
-
-  .retail {
-    margin-bottom: 248px;
-
-    h3 {
-      padding: 0 24px;
-    }
-
-    @include r($lg) {
-      margin-bottom: 100px;
-    }
-
-    @include r($md) {
-      margin-bottom: 80px;
-    }
-  }
-}
-
-.quest-pop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 7;
-  display: flex;
-  justify-content: flex-end;
-  visibility: hidden;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(#0f0f11, 0.25);
-  transition: all 0.3s;
-
-  &__wrapper {
-    padding: 112px 80px;
-    max-width: 858px;
-    border-radius: 24px 0 0;
-    background-color: #fff;
-
-    h4 {
-      margin-bottom: 69px;
-      padding-top: 36px;
-      border-top: 1px solid #000;
-      font-weight: 600;
-      font-size: 32px;
-      line-height: 40px;
-      letter-spacing: -0.02em;
-
-      @include r($xl) {
-        margin-bottom: 40px;
-        padding-top: 32px;
-      }
-    }
-
-    p {
-      letter-spacing: -0.01em;
-
-      + p {
-        margin-top: 32px;
-      }
-    }
-
-    @include r($xl) {
-      padding: 96px 24px;
-    }
-
-    @include r($lg) {
-      border-radius: 0;
-    }
-  }
-
-  &__close {
-    position: absolute;
-    right: 24px;
-    top: 24px;
-    padding: 0;
-    width: 24px;
-    height: 24px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  &--active {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 .home-top {
@@ -111,30 +25,18 @@
   z-index: 2;
   overflow: hidden;
   color: $white;
-  background-color: $green;
-
-  //&::after {
-  //  content: "";
-  //  position: absolute;
-  //  right: -500px;
-  //  top: -476px;
-  //  opacity: 0.85;
-  //  width: 1123px;
-  //  height: 1123px;
-  //  border-radius: 50%;
-  //  background-color: $green;
-  //  filter: blur(1000px);
-  //
-  //  @include r($xl) {
-  //    filter: blur(800px);
-  //  }
-  //
-  //  @include r($md) {
-  //    display: none;
-  //  }
-  //}
+  background-image: url("../images/home-top.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $black;
 
   .green-link {
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
     &:hover {
       svg {
         circle {
@@ -153,61 +55,19 @@
   }
 
   &__wrapper {
-    position: relative;
-    z-index: 2;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 92px);
 
     @include r($md) {
       flex-direction: column;
     }
   }
 
-  &__inner {
-    z-index: 2;
-
-    @include r($md) {
-      padding-top: 136px;
-    }
-  }
-
-  &__img {
-    z-index: 1;
-    align-self: flex-end;
-    margin: 0 -100px 0 -50px;
-    max-width: 55%;
-    object-fit: cover;
-
-    @include r($xxl) {
-      margin: 0 -40px 0 -30px;
-    }
-
-    @include r($xl) {
-      margin: 0 -20px 0 -80px;
-      max-width: 60%;
-    }
-
-    @include r($lg) {
-      margin: 0 -20px 0 -40px;
-      max-width: 62%;
-    }
-
-    @include r($md) {
-      margin: 30px auto 0;
-      max-width: 80%;
-    }
-
-    @include r($sm) {
-      margin: 30px auto 0;
-      max-width: 100%;
-    }
-  }
-
   h1 {
     margin-bottom: 19px;
-    width: 100%;
-    max-width: 647px;
+    max-width: 699px;
     font-weight: 700;
     font-size: 64px;
     line-height: 72px;
@@ -286,16 +146,15 @@
     }
   }
 
-  &__text {
-    @include r($md) {
-      display: none;
-    }
-  }
-
-  .general-text {
+  h5 {
     margin: 0 auto 42px;
-    max-width: 540px;
+    max-width: 547px;
     text-align: center;
+
+    @include r($md) {
+      margin: 0 auto 40px 0;
+      text-align: left;
+    }
   }
 
   &__info {
@@ -306,13 +165,24 @@
     border-radius: 24px;
     background-color: $white;
 
+    h6 {
+      margin-bottom: 7px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: $grey-text;
+    }
+
     @include r($lg) {
       flex-direction: column;
       padding: 32px 28px 0;
-
-      .general-text {
-        margin: 0 auto 42px 0;
-      }
     }
 
     @include r($md) {
@@ -354,16 +224,6 @@
       @include r($lg) {
         font-size: 16px;
         line-height: 24px;
-      }
-    }
-
-    .general-text {
-      margin-bottom: 0;
-      text-align: left;
-
-      @include r($lg) {
-        font-size: 14px;
-        letter-spacing: 0;
       }
     }
 
@@ -418,7 +278,13 @@
     }
   }
 
-  .general-text {
+  h5 {
+    margin: 0 auto 58px;
+    max-width: 618px;
+    text-align: center;
+  }
+
+  h6 {
     margin: 0 auto 58px;
     max-width: 618px;
     text-align: center;
@@ -623,7 +489,7 @@
     }
   }
 
-  .general-text {
+  h5 {
     margin-bottom: 56px;
     max-width: 600px;
     text-align: left;
@@ -657,7 +523,7 @@
         letter-spacing: -0.02em;
       }
 
-      .general-text {
+      h5 {
         @include r($md) {
           margin: 0 auto 0 0;
           text-align: left;
@@ -726,7 +592,7 @@
     text-align: left;
   }
 
-  .general-text {
+  h5 {
     max-width: 540px;
   }
 
@@ -972,5 +838,75 @@
 
   @include r($xl) {
     margin: 0 24px 80px;
+  }
+}
+
+.quest-pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 7;
+  display: flex;
+  justify-content: flex-end;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#0f0f11, 0.25);
+  transition: all 0.3s;
+
+  &__wrapper {
+    padding: 112px 80px;
+    max-width: 858px;
+    border-radius: 24px 0 0;
+    background-color: #fff;
+
+    h4 {
+      margin-bottom: 69px;
+      padding-top: 36px;
+      border-top: 1px solid #000;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+
+      @include r($xl) {
+        margin-bottom: 40px;
+        padding-top: 32px;
+      }
+    }
+
+    p {
+      letter-spacing: -0.01em;
+
+      + p {
+        margin-top: 32px;
+      }
+    }
+
+    @include r($xl) {
+      padding: 96px 24px;
+    }
+
+    @include r($lg) {
+      border-radius: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
   }
 }
