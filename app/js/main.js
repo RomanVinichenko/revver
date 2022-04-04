@@ -32,16 +32,31 @@ $(".footer-back__mobile, .footer-back, .logo").click(function () {
 
 // HEADER HIDE
 
-var prevScrollpos = window.pageYOffset;
+var prevScrollpos = window.pageYOffset - 100;
 window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
+    var currentScrollPos = window.pageYOffset - 100;
     if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".header").classList.add('header--active');
-    } else {
-        document.querySelector(".header").classList.remove('header--active');
+        document.querySelector(".header").classList.remove('header--out');
+        document.querySelector(".header").classList.add('header--in');
+    }
+    else {
+        document.querySelector(".header").classList.add('header--out');
     }
     prevScrollpos = currentScrollPos;
 }
+
+
+$(document).bind( 'mousewheel', function (e) {
+
+    var nt = $(document).scrollTop()+200;
+
+    e.preventDefault();
+
+    e.stopPropagation();
+
+    $('body').animate({scrollTop: nt}, 3000);
+
+} );
 
 // MENU TOGGLE
 
@@ -180,17 +195,19 @@ $(function () {
 
 // 4. NEWS INNER PAGE START
 
-$('.propose__info a').on('click', function (event) {
-    event.preventDefault();
-    var id = $(this).attr('href'),
-        top = $(id).offset().top - 20;
-    $('body,html').animate(
-        {
-            scrollTop: top,
-        },
-        800,
-    );
-});
+// ON PAUSE
+
+// $('.propose__info a').on('click', function (event) {
+//     event.preventDefault();
+//     var id = $(this).attr('href'),
+//         top = $(id).offset().top - 20;
+//     $('body,html').animate(
+//         {
+//             scrollTop: top,
+//         },
+//         800,
+//     );
+// });
 
 // 4. NEWS INNER PAGE FINISH
 
@@ -224,6 +241,25 @@ if(close) {
 
 // 5. JOIN US FINISH
 
+
+
+function newAnimIn (x) {
+    x.classList.add('job__link--active');
+    let myElem = x;
+    myElem = myElem.previousElementSibling;
+    myElem = myElem.querySelector('a');
+    myElem.classList.add('job__title--active');
+}
+
+function newAnimOut (x) {
+    let myElem = x;
+    myElem = myElem.previousElementSibling;
+    myElem = myElem.querySelector('a');
+    myElem.classList.remove('job__title--active');
+    x.classList.remove('job__link--active');
+}
+
+
 let elements = document.querySelectorAll('.job__wave');
 
 elements.forEach(element => {
@@ -243,6 +279,8 @@ elements.forEach(element => {
     element.appendChild(textContainer);
     element.appendChild(textContainer.cloneNode(true));
 });
+
+
 
 
 

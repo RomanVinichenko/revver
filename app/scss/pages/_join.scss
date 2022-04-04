@@ -182,19 +182,19 @@
     background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
     background-size: 0 86%;
     background-repeat: no-repeat;
-    transition: background-size 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-
-  &:hover {
-    span {
-      background-size: 100% 86% !important;
-    }
+    transition: background-size 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
   }
 
   @include r($lg) {
     margin-bottom: 8px;
     font-size: 32px;
     line-height: 40px;
+  }
+}
+
+.job__title--active {
+  span {
+    background-size: 100% 86%;
   }
 }
 
@@ -221,35 +221,31 @@
       transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
 
-    &.play {
-      transform: translateY(-100%);
-    }
-
     @for $i from 0 through 20 {
       .letter:nth-child(#{$i + 1}) {
         transition-delay: 0.015s * $i;
       }
     }
   }
+}
 
-  &:hover {
-    .job__wave {
-      .letter {
-        transform: translateY(-100%);
-      }
+.job__link--active {
+  .job__wave {
+    .letter {
+      transform: translateY(-100%);
+    }
+  }
+
+  svg {
+    overflow: hidden;
+    border-radius: 50%;
+
+    path {
+      animation: slotMachine 0.2s ease-in forwards 3;
     }
 
-    svg {
+    circle {
       overflow: hidden;
-      border-radius: 50%;
-
-      path {
-        animation: slotMachine 0.2s ease-in forwards 3;
-      }
-
-      circle {
-        overflow: hidden;
-      }
     }
   }
 }
