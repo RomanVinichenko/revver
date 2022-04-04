@@ -132,6 +132,18 @@ if (questClose) {
     })
 }
 
+// if (questionItem) {
+//     questionItem.forEach((questionItem) => {
+//         questionItem.addEventListener('click', function () {
+//             event.preventDefault();
+//             var myNum = this.getAttribute('data-slide-num');
+//             document.getElementById('quest-pop-main-text').innerHTML =
+//                 document.getElementById('home-slide-answer-' + myNum).innerHTML;
+//             questPop.classList.add('quest-pop--active');
+//         });
+//     });
+// }
+
 // FOOTER ANIMATION
 
 function calcFooterHeight() {
@@ -203,14 +215,38 @@ if(close) {
     })
 }
 
-buttonVacancy.forEach((buttonVacancy) => {
-    buttonVacancy.addEventListener('click', function () {
-        OpenPopUpInJoinUs(this, dadAr);
-        body.style.overflow = 'hidden';
-    });
-});
+// buttonVacancy.forEach((buttonVacancy) => {
+//     buttonVacancy.addEventListener('click', function () {
+//         OpenPopUpInJoinUs(this, dadAr);
+//         body.style.overflow = 'hidden';
+//     });
+// });
 
 // 5. JOIN US FINISH
+
+let elements = document.querySelectorAll('.job__wave');
+
+elements.forEach(element => {
+    let innerText = element.innerText;
+    element.innerHTML = '';
+
+    let textContainer = document.createElement('div');
+    textContainer.classList.add('block');
+
+    for (let letter of innerText) {
+        let span = document.createElement('span');
+        span.innerText = letter.trim() === '' ? '\xa0': letter;
+        span.classList.add('letter');
+        textContainer.appendChild(span);
+    }
+
+    element.appendChild(textContainer);
+    element.appendChild(textContainer.cloneNode(true));
+});
+
+
+
+
 
 
 
