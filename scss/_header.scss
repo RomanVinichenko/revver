@@ -3,7 +3,7 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 4;
+  z-index: 5;
   padding: 24px 0;
   background-color: $black;
   transition: all 0.5s;
@@ -35,12 +35,16 @@
     pointer-events: auto;
   }
 
-  &--active {
-    z-index: 6;
+  &--go {
+    z-index: 10;
   }
 
-  &--go {
-    z-index: 6;
+  &--in {
+    z-index: 10;
+  }
+
+  &--out {
+    transform: translateY(-166px);
   }
 
   @include r($lg) {

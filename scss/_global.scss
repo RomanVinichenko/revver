@@ -16,10 +16,14 @@ body {
 .links {
   position: absolute;
   left: 200px;
-  top: 40px;
-  z-index: 200;
-  width: 5px;
+  top: 200px;
+  z-index: 100;
+  padding: 10px;
+  width: 20px;
   height: 20px;
+  border: 1px solid red;
+  font-size: 20px;
+  background-color: red;
 }
 
 .bunch {
@@ -76,13 +80,16 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
   max-width: 1248px;
-
-  // ** Reset Bootstrap **
 
   &::before {
     display: none;
