@@ -1,20 +1,36 @@
 .home {
   .integration {
-    margin-bottom: 192px;
+    margin-bottom: 200px;
 
     @include r($xl) {
-      margin-bottom: 120px;
+      margin-bottom: 140px;
     }
 
-    @include r($lg) {
-      margin-bottom: 55px;
+    @include r($md) {
+      margin-bottom: 88px;
     }
   }
 
   .business {
-    margin-bottom: 176px;
+    margin-bottom: 200px;
 
-    @include r($lg) {
+    @include r($xl) {
+      margin-bottom: 140px;
+    }
+
+    @include r($md) {
+      margin-bottom: 88px;
+    }
+  }
+
+  .retail {
+    margin-bottom: 160px;
+
+    @include r($xl) {
+      margin-bottom: 110px;
+    }
+
+    @include r($md) {
       margin-bottom: 88px;
     }
   }
@@ -22,19 +38,20 @@
 
 .home-top {
   position: relative;
-  z-index: 2;
-  overflow: hidden;
   color: $white;
-  background-image: url("../images/home-top.png");
+  background-image: url("../images/home-top.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $black;
 
   .green-link {
+    margin-bottom: 100px;
+
     span {
       font-weight: 400;
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 18px;
+      line-height: 30px;
     }
 
     &:hover {
@@ -55,13 +72,21 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: calc(100vh - 92px);
 
+    @include r($lg) {
+      min-height: calc(100vh - 72px);
+    }
+
     @include r($md) {
       flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 64px;
+      text-align: center;
     }
   }
 
@@ -69,8 +94,8 @@
     margin-bottom: 19px;
     max-width: 699px;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 72px;
+    font-size: 56px;
+    line-height: 64px;
     letter-spacing: -0.02em;
 
     span {
@@ -78,31 +103,83 @@
     }
 
     @include r($extra) {
-      font-size: 50px;
-      line-height: 58px;
+      max-width: 580px;
+      font-size: 46px;
+      line-height: 54px;
     }
 
     @include r($xl) {
+      max-width: 520px;
       font-size: 40px;
       line-height: 48px;
     }
 
     @include r($lg) {
+      max-width: 350px;
       font-size: 32px;
       line-height: 40px;
     }
 
     @include r($md) {
-      margin-bottom: 26px;
-      font-size: 40px;
-      line-height: 48px;
-      text-align: center;
+      margin-bottom: 24px;
+      max-width: 100%;
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px 16px 12px;
+      width: 201px;
+      height: 111px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.02);
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: left;
+
+        @include r($md) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      @include r($lg) {
+        width: 180px;
+      }
+
+      @include r($md) {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    @include r($md) {
+      bottom: 24px;
+      justify-content: center;
+      width: 100%;
     }
   }
 
   &__scroll {
     position: absolute;
-    left: -32px;
+    left: -42px;
     bottom: 64px;
 
     p {
@@ -124,76 +201,49 @@
       }
     }
 
-    @include r($xxl) {
-      left: -60px;
-    }
-
     @include r($md) {
       display: none;
     }
   }
+
+  @include r($md) {
+    background-image: url("../images/home-top-md.jpg");
+    background-position: center;
+  }
 }
 
 .cloud {
-  padding: 144px 0 160px;
+  margin-bottom: 160px;
+  padding-top: 144px;
 
   h2 {
-    max-width: 750px;
-
-    @include r($md) {
-      margin: 0 auto 32px 0;
-      text-align: left;
-    }
+    max-width: 792px;
   }
 
-  h5 {
-    margin: 0 auto 42px;
-    max-width: 547px;
-    text-align: center;
-
-    @include r($md) {
-      margin: 0 auto 40px 0;
-      text-align: left;
+  .subtitle {
+    p {
+      max-width: 792px;
+      text-align: center;
     }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0 50px 55px;
     overflow: hidden;
     border-radius: 24px;
     background-color: $white;
 
-    h6 {
-      margin-bottom: 7px;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 28px;
-      letter-spacing: -0.01em;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.01em;
-      color: $grey-text;
-    }
-
     @include r($lg) {
-      flex-direction: column;
-      padding: 32px 28px 0;
-    }
-
-    @include r($md) {
-      border-radius: 20px;
+      flex-direction: column-reverse;
+      border-right: 20px;
     }
   }
 
   ul {
     margin: 0 20px 0 0;
-    width: 100%;
-    max-width: 628px;
+    padding: 51px 0 42px 56px;
+    max-width: 702px;
     letter-spacing: -0.01em;
 
     li {
@@ -212,40 +262,68 @@
 
       @include r($lg) {
         padding: 62px 0 0;
+        background-position: top center;
         background-size: 48px;
       }
     }
 
     h5 {
       margin-bottom: 7px;
+      font-weight: 700;
       font-size: 18px;
       line-height: 28px;
+      letter-spacing: -0.01em;
 
       @include r($lg) {
-        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: $grey-text;
+
+      @include r($lg) {
+        font-size: 14px;
         line-height: 24px;
+        letter-spacing: 0;
+        text-align: center;
+      }
+
+      @include r($md) {
+        max-width: 100%;
       }
     }
 
     @include r($lg) {
-      margin: 0 0 60px;
+      flex-direction: column;
+      margin: 10px 0 0;
+      padding: 0 24px 37px;
       max-width: 100%;
     }
   }
 
   &__img {
-    margin: auto 0;
     width: 100%;
-    max-width: 450px;
+    max-width: 40%;
 
     img {
       width: 100%;
-      text-align: center;
+      height: 100%;
       object-fit: contain;
 
       @include r($lg) {
-        transform: rotate(90deg);
+        min-height: 288px;
+        max-height: 500px;
       }
+    }
+
+    @include r($lg) {
+      min-height: 288px;
+      max-width: 100%;
     }
 
     @include r($lg) {
@@ -254,43 +332,26 @@
   }
 
   @include r($xl) {
-    padding: 80px 0 120px;
+    margin-bottom: 120px;
+    padding-top: 130px;
   }
 
   @include r($lg) {
-    padding: 40px 0 72px;
+    padding-top: 100px;
+  }
+
+  @include r($md) {
+    margin-bottom: 88px;
   }
 }
 
 .testimonials {
-  margin-bottom: 184px;
+  margin-bottom: 160px;
 
-  h2 {
-    @include r($md) {
-      margin: 0 auto 15px;
+  .subtitle {
+    p {
+      max-width: 618px;
       text-align: center;
-    }
-  }
-
-  .category {
-    @include r($md) {
-      margin: 0 auto 10px;
-    }
-  }
-
-  h5 {
-    margin: 0 auto 58px;
-    max-width: 618px;
-    text-align: center;
-  }
-
-  h6 {
-    margin: 0 auto 58px;
-    max-width: 618px;
-    text-align: center;
-
-    @include r($lg) {
-      margin-bottom: 41px;
     }
   }
 
@@ -299,7 +360,6 @@
   }
 
   ul {
-    position: relative;
     display: flex;
     justify-content: space-between;
 
@@ -320,6 +380,7 @@
 
       @include r($lg) {
         min-height: 540px;
+        border-radius: 20px;
       }
 
       @include r($md) {
@@ -349,14 +410,19 @@
     li:last-child {
       max-width: 33%;
 
-      img {
-        right: 28px;
-        top: 28px;
-      }
-
       @include r($lg) {
         display: none;
       }
+    }
+  }
+
+  h6 {
+    margin: 0 auto 58px;
+    max-width: 618px;
+    text-align: center;
+
+    @include r($lg) {
+      margin-bottom: 41px;
     }
   }
 
@@ -373,13 +439,17 @@
     border-radius: 24px;
     background-color: $green;
 
+    @include r($lg) {
+      border-radius: 20px;
+    }
+
     @include r($md) {
       position: relative;
       left: 0;
       top: 0;
       z-index: 1;
       margin-top: -24px;
-      padding: 40px 23px 23px;
+      padding: 40px 28px 31px;
       max-width: 100%;
       border-radius: 0 0 24px 24px;
     }
@@ -391,10 +461,12 @@
       max-width: 392px;
       font-weight: 700;
       font-size: 24px;
+      line-height: 32px;
       letter-spacing: -0.02em;
 
       @include r($md) {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
+        max-width: 100%;
       }
     }
   }
@@ -459,8 +531,12 @@
     }
   }
 
-  @include r($lg) {
-    margin-bottom: 128px;
+  @include r($xl) {
+    margin-bottom: 140px;
+  }
+
+  @include r($md) {
+    margin-bottom: 88px;
   }
 }
 
@@ -484,19 +560,20 @@
     text-align: left;
 
     @include r($md) {
-      margin: 0 auto 15px;
+      margin: 0 auto 20px;
       text-align: center;
     }
   }
 
-  h5 {
-    margin-bottom: 56px;
-    max-width: 600px;
-    text-align: left;
+  .subtitle {
+    p {
+      margin: 0 auto 50px 0;
+      max-width: 600px;
 
-    @include r($md) {
-      margin: 0 auto 50px;
-      text-align: center;
+      @include r($md) {
+        margin: 0 auto 50px;
+        text-align: center;
+      }
     }
   }
 
@@ -509,6 +586,7 @@
       display: flex;
       flex-direction: column;
       padding: 80px 32px 22px;
+      width: 100%;
       height: 384px;
       max-width: 384px;
       border: 1px solid rgba(#4a4b54, 0.5s);
@@ -519,15 +597,19 @@
 
       h4 {
         margin-bottom: 7px;
+        font-weight: 700;
         font-size: 24px;
+        line-height: 32px;
         letter-spacing: -0.02em;
       }
 
-      h5 {
-        @include r($md) {
-          margin: 0 auto 0 0;
-          text-align: left;
-        }
+      p {
+        max-width: 294px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: $grey-text;
       }
 
       span {
@@ -592,13 +674,15 @@
     text-align: left;
   }
 
-  h5 {
-    max-width: 540px;
+  .subtitle {
+    p {
+      margin: 0 auto 50px 0;
+      max-width: 540px;
+    }
   }
 
   &__info {
     margin-bottom: 40px;
-    padding-bottom: 56px;
     border-bottom: 1px solid $black;
 
     @include r($md) {
@@ -686,15 +770,18 @@
     }
   }
 
-  @include r($lg) {
-    margin-top: -90px;
+  @include r($xl) {
     margin-bottom: 120px;
   }
 
-  @include r($md) {
-    margin-bottom: 56px;
-    padding: 24px 28px;
+  @include r($lg) {
+    margin-top: -90px;
     border-radius: 20px;
+  }
+
+  @include r($md) {
+    margin-bottom: 88px;
+    padding: 24px 28px;
   }
 }
 
@@ -703,6 +790,7 @@
   margin: 0 36px 120px;
 
   img {
+    display: block;
     width: 100%;
     height: 864px;
     border-radius: 24px;
@@ -713,7 +801,6 @@
     }
 
     @include r($lg) {
-      margin-bottom: 50px;
       height: 420px;
       border-radius: 20px;
     }
@@ -744,8 +831,7 @@
     }
 
     @include r($sm) {
-      align-self: flex-end;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
   }
 
@@ -753,7 +839,7 @@
     position: absolute;
     left: 228px;
     bottom: 112px;
-    padding: 26px 27px 26px 36px;
+    padding: 26px 26px 26px 36px;
     width: 100%;
     max-width: 684px;
     border-radius: 24px;
@@ -767,8 +853,11 @@
       position: relative;
       left: 0;
       top: 0;
-      padding: 28px;
+      z-index: 2;
+      margin-top: -34px;
+      padding: 26px 26px 26px 36px;
       max-width: 100%;
+      border-radius: 20px;
     }
   }
 
@@ -784,6 +873,7 @@
 
     @include r($sm) {
       flex-direction: column-reverse;
+      align-items: flex-start;
     }
   }
 
@@ -845,24 +935,24 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 7;
+  z-index: 15;
   display: flex;
   justify-content: flex-end;
-  visibility: hidden;
   opacity: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(#0f0f11, 0.25);
-  transition: all 0.3s;
+  background-color: rgba(#0f0f11, 0.7);
+  transform: translateX(100%);
+  transition: all 0.4s;
 
   &__wrapper {
-    padding: 112px 80px;
-    max-width: 858px;
+    padding: 80px 50px;
+    max-width: 800px;
     border-radius: 24px 0 0;
     background-color: #fff;
 
     h4 {
-      margin-bottom: 69px;
+      margin-bottom: 50px;
       padding-top: 36px;
       border-top: 1px solid #000;
       font-weight: 600;
@@ -871,16 +961,30 @@
       letter-spacing: -0.02em;
 
       @include r($xl) {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         padding-top: 32px;
+      }
+
+      @include r($lg) {
+        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 36px;
       }
     }
 
     p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
       letter-spacing: -0.01em;
 
       + p {
-        margin-top: 32px;
+        margin-top: 30px;
+      }
+
+      @include r($xl) {
+        font-size: 16px;
+        line-height: 24px;
       }
     }
 
@@ -906,7 +1010,7 @@
   }
 
   &--active {
-    visibility: visible;
     opacity: 1;
+    transform: translateX(0);
   }
 }

@@ -30,7 +30,7 @@
       max-height: 200px;
 
       @include r($lg) {
-        max-width: 160px;
+        max-width: 180px;
       }
 
       @include r($sm) {

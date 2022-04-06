@@ -1,10 +1,4 @@
-// ** GENERAL (.general in tag .main) styles for: **
-// ** HOME **
-// ** PRODUCT **
-// ** ABOUT **
-
 .general {
-  // ** Headings **
   h2 {
     margin: 0 auto 20px;
     font-weight: 700;
@@ -19,35 +13,20 @@
     }
 
     @include r($lg) {
-      margin: 0 auto 15px;
       font-size: 32px;
       line-height: 40px;
     }
   }
 
-  h3 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.02em;
-
-    @include r($xl) {
-      font-size: 28px;
-      line-height: 36px;
+  .subtitle {
+    p {
+      margin: 0 auto 50px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: $grey-text;
     }
-
-    @include r($lg) {
-      font-size: 24px;
-      line-height: 32px;
-    }
-  }
-
-  // ** Grey text under headings **
-  h5 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
   }
 }
 
@@ -63,32 +42,30 @@
   color: $white;
   background-color: $green;
 
-  @include r($md) {
-    margin: 0 auto 10px 0;
+  @include r($lg) {
+    margin: 0 auto 8px;
   }
 }
 
 .integration {
   .category {
     margin: 0 auto 10px 0;
+
+    @include r($lg) {
+      margin: 0 auto 8px 0;
+    }
   }
 
   h2 {
     margin: 0 auto 20px 0;
     max-width: 684px;
     text-align: left;
-
-    @include r($md) {
-      margin: 0 auto 15px 0;
-    }
   }
 
-  h5 {
-    margin-bottom: 50px;
-    max-width: 620px;
-
-    @include r($lg) {
-      margin-bottom: 40px;
+  .subtitle {
+    p {
+      margin: 0 auto 50px 0;
+      max-width: 620px;
     }
   }
 
@@ -98,55 +75,50 @@
 
     li {
       position: relative;
-      padding: 31px 36px;
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      min-height: 560px;
+      height: 560px;
       overflow: hidden;
       border-radius: 24px;
       background-color: $white;
 
       h4 {
         margin-bottom: 15px;
+        padding: 35px 36px 0;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 28px;
+        line-height: 36px;
         letter-spacing: -0.02em;
 
         @include r($lg) {
           margin-bottom: 8px;
+          padding: 23px 28px 0;
+          font-size: 24px;
+          line-height: 32px;
         }
       }
 
       p {
-        max-width: 538px;
+        margin-bottom: 34px;
+        padding: 0 36px;
+        max-width: 572px;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.01em;
         color: $grey-text;
 
         @include r($lg) {
+          margin-bottom: 25px;
+          padding: 0 28px;
           font-size: 14px;
+          line-height: 24px;
         }
-      }
-
-      h5 {
-        max-width: 538px;
       }
 
       img {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        max-width: 450px;
+        margin-top: auto;
         object-fit: contain;
-
-        @include r($lg) {
-          max-width: 350px;
-        }
-
-        @include r($sm) {
-          max-width: 200px;
-        }
       }
 
       &:first-child {
@@ -172,18 +144,19 @@
 
         @include r($md) {
           max-width: 100%;
+
+          img {
+            max-height: 350px;
+          }
         }
       }
 
       @include r($lg) {
-        padding: 23px 28px;
-        min-height: 500px;
-        max-height: 500px;
+        border-radius: 20px;
       }
 
       @include r($md) {
-        min-height: 432px;
-        max-height: 432px;
+        height: fit-content;
       }
     }
 
@@ -223,31 +196,43 @@
   justify-content: space-between;
 
   &__wrapper {
-    margin: 0 20px 0 0;
-    max-width: 50%;
+    margin: 0 0 0 20px;
+    width: 100%;
+    max-width: 471px;
 
     @include r($md) {
-      margin: 0 0 40px;
+      margin: 0 0 24px;
       max-width: 100%;
+    }
+  }
+
+  .subtitle {
+    p {
+      margin: 0 auto 24px 0;
+
+      @include r($md) {
+        margin: 0 auto 26px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .green-link {
+    @include r($md) {
+      margin: 0 auto;
     }
   }
 
   h4 {
     margin-bottom: 22px;
-    max-width: 424px;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.02em;
 
-    @include r($lg) {
-      margin-bottom: 15px;
-      font-size: 24px;
-      line-height: 32px;
-    }
-
     @include r($md) {
       max-width: 100%;
+      text-align: center;
     }
   }
 
@@ -269,7 +254,7 @@
   }
 
   img {
-    max-width: 50%;
+    max-width: 55%;
     object-fit: contain;
 
     @include r($md) {
@@ -283,8 +268,6 @@
 }
 
 .retail {
-  margin-bottom: 248px;
-
   .category {
     @include r($md) {
       margin: 0 auto 10px;
@@ -292,37 +275,30 @@
   }
 
   h2 {
-    max-width: 535px;
+    max-width: 792px;
+  }
 
-    @include r($md) {
-      margin: 0 auto 15px;
+  .subtitle {
+    p {
+      max-width: 612px;
       text-align: center;
     }
   }
 
-  h5 {
-    margin: 0 auto 50px;
-    max-width: 557px;
-    text-align: center;
-
-    @include r($lg) {
-      margin-bottom: 40px;
-    }
-  }
-
-  h3 {
-    margin-bottom: 80px;
-    max-width: 451px;
-    text-align: center;
-  }
-
   h4 {
+    padding: 104px 20px 64px;
     max-width: 451px;
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.02em;
     text-align: center;
+
+    @include r($md) {
+      padding: 64px 20px 32px;
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   &__wrapper {
@@ -330,14 +306,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 104px;
-    min-height: 592px;
+    min-height: 624px;
     overflow: hidden;
     border-radius: 24px;
     background-color: $white;
+
+    @include r($lg) {
+      min-height: 500px;
+      border-radius: 20px;
+    }
+
+    @include r($md) {
+      min-height: fit-content;
+    }
   }
 
   img {
+    margin-top: auto;
+    width: 100%;
+    max-height: 376px;
     object-fit: cover;
+
+    @include r($md) {
+      min-height: 250px;
+    }
   }
 }
