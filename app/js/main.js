@@ -4,16 +4,6 @@ if (typeof browser === "undefined") {
     var browser = chrome;
 }
 
-// COPIED
-
-// const copiedClose = document.querySelector(".copied__close");
-// const copied = document.querySelector(".copied");
-//
-// copiedClose.addEventListener('click', () => {
-//     copied.classList.add('copied--hide');
-//
-// })
-
 // HEADER MOVEMENT
 
 // $(window).scroll(function () {

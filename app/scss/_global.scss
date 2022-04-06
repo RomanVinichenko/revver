@@ -11,19 +11,50 @@ body {
   cursor: default;
 }
 
-// ** For open pages (dev point) **
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1248px;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &--main {
+    padding: 0 56px;
+    max-width: 1454px;
+
+    @include r($md) {
+      padding: 0 24px;
+    }
+  }
+
+  &--technical {
+    padding: 0 36px;
+    max-width: 1920px;
+
+    @include r($lg) {
+      padding: 0 24px;
+    }
+  }
+}
 
 .links {
   position: absolute;
-  left: 200px;
+  left: 20px;
   top: 200px;
   z-index: 100;
   padding: 10px;
   width: 20px;
   height: 20px;
-  border: 1px solid red;
+  border: 1px solid #cb0e24;
   font-size: 20px;
-  background-color: red;
+  background-color: #cb0e24;
 }
 
 .bunch {
@@ -47,8 +78,6 @@ body {
   }
 }
 
-// ** MAIN **
-
 .main {
   position: relative;
   z-index: 5;
@@ -66,6 +95,12 @@ body {
     width: 24px;
     height: 24px;
     background-image: radial-gradient(circle at 0 100%, transparent 24px, $black 25px);
+
+    @include r($lg) {
+      width: 20px;
+      height: 20px;
+      background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
+    }
   }
 
   &::after {
@@ -77,40 +112,22 @@ body {
     width: 24px;
     height: 24px;
     background-image: radial-gradient(circle at 100% 100%, transparent 24px, $black 25px);
+
+    @include r($lg) {
+      width: 20px;
+      height: 20px;
+      background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
+    }
+  }
+
+  @include r($lg) {
+    border-radius: 20px;
   }
 }
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 24px;
-  width: 100%;
-  max-width: 1248px;
-
-  &::before {
-    display: none;
-  }
-
-  &::after {
-    display: none;
-  }
-
-  &--main {
-    max-width: 1514px;
-  }
-
-  &--technical {
-    padding: 0 36px;
-    max-width: 1920px;
-
-    @include r($lg) {
-      padding: 0 24px;
-    }
-  }
 }
 
 .button-home {
@@ -405,6 +422,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 24px;
     width: 100%;
     min-height: 472px;
     border-radius: 24px;
@@ -449,13 +467,6 @@ a {
       }
     }
 
-    a {
-      span {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
     svg {
       path {
         transition: stroke 0.2s;
@@ -463,6 +474,11 @@ a {
 
       circle {
         transition: fill 0.2s;
+      }
+
+      @include r($lg) {
+        width: 32px;
+        height: 32px;
       }
     }
 
@@ -490,6 +506,7 @@ a {
 
     @include r($lg) {
       min-height: 328px;
+      border-radius: 20px;
     }
   }
 
@@ -506,8 +523,6 @@ a {
     align-items: center;
   }
 }
-
-// ** Styles for blockquote **
 
 blockquote {
   margin-top: 20px;

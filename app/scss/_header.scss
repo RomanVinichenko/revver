@@ -16,6 +16,13 @@
     width: 24px;
     height: 24px;
     background-image: radial-gradient(circle at 0 100%, transparent 24px, $black 25px);
+
+    @include r($lg) {
+      bottom: -20px;
+      width: 20px;
+      height: 20px;
+      background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
+    }
   }
 
   &::after {
@@ -26,13 +33,23 @@
     width: 24px;
     height: 24px;
     background-image: radial-gradient(circle at 100% 100%, transparent 24px, $black 25px);
+
+    @include r($lg) {
+      bottom: -20px;
+      width: 20px;
+      height: 20px;
+      background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
+    }
   }
 
   &__pusher {
     display: block;
     min-height: 92px;
     background-color: $black;
-    pointer-events: auto;
+
+    @include r($lg) {
+      min-height: 72px;
+    }
   }
 
   &--go {
@@ -48,7 +65,7 @@
   }
 
   @include r($lg) {
-    padding: 16px 0 36px;
+    padding: 16px 0;
   }
 }
 
@@ -80,8 +97,8 @@
       object-fit: cover;
     }
 
-    @include r($md) {
-      max-width: 117px;
+    @include r($lg) {
+      max-width: 115px;
     }
   }
 
