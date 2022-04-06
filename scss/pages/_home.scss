@@ -1,38 +1,7 @@
 .home {
-  .integration {
-    margin-bottom: 200px;
-
-    @include r($xl) {
-      margin-bottom: 140px;
-    }
-
-    @include r($md) {
-      margin-bottom: 88px;
-    }
-  }
-
-  .business {
-    margin-bottom: 200px;
-
-    @include r($xl) {
-      margin-bottom: 140px;
-    }
-
-    @include r($md) {
-      margin-bottom: 88px;
-    }
-  }
-
-  .retail {
-    margin-bottom: 160px;
-
-    @include r($xl) {
-      margin-bottom: 110px;
-    }
-
-    @include r($md) {
-      margin-bottom: 88px;
-    }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 

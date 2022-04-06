@@ -18,6 +18,11 @@
     }
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .subtitle {
     p {
       margin: 0 auto 50px;
@@ -41,19 +46,13 @@
   letter-spacing: -0.01em;
   color: $white;
   background-color: $green;
-
-  @include r($lg) {
-    margin: 0 auto 8px;
-  }
 }
 
 .integration {
+  margin-bottom: 200px;
+
   .category {
     margin: 0 auto 10px 0;
-
-    @include r($lg) {
-      margin: 0 auto 8px 0;
-    }
   }
 
   h2 {
@@ -166,27 +165,49 @@
   }
 
   .product__unique {
+    margin-top: 24px;
+
     li {
-      max-width: 50% !important;
+      height: 528px;
+      max-width: 50%;
+
+      &:first-child {
+        max-width: 50%;
+
+        @include r($md) {
+          max-width: 100%;
+        }
+      }
+
+      &:last-child {
+        max-width: 50%;
+
+        img {
+          justify-self: flex-start;
+          margin-top: 0;
+          margin-bottom: auto;
+          width: 100%;
+          max-height: 60%;
+          object-fit: cover;
+        }
+
+        @include r($md) {
+          max-width: 100%;
+        }
+      }
 
       @include r($md) {
         max-width: 100%;
       }
     }
-
-    img {
-      max-width: 550px;
-    }
   }
 
-  .product__unique-next {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
+  @include r($xl) {
+    margin-bottom: 140px;
+  }
 
-    @include r($md) {
-      max-width: 100%;
-    }
+  @include r($md) {
+    margin-bottom: 88px;
   }
 }
 
@@ -194,6 +215,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 200px;
 
   &__wrapper {
     margin: 0 0 0 20px;
@@ -262,12 +284,19 @@
     }
   }
 
+  @include r($xl) {
+    margin-bottom: 140px;
+  }
+
   @include r($md) {
     flex-direction: column-reverse;
+    margin-bottom: 88px;
   }
 }
 
 .retail {
+  margin-bottom: 160px;
+
   .category {
     @include r($md) {
       margin: 0 auto 10px;
@@ -330,5 +359,13 @@
     @include r($md) {
       min-height: 250px;
     }
+  }
+
+  @include r($xl) {
+    margin-bottom: 110px;
+  }
+
+  @include r($md) {
+    margin-bottom: 88px;
   }
 }
