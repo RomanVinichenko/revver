@@ -71,6 +71,8 @@ body {
     display: block;
     font-size: 16px;
     line-height: 24px;
+    text-decoration: none;
+    color: inherit;
   }
 
   &--active {
@@ -534,8 +536,6 @@ blockquote {
   font-size: 32px;
 }
 
-// ** Styles for copied block **
-
 .copied {
   position: absolute;
   top: 50px;
@@ -580,8 +580,6 @@ blockquote {
     display: none;
   }
 }
-
-// ** Styles for font **
 
 strong {
   font-weight: 700;
