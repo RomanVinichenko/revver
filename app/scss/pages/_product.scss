@@ -2,6 +2,20 @@
   a {
     text-decoration: none;
   }
+
+  .business {
+    &__wrapper {
+      margin: 0 20px 0 0;
+
+      @include r($md) {
+        margin: 0 0 24px;
+      }
+    }
+
+    @include r($md) {
+      flex-direction: column;
+    }
+  }
 }
 
 .product-top {
@@ -343,50 +357,69 @@
 }
 
 .office {
-  margin-bottom: 288px;
+  margin: 0 36px 200px;
   padding: 120px 0;
   border-radius: 24px;
-  text-align: center;
   color: $white;
   background-color: $black;
 
-  &__text {
-    margin: 0 auto;
-    max-width: 582px;
-
-    @include r($xl) {
-      padding: 0 24px;
-    }
+  .category {
+    background-color: #5a0de4;
   }
 
-  h5 {
-    margin: 0 auto 90px;
+  h2 {
     max-width: 792px;
   }
 
+  .subtitle {
+    p {
+      margin: 0 auto 100px;
+      max-width: 792px;
+      text-align: center;
+
+      @include r($xl) {
+        margin: 0 auto 65px;
+      }
+
+      @include r($md) {
+        margin: 0 auto 40px;
+      }
+    }
+  }
+
   .business {
-    margin-bottom: 50px;
-  }
+    margin-bottom: 100px;
 
-  .business__wrapper {
-    text-align: left;
-
-    @include r($md) {
-      margin-bottom: 0;
+    img {
+      @include r($md) {
+        margin: 0 auto 52px;
+      }
     }
-  }
 
-  .category {
-    @include r($md) {
-      margin: 0 auto 10px;
+    .subtitle {
+      p {
+        margin: 0 auto 24px;
+        text-align: left;
+
+        @include r($md) {
+          text-align: center;
+        }
+      }
     }
-  }
 
-  h3 {
-    margin-bottom: 20px;
+    &__wrapper {
+      @include r($md) {
+        margin: 0;
+      }
+    }
 
     @include r($xl) {
-      padding: 0 24px;
+      margin: 0 auto 65px;
+    }
+
+    @include r($md) {
+      flex-direction: column-reverse;
+      margin: 0 auto 40px;
     }
   }
 
@@ -423,9 +456,13 @@
 
       div {
         max-width: 225px;
+
+        @include r($lg) {
+          max-width: 100%;
+        }
       }
 
-      h6 {
+      h5 {
         margin-bottom: 7px;
         font-weight: 700;
         font-size: 24px;
@@ -439,11 +476,15 @@
         line-height: 24px;
         letter-spacing: -0.01em;
         color: $grey-text;
+
+        @include r($lg) {
+          max-width: 100%;
+        }
       }
 
       @include r($lg) {
         margin: 0;
-        min-height: 300px;
+        min-height: 250px;
         max-width: 100%;
       }
     }
@@ -460,13 +501,18 @@
   }
 
   @include r($xl) {
-    margin-bottom: 80px;
-    padding: 60px 0 80px;
+    margin: 0 24px 100px;
+    padding: 60px 0;
   }
 
   @include r($lg) {
-    margin-bottom: 53px;
-    padding: 40px 0 28px;
+    margin: 0 0 50px;
+    border-radius: 20px;
+  }
+
+  @include r($md) {
+    margin: 0 0 32px;
+    padding: 40px 0;
   }
 }
 
@@ -488,38 +534,29 @@
 
     @include r($lg) {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
     }
   }
 
   &__block {
     max-width: 406px;
-  }
-
-  h4 {
-    margin-bottom: 13px;
-    max-width: 406px;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.02em;
 
     @include r($lg) {
       max-width: 100%;
     }
   }
 
-  p {
-    margin-bottom: 50px;
-    max-width: 405px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
+  h4 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
 
     @include r($lg) {
-      max-width: 100%;
+      font-size: 32px;
+      line-height: 40px;
     }
   }
 
@@ -529,6 +566,8 @@
 
   .nav-tabs {
     position: relative;
+    display: flex;
+    flex-direction: column;
     border-bottom: none;
 
     &::before {
@@ -540,6 +579,10 @@
       height: 100%;
       border-radius: 8px;
       background-color: rgba($white, 0.15);
+    }
+
+    @include r($lg) {
+      margin-bottom: 30px;
     }
   }
 
@@ -574,6 +617,10 @@
       color: $white;
       transform: translateY(-50%);
       transition: opacity 0.3s;
+
+      @include r($md) {
+        left: 14px;
+      }
     }
 
     &:not(:last-child) {
@@ -587,6 +634,10 @@
       line-height: 32px;
       letter-spacing: -0.02em;
       transition: opacity 0.3s;
+    }
+
+    @include r($md) {
+      padding-left: 40px;
     }
   }
 
@@ -617,27 +668,62 @@
 .sales-bottom {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 152px;
+  margin-bottom: 200px;
 
   &__left {
+    display: flex;
+    flex-direction: column;
     margin-right: 24px;
-    padding: 32px;
     max-width: 30%;
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include r($lg) {
+        margin-top: 0;
+        height: 100%;
+        max-width: 50%;
+        max-height: 400px;
+      }
+
+      @include r($md) {
+        max-width: 100%;
+        max-height: 300px;
+      }
+
+      @include r($sm) {
+        min-height: 250px;
+      }
+    }
+
+    .subtitle {
+      p {
+        margin: 0 0 16px;
+      }
+    }
+
     @include r($lg) {
+      flex-direction: row;
       margin-right: 0;
       margin-bottom: 24px;
-      padding: 22px 28px;
+      height: 400px;
       max-width: 100%;
+    }
+
+    @include r($md) {
+      flex-direction: column;
+      height: fit-content;
     }
   }
 
-  &__left-img {
-    position: absolute;
-    left: 20px;
-    bottom: 0;
-    object-fit: cover;
-    transform: scale(1.5);
+  &__left-wrapper {
+    padding: 32px;
+
+    @include r($md) {
+      padding: 22px 28px;
+    }
   }
 
   &__right {
@@ -650,63 +736,70 @@
       li {
         position: relative;
         padding-left: 48px;
-
-        &::after {
-          content: url("../images/sales-bottom.svg");
-          position: absolute;
-          left: 0;
-          top: 50%;
-          width: 32px;
-          height: 32px;
-          transform: translateY(-50%);
-        }
+        height: 32px;
+        background-position: left center;
+        background-size: 32px;
+        background-repeat: no-repeat;
 
         &:not(:last-child) {
-          margin-bottom: 24px;
+          margin-bottom: 16px;
         }
 
-        h4 {
+        h5 {
           font-weight: 600;
           font-size: 16px;
-          line-height: 24px;
+          line-height: 32px;
           letter-spacing: -0.01em;
         }
       }
     }
 
+    img {
+      margin-bottom: -30px;
+      width: 100%;
+      height: 100%;
+      max-width: 50%;
+      object-fit: cover;
+
+      @include r($md) {
+        max-width: 100%;
+        max-height: 350px;
+      }
+
+      @include r($sm) {
+        min-height: 300px;
+      }
+    }
+
     @include r($lg) {
-      padding: 22px 28px 22px 0;
+      height: 500px;
       max-width: 100%;
     }
 
     @include r($md) {
       flex-direction: column-reverse;
-      padding: 22px 28px 0;
-    }
-  }
-
-  &__right-img {
-    align-self: flex-end;
-    max-width: 50%;
-    object-fit: cover;
-
-    @include r($lg) {
-      max-width: 300px;
-    }
-
-    @include r($md) {
-      margin-bottom: -54px;
-      transform: rotate(-90deg);
+      height: fit-content;
     }
   }
 
   &__right-wrapper {
-    margin-left: 15px;
+    margin: 0 45px 0 15px;
+    width: 100%;
     max-width: 352px;
 
+    .subtitle {
+      p {
+        margin: 0 0 32px;
+      }
+    }
+
+    @include r($xl) {
+      margin: 20px 30px;
+    }
+
     @include r($md) {
-      margin-bottom: 20px;
-      margin-left: 0;
+      margin: 0;
+      padding: 22px 28px;
       max-width: 100%;
     }
   }
@@ -722,28 +815,15 @@
     background-color: $black;
 
     h4 {
-      margin-bottom: 14px;
-      max-width: 319px;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
       letter-spacing: -0.02em;
-
-      @include r($lg) {
-        font-size: 24px;
-        line-height: 32px;
-      }
-    }
-
-    p {
-      margin-bottom: 24px;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.01em;
-      color: $grey-text;
     }
 
     @include r($lg) {
+      min-height: fit-content;
       border-radius: 20px;
     }
   }
@@ -754,6 +834,9 @@
 
   @include r($lg) {
     flex-direction: column;
-    margin-bottom: 63px;
+  }
+
+  @include r($md) {
+    margin-bottom: 88px;
   }
 }
