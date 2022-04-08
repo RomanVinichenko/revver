@@ -125,14 +125,13 @@
     &:hover {
       svg {
         path {
-          animation: slotMachine-Prod 0.2s ease-in forwards 3;
           stroke: $green;
+          animation: slotMachine-Prod 0.2s ease-in forwards 3;
         }
 
         circle {
           fill: $white;
         }
-
       }
     }
   }
