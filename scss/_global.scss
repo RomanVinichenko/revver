@@ -198,6 +198,9 @@ a {
   }
 
   svg {
+    overflow: hidden;
+    border-radius: 40%;
+
     path {
       transition: stroke 0.2s;
     }
@@ -211,6 +214,10 @@ a {
     color: inherit;
 
     svg {
+      path {
+        animation: slotMachine 0.2s ease-in forwards 3;
+      }
+
       circle {
         fill: $black;
       }
@@ -583,4 +590,21 @@ blockquote {
 
 strong {
   font-weight: 700;
+}
+
+@keyframes slotMachine {
+  50% {
+    opacity: 0;
+    transform: translate3d(100%, -100%, 0);
+  }
+
+  51% {
+    opacity: 0;
+    transform: translate3d(-100%, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

@@ -53,6 +53,7 @@
 
       &:hover {
         a {
+          text-decoration: none;
           color: $green;
         }
       }
@@ -149,6 +150,7 @@
       transition: color 0.2s;
 
       &:hover {
+        text-decoration: none;
         color: $green;
       }
     }
