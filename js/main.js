@@ -236,7 +236,13 @@ if (close) {
 
 
 function newAnimIn(x) {
-    x.classList.add('job__link--active');
+
+
+    setTimeout(function () {
+        x.classList.add('job__link--active');
+    }, 500);
+
+
     let myElem = x;
     myElem = myElem.previousElementSibling;
     myElem = myElem.querySelector('a');
