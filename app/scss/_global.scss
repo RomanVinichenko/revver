@@ -230,130 +230,6 @@ a {
   }
 }
 
-.expect {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 300px;
-
-  div {
-    margin-right: 30px;
-    max-width: 470px;
-
-    @include r($xl) {
-      margin-right: 0;
-      max-width: 100%;
-      text-align: center;
-    }
-  }
-
-  h2 {
-    margin-bottom: 32px;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 72px;
-    letter-spacing: -0.02em;
-
-    @include r($xl) {
-      margin-bottom: 26px;
-      font-size: 50px;
-      line-height: 58px;
-    }
-
-    @include r($lg) {
-      font-size: 40px;
-      line-height: 48px;
-    }
-  }
-
-  h5 {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: -0.01em;
-    color: $grey-text;
-
-    @include r($xl) {
-      margin-bottom: 74px;
-      font-weight: 600;
-      color: $black;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 624px;
-
-    li {
-      margin-right: 56px;
-      width: 100%;
-      max-width: 236px;
-
-      @include r($md) {
-        margin-right: 0;
-        max-width: 100%;
-        text-align: center;
-      }
-    }
-
-    li:nth-child(-n+2) {
-      margin-bottom: 67px;
-    }
-
-    li:not(:last-child) {
-      @include r($md) {
-        margin-bottom: 50px;
-      }
-    }
-
-    span {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-
-      @include r($lg) {
-        margin-bottom: 5px;
-        font-size: 14px;
-        line-height: 20px;
-      }
-    }
-
-    h4 {
-      margin-bottom: 14px;
-      max-width: 210px;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
-      letter-spacing: -0.02em;
-
-      @include r($md) {
-        max-width: 100%;
-      }
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.01em;
-      color: $grey-text;
-    }
-
-    @include r($md) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  @include r($xl) {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 90px;
-  }
-}
-
 .location {
   display: flex;
   font-size: 16px;
@@ -607,5 +483,21 @@ strong {
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

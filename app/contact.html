@@ -99,7 +99,6 @@
 </header>
 
 <main class="main contact">
-
     <div class="container">
         <h1>Nice too meet you.</h1>
         <p class="contact__text">If you have a question, please send us a note, and we’ll get back to you as soon as possible.
@@ -110,7 +109,7 @@
                 <span>Call us:</span>
                 <a href="tel:448314123134">+44 (831) 412 313 4</a>
             </li>
-            <li>
+            <li >
                 <span>Media inquiries</span>
                 <a href="mailto:press@tech.com">press@tech.com</a>
             </li>
@@ -125,28 +124,28 @@
         </ul>
         <form class="form" action="">
             <div class="form__box">
-                <label>
+                <label class="wow">
                     <span class="form__headings">First Name</span>
                     <input type="text" placeholder="First Name" name="first" id="first">
                 </label>
-                <label>
+                <label class="wow">
                     <span class="form__headings">Last Name</span>
                     <input type="text" placeholder="Last Name" name="last" id="last">
                 </label>
             </div>
-            <label>
+            <label class="wow" style="animation: 1s fade">
                 <span class="form__headings">Enter your email address</span>
                 <input type="text" placeholder="example@gmail.com" name="mail" id="mail">
             </label>
-            <label>
+            <label class="wow" style="animation: 1s fade">
                 <span class="form__headings">Name of Organization</span>
                 <input type="text" placeholder="Name of Organization" name="organization" id="organization">
             </label>
-            <label style="margin-bottom: 27px">
+            <label style="margin-bottom: 27px; animation: 1s fade" class="wow">
                 <span style="margin-bottom: 18px" class="form__headings">Your message</span>
                 <textarea id="textarea"></textarea>
             </label>
-            <div class="form__agree">
+            <div class="form__agree wow" style="animation: 1s fade">
                 <label>
                     <input type="checkbox" id="agree"/>
                     <span class="form__agree-inner">By submit, you confirm you have read ad accept our
@@ -243,6 +242,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 <script src='js/main.js'></script>
 

@@ -173,14 +173,42 @@
     }
   }
 
-  img {
+  &__img {
+    position: relative;
     margin: 0 auto 84px;
-    width: 100%;
     max-width: 900px;
-    object-fit: cover;
+    transition: all 0.5s;
 
-    @include r($xl) {
-      max-width: 600px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      top: 15px;
+      bottom: 15px;
+      border-radius: 24px;
+      background-position: 100% 100%;
+      background-size: 0 100%;
+      background-color: rgba(#000, 0.03);
+      transition: right 2s;
+      backdrop-filter: grayscale(1);
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      object-fit: cover;
+
+      @include r($xl) {
+        max-width: 600px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        right: 100%;
+      }
     }
 
     @include r($lg) {
