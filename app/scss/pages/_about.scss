@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 24px;
-    min-height: 100vh;
+    min-height: calc(100vh - 92px);
     overflow: hidden;
     border-radius: 0 0 24px 24px;
     color: $white;
@@ -32,6 +32,7 @@
     }
 
     p {
+      margin-bottom: 7px;
       font-weight: 600;
       font-size: 14px;
       line-height: 24px;
@@ -40,16 +41,16 @@
     }
 
     h1 {
-      max-width: 635px;
-      font-weight: 700;
-      font-size: 80px;
-      line-height: 88px;
+      margin-bottom: 60px;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 72px;
       letter-spacing: -0.02em;
       text-align: center;
 
       @include r($lg) {
-        font-size: 60px;
-        line-height: 68px;
+        font-size: 50px;
+        line-height: 58px;
       }
 
       @include r($md) {
@@ -58,34 +59,39 @@
       }
     }
 
-    button {
+    .green-link {
       position: absolute;
       left: 50%;
-      bottom: 48px;
-      padding: 0 38px 0 16px;
-      min-width: 178px;
-      min-height: 44px;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 28px;
-      color: $white;
-      background-color: rgba($white, 0.3);
+      bottom: 50px;
       transform: translateX(-50%);
-      cursor: pointer;
 
-      &::after {
-        content: "";
-        position: absolute;
-        right: 16px;
-        top: 50%;
-        width: 16px;
-        height: 16px;
-        background-image: url("../images/arrow-white-down.svg");
-        background-position: center right;
-        transform: translateY(-50%);
+      span {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+
+        @include r($md) {
+          min-width: 159px;
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
+
+      &:hover {
+        text-decoration: none;
+
+        svg {
+          path {
+            animation: slotMachine-Prod 0.2s ease-in forwards 3;
+          }
+        }
+      }
+    }
+
+    @include r($lg) {
+      min-height: calc(100vh - 72px);
+      border-radius: 0 0 20px 20px;
     }
   }
 
@@ -254,12 +260,52 @@
     }
   }
 
+  .logo__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 92px;
+
+    @include r($xl) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include r($sm) {
+      flex-direction: column;
+    }
+  }
+
+  .logo__item {
+    align-items: center;
+
+    &:not(:last-child) {
+      margin: 0 15px 0 0;
+
+      @include r($xl) {
+        margin: 0 20px 40px;
+      }
+
+      @include r($sm) {
+        margin: 0 0 30px;
+      }
+    }
+
+    @include r($xl) {
+      margin: 0 20px 40px;
+    }
+
+    @include r($sm) {
+      margin: 0 0 30px;
+    }
+  }
+
   @include r($xl) {
-    padding: 85px 0 110px;
+    padding: 85px;
   }
 
   @include r($lg) {
-    padding: 59px 0 73px;
+    padding: 59px 0 33px;
   }
 }
 
@@ -717,7 +763,7 @@
   }
 
   &__name {
-    margin-top: 8px;
+    margin: 8px 8px 0 0;
     width: 100%;
     max-width: 200px;
     vertical-align: top;
@@ -734,7 +780,6 @@
 
     h5 {
       margin-bottom: 24px;
-      max-width: 78px;
       font-weight: 600;
       font-size: 14px;
       line-height: 20px;
@@ -856,5 +901,22 @@
 
   @include r($lg) {
     margin-bottom: 72px;
+  }
+}
+
+@keyframes slotMachine-Prod {
+  50% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  51% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

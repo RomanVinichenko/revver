@@ -174,10 +174,11 @@ $(function () {
     $('.review__items').slick({
         loop: true,
         infinite: true,
+        swipe: false,
         slidesToShow: 1,
+        fade: true,
+        cssEase: 'linear',
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2500,
         dots: false,
         arrows: true
     });
