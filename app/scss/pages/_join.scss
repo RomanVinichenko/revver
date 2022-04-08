@@ -238,31 +238,10 @@
 
   svg {
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 40%;
 
     path {
       animation: slotMachine 0.2s ease-in forwards 3;
     }
-
-    circle {
-      overflow: hidden;
-    }
-  }
-}
-
-@keyframes slotMachine {
-  50% {
-    opacity: 0;
-    transform: translate3d(100%, -100%, 0);
-  }
-
-  51% {
-    opacity: 0;
-    transform: translate3d(-100%, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 }
