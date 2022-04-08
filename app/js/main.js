@@ -22,23 +22,25 @@ $(".footer-back__mobile, .footer-back, .logo").click(function () {
 
 // HEADER HIDE
 
-var prevScrollpos = window.pageYOffset - 100;
+var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset - 100;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".header").classList.remove('header--out');
-        document.querySelector(".header").classList.add('header--in');
-    }
-    else {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos - 100) {
+        setTimeout(function () {
+            document.querySelector(".header").classList.remove('header--out');
+            document.querySelector(".header").classList.add('header--in');
+        }, 250);
+    } else {
         document.querySelector(".header").classList.add('header--out');
+
     }
     prevScrollpos = currentScrollPos;
 }
 
 
-$(document).bind( 'mousewheel', function (e) {
+$(document).bind('mousewheel', function (e) {
 
-    var nt = $(document).scrollTop()+200;
+    var nt = $(document).scrollTop() + 200;
 
     e.preventDefault();
 
@@ -46,7 +48,7 @@ $(document).bind( 'mousewheel', function (e) {
 
     $('body').animate({scrollTop: nt}, 3000);
 
-} );
+});
 
 // MENU TOGGLE
 
@@ -215,7 +217,7 @@ buttonVacancy.forEach((buttonVacancy) => {
     });
 });
 
-if(close) {
+if (close) {
     close.addEventListener('click', function () {
         popUp.classList.remove('popup__active');
         body.style.overflow = 'auto';
@@ -232,8 +234,7 @@ if(close) {
 // 5. JOIN US FINISH
 
 
-
-function newAnimIn (x) {
+function newAnimIn(x) {
     x.classList.add('job__link--active');
     let myElem = x;
     myElem = myElem.previousElementSibling;
@@ -241,7 +242,7 @@ function newAnimIn (x) {
     myElem.classList.add('job__title--active');
 }
 
-function newAnimOut (x) {
+function newAnimOut(x) {
     let myElem = x;
     myElem = myElem.previousElementSibling;
     myElem = myElem.querySelector('a');
@@ -261,7 +262,7 @@ elements.forEach(element => {
 
     for (let letter of innerText) {
         let span = document.createElement('span');
-        span.innerText = letter.trim() === '' ? '\xa0': letter;
+        span.innerText = letter.trim() === '' ? '\xa0' : letter;
         span.classList.add('letter');
         textContainer.appendChild(span);
     }
