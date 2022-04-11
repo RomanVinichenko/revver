@@ -113,6 +113,9 @@
       }
 
       &:hover {
+        text-decoration: none !important;
+        color: inherit;
+
         span {
           background-size: 100% 90%;
         }
@@ -193,14 +196,20 @@
       line-height: 28px;
     }
 
-    svg {
+    a {
       display: inline-block;
-      transition: all 0.2s;
-      cursor: pointer;
+      font-size: 0;
+      line-height: 28;
 
       &:not(:last-child) {
         margin-right: 6px;
       }
+    }
+
+    svg {
+      display: inline-block;
+      transition: all 0.2s;
+      cursor: pointer;
 
       &:hover {
         fill: #0f0f11;
