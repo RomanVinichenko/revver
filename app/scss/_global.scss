@@ -216,15 +216,12 @@ a {
 
     svg {
       path {
+        stroke: $white;
         animation: slotMachine 0.2s ease-in forwards 3;
       }
 
       circle {
         fill: $black;
-      }
-
-      path {
-        stroke: $white;
       }
     }
   }

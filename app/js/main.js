@@ -236,24 +236,18 @@ if (close) {
 
 
 function newAnimIn(x) {
-
-
-    setTimeout(function () {
-        x.classList.add('job__link--active');
-    }, 500);
-
-
-    let myElem = x;
-    myElem = myElem.previousElementSibling;
-    myElem = myElem.querySelector('a');
-    myElem.classList.add('job__title--active');
+    x.classList.add('job__link--active');
+    // let myElem = x;
+    // myElem = myElem.previousElementSibling;
+    // myElem = myElem.querySelector('a');
+    // myElem.classList.add('job__title--active');
 }
 
 function newAnimOut(x) {
-    let myElem = x;
-    myElem = myElem.previousElementSibling;
-    myElem = myElem.querySelector('a');
-    myElem.classList.remove('job__title--active');
+    // let myElem = x;
+    // myElem = myElem.previousElementSibling;
+    // myElem = myElem.querySelector('a');
+    // myElem.classList.remove('job__title--active');
     x.classList.remove('job__link--active');
 }
 
@@ -277,6 +271,10 @@ elements.forEach(element => {
     element.appendChild(textContainer);
     element.appendChild(textContainer.cloneNode(true));
 });
+
+// setTimeout(function () {
+//     x.classList.add('job__link--active');
+// }, 500);
 
 
 

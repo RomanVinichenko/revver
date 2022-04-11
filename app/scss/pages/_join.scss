@@ -170,6 +170,14 @@
     &:not(:last-child) {
       margin-bottom: 24px;
     }
+
+    &:hover {
+      .job__title {
+        span {
+          background-size: 100% 86%;
+        }
+      }
+    }
   }
 }
 
@@ -180,7 +188,6 @@
   font-size: 48px;
   line-height: 56px;
   letter-spacing: -0.02em;
-  text-decoration: none !important;
   cursor: pointer;
 
   span {
@@ -188,11 +195,11 @@
     background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
     background-size: 0 86%;
     background-repeat: no-repeat;
-    transition: background-size 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: background-size 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
   }
 
   &:hover {
-    text-transform: none !important;
+    text-decoration: none !important;
     color: inherit;
   }
 
@@ -200,12 +207,6 @@
     margin-bottom: 8px;
     font-size: 32px;
     line-height: 40px;
-  }
-}
-
-.job__title--active {
-  span {
-    background-size: 100% 86%;
   }
 }
 
@@ -242,6 +243,10 @@
 
   &:hover {
     color: inherit;
+  }
+
+  @include r($sm) {
+    display: none;
   }
 }
 
