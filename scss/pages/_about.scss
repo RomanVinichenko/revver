@@ -1,4 +1,5 @@
 .about {
+
   .about-top {
     position: relative;
     z-index: 2;
@@ -83,7 +84,7 @@
 
         svg {
           path {
-            animation: slotMachine-Prod 0.2s ease-in forwards 3;
+            animation: slotMachine-Prod 0.3s ease-in forwards 3;
           }
         }
       }
@@ -111,6 +112,41 @@
       line-height: 32px;
     }
   }
+
+  &__photo {
+    position: relative;
+    img {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 280px;
+      max-height: 654px;
+      border-radius: 24px;
+      object-fit: cover;
+      display: block;
+      animation: about-photo 1.6s forwards 0.4s;
+    }
+
+    h4,p {
+      position: absolute;
+      top: 50%;
+      color: $white;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    h4 {
+      font-size: 46px;
+      animation: about-photo-title 1s forwards 1.6s;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 600px;
+      text-align: center;
+      animation: about-photo-text 1s forwards 1.8s;
+    }
+  }
 }
 
 .approach {
@@ -133,23 +169,7 @@
   }
 
   h2 {
-    margin-bottom: 240px;
     max-width: 845px;
-
-    @include r($xl) {
-      margin-bottom: 113px;
-    }
-  }
-
-  img {
-    width: 100%;
-    max-height: 654px;
-    border-radius: 24px;
-    object-fit: cover;
-
-    @include r($md) {
-      height: 376px;
-    }
   }
 
   @include r($xl) {
@@ -918,5 +938,36 @@
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes about-photo {
+  0% {
+    max-width: 1200px;
+
+  }
+  100% {
+    max-width: 96%;
+    max-height: 910px;
+  }
+}
+@keyframes about-photo-title {
+  0% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 1;
+    top: 40%;
+  }
+}
+@keyframes about-photo-text {
+  0% {
+    opacity: 0;
+    top: 65%;
+  }
+  100% {
+    opacity: 1;
+    top: 55%;
   }
 }

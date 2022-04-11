@@ -1,9 +1,5 @@
 // 0. GLOBAL START
 
-if (typeof browser === "undefined") {
-    var browser = chrome;
-}
-
 // HEADER MOVEMENT
 
 // $(window).scroll(function () {
@@ -25,7 +21,7 @@ $(".footer-back__mobile, .footer-back, .logo").click(function () {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos - 100) {
+    if (prevScrollpos > currentScrollPos) {
         setTimeout(function () {
             document.querySelector(".header").classList.remove('header--out');
             document.querySelector(".header").classList.add('header--in');
@@ -52,6 +48,7 @@ menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('menu__button--active');
     blur.classList.toggle('blur--active');
     header.classList.toggle('header--go');
+    body.classList.toggle('scroll-none');
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -63,6 +60,8 @@ menuButton.addEventListener('click', function () {
         menuText.innerText = curMenuText;
     }
 }, false);
+
+
 
 // 0. GLOBAL FINISH
 

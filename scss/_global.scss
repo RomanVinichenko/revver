@@ -10,6 +10,10 @@ body {
   background-color: $grey-white;
   cursor: default;
 }
+.scroll-none {
+  overflow: scroll;
+  position: fixed;
+}
 
 .container {
   margin: 0 auto;
@@ -217,7 +221,7 @@ a {
     svg {
       path {
         stroke: $white;
-        animation: slotMachine 0.2s ease-in forwards 3;
+        animation: slotMachine 0.3s ease-in forwards 3;
       }
 
       circle {

@@ -326,9 +326,11 @@
 
       &:hover {
         opacity: 1;
+        text-decoration: none!important;
 
         a {
           color: $white;
+          text-decoration: none;
         }
       }
     }
