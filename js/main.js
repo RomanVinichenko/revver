@@ -37,19 +37,6 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
-
-$(document).bind('mousewheel', function (e) {
-
-    var nt = $(document).scrollTop() + 200;
-
-    e.preventDefault();
-
-    e.stopPropagation();
-
-    $('body').animate({scrollTop: nt}, 3000);
-
-});
-
 // MENU TOGGLE
 
 const menuButton = document.querySelector(".menu__button");
@@ -128,6 +115,10 @@ const questClose = document.querySelector('.quest-pop__close')
 if (questionItem) {
     questionItem.forEach((questionItem) => {
         questionItem.addEventListener('click', function () {
+            event.preventDefault();
+            var myNum = this.getAttribute('data-slide-num');
+            document.getElementById('quest-pop-main-text').innerHTML =
+                document.getElementById('home-slide-answer-' + myNum).innerHTML;
             questPop.classList.add('quest-pop--active');
         });
     });
