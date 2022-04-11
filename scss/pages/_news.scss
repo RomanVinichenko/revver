@@ -8,6 +8,7 @@
     font-size: 64px;
     line-height: 72px;
     letter-spacing: -0.02em;
+    animation: 0.4s fade;
 
     @include r($xl) {
       font-size: 50px;
@@ -23,6 +24,7 @@
 
   nav {
     position: relative;
+    animation: 0.6s fade;
 
     label {
       position: relative;
@@ -149,6 +151,25 @@
   width: 100%;
   max-width: 1248px;
 
+  li:first-child {
+    animation: 0.8s fade;
+  }
+
+  li {
+    margin: 0 24px 75px;
+
+    @include r($lg) {
+      margin: 0 24px 55px;
+    }
+
+    @for $i from 0 to 20 {
+      &:nth-child(#{$i}) {
+        animation-name: fade;
+        animation-duration: 0.28s * $i;
+      }
+    }
+  }
+
   &__bg {
     display: flex;
     width: 100%;
@@ -205,6 +226,7 @@
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -0.02em;
+        text-decoration: none !important;
         color: $white;
 
         span {
@@ -321,14 +343,6 @@
     }
   }
 
-  li {
-    margin: 0 24px 75px;
-
-    @include r($lg) {
-      margin: 0 24px 55px;
-    }
-  }
-
   &__link {
     display: block;
     margin-bottom: 11px;
@@ -358,6 +372,7 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 24px;
+    text-decoration: none !important;
 
     span {
       width: calc(100%);
@@ -369,6 +384,8 @@
 
     &:hover {
       span {
+        text-decoration: none;
+        color: $black;
         background-size: 100% 90%;
       }
     }
