@@ -10,9 +10,11 @@ body {
   background-color: $grey-white;
   cursor: default;
 }
+
 .scroll-none {
-  overflow: scroll;
   position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .container {
@@ -98,15 +100,9 @@ body {
     right: 0;
     top: 0;
     z-index: 10;
-    width: 24px;
-    height: 24px;
-    background-image: radial-gradient(circle at 0 100%, transparent 24px, $black 25px);
-
-    @include r($lg) {
-      width: 20px;
-      height: 20px;
-      background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
-    }
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
   }
 
   &::after {
@@ -115,15 +111,9 @@ body {
     left: 0;
     top: 0;
     z-index: 10;
-    width: 24px;
-    height: 24px;
-    background-image: radial-gradient(circle at 100% 100%, transparent 24px, $black 25px);
-
-    @include r($lg) {
-      width: 20px;
-      height: 20px;
-      background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
-    }
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
   }
 
   @include r($lg) {
@@ -152,6 +142,7 @@ a {
   cursor: pointer;
 
   &:hover {
+    text-decoration: none;
     color: $white;
     background-color: $black;
   }
@@ -203,7 +194,7 @@ a {
 
   svg {
     overflow: hidden;
-    border-radius: 40%;
+    border-radius: 44%;
 
     path {
       transition: stroke 0.2s;
@@ -500,5 +491,76 @@ strong {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.dad-rich-text {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    color: inherit;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  ul {
+    li {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+
+  ol {
+    li {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+
+  a {
+    font-size: 24px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
   }
 }

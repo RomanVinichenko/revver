@@ -1,5 +1,4 @@
 .about {
-
   .about-top {
     position: relative;
     z-index: 2;
@@ -8,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 24px;
-    min-height: calc(100vh - 92px);
+    min-height: calc(100vh - 72px);
     overflow: hidden;
     border-radius: 0 0 24px 24px;
     color: $white;
@@ -91,7 +90,6 @@
     }
 
     @include r($lg) {
-      min-height: calc(100vh - 72px);
       border-radius: 0 0 20px 20px;
     }
   }
@@ -115,30 +113,32 @@
 
   &__photo {
     position: relative;
+
     img {
+      display: block;
+      margin: 0 auto 280px;
       width: 100%;
       max-width: 1200px;
-      margin: 0 auto 280px;
       max-height: 654px;
       border-radius: 24px;
       object-fit: cover;
-      display: block;
       animation: about-photo 1.6s forwards 0.4s;
     }
 
-    h4,p {
+    h4,
+    p {
       position: absolute;
-      top: 50%;
-      color: $white;
       left: 50%;
-      transform: translate(-50%, -50%);
+      top: 50%;
       opacity: 0;
+      color: $white;
+      transform: translate(-50%, -50%);
     }
 
     h4 {
+      margin-bottom: 20px;
       font-size: 46px;
       animation: about-photo-title 1s forwards 1.6s;
-      margin-bottom: 20px;
     }
 
     p {
@@ -944,30 +944,34 @@
 @keyframes about-photo {
   0% {
     max-width: 1200px;
-
   }
+
   100% {
     max-width: 96%;
     max-height: 910px;
   }
 }
+
 @keyframes about-photo-title {
   0% {
-    opacity: 0;
     top: 50%;
+    opacity: 0;
   }
+
   100% {
-    opacity: 1;
     top: 40%;
+    opacity: 1;
   }
 }
+
 @keyframes about-photo-text {
   0% {
-    opacity: 0;
     top: 65%;
+    opacity: 0;
   }
+
   100% {
-    opacity: 1;
     top: 55%;
+    opacity: 1;
   }
 }

@@ -1,6 +1,5 @@
 .thank {
   position: relative;
-  height: calc(100vh - 92px);
   overflow: hidden;
   background-color: $grey-white;
 
@@ -9,8 +8,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-top: auto;
     width: 100%;
-    height: calc(100vh - 92px);
+    min-height: calc(100vh - 72px);
     max-width: 670px;
     background-color: rgba($grey-white, 0.9);
 
@@ -67,7 +67,6 @@
     position: absolute;
     right: 100px;
     bottom: 0;
-    z-index: -10;
     max-width: 750px;
     object-fit: cover;
 
@@ -77,9 +76,5 @@
       max-width: 500px;
       transform: translateX(50%);
     }
-  }
-
-  @include r($lg) {
-    height: calc(100vh - 72px);
   }
 }
