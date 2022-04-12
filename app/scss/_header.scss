@@ -3,8 +3,8 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 5;
-  padding: 24px 0;
+  z-index: 8;
+  padding: 14px 0;
   background-color: $black;
   transition: all 0.5s;
 
@@ -12,39 +12,25 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: -24px;
-    width: 24px;
-    height: 24px;
-    background-image: radial-gradient(circle at 0 100%, transparent 24px, $black 25px);
-
-    @include r($lg) {
-      bottom: -20px;
-      width: 20px;
-      height: 20px;
-      background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
-    }
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
   }
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -24px;
-    width: 24px;
-    height: 24px;
-    background-image: radial-gradient(circle at 100% 100%, transparent 24px, $black 25px);
-
-    @include r($lg) {
-      bottom: -20px;
-      width: 20px;
-      height: 20px;
-      background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
-    }
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
   }
 
   &__pusher {
     display: block;
-    min-height: 92px;
+    min-height: 72px;
     background-color: $black;
 
     @include r($lg) {
@@ -61,11 +47,7 @@
   }
 
   &--out {
-    transform: translateY(-166px);
-  }
-
-  @include r($lg) {
-    padding: 16px 0;
+    transform: translateY(-92px);
   }
 }
 
@@ -326,11 +308,11 @@
 
       &:hover {
         opacity: 1;
-        text-decoration: none!important;
+        text-decoration: none !important;
 
         a {
-          color: $white;
           text-decoration: none;
+          color: $white;
         }
       }
     }

@@ -1,15 +1,3 @@
-// 0. GLOBAL START
-
-// HEADER MOVEMENT
-
-// $(window).scroll(function () {
-//     if ($(this).scrollTop() > 1) {
-//         $('.').addClass('');
-//     } else {
-//         $('.').removeClass('');
-//     }
-// });
-
 // MOVE TO TOP
 
 $(".footer-back__mobile, .footer-back, .logo").click(function () {
@@ -60,7 +48,6 @@ menuButton.addEventListener('click', function () {
         menuText.innerText = curMenuText;
     }
 }, false);
-
 
 
 // 0. GLOBAL FINISH
@@ -155,9 +142,6 @@ window.addEventListener('resize', calcFooterHeight);
 
 // 1. HOME FINISH
 
-// 2. PRODUCT START
-// 2. PRODUCT FINISH
-
 // 3. ABOUT
 
 $(function () {
@@ -176,23 +160,15 @@ $(function () {
 
 // 3. ABOUT FINISH
 
-// 4. NEWS INNER PAGE START
+function hover(x) {
+    document.getElementById('n-link-' + x).classList.add('title-hover');
+    document.getElementById('n-img-' + x).classList.add('img-hover');
+}
 
-// ON PAUSE
-
-// $('.propose__info a').on('click', function (event) {
-//     event.preventDefault();
-//     var id = $(this).attr('href'),
-//         top = $(id).offset().top - 20;
-//     $('body,html').animate(
-//         {
-//             scrollTop: top,
-//         },
-//         800,
-//     );
-// });
-
-// 4. NEWS INNER PAGE FINISH
+function unHover(x) {
+    document.getElementById('n-link-' + x).classList.remove('title-hover');
+    document.getElementById('n-img-' + x).classList.remove('img-hover');
+}
 
 // 5. JOIN US START
 
@@ -265,6 +241,13 @@ elements.forEach(element => {
 // setTimeout(function () {
 //     x.classList.add('job__link--active');
 // }, 500);
+
+
+
+
+
+
+
 
 
 

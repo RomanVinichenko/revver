@@ -60,11 +60,7 @@
     flex-direction: column;
     align-items: center;
     padding: 76px 0 0;
-    height: calc(100vh - 92px);
-
-    @include r($lg) {
-      height: calc(100vh - 72px);
-    }
+    height: calc(100vh - 72px);
   }
 
   h1 {
@@ -90,7 +86,7 @@
   .subtitle {
     p {
       margin: 0 auto 32px 0;
-      max-width: 538px;
+      max-width: 500px;
       text-align: center;
 
       @include r($md) {
