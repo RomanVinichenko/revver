@@ -5,6 +5,12 @@ $(".footer-back__mobile, .footer-back, .logo").click(function () {
 })
 
 // HEADER HIDE
+const menuButton = document.querySelector(".menu__button");
+const menuText = document.querySelector(".menu__text");
+const curMenuText = menuText.innerText;
+const menuSecond = document.querySelector(".menu__second");
+const header = document.querySelector(".header");
+const headerPusher = document.querySelector(".header__pusher")
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
@@ -16,27 +22,16 @@ window.onscroll = function () {
         }, 250);
     } else {
         document.querySelector(".header").classList.add('header--out');
-
     }
     prevScrollpos = currentScrollPos;
 }
 
 // MENU TOGGLE
 
-const menuButton = document.querySelector(".menu__button");
-const menuMain = document.querySelector(".menu__main");
-const menuText = document.querySelector(".menu__text");
-const curMenuText = menuText.innerText;
-const blur = document.querySelector(".blur");
-const menuSecond = document.querySelector(".menu__second");
-const header = document.querySelector(".header");
-
 menuButton.addEventListener('click', function () {
-    menuMain.classList.toggle('menu__main--active');
     menuButton.classList.toggle('menu__button--active');
-    blur.classList.toggle('blur--active');
-    header.classList.toggle('header--go');
     body.classList.toggle('scroll-none');
+    headerPusher.classList.toggle('header__pusher--active');
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -47,7 +42,7 @@ menuButton.addEventListener('click', function () {
     } else {
         menuText.innerText = curMenuText;
     }
-}, false);
+});
 
 
 // 0. GLOBAL FINISH
@@ -190,13 +185,6 @@ if (close) {
         body.style.overflow = 'auto';
     })
 }
-
-// buttonVacancy.forEach((buttonVacancy) => {
-//     buttonVacancy.addEventListener('click', function () {
-//         OpenPopUpInJoinUs(this, dadAr);
-//         body.style.overflow = 'hidden';
-//     });
-// });
 
 // 5. JOIN US FINISH
 
