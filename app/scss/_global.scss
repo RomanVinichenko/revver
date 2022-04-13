@@ -88,10 +88,10 @@ body {
 
 .main {
   position: relative;
-  z-index: 5;
+  z-index: 10;
   flex-grow: 1;
-  margin: 0 0 -24px;
-  border-radius: 24px;
+  margin: 0 0 -20px;
+  border-radius: 20px;
   background-color: $grey-white;
 
   &::before {
@@ -195,7 +195,13 @@ a {
 
     .letter {
       display: inline-block;
-      transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+  }
+
+  .move-text__active {
+    .letter {
+      transform: translateY(-100%);
     }
   }
 
@@ -212,25 +218,31 @@ a {
     }
   }
 
+  .arrow-towards {
+    path {
+      stroke: $white;
+      animation: slotMachine 0.4s ease-in forwards;
+    }
+
+    circle {
+      fill: $black;
+    }
+  }
+
+
   &:hover {
     text-decoration: none;
     color: inherit;
 
-    .move-text {
-      .letter {
-        transform: translateY(-100%);
-      }
-    }
-
     svg {
-      path {
-        stroke: $white;
-        animation: slotMachine 0.3s ease-in forwards;
-      }
-
-      circle {
-        fill: $black;
-      }
+      //path {
+      //  stroke: $white;
+      //  animation: slotMachine 0.4s ease-in forwards;
+      //}
+      //
+      //circle {
+      //  fill: $black;
+      //}
     }
   }
 }

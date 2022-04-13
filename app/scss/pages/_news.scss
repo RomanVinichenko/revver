@@ -77,18 +77,23 @@
     }
 
     li {
-      display: flex;
       align-items: center;
       padding: 0 16px;
-      min-width: fit-content;
-      min-height: 32px;
-      border: 1px solid $black;
+      height: 32px;
+      overflow: hidden;
+      line-height: 32px;
+      border: 1px solid rgba(15, 15, 17, 0.15);
       border-radius: 32px;
       font-size: 14px;
-      line-height: 20px;
+      min-width: fit-content;
       letter-spacing: -0.01em;
-      transition: border 0.2s;
+      transition: border 0.4s;
       cursor: pointer;
+
+      .letter {
+        display: inline-block;
+        transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+      }
 
       &:not(:last-child) {
         margin-right: 12px;
@@ -96,7 +101,10 @@
     }
 
     li:hover {
-      border: 1px solid $green;
+      border: 1px solid rgba(15, 15, 17, 1);
+      .letter {
+        transform: translateY(-100%);
+      }
     }
 
     .active {
