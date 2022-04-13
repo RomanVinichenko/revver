@@ -86,7 +86,7 @@
   .subtitle {
     p {
       margin: 0 auto 32px 0;
-      max-width: 500px;
+      max-width: 480px;
       text-align: center;
 
       @include r($md) {

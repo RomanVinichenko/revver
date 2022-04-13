@@ -233,12 +233,6 @@
       display: inline-block;
       transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
-
-    @for $i from 0 through 20 {
-      .letter:nth-child(#{$i + 1}) {
-        transition-delay: 0.015s * $i;
-      }
-    }
   }
 
   &:hover {
@@ -262,7 +256,7 @@
     border-radius: 40%;
 
     path {
-      animation: slotMachine 0.3s ease-in-out 3;
+      animation: slotMachine 0.4s ease-in-out;
     }
   }
 }

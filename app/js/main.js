@@ -218,7 +218,7 @@ function newAnimOut(x) {
 }
 
 
-let elements = document.querySelectorAll('.job__wave');
+let elements = document.querySelectorAll('.move-text');
 
 elements.forEach(element => {
     let innerText = element.innerText;
