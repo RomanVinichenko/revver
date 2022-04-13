@@ -296,7 +296,7 @@
       line-height: 24px;
       letter-spacing: -0.01em;
       color: $white;
-      transition: opacity 0.2s;
+      transition: opacity 0.3s;
 
       &:not(:last-child) {
         margin-right: 80px;
@@ -304,11 +304,27 @@
 
       a {
         position: relative;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+
+        .menu-title {
+          width: calc(100%);
+          background-image: linear-gradient(transparent calc(100% - 1px), $white 1px);
+          background-size: 0 95%;
+          background-repeat: no-repeat;
+          transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+        }
       }
 
       &:hover {
         opacity: 1;
-        text-decoration: none !important;
+        text-decoration: none;
+
+        .menu-title {
+          background-size: 100% 95%;
+        }
 
         a {
           text-decoration: none;
@@ -317,7 +333,7 @@
       }
     }
 
-    span {
+    .count-news {
       position: absolute;
       right: -16px;
       top: 0;

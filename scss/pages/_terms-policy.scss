@@ -30,13 +30,18 @@
   }
 
   &__part {
+    position: sticky;
+    top: 20px;
     margin-right: 40px;
+    width: 100%;
+    height: fit-content;
     max-width: 432px;
 
     h4 {
       margin-bottom: 58px;
       font-weight: 600;
       font-size: 24px;
+      line-height: 32px;
       letter-spacing: -0.02em;
 
       @include r($xl) {
@@ -95,6 +100,9 @@
         }
 
         &:hover {
+          text-decoration: none;
+          color: inherit;
+
           span {
             background-size: 100% 90%;
           }
@@ -109,6 +117,8 @@
     }
 
     @include r($lg) {
+      position: relative;
+      top: 0;
       margin-right: 0;
       margin-bottom: 50px;
       max-width: 100%;
