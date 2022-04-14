@@ -3,8 +3,8 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 5;
-  padding: 14px 0 24px;
+  z-index: 15;
+  padding: 14px 0;
   background-color: $black;
   transition: transform 0.3s;
 
@@ -29,8 +29,8 @@
   }
 
   &__pusher {
-    position: relative;
     min-height: 72px;
+    background-color: $black;
     transition: all 0.4s;
 
     @include r($lg) {
@@ -38,12 +38,8 @@
     }
   }
 
-  &__pusher--active {
-    min-height: 527px;
-  }
-
   &--in {
-    z-index: 10;
+    z-index: 15;
   }
 
   &--out {
@@ -52,11 +48,15 @@
 }
 
 .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 58px;
+    width: 100%;
   }
 
   a {
@@ -86,15 +86,30 @@
   }
 
   &__main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px 20px;
     color: $white;
-    transition: transform 0.5s;
+    background-color: $black;
+    transform: translateY(-100%);
+    transition: all 0.5s;
 
     @include r($lg) {
       padding: 80px 0 30px;
     }
+  }
+
+  &__main--active {
+    transform: translateY(0);
+    transition: all 0.5s;
   }
 
   &__main-list {
@@ -139,7 +154,7 @@
   }
 
   &__button {
-    z-index: 5;
+    z-index: 55;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -284,7 +299,7 @@
         .menu-title {
           width: calc(100%);
           background-image: linear-gradient(transparent calc(100% - 1px), $white 1px);
-          background-size: 0 95%;
+          background-size: 0 90%;
           background-repeat: no-repeat;
           transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
         }
@@ -295,7 +310,7 @@
         text-decoration: none;
 
         .menu-title {
-          background-size: 100% 95%;
+          background-size: 100% 90%;
         }
 
         a {

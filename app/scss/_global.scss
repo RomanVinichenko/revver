@@ -11,12 +11,6 @@ body {
   cursor: default;
 }
 
-.scroll-none {
-  position: fixed;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 24px;
@@ -190,58 +184,58 @@ a {
     overflow: hidden;
     font-weight: 600;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 32px; // NEED
     letter-spacing: -0.01em;
 
     .letter {
       display: inline-block;
-      transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+      transition: transform 0.4s ease-in-out;
     }
   }
 
-  .move-text__active {
-    .letter {
-      transform: translateY(-100%);
-    }
-  }
-
-  svg {
+  .move-arrow {
+    position: relative;
+    width: 32px;
+    height: 32px;
     overflow: hidden;
-    border-radius: 44%;
+    border-radius: 50%;
+    background-color: $green;
 
-    path {
-      transition: stroke 0.2s;
+    &::after,
+    &::before {
+      content: url("../images/arrow-transform.svg");
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      font-size: 0;
+      line-height: 16px;
+      transition: all 0.4s ease-in-out;
     }
 
-    circle {
-      transition: fill 0.2s;
-    }
-  }
-
-  .arrow-towards {
-    path {
-      stroke: $white;
-      animation: slotMachine 0.4s ease-in forwards;
-    }
-
-    circle {
-      fill: $black;
+    &::before {
+      transform: translate(-130%, 100%);
     }
   }
 
   &:hover {
-    text-decoration: none;
     color: inherit;
 
-    svg {
-      //path {
-      //  stroke: $white;
-      //  animation: slotMachine 0.4s ease-in forwards;
-      //}
-      //
-      //circle {
-      //  fill: $black;
-      //}
+    .move-text {
+      .letter {
+        transform: translateY(-100%);
+      }
+    }
+
+    .move-arrow {
+      &::before {
+        transform: translate(0);
+      }
+
+      &::after {
+        transform: translate(140%, -130%);
+      }
     }
   }
 }
@@ -336,6 +330,10 @@ a {
       width: 100%;
       max-width: 376px;
 
+      .move-text {
+        font-weight: 400;
+      }
+
       @include r($xl) {
         max-width: 300px;
       }
@@ -369,31 +367,15 @@ a {
       }
     }
 
-    svg {
-      path {
-        transition: stroke 0.2s;
-      }
-
-      circle {
-        transition: fill 0.2s;
-      }
-
-      @include r($lg) {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
     &:hover {
       background-color: $green;
 
-      svg {
-        circle {
-          fill: $black;
-        }
+      .move-arrow {
+        background-color: $black;
 
-        path {
-          stroke: $white;
+        &::after,
+        &::before {
+          content: url("../images/arrow-transform-white.svg");
         }
       }
     }
@@ -485,23 +467,6 @@ strong {
   font-weight: 700;
 }
 
-@keyframes slotMachine {
-  50% {
-    opacity: 0;
-    transform: translate3d(100%, -100%, 0);
-  }
-
-  51% {
-    opacity: 0;
-    transform: translate3d(-100%, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @keyframes fade {
   0% {
     opacity: 0;
@@ -586,5 +551,75 @@ strong {
   img {
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.home-top,
+.product-top,
+.about-top {
+  .green-link {
+    .move-text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 36px;
+    }
+
+    .move-arrow {
+      width: 36px;
+      height: 36px;
+
+      &::after,
+      &::before {
+        left: 10px;
+        top: 10px;
+        transform: rotate(135deg);
+      }
+
+      &::before {
+        transform: translate(0, -200%) rotate(135deg);
+      }
+    }
+
+    &:hover {
+      .move-arrow {
+        &::before {
+          transform: translate(0) rotate(135deg);
+        }
+
+        &::after {
+          transform: translate(0, 200%) rotate(135deg);
+
+          @include r($md) {
+            transform: translate(0, 180%) rotate(135deg);
+          }
+        }
+      }
+    }
+
+    @include r($md) {
+      margin: 0 auto;
+
+      .move-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      .move-arrow {
+        width: 32px;
+        height: 32px;
+
+        &::after,
+        &::before {
+          left: 8px;
+          top: 8px;
+          transform: rotate(135deg);
+        }
+
+        &::before {
+          transform: translate(0, -180%) rotate(135deg);
+        }
+      }
+    }
   }
 }

@@ -7,10 +7,9 @@ $(".footer-back__mobile, .footer-back, .logo").click(function () {
 // HEADER HIDE
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
-const curMenuText = menuText.innerText;
 const menuSecond = document.querySelector(".menu__second");
 const header = document.querySelector(".header");
-const headerPusher = document.querySelector(".header__pusher")
+const menuMain = document.querySelector(".menu__main");
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
@@ -28,10 +27,11 @@ window.onscroll = function () {
 
 // MENU TOGGLE
 
+const curMenuText = menuText.innerText;
+
 menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('menu__button--active');
-    body.classList.toggle('scroll-none');
-    headerPusher.classList.toggle('header__pusher--active');
+    menuMain.classList.toggle('menu__main--active');
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -43,9 +43,6 @@ menuButton.addEventListener('click', function () {
         menuText.innerText = curMenuText;
     }
 });
-
-
-// 0. GLOBAL FINISH
 
 // 1. HOME START
 
@@ -188,23 +185,7 @@ if (close) {
 
 // 5. JOIN US FINISH
 
-
-function newAnimIn(x) {
-    x.classList.add('job__link--active');
-    // let myElem = x;
-    // myElem = myElem.previousElementSibling;
-    // myElem = myElem.querySelector('a');
-    // myElem.classList.add('job__title--active');
-}
-
-function newAnimOut(x) {
-    // let myElem = x;
-    // myElem = myElem.previousElementSibling;
-    // myElem = myElem.querySelector('a');
-    // myElem.classList.remove('job__title--active');
-    x.classList.remove('job__link--active');
-}
-
+// GREEN-LINK
 
 let elements = document.querySelectorAll('.move-text');
 
@@ -226,9 +207,6 @@ elements.forEach(element => {
     element.appendChild(textContainer.cloneNode(true));
 });
 
-// setTimeout(function () {
-//     x.classList.add('job__link--active');
-// }, 500);
 
 
 

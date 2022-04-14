@@ -199,7 +199,7 @@
   }
 
   &:hover {
-    text-decoration: none !important;
+    text-decoration: none;
     color: inherit;
   }
 
@@ -207,57 +207,6 @@
     margin-bottom: 8px;
     font-size: 32px;
     line-height: 40px;
-  }
-}
-
-.job__link {
-  position: absolute;
-  right: 0;
-  display: flex;
-  align-items: center;
-  color: inherit;
-  cursor: pointer;
-
-  .job__wave {
-    display: inline-block;
-    margin-right: 10px;
-    height: 24px;
-    overflow: hidden;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-
-    .letter {
-      display: inline-block;
-      transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-    }
-  }
-
-  &:hover {
-    color: inherit;
-  }
-
-  @include r($sm) {
-    display: none;
-  }
-}
-
-.job__link--active {
-  .job__wave {
-    .letter {
-      transform: translateY(-100%);
-    }
-  }
-
-  svg {
-    overflow: hidden;
-    border-radius: 40%;
-
-    path {
-      animation: slotMachine 0.4s ease-in-out;
-    }
   }
 }
 

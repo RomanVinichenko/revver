@@ -292,37 +292,9 @@
     background-color: transparent;
     cursor: pointer;
 
-    span {
-      margin-right: 12px;
-    }
-
-    svg {
-      overflow: hidden;
-      border-radius: 40%;
-
-      path {
-        transition: stroke 0.2s;
-      }
-
-      circle {
-        transition: fill 0.2s;
-      }
-    }
-
     &:hover {
       text-decoration: none;
       color: inherit;
-
-      svg {
-        path {
-          stroke: $white;
-          animation: slotMachine 0.3s ease-in forwards 3;
-        }
-
-        circle {
-          fill: $black;
-        }
-      }
     }
 
     @include r($md) {

@@ -95,32 +95,6 @@
     }
   }
 
-  .green-link {
-    span {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 32px;
-
-      @include r($md) {
-        font-size: 18px;
-        line-height: 28px;
-      }
-    }
-
-    &:hover {
-      svg {
-        path {
-          stroke: $green;
-          animation: slotMachine-Prod 0.3s ease-in forwards 3;
-        }
-
-        circle {
-          fill: $white;
-        }
-      }
-    }
-  }
-
   @include r($lg) {
     margin-bottom: 130px;
   }
@@ -447,6 +421,17 @@
       }
     }
 
+    .green-link {
+      .move-arrow {
+        background-color: #5a0de4;
+
+        &::after,
+        &::before {
+          content: url("../images/arrow-transform-white.svg");
+        }
+      }
+    }
+
     @include r($xl) {
       margin: 0 auto 65px;
     }
@@ -760,6 +745,15 @@
       }
     }
 
+    .green-link {
+      .move-arrow {
+        &::after,
+        &::before {
+          content: url("../images/arrow-transform-white.svg");
+        }
+      }
+    }
+
     @include r($lg) {
       flex-direction: row;
       margin-right: 0;
@@ -894,22 +888,5 @@
 
   @include r($md) {
     margin-bottom: 88px;
-  }
-}
-
-@keyframes slotMachine-Prod {
-  50% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  51% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 }
