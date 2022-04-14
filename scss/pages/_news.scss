@@ -252,7 +252,7 @@
           background-image: linear-gradient(transparent calc(100% - 2px), $white 2px);
           background-size: 0 90%;
           background-repeat: no-repeat;
-          transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+          transition: background-size 0.25s ease-in-out;
         }
 
         @include r($lg) {
@@ -392,7 +392,7 @@
       background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
       background-size: 0 90%;
       background-repeat: no-repeat;
-      transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+      transition: background-size 0.25s ease-in-out;
     }
 
     &:hover {
@@ -438,11 +438,33 @@
       color: $grey-text;
     }
 
-    h4 {
+    .read__title {
+      display: block;
       margin-bottom: 11px;
       font-weight: 700;
       font-size: 20px;
       letter-spacing: -0.01em;
+
+      span {
+        width: calc(100%);
+        background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
+        background-size: 0 94%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    &:hover {
+      .read__title {
+        span {
+          background-size: 100% 94%;
+        }
+      }
     }
 
     @include r($md) {
