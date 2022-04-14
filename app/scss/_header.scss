@@ -301,7 +301,7 @@
           background-image: linear-gradient(transparent calc(100% - 1px), $white 1px);
           background-size: 0 90%;
           background-repeat: no-repeat;
-          transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+          transition: background-size 0.3s ease-in-out;
         }
       }
 
