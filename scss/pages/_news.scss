@@ -22,6 +22,15 @@
     }
   }
 
+  h3 {
+    margin: 128px auto 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
   nav {
     position: relative;
     animation: 0.6s fade;
@@ -92,7 +101,7 @@
 
       .letter {
         display: inline-block;
-        transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+        transition: transform 0.4s ease-in-out;
       }
 
       &:not(:last-child) {
@@ -398,7 +407,7 @@
 }
 
 .read {
-  margin: 90px auto 0;
+  margin: 56px auto 0;
   max-width: 784px;
 
   &__info {
@@ -434,23 +443,6 @@
       font-weight: 700;
       font-size: 20px;
       letter-spacing: -0.01em;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 146px;
-      background-color: transparent;
-
-      span {
-        display: block;
-        margin-right: 12px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-      }
     }
 
     @include r($md) {
