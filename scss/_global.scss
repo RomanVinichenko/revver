@@ -11,6 +11,13 @@ body {
   cursor: default;
 }
 
+.scroll-none {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 24px;
