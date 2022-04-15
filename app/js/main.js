@@ -1,29 +1,25 @@
-// MOVE TO TOP
-
-$(".footer-back__mobile, .footer-back, .logo").click(function () {
-    jQuery('html,body').animate({scrollTop: 0}, 800);
-})
-
-// HEADER HIDE
+const body = document.body
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
 const menuSecond = document.querySelector(".menu__second");
 const header = document.querySelector(".header");
 const menuMain = document.querySelector(".menu__main");
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        setTimeout(function () {
-            document.querySelector(".header").classList.remove('header--out');
-            document.querySelector(".header").classList.add('header--in');
-        }, 250);
-    } else {
-        document.querySelector(".header").classList.add('header--out');
-    }
-    prevScrollpos = currentScrollPos;
-}
+// HEADER MOVING temporary commented
+
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//     var currentScrollPos = window.pageYOffset;
+//     if (prevScrollpos > currentScrollPos) {
+//         setTimeout(function () {
+//             document.querySelector(".header").classList.remove('header--out');
+//             document.querySelector(".header").classList.add('header--in');
+//         }, 250);
+//     } else {
+//         document.querySelector(".header").classList.add('header--out');
+//     }
+//     prevScrollpos = currentScrollPos;
+// }
 
 // MENU TOGGLE
 
@@ -32,6 +28,7 @@ const curMenuText = menuText.innerText;
 menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('menu__button--active');
     menuMain.classList.toggle('menu__main--active');
+    body.classList.toggle('scroll-none')
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -45,6 +42,12 @@ menuButton.addEventListener('click', function () {
 });
 
 // 1. HOME START
+
+// MOVE TO TOP
+
+$(".footer-back__mobile, .footer-back, .logo").click(function () {
+    jQuery('html,body').animate({scrollTop: 0}, 800);
+})
 
 // HOME PAGES BAR (FOR DEV)
 
@@ -167,7 +170,6 @@ function unHover(x) {
 const buttonVacancy = document.querySelectorAll('.green-link')
 const popUp = document.querySelector('.popup')
 const close = document.querySelector('.popup__close')
-const body = document.body
 
 buttonVacancy.forEach((buttonVacancy) => {
     buttonVacancy.addEventListener('click', function () {
