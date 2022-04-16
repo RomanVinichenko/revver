@@ -117,6 +117,13 @@
 
       img {
         margin-top: auto;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.015);
+        }
       }
 
       &:first-child {
@@ -300,10 +307,17 @@
     width: 100%;
     max-width: 55%;
     object-fit: contain;
+    transition: transform 0.5s ease-in-out;
 
     @include r($md) {
       max-width: 100%;
       max-height: 400px;
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.015);
     }
   }
 
@@ -378,9 +392,16 @@
     width: 100%;
     max-height: 376px;
     object-fit: cover;
+    transition: transform 0.5s ease-in-out;
 
     @include r($md) {
       min-height: 250px;
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.015);
     }
   }
 

@@ -101,42 +101,27 @@
       color: $white;
     }
 
-    &__dot {
-      position: relative;
-      width: 68px;
-      height: 68px;
-      border: 1px solid #4a4b54;
-      border-radius: 50%;
-      background-color: transparent;
-      transition: background-color 0.5s, border 0.5s;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 4px;
-        height: 4px;
-        border-radius: 100%;
-        background-color: $white;
-        transform: translate(-50%, -50%) scale(1.0476);
-        transition: ease-in 0.2s;
-      }
-    }
-
-    &:hover {
-      .footer-back__dot {
-        border: 1px solid transparent;
-
-        &::before {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
     @include r($md) {
       display: none;
+    }
+  }
+
+  .footer-back__dot {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    border: 1px solid #4a4b54;
+    border-radius: 50%;
+    background-color: transparent;
+
+    &::after {
+      content: url("../images/arrow-white-top.svg");
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, -50%);
     }
   }
 
