@@ -283,6 +283,7 @@
   img {
     max-width: 50%;
     object-fit: contain;
+    transition: transform 0.5s ease-in-out;
 
     @include r($lg) {
       margin: 0 auto;
@@ -348,6 +349,12 @@
         padding-left: 68px;
         background-size: 48px;
       }
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.015);
     }
   }
 
@@ -864,12 +871,22 @@
     color: $white;
     background-color: $black;
 
+    img {
+      transition: transform 0.5s ease-in-out;
+    }
+
     h4 {
       margin-bottom: 16px;
       font-weight: 600;
       font-size: 24px;
       line-height: 32px;
       letter-spacing: -0.02em;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.015);
+      }
     }
 
     @include r($lg) {

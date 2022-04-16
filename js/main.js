@@ -111,18 +111,6 @@ if (questClose) {
     })
 }
 
-// if (questionItem) {
-//     questionItem.forEach((questionItem) => {
-//         questionItem.addEventListener('click', function () {
-//             event.preventDefault();
-//             var myNum = this.getAttribute('data-slide-num');
-//             document.getElementById('quest-pop-main-text').innerHTML =
-//                 document.getElementById('home-slide-answer-' + myNum).innerHTML;
-//             questPop.classList.add('quest-pop--active');
-//         });
-//     });
-// }
-
 // FOOTER ANIMATION
 
 function calcFooterHeight() {
