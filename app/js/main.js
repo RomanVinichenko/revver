@@ -141,8 +141,6 @@ $(function () {
     });
 });
 
-// 3. ABOUT FINISH
-
 function hover(x) {
     document.getElementById('n-link-' + x).classList.add('title-hover');
     document.getElementById('n-img-' + x).classList.add('img-hover');
@@ -153,18 +151,20 @@ function unHover(x) {
     document.getElementById('n-img-' + x).classList.remove('img-hover');
 }
 
-// 5. JOIN US START
+// POPUP JOIN
 
 const buttonVacancy = document.querySelectorAll('.green-link')
 const popUp = document.querySelector('.popup')
 const close = document.querySelector('.popup__close')
 
-buttonVacancy.forEach((buttonVacancy) => {
-    buttonVacancy.addEventListener('click', function () {
-        popUp.classList.add('popup__active');
-        body.style.overflow = 'hidden';
+if (buttonVacancy && popUp) {
+    buttonVacancy.forEach((buttonVacancy) => {
+        buttonVacancy.addEventListener('click', function () {
+            popUp.classList.add('popup__active');
+            body.style.overflow = 'hidden';
+        });
     });
-});
+}
 
 if (close) {
     close.addEventListener('click', function () {
@@ -172,8 +172,6 @@ if (close) {
         body.style.overflow = 'auto';
     })
 }
-
-// 5. JOIN US FINISH
 
 // GREEN-LINK
 
