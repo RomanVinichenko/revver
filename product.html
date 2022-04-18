@@ -207,6 +207,12 @@
     </ul>
   </div>
 
+<!--  <section class="scroll_slider">-->
+<!--    <div class="cb-sequence-stage" style="width: 100%;height: 100%">-->
+<!--      <canvas></canvas>-->
+<!--    </div>-->
+<!--  </section>-->
+
   <div class="container">
 
     <section class="management">
@@ -261,20 +267,25 @@
               organization.
             </p>
           </div>
-          <ul class="nav nav-tabs">
-            <li class="sales__item active">
-              <h6 data-toggle="tab" href="#home">Transaction</h6>
-            </li>
-            <li class="sales__item">
-              <h6 data-toggle="tab" href="#menu1">Cash management</h6>
-            </li>
-            <li class="sales__item">
-              <h6 data-toggle="tab" href="#menu2">Sales reports</h6>
-            </li>
-            <li class="sales__item">
-              <h6 data-toggle="tab" href="#menu3">Sales analysis</h6>
-            </li>
-          </ul>
+          <div class="sales__nav-box">
+            <div class="sales__bar">
+              <span class="sales__bar-item"></span>
+            </div>
+            <ul class="nav nav-tabs">
+              <li class="sales__item active" onclick="MoveBarItem(0)" data-toggle="tab" href="#home">
+                <h6>Transaction</h6>
+              </li>
+              <li class="sales__item" onclick="MoveBarItem(27)" data-toggle="tab" href="#menu1">
+                <h6>Cash management</h6>
+              </li>
+              <li class="sales__item" onclick="MoveBarItem(55)" data-toggle="tab" href="#menu2">
+                <h6>Sales reports</h6>
+              </li>
+              <li class="sales__item" onclick="MoveBarItem(82)" style="margin-bottom: 0"  data-toggle="tab" href="#menu3">
+                <h6>Sales analysis</h6>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="tab-content">
           <div id="home" class="tab-pane fade in active">
@@ -354,6 +365,7 @@
       </div>
       <img src="images/business-product.png" alt="Business">
     </section>
+
   </div>
 
   <section class="office">
@@ -510,6 +522,10 @@
 
 <div class="footer__pusher">
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
