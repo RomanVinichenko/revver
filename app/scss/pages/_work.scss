@@ -376,8 +376,6 @@
   .vacancy {
     top: -200px;
 
-    //height: auto;
-
     @include r($lg) {
       top: 0;
     }
