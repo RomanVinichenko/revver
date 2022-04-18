@@ -112,22 +112,33 @@ $('.question').slick({
 const questionItem = document.querySelectorAll('.question__item')
 const questPop = document.querySelector('.quest-pop')
 const questClose = document.querySelector('.quest-pop__close')
+const questUnder = document.querySelector('.quest-pop__under')
 
 if (questionItem) {
     questionItem.forEach((questionItem) => {
         questionItem.addEventListener('click', function () {
-            event.preventDefault();
-            var myNum = this.getAttribute('data-slide-num');
-            document.getElementById('quest-pop-main-text').innerHTML =
-                document.getElementById('home-slide-answer-' + myNum).innerHTML;
+            // event.preventDefault();
+            // var myNum = this.getAttribute('data-slide-num');
+            // document.getElementById('quest-pop-main-text').innerHTML =
+            //     document.getElementById('home-slide-answer-' + myNum).innerHTML;
             questPop.classList.add('quest-pop--active');
+            questUnder.classList.add('quest-pop__under--active');
         });
     });
 }
 
+if (questUnder) {
+    questUnder.addEventListener('click', function (){
+        questUnder.classList.remove('quest-pop__under--active');
+        questPop.classList.remove('quest-pop--active');
+    });
+}
+
+
 if (questClose) {
     questClose.addEventListener('click', function () {
         questPop.classList.remove('quest-pop--active');
+        questUnder.classList.remove('quest-pop__under--active')
     })
 }
 

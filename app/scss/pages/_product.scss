@@ -22,6 +22,7 @@
   position: relative;
   z-index: 5;
   margin-bottom: 160px;
+  overflow: hidden;
   color: $white;
   background-image: url("../images/product-bg.jpg");
   background-position: center;
@@ -34,23 +35,19 @@
     left: 50%;
     bottom: 0;
     z-index: -1;
-    max-width: 800px;
+    max-width: 1080px;
     transform: translateX(-50%);
 
-    @include r($md) {
-      max-width: 700px;
+    @include r($lg) {
+      max-width: 1000px;
     }
 
     @include r($sm) {
-      max-width: 500px;
+      max-width: 530px;
     }
 
     @include h(800) {
-      max-width: 700px;
-    }
-
-    @include h($md) {
-      max-width: 600px;
+      max-width: 900px;
     }
   }
 
@@ -283,7 +280,7 @@
   img {
     max-width: 50%;
     object-fit: contain;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 
     @include r($lg) {
       margin: 0 auto;
@@ -354,7 +351,7 @@
 
   &:hover {
     img {
-      transform: scale(1.015);
+      transform: scale(1.04);
     }
   }
 
@@ -869,7 +866,7 @@
     background-color: $black;
 
     img {
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.7s ease-in-out;
     }
 
     h4 {
@@ -882,7 +879,7 @@
 
     &:hover {
       img {
-        transform: scale(1.015);
+        transform: scale(1.04);
       }
     }
 

@@ -222,6 +222,16 @@
       transform: translateY(-50%);
     }
 
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+
     @include r($md) {
       left: 24px;
       top: 22px;
@@ -371,6 +381,10 @@
     padding-bottom: 0;
     border-radius: 24px;
     background-color: #fff;
+  }
+
+  .work-info__wrapper {
+    border-bottom: none;
   }
 
   .vacancy {
