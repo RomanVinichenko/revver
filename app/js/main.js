@@ -1,3 +1,17 @@
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.to('.laptop__top', {
+//     scrollTrigger: {
+//         trigger: '.laptop',
+//         start: 'top top',
+//         end: '800px top',
+//         // markers: true,
+//         scrub: 2.5,
+//         pin: true,
+//     },
+//     rotationX: 0,
+//     duration: 5,
+// });
+
 const body = document.body
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
@@ -41,7 +55,12 @@ menuButton.addEventListener('click', function () {
     }
 });
 
-// 1. HOME START
+// PRODUCT POLZUN MOVING
+
+function MoveBarItem(x) {
+    document.querySelector('.sales__bar-item').style.top = x + '%';
+}
+
 
 // MOVE TO TOP
 
@@ -64,7 +83,7 @@ if (link) {
 
 $('.question').slick({
     loop: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     swipe: false,
     slidesToScroll: 1,
@@ -86,6 +105,7 @@ $('.question').slick({
         }
     ]
 });
+
 
 // HOME POPUP
 
@@ -219,7 +239,6 @@ const preloadImage = (src) => {
     });
 };
 
-
 const calcDrawImage = (ctx, image, left = 0.5, top = 0.5) => {
     // console.log(ctx)
     const cWidth = ctx.canvas.width;
@@ -242,27 +261,25 @@ const calcDrawImage = (ctx, image, left = 0.5, top = 0.5) => {
     ctx.drawImage(image, (cWidth - resultWidth) * left, (cHeight - resultHeight) * top, resultWidth, resultHeight)
 }
 
-
 // scroll_slider
 
-function initHeroSection(){
+function initHeroSection() {
     const urls = [];
-    for(let i=0; i<199; i++){
-        let number = (i<99)? (i<9)? `00${i + 1}`: `0${i + 1}`: `${i + 1}`
-        urls.push( `https://www.polestar.com/www-images/home-car-carousel/car-sequence/desktop/ps2-ps1-precept/${number}.jpg`)
+    for (let i = 0; i < 199; i++) {
+        let number = (i < 99) ? (i < 9) ? `00${i + 1}` : `0${i + 1}` : `${i + 1}`
+        urls.push(`https://www.polestar.com/www-images/home-car-carousel/car-sequence/desktop/ps2-ps1-precept/${number}.jpg`)
     }
 
     const images = preloadImages(urls);
     const container = document.querySelector('.scroll_slider');
-    this.canvasSlider(container, images,"600%")
+    this.canvasSlider(container, images, "600%")
 }
 
 
-function  canvasSlider(container, images, end){
+function canvasSlider(container, images, end) {
 
     const canvas = container.querySelector('canvas');
     const ctx = canvas.getContext('2d');
-
 
 
     const tl = gsap.timeline({

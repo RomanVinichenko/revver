@@ -576,6 +576,29 @@
     }
   }
 
+  &__nav-box {
+    display: flex;
+  }
+
+  &__bar {
+    position: relative;
+    width: 2px;
+    height: initial;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: rgba($white, 0.15);
+
+    span {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 32px;
+      border-radius: 8px;
+      background-color: $green;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
   h4 {
     margin-bottom: 15px;
     font-weight: 700;
@@ -621,34 +644,12 @@
     display: flex;
     flex-direction: column;
     border-bottom: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      border-radius: 8px;
-      background-color: rgba($white, 0.15);
-    }
   }
 
   &__item {
     position: relative;
     padding-left: 64px;
     cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 2px;
-      height: 100%;
-      border-radius: 8px;
-      background-color: transparent;
-      transition: background-color 0.3s;
-    }
 
     &::after {
       content: "0" counter(section) "";
@@ -690,10 +691,6 @@
   }
 
   .active {
-    &::before {
-      background-color: $green;
-    }
-
     &::after {
       opacity: 1;
     }
