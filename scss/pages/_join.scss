@@ -198,6 +198,11 @@
     transition: background-size 0.3s ease-in-out;
   }
 
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
   &:hover {
     text-decoration: none;
     color: inherit;
