@@ -362,6 +362,7 @@
   transition: all 0.5s;
 
   &__active {
+    z-index: 30;
     visibility: visible;
     opacity: 1;
   }
@@ -374,7 +375,8 @@
 
   .vacancy {
     top: -200px;
-    height: auto;
+
+    //height: auto;
 
     @include r($lg) {
       top: 0;
