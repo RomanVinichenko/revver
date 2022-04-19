@@ -389,6 +389,26 @@ a {
           content: url("../images/arrow-transform-white.svg");
         }
       }
+
+      .green-link {
+        color: inherit;
+
+        .move-text {
+          .letter {
+            transform: translateY(-100%);
+          }
+        }
+
+        .move-arrow {
+          &::before {
+            transform: translate(0);
+          }
+
+          &::after {
+            transform: translate(140%, -130%);
+          }
+        }
+      }
     }
 
     &:first-child {
@@ -499,8 +519,9 @@ strong {
 .about-top {
   .green-link {
     .move-text {
-      font-weight: 400;
-      font-size: 20px;
+      height: 36px;
+      font-weight: 600;
+      font-size: 16px;
       line-height: 36px;
     }
 

@@ -128,7 +128,7 @@ if (questionItem) {
 }
 
 if (questUnder) {
-    questUnder.addEventListener('click', function (){
+    questUnder.addEventListener('click', function () {
         questUnder.classList.remove('quest-pop__under--active');
         questPop.classList.remove('quest-pop--active');
     });
@@ -225,6 +225,37 @@ elements.forEach(element => {
     element.appendChild(textContainer);
     element.appendChild(textContainer.cloneNode(true));
 });
+
+// HOME TESTIMONIALS
+
+function storyIn() {
+    document.querySelector(".testimonials__first").classList.add('testimonials__first--active');
+    document.querySelector(".testimonials__second").classList.add('testimonials__second--active');
+
+    setTimeout(function () {
+        document.querySelector(".testimonials__block-right").classList.add('testimonials__block-right--active');
+    }, 300);
+    setTimeout(function () {
+        document.querySelector(".testimonials__block-left").classList.add('testimonials__block-left--active');
+    }, 300);
+}
+
+function storyOut() {
+    document.querySelector(".testimonials__first").classList.remove('testimonials__first--active');
+    document.querySelector(".testimonials__second").classList.remove('testimonials__second--active');
+    document.querySelector(".testimonials__block-right").classList.remove('testimonials__block-right--active');
+    document.querySelector(".testimonials__block-left").classList.remove('testimonials__block-left--active');
+}
+
+// HOME PARTICLE BLOCK
+
+function imgIn() {
+    document.querySelector('.particle__img').classList.add('particle__img--active')
+}
+
+function imgOut() {
+    document.querySelector('.particle__img').classList.remove('particle__img--active')
+}
 
 // !!!!!!!!!!!!!!!! IN DEVELOPMENT
 

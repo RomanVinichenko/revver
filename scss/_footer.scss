@@ -91,14 +91,39 @@
     align-items: center;
     padding: 0;
     border: 0;
-    background-color: transparent;
     cursor: pointer;
 
-    &__text {
-      display: block;
-      margin-right: 16px;
-      letter-spacing: -0.01em;
-      color: $white;
+    .move-text {
+      display: inline-block;
+      margin-right: 12px;
+      height: 16px;
+      overflow: hidden;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+
+      .letter {
+        display: inline-block;
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+
+    &:hover {
+      .move-text {
+        .letter {
+          transform: translateY(-100%);
+        }
+      }
+
+      .footer-back__dot {
+        &::before {
+          top: 50%;
+        }
+
+        &::after {
+          top: -20%;
+        }
+      }
     }
 
     @include r($md) {
@@ -110,18 +135,29 @@
     position: relative;
     width: 68px;
     height: 68px;
+    overflow: hidden;
     border: 1px solid #4a4b54;
     border-radius: 50%;
     background-color: transparent;
 
-    &::after {
+    &::after,
+    &::before {
       content: url("../images/arrow-white-top.svg");
       position: absolute;
-      left: 50%;
-      top: 50%;
       width: 20px;
       height: 20px;
       transform: translate(-50%, -50%);
+      transition: all 0.4s ease-in-out;
+    }
+
+    &::before {
+      left: 50%;
+      top: 120%;
+    }
+
+    &::after {
+      left: 50%;
+      top: 50%;
     }
   }
 

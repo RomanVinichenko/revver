@@ -184,32 +184,32 @@
   <div class="container">
 
     <section class="cloud">
-      <span class="category">Cloud System</span>
-      <h2>Keep your business running with 99.9% guaranteed uptime</h2>
-      <div class="subtitle">
+      <span class="category wow">Cloud System</span>
+      <h2 class="wow">Keep your business running with 99.9% guaranteed uptime</h2>
+      <div class="subtitle wow">
         <p>
           Revver is a modern, cloud-native POS that’s always online - keeping you connected 24 hours a day,
           seven days a week. You’re always in the driving seat.
         </p>
       </div>
-      <div class="cloud__info">
+      <div class="cloud__info wow">
         <ul>
-          <li style="background-image: url('images/cloud-1.svg')">
+          <li class="wow" style="background-image: url('images/cloud-1.svg'); animation: 1.6s fade;">
             <h5>Cloud-based software and data backup that won’t let you down.</h5>
             <p>Based entirely in the cloud, your sensitive data - and daily operations - are always protected.
               Keep things running without fear of slowing down</p>
           </li>
-          <li style="background-image: url('images/cloud-2.svg')">
+          <li class="wow" style="background-image: url('images/cloud-2.svg'); animation: 1.8s fade;">
             <h5>Fast transaction speed</h5>
             <p>Revver’s native, cloud-based operation allows for advanced security measures - ensuring your data
               is always secured to industry standards</p>
           </li>
-          <li style="background-image: url('images/cloud-3.svg')">
+          <li class="wow" style="background-image: url('images/cloud-3.svg'); animation: 2s fade;">
             <h5>Streamline a safe and secure daily retail operation</h5>
             <p>Capture and safeguard sensitive corporate and customer data with ease. Choose a POS that’s quick to
               react, and easy to access at a second’s notice</p>
           </li>
-          <li style="background-image: url('images/cloud-4.svg')">
+          <li class="wow" style="background-image: url('images/cloud-4.svg'); animation: 2.2s fade;">
             <h5>Manage your business anytime, anywhere</h5>
             <p>In the field and off-premises, access your POS data wherever there’s an internet connection. Track
               technical problems and streamline your running no matter where you are</p>
@@ -292,33 +292,55 @@
       </div>
       <div class="testimonials__area">
         <ul>
-          <li style="background-image: url('images/socar-1.jpg')">
+          <li class="testimonials__first" style="background-image: url('images/socar-1.jpg')">
             <img src="images/socar.svg" alt="Socar">
+            <div class="testimonials__block-left">
+              <div class="testimonials__head">
+                <p>“A modern cloud-native POS platformto rev up your sales operation.”</p>
+              </div>
+              <div class="testimonials__box">
+                <div class="testimonials__author">
+                  <h5>Joe Hawkins</h5>
+                  <p>CEO Socar</p>
+                </div>
+                <div class="testimonials__info">
+                  <div class="testimonials__info-item">
+                    <h5>40%</h5>
+                    <p>More sales in 2021</p>
+                  </div>
+                  <div class="testimonials__info-item">
+                    <h5>70%</h5>
+                    <p>Increase in productivity</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li style="background-image: url('images/socar-2.jpg')">
+          <li class="testimonials__second" style="background-image: url('images/socar-2.jpg')" onmouseenter="storyIn()"
+              onmouseleave="storyOut()">
+            <div class="testimonials__block-right">
+              <div class="testimonials__head">
+                <p>“A modern cloud-native POS platformto rev up your sales operation.”</p>
+              </div>
+              <div class="testimonials__box">
+                <div class="testimonials__author">
+                  <h5>Joe Hawkins</h5>
+                  <p>CEO Socar</p>
+                </div>
+                <div class="testimonials__info">
+                  <div class="testimonials__info-item">
+                    <h5>40%</h5>
+                    <p>More sales in 2021</p>
+                  </div>
+                  <div class="testimonials__info-item">
+                    <h5>70%</h5>
+                    <p>Increase in productivity</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
-        <div class="testimonials__block">
-          <div class="testimonials__head">
-            <p>“A modern cloud-native POS platformto rev up your sales operation.”</p>
-          </div>
-          <div class="testimonials__box">
-            <div class="testimonials__author">
-              <h5>Joe Hawkins</h5>
-              <p>CEO Socar</p>
-            </div>
-            <div class="testimonials__info">
-              <div class="testimonials__info-item">
-                <h5>40%</h5>
-                <p>More sales in 2021</p>
-              </div>
-              <div class="testimonials__info-item">
-                <h5>70%</h5>
-                <p>Increase in productivity</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   </div>
@@ -406,8 +428,10 @@
   </div>
 
   <div class="particle">
-    <img src="images/particle.jpg" alt="Particle">
-    <div class="particle__block">
+    <div class="particle__inner">
+      <img class="particle__img" src="images/particle.jpg" alt="Particle">
+    </div>
+    <div class="particle__block" onmouseenter="imgIn()" onmouseleave="imgOut()">
       <div class="particle__info">
         <div class="particle__date">
           <span>20.12.2021</span>
@@ -419,7 +443,9 @@
         </a>
       </div>
       <div class="particle__main">
-        <h4>The future of retail is about to take off: into the Cloud</h4>
+        <a href="#">
+          <span>The future of retail is about to take off: into the Cloud</span>
+        </a>
         <p>Control everything from a single platform: your Point of Sale, back office & advertising.</p>
       </div>
     </div>
@@ -479,7 +505,7 @@
         </li>
       </ul>
       <button class="footer-back">
-        <span class="footer-back__text">Back to top</span>
+        <span class="move-text">Back to top</span>
         <span class="footer-back__dot"></span>
       </button>
     </nav>
@@ -525,8 +551,7 @@
   </div>
 </footer>
 
-<div class="footer__pusher">
-</div>
+<div class="footer__pusher"></div>
 
 <div class="quest-pop__under"></div>
 
@@ -555,6 +580,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 <script src="js/bootstrap.min.js"></script>
 
