@@ -3,6 +3,16 @@
     text-decoration: none;
     color: inherit;
   }
+
+  .business {
+    img {
+      margin-left: -115px;
+
+      @include r($xl) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .home-top {
@@ -28,6 +38,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    animation: 1.2s fade;
 
     @include r($extra) {
       max-width: 700px;
@@ -61,7 +72,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
 
     @include r($md) {
       flex-direction: column;
@@ -78,6 +89,7 @@
     font-size: 56px;
     line-height: 64px;
     letter-spacing: -0.02em;
+    animation: 1s fade;
 
     span {
       color: $green;
@@ -127,6 +139,7 @@
 
       &:not(:last-child) {
         margin-right: 20px;
+        animation: 1.4s fade;
       }
 
       h4 {
@@ -142,6 +155,10 @@
         }
       }
 
+      &:last-child {
+        animation: 1.6s fade;
+      }
+
       @include r($lg) {
         width: 180px;
       }
@@ -152,6 +169,11 @@
       justify-content: center;
       width: 100%;
     }
+  }
+
+  .green-link {
+    margin-bottom: 40px;
+    animation: 1.2s fade;
   }
 }
 
@@ -176,6 +198,7 @@
     overflow: hidden;
     border-radius: 24px;
     background-color: $white;
+    animation: 1.6s fade;
 
     &:hover {
       .cloud__img {
@@ -317,6 +340,8 @@
 
     li {
       position: relative;
+      display: flex;
+      padding: 20px;
       width: 100%;
       min-height: 680px;
       border-radius: 24px;
@@ -339,33 +364,49 @@
         min-height: 240px;
       }
     }
+  }
 
-    li:first-child {
-      margin-right: 24px;
-      max-width: 67%;
+  &__first {
+    margin-right: 24px;
+    width: 100%;
+    max-width: 67%;
+    transition: all 0.8s ease-in-out;
 
-      img {
-        left: 28px;
-        bottom: 28px;
-      }
-
-      @include r($lg) {
-        margin-right: 0;
-        max-width: 100%;
-      }
-
-      @include r($md) {
-        z-index: 2;
-      }
+    img {
+      left: 28px;
+      bottom: 28px;
     }
 
-    li:last-child {
-      max-width: 33%;
-
-      @include r($lg) {
-        display: none;
-      }
+    @include r($lg) {
+      margin-right: 0;
+      max-width: 100%;
     }
+
+    @include r($md) {
+      z-index: 2;
+    }
+  }
+
+  &__first--active {
+    margin-right: 0;
+    max-width: 33%;
+  }
+
+  &__second {
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 33%;
+    transition: all 0.8s ease-in-out;
+
+    @include r($lg) {
+      display: none;
+    }
+  }
+
+  &__second--active {
+    margin-left: 24px;
+    max-width: 67%;
   }
 
   h6 {
@@ -378,33 +419,19 @@
     }
   }
 
-  &__block {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    padding: 23px;
-    width: 100%;
-    max-width: 540px;
-    border-radius: 24px;
-    background-color: $green;
+  &__block-left--active {
+    visibility: hidden;
+    opacity: 0;
+  }
 
-    @include r($lg) {
-      border-radius: 20px;
-    }
+  &__block-right {
+    visibility: hidden;
+    opacity: 0;
+  }
 
-    @include r($md) {
-      position: relative;
-      left: 0;
-      top: 0;
-      z-index: 1;
-      margin-top: -24px;
-      padding: 40px 28px 31px;
-      max-width: 100%;
-      border-radius: 0 0 24px 24px;
-    }
+  &__block-right--active {
+    visibility: visible;
+    opacity: 1;
   }
 
   &__head {
@@ -483,6 +510,26 @@
     }
   }
 
+  &__block-left,
+  &__block-right {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    padding: 23px;
+    width: 100%;
+    height: fit-content;
+    max-width: 540px;
+    border-radius: 24px;
+    background-color: $green;
+    transition: all 0.4s ease-in-out;
+
+    @include r($lg) {
+      border-radius: 20px;
+    }
+  }
+
   @include r($xl) {
     margin-bottom: 140px;
   }
@@ -520,7 +567,7 @@
   .subtitle {
     p {
       margin: 0 auto 50px 0;
-      max-width: 600px;
+      max-width: 590px;
 
       @include r($md) {
         margin: 0 auto 50px;
@@ -656,9 +703,7 @@
 
     &__item {
       display: inline-block;
-      opacity: 0.15;
       width: 368px;
-      transition: opacity 0.2s;
       cursor: pointer;
 
       span {
@@ -670,10 +715,15 @@
       }
 
       h4 {
+        @include text-clamp;
+
         margin-bottom: 30px;
         padding-right: 30px;
+        height: 64px;
+        overflow: hidden;
         font-weight: 700;
         font-size: 24px;
+        line-height: 32px;
         letter-spacing: -0.02em;
       }
 
@@ -695,8 +745,6 @@
       }
 
       &:hover {
-        opacity: 1;
-
         a {
           span {
             background-size: 100% 90%;
@@ -744,12 +792,10 @@
   position: relative;
   margin: 0 36px 120px;
 
-  img {
-    display: block;
-    width: 100%;
+  &__inner {
     height: 864px;
+    overflow: hidden;
     border-radius: 24px;
-    object-fit: cover;
 
     @include r($xl) {
       height: 664px;
@@ -759,6 +805,17 @@
       height: 420px;
       border-radius: 20px;
     }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &__img--active {
+    transform: scale(1.02);
   }
 
   .green-link {
@@ -785,6 +842,18 @@
     max-width: 684px;
     border-radius: 24px;
     background-color: $green;
+
+    &:hover {
+      cursor: pointer;
+
+      .particle__main {
+        a {
+          span {
+            background-size: 100% 86%;
+          }
+        }
+      }
+    }
 
     @include r($xl) {
       left: 80px;
@@ -850,13 +919,22 @@
   }
 
   &__main {
-    h4 {
+    a {
+      display: block;
       margin-bottom: 14px;
       max-width: 591px;
       font-weight: 700;
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
+
+      span {
+        width: calc(100%);
+        background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
+        background-size: 0 86%;
+        background-repeat: no-repeat;
+        transition: background-size 0.3s ease-in-out;
+      }
     }
 
     p {
@@ -968,7 +1046,7 @@
     height: 24px;
     border: none;
     background-color: transparent;
-    transform: rotate(240deg);
+    transform: rotate(180deg);
     transition: all 0.4s ease-in-out;
     cursor: pointer;
   }
