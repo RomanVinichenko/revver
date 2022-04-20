@@ -12,7 +12,6 @@
 //     duration: 5,
 // });
 
-const body = document.body
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
 const menuSecond = document.querySelector(".menu__second");
@@ -200,7 +199,6 @@ if (buttonVacancy && popUp) {
     buttonVacancy.forEach((buttonVacancy) => {
         buttonVacancy.addEventListener('click', function () {
             popUp.classList.add('popup__active');
-            body.style.overflow = 'hidden';
         });
     });
 }
@@ -208,7 +206,6 @@ if (buttonVacancy && popUp) {
 if (close) {
     close.addEventListener('click', function () {
         popUp.classList.remove('popup__active');
-        body.style.overflow = 'auto';
     })
 }
 

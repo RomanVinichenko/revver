@@ -37,6 +37,7 @@
     img {
       height: 472px;
       min-width: 472px;
+      max-width: 472px;
       border-radius: 24px 0 0 24px;
       object-fit: cover;
 
@@ -164,7 +165,7 @@
 
   &__sidebar {
     position: sticky;
-    top: 20px;
+    top: 100px;
     width: 100%;
     height: fit-content;
     max-width: 240px;

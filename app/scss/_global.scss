@@ -318,89 +318,108 @@ a {
   margin: 0 36px 36px;
 
   li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 24px;
     width: 100%;
-    min-height: 472px;
-    border-radius: 24px;
-    background-color: $white;
-    transition: background-color 0.2s;
 
-    .green-link {
-      margin: 0 auto;
+    .more__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
       width: 100%;
-      max-width: 376px;
-
-      .move-text {
-        font-weight: 400;
-      }
-
-      @include r($xl) {
-        max-width: 300px;
-      }
-
-      @include r($lg) {
-        max-width: 240px;
-      }
-    }
-
-    h2 {
-      margin: 0 auto 23px;
-      width: 100%;
-      max-width: 376px;
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 56px;
-      letter-spacing: -0.02em;
-      text-align: left;
-
-      @include r($xl) {
-        max-width: 300px;
-        font-size: 40px;
-        line-height: 48px;
-      }
-
-      @include r($lg) {
-        margin: 0 auto 10px;
-        max-width: 240px;
-        font-size: 32px;
-        line-height: 40px;
-      }
-    }
-
-    &:hover {
-      background-color: $green;
-
-      .move-arrow {
-        background-color: $black;
-
-        &::after,
-        &::before {
-          content: url("../images/arrow-transform-white.svg");
-        }
-      }
+      min-height: 472px;
+      border-radius: 24px;
+      background-color: $white;
+      transition: background-color 0.2s;
 
       .green-link {
-        color: inherit;
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        max-width: 376px;
+        border: none;
 
         .move-text {
-          .letter {
-            transform: translateY(-100%);
-          }
+          font-weight: 400;
         }
+
+        @include r($xl) {
+          max-width: 300px;
+        }
+
+        @include r($lg) {
+          max-width: 240px;
+        }
+      }
+
+      h2 {
+        margin: 0 auto 23px;
+        width: 100%;
+        max-width: 376px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+        @include r($xl) {
+          max-width: 300px;
+          font-size: 40px;
+          line-height: 48px;
+        }
+
+        @include r($lg) {
+          margin: 0 auto 10px;
+          max-width: 240px;
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+
+      &:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+        background-color: $green;
 
         .move-arrow {
-          &::before {
-            transform: translate(0);
-          }
+          background-color: $black;
 
-          &::after {
-            transform: translate(140%, -130%);
+          &::after,
+          &::before {
+            content: url("../images/arrow-transform-white.svg");
           }
         }
+
+        .green-link {
+          color: inherit;
+
+          .move-text {
+            .letter {
+              transform: translateY(-100%);
+            }
+          }
+
+          .move-arrow {
+            &::before {
+              transform: translate(0);
+            }
+
+            &::after {
+              transform: translate(140%, -130%);
+            }
+          }
+        }
+      }
+
+      @include r($lg) {
+        min-height: 328px;
+        border-radius: 20px;
       }
     }
 
@@ -410,11 +429,6 @@ a {
       @include r($md) {
         margin: 0 0 24px;
       }
-    }
-
-    @include r($lg) {
-      min-height: 328px;
-      border-radius: 20px;
     }
   }
 
