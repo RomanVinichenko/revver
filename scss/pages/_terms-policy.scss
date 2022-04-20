@@ -1,7 +1,9 @@
 .terms-policy {
-  padding: 143px 0 135px;
+  padding: 180px 0 127px;
 
   h1 {
+    position: sticky;
+    top: 92px;
     margin-bottom: 92px;
     font-weight: 600;
     font-size: 64px;
@@ -15,6 +17,8 @@
     }
 
     @include r($lg) {
+      position: relative;
+      top: 0;
       font-size: 40px;
       line-height: 48px;
     }
@@ -31,7 +35,7 @@
 
   &__part {
     position: sticky;
-    top: 80px;
+    top: 260px;
     margin-right: 40px;
     width: 100%;
     height: fit-content;
@@ -126,11 +130,11 @@
   }
 
   @include r($xl) {
-    padding: 90px 0 95px;
+    padding: 160px 0 95px;
   }
 
   @include r($lg) {
-    padding: 65px 0 95px;
+    padding: 137px 0 95px;
   }
 }
 

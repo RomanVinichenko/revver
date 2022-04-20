@@ -43,6 +43,12 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:visited,
+  &:active,
+  &:target, {
+    color: inherit;
+  }
 }
 
 input,

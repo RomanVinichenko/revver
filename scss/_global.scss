@@ -11,13 +11,6 @@ body {
   cursor: default;
 }
 
-.scroll-none {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 24px;
@@ -440,13 +433,14 @@ a {
 }
 
 blockquote {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
+  margin: 85px auto 76px;
+  padding: 0 0 0 20px;
+  max-width: 680px;
   border-left: 2px solid #2fba56;
   font-weight: 700;
   font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
 }
 
 .copied {
@@ -523,6 +517,10 @@ strong {
       font-weight: 600;
       font-size: 16px;
       line-height: 36px;
+
+      .letter {
+        transform: translateY(-100%);
+      }
     }
 
     .move-arrow {
@@ -553,6 +551,12 @@ strong {
           @include r($md) {
             transform: translate(0, 180%) rotate(135deg);
           }
+        }
+      }
+
+      .move-text {
+        .letter {
+          transform: translateY(0);
         }
       }
     }

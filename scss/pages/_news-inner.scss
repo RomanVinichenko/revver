@@ -1,12 +1,12 @@
 .news-inner {
-  padding: 116px 0 0;
+  padding: 180px 0 0;
 
   @include r($xl) {
-    padding: 70px 0 0;
+    padding: 142px 0 0;
   }
 
   @include r($md) {
-    padding: 0;
+    padding: 72px 0 0;
   }
 }
 
@@ -62,13 +62,11 @@
   &__button {
     display: none;
     padding: 0 0 0 28px;
-    border: none;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.01em;
-    color: $white;
-    background-color: transparent;
+    color: #fff !important;
 
     @include r($md) {
       position: absolute;
@@ -81,8 +79,8 @@
         position: absolute;
         left: 0;
         top: 50%;
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         transform: translateY(-50%);
       }
     }
@@ -383,43 +381,6 @@
     border-radius: 12px;
     color: $white;
     background-color: $black;
-  }
-
-  &__quote {
-    margin: 79px auto 76px;
-    padding-left: 20px;
-    max-width: 672px;
-    border-left: 2px solid $green;
-
-    h4 {
-      margin-bottom: 11px;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
-      letter-spacing: -0.02em;
-
-      @include r($lg) {
-        font-size: 24px;
-        line-height: 32px;
-      }
-    }
-
-    p {
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 16px;
-    }
-
-    @include r($lg) {
-      font-size: 24px;
-      line-height: 32px;
-    }
-
-    @include r($md) {
-      margin: 60px auto 60px 24px;
-      padding: 0 24px;
-      max-width: 100%;
-    }
   }
 
   @include r($md) {

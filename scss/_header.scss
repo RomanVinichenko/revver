@@ -27,6 +27,10 @@
     background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
   }
 
+  @include r($lg) {
+    padding: 16px 0;
+  }
+
   //&__pusher {
   //  min-height: 72px;
   //  background-color: $black;
@@ -64,96 +68,6 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-    }
-  }
-
-  &__main {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 36px 20px;
-    color: $white;
-    background-color: $black;
-    transform: translateY(-100%);
-    transition: all 0.5s;
-
-    @include r($lg) {
-      padding: 0 24px 20px;
-    }
-  }
-
-  &__main--active {
-    z-index: 15;
-    transform: translateY(0);
-    transition: all 0.5s;
-  }
-
-  &__main-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto 0;
-    width: 100%;
-    max-width: 600px;
-    max-height: 240px;
-
-    li {
-      margin-right: 30px;
-      width: 100%;
-      max-width: 270px;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 36px;
-      letter-spacing: -0.01em;
-
-      &:nth-child(-n+3) {
-        font-weight: 700;
-        font-size: 54px;
-        line-height: 66px;
-        letter-spacing: -0.02em;
-
-        @include r($lg) {
-          font-size: 44px;
-          line-height: 56px;
-        }
-      }
-
-      @include r($lg) {
-        margin-right: 20px;
-        max-width: 200px;
-      }
-
-      @include r($md) {
-        font-size: 18px;
-        line-height: 26px;
-      }
-
-      @include r($sm) {
-        margin-right: 0;
-        max-width: 100%;
-      }
-    }
-
-    .active {
-      color: $green;
-    }
-
-    @include r($lg) {
-      max-width: 440px;
-    }
-
-    @include r($sm) {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      max-height: fit-content;
-      text-align: center;
     }
   }
 
@@ -365,5 +279,121 @@
 
   &__second--inactive {
     opacity: 0;
+  }
+}
+
+.menu__main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 36px 20px;
+  overflow: hidden;
+  color: $white;
+  background-color: $black;
+  transform: translateY(-200%);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  a {
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  #menuAddress {
+    transform: translateX(-200%);
+    transition: color 0.2s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .address--active {
+    transform: translateX(0) !important;
+  }
+
+  .menu__social {
+    transform: translateX(200%);
+    transition: color 0.2s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .menu__social--active {
+    transform: translateX(0);
+  }
+
+  @include r($lg) {
+    padding: 0 24px 20px;
+  }
+}
+
+.menu__main--active {
+  transform: translateY(0);
+}
+
+.menu__main-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto 0;
+  width: 100%;
+  max-width: 600px;
+  max-height: 240px;
+
+  li {
+    margin-right: 30px;
+    width: 100%;
+    max-width: 270px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+
+    &:nth-child(-n+3) {
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 66px;
+      letter-spacing: -0.02em;
+
+      @include r($lg) {
+        font-size: 44px;
+        line-height: 56px;
+      }
+    }
+
+    @include r($lg) {
+      margin-right: 20px;
+      max-width: 200px;
+    }
+
+    @include r($md) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @include r($sm) {
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  .active {
+    color: $green;
+  }
+
+  @include r($lg) {
+    max-width: 440px;
+  }
+
+  @include r($sm) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: fit-content;
+    text-align: center;
   }
 }

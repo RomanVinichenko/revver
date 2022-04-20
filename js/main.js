@@ -18,6 +18,8 @@ const menuText = document.querySelector(".menu__text");
 const menuSecond = document.querySelector(".menu__second");
 const header = document.querySelector(".header");
 const menuMain = document.querySelector(".menu__main");
+const menuAddress = document.getElementById('menuAddress')
+const menuSocial = document.querySelector(".menu__social");
 
 // HEADER MOVING temporary commented
 
@@ -42,7 +44,13 @@ const curMenuText = menuText.innerText;
 menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('menu__button--active');
     menuMain.classList.toggle('menu__main--active');
-    body.classList.toggle('scroll-none')
+
+    setTimeout(function () {
+        menuAddress.classList.toggle('address--active');
+    }, 300)
+    setTimeout(function () {
+        menuSocial.classList.toggle('menu__social--active');
+    }, 300)
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -117,10 +125,10 @@ const questUnder = document.querySelector('.quest-pop__under')
 if (questionItem) {
     questionItem.forEach((questionItem) => {
         questionItem.addEventListener('click', function () {
-            // event.preventDefault();
-            // var myNum = this.getAttribute('data-slide-num');
-            // document.getElementById('quest-pop-main-text').innerHTML =
-            //     document.getElementById('home-slide-answer-' + myNum).innerHTML;
+            event.preventDefault();
+            var myNum = this.getAttribute('data-slide-num');
+            document.getElementById('quest-pop-main-text').innerHTML =
+                document.getElementById('home-slide-answer-' + myNum).innerHTML;
             questPop.classList.add('quest-pop--active');
             questUnder.classList.add('quest-pop__under--active');
         });

@@ -1,5 +1,5 @@
 .join {
-  padding: 111px 0 236px;
+  padding: 180px 0 236px;
 
   .green-link {
     padding: 0;
@@ -62,11 +62,11 @@
   }
 
   @include r($xl) {
-    padding: 80px 0 120px;
+    padding: 152px 0 120px;
   }
 
   @include r($lg) {
-    padding: 65px 0 70px;
+    padding: 137px 0 70px;
   }
 }
 
