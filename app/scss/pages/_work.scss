@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 144px;
+  padding: 72px 0 144px;
 
   @include r($xl) {
     padding-bottom: 92px;

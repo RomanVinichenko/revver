@@ -1,5 +1,5 @@
 .data-sheets {
-  padding: 111px 0 384px;
+  padding: 180px 0 150px;
 
   a {
     text-decoration: none !important;
@@ -152,5 +152,13 @@
         transform: translateY(-50%);
       }
     }
+  }
+
+  @include r($xl) {
+    padding: 152px 0;
+  }
+
+  @include r($lg) {
+    padding: 129px 0;
   }
 }

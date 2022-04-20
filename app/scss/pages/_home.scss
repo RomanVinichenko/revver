@@ -17,7 +17,7 @@
 
 .home-top {
   position: relative;
-  z-index: 5;
+  z-index: 1;
   color: $white;
   background-image: url("../images/home-top.jpg");
   background-position: center;
@@ -567,7 +567,7 @@
   .subtitle {
     p {
       margin: 0 auto 50px 0;
-      max-width: 590px;
+      max-width: 900px;
 
       @include r($md) {
         margin: 0 auto 50px;
@@ -718,8 +718,8 @@
         @include text-clamp;
 
         margin-bottom: 30px;
-        padding-right: 30px;
         height: 64px;
+        max-width: 240px;
         overflow: hidden;
         font-weight: 700;
         font-size: 24px;
@@ -844,8 +844,6 @@
     background-color: $green;
 
     &:hover {
-      cursor: pointer;
-
       .particle__main {
         a {
           span {
