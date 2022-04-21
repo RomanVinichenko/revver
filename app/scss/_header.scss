@@ -30,12 +30,6 @@
   @include r($lg) {
     padding: 16px 0;
   }
-
-  //&__pusher {
-  //  min-height: 72px;
-  //  background-color: $black;
-  //  transition: all 0.4s;
-  //}
 }
 
 .menu {
@@ -298,7 +292,7 @@
   color: $white;
   background-color: $black;
   transform: translateY(-200%);
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   a {
     text-decoration: none;
@@ -310,21 +304,25 @@
   }
 
   #menuAddress {
-    transform: translateX(-200%);
-    transition: color 0.2s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    visibility: hidden;
+    opacity: 0;
+    transition: color 0.2s, opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
   }
 
   .address--active {
-    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .menu__social {
-    transform: translateX(200%);
-    transition: color 0.2s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    visibility: hidden;
+    opacity: 0;
+    transition: color 0.2s, opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
   }
 
   .menu__social--active {
-    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
   }
 
   @include r($lg) {
@@ -340,10 +338,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  visibility: hidden;
+  opacity: 0;
   margin: auto 0;
   width: 100%;
   max-width: 600px;
   max-height: 240px;
+  transition: color 0.2s, opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
 
   li {
     margin-right: 30px;
@@ -396,4 +397,9 @@
     max-height: fit-content;
     text-align: center;
   }
+}
+
+.menu__main-list--active {
+  visibility: visible;
+  opacity: 1;
 }
