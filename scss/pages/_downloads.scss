@@ -7,6 +7,10 @@
 
   .data-sheets__top {
     margin-bottom: 96px;
+
+    @include r($lg) {
+      margin-bottom: 63px;
+    }
   }
 
   &__text {
@@ -16,11 +20,21 @@
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.02em;
+
+    @include r($lg) {
+      margin-bottom: 65px;
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include r($md) {
+      flex-direction: column;
+    }
   }
 
   .nav-tabs {
@@ -72,11 +86,19 @@
     .active {
       opacity: 1;
     }
+
+    @include r($md) {
+      margin-bottom: 55px;
+    }
   }
 
   .tab-content {
     width: 100%;
     max-width: 65%;
+
+    @include r($md) {
+      max-width: 100%;
+    }
   }
 
   .tab-pane {
@@ -107,6 +129,11 @@
           color: $white;
           background-color: $green;
         }
+
+        @include r($lg) {
+          padding: 0 45px;
+          min-height: 50px;
+        }
       }
 
       h3 {
@@ -115,6 +142,12 @@
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -0.02em;
+
+        @include r($lg) {
+          margin-bottom: 2px;
+          font-size: 24px;
+          line-height: 32px;
+        }
       }
 
       p {
@@ -155,10 +188,10 @@
   }
 
   @include r($xl) {
-    padding: 152px 0;
+    padding: 152px 0 60px;
   }
 
   @include r($lg) {
-    padding: 129px 0;
+    padding: 140px 0 60px;
   }
 }

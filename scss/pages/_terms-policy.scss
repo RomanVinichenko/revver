@@ -2,9 +2,7 @@
   padding: 180px 0 127px;
 
   h1 {
-    position: sticky;
-    top: 140px;
-    margin-bottom: 92px;
+    margin-bottom: 60px;
     max-width: 400px;
     font-weight: 600;
     font-size: 64px;
@@ -36,7 +34,7 @@
 
   &__part {
     position: sticky;
-    top: 310px;
+    top: 110px;
     margin-right: 40px;
     width: 100%;
     height: fit-content;
@@ -140,6 +138,7 @@
 }
 
 .info {
+  margin-top: 204px;
   max-width: 576px;
 
   h3,
@@ -208,7 +207,12 @@
     }
   }
 
+  @include r($xl) {
+    margin-top: 155px;
+  }
+
   @include r($lg) {
+    margin-top: 0;
     max-width: 100%;
   }
 }
