@@ -125,6 +125,10 @@
     color: $black;
   }
 
+  @include r($lg) {
+    padding-bottom: 34px;
+  }
+
   @include r($xl) {
     margin-bottom: 51px;
   }

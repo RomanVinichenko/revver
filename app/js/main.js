@@ -1,3 +1,4 @@
+
 // gsap.registerPlugin(ScrollTrigger);
 // gsap.to('.laptop__top', {
 //     scrollTrigger: {
@@ -163,26 +164,6 @@ function hover(x) {
 function unHover(x) {
     document.getElementById('n-link-' + x).classList.remove('title-hover');
     document.getElementById('n-img-' + x).classList.remove('img-hover');
-}
-
-// POPUP JOIN
-
-const buttonVacancy = document.querySelectorAll('.green-link')
-const popUp = document.querySelector('.popup')
-const close = document.querySelector('.popup__close')
-
-if (buttonVacancy && popUp) {
-    buttonVacancy.forEach((buttonVacancy) => {
-        buttonVacancy.addEventListener('click', function () {
-            popUp.classList.add('popup__active');
-        });
-    });
-}
-
-if (close) {
-    close.addEventListener('click', function () {
-        popUp.classList.remove('popup__active');
-    })
 }
 
 // GREEN-LINK

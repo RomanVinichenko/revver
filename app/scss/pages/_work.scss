@@ -206,7 +206,7 @@
 
 .work-info {
   position: relative;
-  padding: 124px 50px 0;
+  padding: 124px 50px 50px;
   width: 100%;
   max-width: 50%;
 
@@ -254,7 +254,6 @@
     margin: 0 auto;
     width: 100%;
     max-width: 600px;
-    border-bottom: 1px solid $black;
 
     @include r($lg) {
       border-bottom: none;
@@ -366,54 +365,5 @@
   @include r($lg) {
     padding: 95px 24px 0;
     max-width: 100%;
-  }
-}
-
-.popup {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  visibility: hidden;
-  opacity: 0;
-  padding-top: 200px;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(#0f0f11, 0.25);
-  transition: all 0.5s;
-
-  &__active {
-    z-index: 30;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .work {
-    padding: 0;
-    border-radius: 24px;
-    background-color: #fff;
-  }
-
-  .work-info__wrapper {
-    border-bottom: none;
-  }
-
-  .vacancy {
-    top: -200px;
-
-    @include r($lg) {
-      top: 0;
-    }
-  }
-
-  &__close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
   }
 }

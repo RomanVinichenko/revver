@@ -38,7 +38,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: 1.2s fade;
+    animation: 1.1s fade;
 
     @include r($extra) {
       max-width: 700px;
@@ -173,7 +173,7 @@
 
   .green-link {
     margin-bottom: 40px;
-    animation: 1.2s fade;
+    animation: 1.1s fade;
   }
 }
 
@@ -375,6 +375,7 @@
     img {
       left: 28px;
       bottom: 28px;
+      transition: all 0.6s 0.4s;
     }
 
     @include r($lg) {
@@ -390,6 +391,12 @@
   &__first--active {
     margin-right: 0;
     max-width: 33%;
+
+    img {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s 0.2s;
+    }
   }
 
   &__second {
@@ -400,6 +407,14 @@
     background-position: center right;
     transition: all 1s ease-in-out;
 
+    img {
+      right: 28px;
+      top: 28px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s 0.2s;
+    }
+
     @include r($lg) {
       display: none;
     }
@@ -408,33 +423,99 @@
   &__second--active {
     margin-left: 24px;
     max-width: 67%;
+
+    img {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.6s 0.4s;
+    }
   }
 
   &__block-right {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s 0.2s;
+
+    .testimonials__head,
+    .testimonials__author,
+    .testimonials__info {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.2s 0.5s;
+    }
   }
 
   &__block-left {
     visibility: visible;
     opacity: 1;
     transition: all 0.6s 0.4s;
+
+    .testimonials__head,
+    .testimonials__author,
+    .testimonials__info {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s 0.5s;
+    }
+
+    .testimonials__head {
+      transition: all 0.2s 0.5s;
+    }
+
+    .testimonials__author {
+      transition: all 0.2s 0.55s;
+    }
+
+    .testimonials__info {
+      transition: all 0.2s 0.6s;
+    }
   }
 
   &__block-left--active {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s 0.2s;
+
+    .testimonials__head,
+    .testimonials__author,
+    .testimonials__info {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(10px);
+      transition: all 0.2s 0.5s;
+    }
   }
 
   &__block-right--active {
     visibility: visible;
     opacity: 1;
     transition: all 0.6s 0.4s;
+
+    .testimonials__head,
+    .testimonials__author,
+    .testimonials__info {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .testimonials__head {
+      transition: all 0.2s 0.5s;
+    }
+
+    .testimonials__author {
+      transition: all 0.2s 0.55s;
+    }
+
+    .testimonials__info {
+      transition: all 0.2s 0.6s;
+    }
   }
 
   &__head {
+    //animation: 0.4s fade;
     p {
       margin-bottom: 88px;
       max-width: 392px;
@@ -462,6 +543,8 @@
   }
 
   &__author {
+    //animation: 0.5s fade;
+
     h5 {
       margin-bottom: 1px;
       font-weight: 600;
@@ -481,6 +564,7 @@
   }
 
   &__info {
+    //animation: 0.6s fade;
     display: flex;
     justify-content: space-between;
   }
@@ -701,6 +785,7 @@
     &__item {
       display: inline-block;
       width: 368px;
+      animation: 1.2s fade;
       cursor: pointer;
 
       span {
@@ -788,6 +873,7 @@
 .particle {
   position: relative;
   margin: 0 36px 120px;
+  animation: 1.2s fade;
 
   &__inner {
     height: 864px;
@@ -839,6 +925,7 @@
     max-width: 684px;
     border-radius: 24px;
     background-color: $green;
+    animation: 1.5s fade;
 
     &:hover {
       .particle__main {
@@ -884,6 +971,7 @@
 
   &__date {
     display: flex;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
