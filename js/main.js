@@ -19,37 +19,19 @@ const header = document.querySelector(".header");
 const menuMain = document.querySelector(".menu__main");
 const menuAddress = document.getElementById('menuAddress')
 const menuSocial = document.querySelector(".menu__social");
+const menuMainList = document.querySelector(".menu__main-list");
+const curMenuText = menuText.innerText;
 
-// HEADER MOVING temporary commented
-
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function () {
-//     var currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//         setTimeout(function () {
-//             document.querySelector(".header").classList.remove('header--out');
-//             document.querySelector(".header").classList.add('header--in');
-//         }, 250);
-//     } else {
-//         document.querySelector(".header").classList.add('header--out');
-//     }
-//     prevScrollpos = currentScrollPos;
-// }
 
 // MENU TOGGLE
 
-const curMenuText = menuText.innerText;
 
 menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('menu__button--active');
     menuMain.classList.toggle('menu__main--active');
-
-    setTimeout(function () {
-        menuAddress.classList.toggle('address--active');
-    }, 300)
-    setTimeout(function () {
-        menuSocial.classList.toggle('menu__social--active');
-    }, 300)
+    menuAddress.classList.toggle('address--active');
+    menuSocial.classList.toggle('menu__social--active');
+    menuMainList.classList.toggle('menu__main-list--active');
 
     if (menuSecond) {
         menuSecond.classList.toggle('menu__second--inactive');
@@ -67,7 +49,6 @@ menuButton.addEventListener('click', function () {
 function MoveBarItem(x) {
     document.querySelector('.sales__bar-item').style.top = x + '%';
 }
-
 
 // MOVE TO TOP
 
@@ -112,7 +93,6 @@ $('.question').slick({
         }
     ]
 });
-
 
 // HOME POPUP
 
@@ -160,10 +140,6 @@ function calcFooterHeight() {
 
 window.addEventListener('DOMContentLoaded', calcFooterHeight);
 window.addEventListener('resize', calcFooterHeight);
-
-// 1. HOME FINISH
-
-// 3. ABOUT
 
 $(function () {
     $('.review__items').slick({
@@ -264,12 +240,11 @@ function imgOut() {
 
 // !!!!!!!!!!!!!!!! IN DEVELOPMENT
 
-const preloadImages = (urls) => {
-    return Promise.all(urls.map((src) => preloadImage(src)));
-};
+// const preloadImages = (urls) => {
+//     return Promise.all(urls.map((src) => preloadImage(src)));
+// };
 
 //init scrollslider
-
 // gsap.registerPlugin(ScrollTrigger)
 //
 // const preloadImage = (src) => {
@@ -366,7 +341,6 @@ const preloadImages = (urls) => {
 //
 //
 // initHeroSection()
-
 
 
 
