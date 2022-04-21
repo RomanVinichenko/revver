@@ -212,13 +212,8 @@ elements.forEach(element => {
 function storyIn() {
     document.querySelector(".testimonials__first").classList.add('testimonials__first--active');
     document.querySelector(".testimonials__second").classList.add('testimonials__second--active');
-
-    setTimeout(function () {
-        document.querySelector(".testimonials__block-right").classList.add('testimonials__block-right--active');
-    }, 300);
-    setTimeout(function () {
-        document.querySelector(".testimonials__block-left").classList.add('testimonials__block-left--active');
-    }, 300);
+    document.querySelector(".testimonials__block-right").classList.add('testimonials__block-right--active');
+    document.querySelector(".testimonials__block-left").classList.add('testimonials__block-left--active');
 }
 
 function storyOut() {
