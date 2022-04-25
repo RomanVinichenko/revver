@@ -622,38 +622,3 @@ strong {
     }
   }
 }
-
-.header-section {
-  margin: 40vh auto 50vh;
-  padding: 0 15px;
-  text-align: center;
-}
-
-.pSection {
-  position: relative;
-  padding-top: 200px;
-  padding-bottom: 300px;
-}
-
-.container--one {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 1070px;
-}
-
-.pContent {
-  padding: 40px 60px;
-  width: 65%;
-  color: white;
-  background-color: rgba(78, 152, 21, 0.8);
-}
-
-.pImage {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 70%;
-  max-height: 900px;
-}
