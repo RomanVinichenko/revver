@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   counter-reset: section;
+  overflow-x: hidden;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -524,6 +525,20 @@ strong {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-img {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

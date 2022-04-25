@@ -97,13 +97,13 @@ $('.question').slick({
 
 // HOME POPUP
 
-const questionItem = document.querySelectorAll('.question__item')
+const questionButton = document.querySelectorAll('.question__button')
 const questPop = document.querySelector('.quest-pop')
 const questClose = document.querySelector('.quest-pop__close')
 const questUnder = document.querySelector('.quest-pop__under')
 
-if (questionItem) {
-    questionItem.forEach((questionItem) => {
+if (questionButton) {
+    questionButton.forEach((questionItem) => {
         questionItem.addEventListener('click', function () {
             event.preventDefault();
             var myNum = this.getAttribute('data-slide-num');
@@ -145,7 +145,7 @@ window.addEventListener('resize', calcFooterHeight);
 $(function () {
     $('.review__items').slick({
         loop: true,
-        infinite: true,
+        infinite: false,
         swipe: false,
         slidesToShow: 1,
         fade: true,
@@ -213,110 +213,6 @@ function imgIn() {
 function imgOut() {
     document.querySelector('.particle__img').classList.remove('particle__img--active')
 }
-
-// !!!!!!!!!!!!!!!! IN DEVELOPMENT
-
-// const preloadImages = (urls) => {
-//     return Promise.all(urls.map((src) => preloadImage(src)));
-// };
-
-//init scrollslider
-// gsap.registerPlugin(ScrollTrigger)
-//
-// const preloadImage = (src) => {
-//     return new Promise((resolve, reject) => {
-//         const img = new Image();
-//         const xhr = new XMLHttpRequest();
-//
-//         xhr.open("GET", src, true);
-//         xhr.responseType = "blob";
-//         xhr.onload = () => {
-//             img.src = URL.createObjectURL(xhr.response);
-//             img.onload = () => resolve(img);
-//         };
-//         xhr.onerror = () => reject();
-//         xhr.send();
-//     });
-// };
-//
-// const calcDrawImage = (ctx, image, left = 0.5, top = 0.5) => {
-//     // console.log(ctx)
-//     const cWidth = ctx.canvas.width;
-//     const cHeight = ctx.canvas.height;
-//     // console.log(image)
-//     const width = image.width;
-//     const height = image.height;
-//     const ratio = width / height;
-//     const cRatio = cWidth / cHeight;
-//     let resultHeight, resultWidth;
-//
-//     if (ratio > cRatio) {
-//         resultHeight = cHeight;
-//         resultWidth = cHeight * ratio;
-//     } else {
-//         resultWidth = cWidth;
-//         resultHeight = cWidth / ratio;
-//     }
-//
-//     ctx.drawImage(image, (cWidth - resultWidth) * left, (cHeight - resultHeight) * top, resultWidth, resultHeight)
-// }
-//
-// // scroll_slider
-//
-// function initHeroSection() {
-//     const urls = [];
-//     for (let i = 0; i < 199; i++) {
-//         let number = (i < 99) ? (i < 9) ? `00${i + 1}` : `0${i + 1}` : `${i + 1}`
-//         urls.push(`https://www.polestar.com/www-images/home-car-carousel/car-sequence/desktop/ps2-ps1-precept/${number}.jpg`)
-//     }
-//
-//     const images = preloadImages(urls);
-//     const container = document.querySelector('.scroll_slider');
-//     this.canvasSlider(container, images, "600%")
-// }
-//
-//
-// function canvasSlider(container, images, end) {
-//
-//     const canvas = container.querySelector('canvas');
-//     const ctx = canvas.getContext('2d');
-//
-//
-//     const tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: container,
-//             scrub: true,
-//             start: "top top",
-//             end: end, // scene duration
-//             pin: true,
-//         }
-//     });
-//
-//     window.addEventListener('resize', function resize() {
-//         ctx.canvas.width = document.documentElement.clientWidth;
-//         ctx.canvas.height = document.documentElement.clientHeight;
-//         return resize;
-//     }());
-//
-//     // when all images ready
-//     images.then((imgs) => {
-//         const counter = {i: 0}; // iteration object
-//
-//         tl.to(counter, {
-//             i: imgs.length - 1, // increment counter to frames length
-//             roundProps: "i", // round, only int
-//             ease: "none", // ease provided by smooth-scroll momentum
-//             immediateRender: true, // render first frame immediately
-//             onUpdate: () => calcDrawImage(ctx, imgs[counter.i]) // draw image in canvas when timeline update
-//         }, 0);
-//
-//         // draw current frame again when scroll stopped and resize happened
-//         window.addEventListener('resize', () => calcDrawImage(ctx, imgs[counter.i]));
-//     });
-// }
-//
-//
-// initHeroSection()
 
 
 

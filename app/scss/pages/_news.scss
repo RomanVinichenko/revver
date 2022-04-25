@@ -182,8 +182,8 @@
 
     @for $i from 0 to 20 {
       &:nth-child(#{$i}) {
-        animation-name: fade;
         animation-duration: 0.28s * $i;
+        animation-name: fade;
       }
     }
   }
