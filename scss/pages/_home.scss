@@ -3,16 +3,6 @@
     text-decoration: none;
     color: inherit;
   }
-
-  .business {
-    img {
-      margin-left: -115px;
-
-      @include r($xl) {
-        margin-left: 0;
-      }
-    }
-  }
 }
 
 .home-top {
@@ -54,8 +44,10 @@
 
     @include r($md) {
       right: 50%;
+      top: 80px;
       max-width: 500px;
       transform: translateX(50%);
+      animation: 1.5s fade-img;
     }
 
     @include h(700) {
@@ -63,7 +55,7 @@
     }
 
     @include r($sm) {
-      bottom: -50px;
+      top: 90px;
     }
   }
 
@@ -77,7 +69,7 @@
     @include r($md) {
       flex-direction: column;
       justify-content: flex-start;
-      padding-top: 64px;
+      padding-top: 136px;
       text-align: center;
     }
   }
@@ -114,10 +106,15 @@
     }
 
     @include r($md) {
-      margin-bottom: 24px;
+      margin-bottom: 15px;
       max-width: 100%;
       font-size: 35px;
       line-height: 40px;
+    }
+
+    @include r($sm) {
+      font-size: 28px;
+      line-height: 34px;
     }
   }
 
@@ -130,7 +127,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 15px 16px 12px;
+      padding: 12px;
       width: 201px;
       height: 111px;
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -140,6 +137,10 @@
       &:not(:last-child) {
         margin-right: 20px;
         animation: 1.4s fade;
+
+        @include r($md) {
+          margin-right: 10px;
+        }
       }
 
       h4 {
@@ -161,6 +162,10 @@
 
       @include r($lg) {
         width: 180px;
+      }
+
+      @include r($md) {
+        height: 100px;
       }
     }
 
@@ -336,7 +341,6 @@
 
   ul {
     display: flex;
-    justify-content: space-between;
 
     li {
       position: relative;
@@ -346,12 +350,21 @@
       min-height: 680px;
       border-radius: 24px;
       background-size: cover;
+      transition: all 1s ease-in-out;
 
       img {
         position: absolute;
         width: 128px;
         height: 30px;
         object-fit: contain;
+
+        @include r($sm) {
+          display: none;
+        }
+      }
+
+      @include r($xl) {
+        min-height: 600px;
       }
 
       @include r($lg) {
@@ -360,17 +373,25 @@
       }
 
       @include r($md) {
-        min-height: 240px;
+        min-height: 430px;
       }
+
+      @include r($sm) {
+        padding: 0;
+        min-height: fit-content;
+        background-image: none !important;
+      }
+    }
+
+    @include r($md) {
+      flex-direction: column;
     }
   }
 
   &__first {
     margin-right: 24px;
-    width: 100%;
     max-width: 67%;
     background-position: center left;
-    transition: all 1s ease-in-out;
 
     img {
       left: 28px;
@@ -378,34 +399,36 @@
       transition: all 0.6s 0.4s;
     }
 
-    @include r($lg) {
-      margin-right: 0;
-      max-width: 100%;
-    }
-
     @include r($md) {
-      z-index: 2;
+      margin: 0 0 30px;
+      max-width: 100%;
     }
   }
 
   &__first--active {
-    margin-right: 0;
     max-width: 33%;
 
     img {
       visibility: hidden;
       opacity: 0;
       transition: all 0.5s 0.2s;
+
+      @include r($md) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    @include r($md) {
+      max-width: 100%;
     }
   }
 
   &__second {
     align-items: flex-end;
     justify-content: flex-end;
-    width: 100%;
     max-width: 33%;
     background-position: center right;
-    transition: all 1s ease-in-out;
 
     img {
       right: 28px;
@@ -413,15 +436,19 @@
       visibility: hidden;
       opacity: 0;
       transition: all 0.5s 0.2s;
+
+      @include r($md) {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
-    @include r($lg) {
-      display: none;
+    @include r($md) {
+      max-width: 100%;
     }
   }
 
   &__second--active {
-    margin-left: 24px;
     max-width: 67%;
 
     img {
@@ -429,12 +456,16 @@
       opacity: 1;
       transition: all 0.6s 0.4s;
     }
+
+    @include r($md) {
+      max-width: 100%;
+    }
   }
 
   &__block-right {
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s 0.2s;
+    transition: all 0.3s 0.1s;
 
     .testimonials__head,
     .testimonials__author,
@@ -443,13 +474,28 @@
       opacity: 0;
       transform: translateY(10px);
       transition: all 0.2s 0.5s;
+
+      @include r($lg) {
+        transform: none;
+        transition: none;
+      }
+
+      @include r($md) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    @include r($md) {
+      visibility: visible;
+      opacity: 1;
     }
   }
 
   &__block-left {
     visibility: visible;
     opacity: 1;
-    transition: all 0.6s 0.4s;
+    transition: all 0.6s 1s;
 
     .testimonials__head,
     .testimonials__author,
@@ -458,6 +504,11 @@
       opacity: 1;
       transform: translateY(0);
       transition: all 0.2s 0.5s;
+
+      @include r($lg) {
+        transform: none;
+        transition: none;
+      }
     }
 
     .testimonials__head {
@@ -476,7 +527,7 @@
   &__block-left--active {
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s 0.2s;
+    transition: all 0.3s 0.1s;
 
     .testimonials__head,
     .testimonials__author,
@@ -485,13 +536,23 @@
       opacity: 1;
       transform: translateY(10px);
       transition: all 0.2s 0.5s;
+
+      @include r($lg) {
+        transform: none;
+        transition: none;
+      }
+    }
+
+    @include r($md) {
+      visibility: visible;
+      opacity: 1;
     }
   }
 
   &__block-right--active {
     visibility: visible;
     opacity: 1;
-    transition: all 0.6s 0.4s;
+    transition: all 0.6s 1s;
 
     .testimonials__head,
     .testimonials__author,
@@ -499,6 +560,11 @@
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
+
+      @include r($lg) {
+        transform: none;
+        transition: none;
+      }
     }
 
     .testimonials__head {
@@ -515,7 +581,6 @@
   }
 
   &__head {
-    //animation: 0.4s fade;
     p {
       margin-bottom: 88px;
       max-width: 392px;
@@ -523,6 +588,12 @@
       font-size: 24px;
       line-height: 32px;
       letter-spacing: -0.02em;
+
+      @include r($lg) {
+        margin-bottom: 50px;
+        font-size: 22px;
+        line-height: 30px;
+      }
 
       @include r($md) {
         margin-bottom: 20px;
@@ -543,8 +614,6 @@
   }
 
   &__author {
-    //animation: 0.5s fade;
-
     h5 {
       margin-bottom: 1px;
       font-weight: 600;
@@ -564,7 +633,6 @@
   }
 
   &__info {
-    //animation: 0.6s fade;
     display: flex;
     justify-content: space-between;
   }
@@ -580,6 +648,12 @@
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
+
+      @include r($lg) {
+        margin-bottom: 5px;
+        font-size: 28px;
+        line-height: 36px;
+      }
     }
 
     p {
@@ -591,6 +665,10 @@
 
     &:first-child {
       margin-right: 40px;
+
+      @include r($lg) {
+        margin-right: 20px;
+      }
     }
   }
 
@@ -745,7 +823,7 @@
 
 .answer {
   margin-top: -150px;
-  margin-bottom: 252px;
+  margin-bottom: 160px;
   padding: 42px 48px;
   border-radius: 24px;
   background-color: $white;
@@ -786,10 +864,8 @@
       display: inline-block;
       width: 368px;
       animation: 1.2s fade;
-      cursor: pointer;
 
       span {
-        display: block;
         margin-bottom: 2px;
         font-size: 14px;
         line-height: 20px;
@@ -809,16 +885,13 @@
         letter-spacing: -0.02em;
       }
 
-      a {
-        display: block;
-        width: fit-content;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-
+      .question__button {
         span {
+          margin-bottom: 0;
           width: calc(100%);
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
           background-image: linear-gradient(transparent calc(100% - 1px), $black 1px);
           background-size: 0 90%;
           background-repeat: no-repeat;
@@ -827,7 +900,7 @@
       }
 
       &:hover {
-        a {
+        .question__button {
           span {
             background-size: 100% 90%;
           }
@@ -848,10 +921,6 @@
 
     .slick-prev {
       right: 44px;
-
-      &::after {
-        background-image: url("../images/slick-left.svg");
-      }
     }
   }
 
@@ -920,7 +989,7 @@
     position: absolute;
     left: 228px;
     bottom: 112px;
-    padding: 26px 26px 26px 36px;
+    padding: 26px;
     width: 100%;
     max-width: 684px;
     border-radius: 24px;
@@ -947,7 +1016,6 @@
       top: 0;
       z-index: 2;
       margin-top: -34px;
-      padding: 26px 26px 26px 36px;
       max-width: 100%;
       border-radius: 20px;
     }
@@ -966,12 +1034,13 @@
     @include r($sm) {
       flex-direction: column-reverse;
       align-items: flex-start;
+      margin-bottom: 10px;
     }
   }
 
   &__date {
     display: flex;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
@@ -1018,6 +1087,11 @@
         background-repeat: no-repeat;
         transition: background-size 0.3s ease-in-out;
       }
+
+      @include r($lg) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     p {
@@ -1056,22 +1130,19 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: -1;
+  z-index: 500;
   display: flex;
   justify-content: flex-end;
+  padding: 80px 50px;
   width: fit-content;
   height: 100%;
+  max-width: 800px;
+  border-radius: 24px 0 0;
+  background-color: #fff;
+  transform: translateX(200%);
   transition: all 0.4s ease-in-out;
 
   &__wrapper {
-    z-index: 8;
-    padding: 80px 50px;
-    max-width: 800px;
-    border-radius: 24px 0 0;
-    background-color: #fff;
-    transform: translateX(200%);
-    transition: all 0.4s ease-in-out;
-
     h4 {
       margin-bottom: 50px;
       padding-top: 36px;
@@ -1080,7 +1151,6 @@
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.02em;
-      transition: all 1s;
 
       @include r($xl) {
         margin-bottom: 35px;
@@ -1110,14 +1180,6 @@
         line-height: 24px;
       }
     }
-
-    @include r($xl) {
-      padding: 96px 24px;
-    }
-
-    @include r($lg) {
-      border-radius: 0;
-    }
   }
 
   &__close {
@@ -1128,19 +1190,24 @@
     width: 24px;
     height: 24px;
     border: none;
+    font-size: 24px;
+    line-height: 24px;
     background-color: transparent;
     transform: rotate(180deg);
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  @include r($xl) {
+    padding: 96px 24px;
+  }
+
+  @include r($lg) {
+    border-radius: 0;
   }
 }
 
 .quest-pop--active {
-  z-index: 30;
-
-  .quest-pop__wrapper {
-    transform: translateX(0);
-  }
+  transform: translateX(0);
 
   .quest-pop__close {
     transform: rotate(0);

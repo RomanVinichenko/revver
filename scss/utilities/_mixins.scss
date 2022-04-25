@@ -3,6 +3,7 @@
     @content;
   }
 }
+
 @mixin h($width) {
   @media only screen and (max-height: $width + "px") {
     @content;
@@ -19,7 +20,7 @@
 @mixin slick {
   .slick-next,
   .slick-prev {
-    opacity: 0.15;
+    opacity: 1;
     padding: 0;
     width: 40px;
     height: 40px;
@@ -27,7 +28,7 @@
     border-radius: 50%;
     font-size: 0;
     background-color: transparent;
-    transition: opacity 0.2s;
+    transition: background-color 0.2s ease-in-out;
     cursor: pointer;
 
     &::after {
@@ -37,13 +38,51 @@
       top: 50%;
       width: 20px;
       height: 20px;
-      background-image: url("../images/slick-right.svg");
       background-repeat: no-repeat;
       transform: translate(-50%, -50%);
+      transition: background-image 0.2s ease-in-out;
     }
 
     &:hover {
-      opacity: 1;
+      background-color: $black;
+    }
+  }
+
+  .slick-next {
+    &::after {
+      background-image: url("../images/slick-right.svg");
+    }
+
+    &:hover {
+      &:not(.slick-disabled)::after {
+        background-image: url("../images/slick-right-white.svg");
+      }
+    }
+  }
+
+  .slick-prev {
+    &::after {
+      background-image: url("../images/slick-left.svg");
+    }
+
+    &:hover {
+      &:not(.slick-disabled)::after {
+        background-image: url("../images/slick-left-white.svg");
+      }
+    }
+  }
+
+  .slick-disabled {
+    opacity: 0.15;
+
+    &:hover {
+      background-color: transparent;
+      cursor: default;
+      .slick-next {
+        &::after {
+          background-image: url("../images/slick-right.svg");
+        }
+      }
     }
   }
 }
