@@ -263,7 +263,7 @@
   margin-bottom: 200px;
 
   &__wrapper {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 50px;
     width: 100%;
     max-width: 471px;
     animation: 1.2s fade;
@@ -325,9 +325,13 @@
 
   img {
     width: 100%;
-    max-width: 55%;
+    max-width: 500px;
     object-fit: contain;
     transition: transform 0.7s ease-in-out;
+
+    @include r($lg) {
+      max-width: 350px;
+    }
 
     @include r($md) {
       max-width: 100%;
@@ -380,6 +384,11 @@
     letter-spacing: -0.02em;
     text-align: center;
     animation: 1.2s fade;
+
+    @include r($xl) {
+      font-size: 28px;
+      line-height: 34px;
+    }
 
     @include r($md) {
       padding: 64px 20px 32px;

@@ -256,52 +256,12 @@
     }
   }
 
-  .logo__items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 92px;
-
-    @include r($xl) {
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    @include r($sm) {
-      flex-direction: column;
-    }
-  }
-
-  .logo__item {
-    align-items: center;
-
-    &:not(:last-child) {
-      margin: 0 15px 0 0;
-
-      @include r($xl) {
-        margin: 0 20px 40px;
-      }
-
-      @include r($sm) {
-        margin: 0 0 30px;
-      }
-    }
-
-    @include r($xl) {
-      margin: 0 20px 40px;
-    }
-
-    @include r($sm) {
-      margin: 0 0 30px;
-    }
-  }
-
   @include r($xl) {
     padding: 85px;
   }
 
   @include r($lg) {
-    padding: 59px 0 33px;
+    padding: 50px 0;
   }
 }
 
@@ -394,7 +354,7 @@
 
   &__members {
     width: 100%;
-    max-width: 612px;
+    max-width: 624px;
 
     ul {
       display: flex;
@@ -403,16 +363,21 @@
       li {
         margin-bottom: 40px;
         width: 100%;
-        max-width: 294px;
+        max-width: 300px;
         cursor: pointer;
 
         img {
           margin-bottom: 25px;
           width: 100%;
-          max-height: 416px;
+          height: 400px;
+          border-radius: 0;
           object-fit: cover;
           filter: grayscale(100%);
           transition: filter 0.2s;
+
+          @include r($xl) {
+            height: 350px;
+          }
 
           @include r($lg) {
             margin-bottom: 15px;
@@ -461,18 +426,21 @@
           }
 
           @include r($sm) {
-            margin: 0 18px 24px 0;
+            margin: 0 0 24px;
           }
         }
 
         @include r($lg) {
           margin: 0 12px 24px;
-          max-width: 200px;
+          max-width: 300px;
+        }
+
+        @include r($md) {
+          max-width: 270px;
         }
 
         @include r($sm) {
           margin: 0 0 24px;
-          max-width: 152px;
         }
       }
 
@@ -559,34 +527,19 @@
   }
 
   &__img {
-    box-sizing: border-box;
     position: relative;
     margin-left: 90px;
     width: 100%;
-    min-height: 574px;
-    max-width: 1110px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-      display: block;
-      min-height: 574px;
-      background-image: url("../images/founded.jpg");
-      background-position: 50% 50%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
 
     img {
       width: 100%;
       max-height: 574px;
       border-radius: 12px;
       object-fit: cover;
+
+      @include r($sm) {
+        min-height: 230px;
+      }
     }
 
     @include r($lg) {

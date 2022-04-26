@@ -1,4 +1,3 @@
-
 // gsap.registerPlugin(ScrollTrigger);
 // gsap.to('.laptop__top', {
 //     scrollTrigger: {
@@ -214,8 +213,39 @@ function imgOut() {
     document.querySelector('.particle__img').classList.remove('particle__img--active')
 }
 
+let testBlock = document.getElementById('test-block');
 
+if (testBlock) {
+    window.addEventListener('scroll', function () {
+        if (window.scrollY >= testBlock.offsetTop) {
+            console.log('1');
+        } else {
+            console.log('0');
+        }
+    })
+    scrollDetect();
+}
 
+function scrollDetect(){
+    var lastScroll = 0;
+
+    window.onscroll = function() {
+        let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
+
+        if (currentScroll > 0 && lastScroll <= currentScroll){
+            lastScroll = currentScroll;
+            console.log('down')
+        }else{
+            lastScroll = currentScroll;
+            console.log('up')
+        }
+    };
+}
+
+// body.addEventListener('scroll', () => {
+//     let scrollTop = body.scrollHeight;
+//     console.log(scrollTop);
+// });
 
 
 
