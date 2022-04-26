@@ -24,11 +24,7 @@
   margin-bottom: 160px;
   overflow: hidden;
   color: $white;
-  background-image: url("../images/product-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: $black;
+  background: linear-gradient(180deg, rgba(68, 110, 253, 0.0972) 0%, rgba(0, 0, 0, 0) 222.5%), linear-gradient(180deg, #0f0f11 0%, #18181d 71.35%, #262524 100%);
 
   img {
     position: absolute;
@@ -47,7 +43,11 @@
     }
 
     @include h(800) {
-      max-width: 900px;
+      max-width: 800px;
+    }
+
+    @include h(700) {
+      max-width: 500px;
     }
   }
 
@@ -58,10 +58,14 @@
     align-items: center;
     padding: 148px 0 0;
     min-height: 100vh;
+
+    @include h(800) {
+      padding: 80px 0 0;
+    }
   }
 
   h1 {
-    margin-bottom: 27px;
+    margin-bottom: 15px;
     font-weight: 600;
     font-size: 56px;
     line-height: 64px;
@@ -82,12 +86,12 @@
 
   .subtitle {
     p {
-      margin: 0 auto 32px 0;
+      margin: 0 auto 15px 0;
       max-width: 480px;
       text-align: center;
 
       @include r($md) {
-        margin: 0 auto 25px;
+        margin: 0 auto 15px;
       }
     }
   }
@@ -787,7 +791,6 @@
       li {
         position: relative;
         padding-left: 48px;
-        height: 32px;
         background-position: left center;
         background-size: 32px;
         background-repeat: no-repeat;
