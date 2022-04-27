@@ -20,22 +20,15 @@
     width: 100%;
     min-height: 100vh;
     max-width: 690px;
-    background-color: rgba($grey-white, 0.9);
 
-    @include r($xl) {
+    @include r($lg) {
       align-items: center;
       justify-self: flex-start;
       padding: 150px 24px 40px;
       width: 100vw;
       min-height: fit-content;
       max-width: 100%;
-      border-radius: 24px 24px 0 0;
-      box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
       text-align: center;
-    }
-
-    @include r($lg) {
-      border-radius: 20px 20px 0 0;
     }
   }
 
@@ -50,6 +43,7 @@
 
     @include r($xl) {
       margin-bottom: 22px;
+      max-width: 450px;
       font-size: 52px;
       line-height: 58px;
     }
@@ -63,6 +57,7 @@
   p {
     z-index: 5;
     margin-bottom: 34px;
+    max-width: 550px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
@@ -70,10 +65,11 @@
 
     @include r($xl) {
       margin-bottom: 26px;
+      max-width: 450px;
     }
   }
 
-  @include r($xl) {
+  @include r($lg) {
     align-items: flex-start;
     justify-self: center;
     padding: 0;
@@ -88,9 +84,13 @@
   object-fit: cover;
 
   @include r($xl) {
+    max-width: 600px;
+  }
+
+  @include r($lg) {
     right: 50%;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     transform: translateX(50%);
   }
 }

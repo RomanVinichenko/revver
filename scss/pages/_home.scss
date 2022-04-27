@@ -9,7 +9,10 @@
   position: relative;
   z-index: 1;
   color: $white;
-  background: linear-gradient(180deg, rgba(68, 110, 253, 0.0972) 0%, rgba(0, 0, 0, 0) 222.5%), linear-gradient(180deg, #0f0f11 0%, #18181d 71.35%, #262524 100%);
+  background-image: url("../images/home-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &::after {
     content: "";

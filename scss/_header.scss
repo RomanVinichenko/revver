@@ -12,7 +12,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -20px;
+    bottom: -19px;
     width: 20px;
     height: 20px;
   }
@@ -292,7 +292,7 @@
   color: $white;
   background-color: $black;
   transform: translateY(-200%);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 1.5s 0.2s;
 
   a {
     text-decoration: none;
@@ -306,23 +306,25 @@
   #menuAddress {
     visibility: hidden;
     opacity: 0;
-    transition: color 0.2s, opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
+    transition: all 1s;
   }
 
   .address--active {
     visibility: visible !important;
     opacity: 1 !important;
+    transition: all 1s 0.7s !important;
   }
 
   .menu__social {
     visibility: hidden;
     opacity: 0;
-    transition: color 0.2s, opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
+    transition: all 1s;
   }
 
   .menu__social--active {
     visibility: visible;
     opacity: 1;
+    transition: all 1s 0.7s;
   }
 
   @include r($lg) {
@@ -332,6 +334,7 @@
 
 .menu__main--active {
   transform: translateY(0);
+  transition: all 1.5s;
 }
 
 .menu__main-list {
@@ -344,7 +347,7 @@
   width: 100%;
   max-width: 600px;
   max-height: 240px;
-  transition: color 0.2s, opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s;
+  transition: all 1s;
 
   li {
     margin-right: 30px;
@@ -402,4 +405,5 @@
 .menu__main-list--active {
   visibility: visible;
   opacity: 1;
+  transition: all 1s 0.7s;
 }
