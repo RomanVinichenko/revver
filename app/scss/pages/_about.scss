@@ -562,7 +562,6 @@
 
 .energy {
   margin-top: 200px;
-  border-radius: 24px;
   color: $white;
   background-position: center;
   background-size: cover;
@@ -626,10 +625,6 @@
       font-size: 14px;
       line-height: 24px;
     }
-  }
-
-  @include r($md) {
-    border-radius: 0;
   }
 
   @include r($xl) {

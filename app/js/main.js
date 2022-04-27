@@ -213,40 +213,41 @@ function imgOut() {
     document.querySelector('.particle__img').classList.remove('particle__img--active')
 }
 
+
+
 let testBlock = document.getElementById('test-block');
+var currenrScrolPoint = 0;
+var scrollDirection;
+var canScroll = true;
+var inFirstAnimBlock = false;
+var firstAnimationprocessed = false;
 
 if (testBlock) {
-    window.addEventListener('scroll', function () {
-        if (window.scrollY >= testBlock.offsetTop) {
-            console.log('1');
+    window.addEventListener('scroll', function MyScroll(e) {
+
+        if (window.scrollY > currenrScrolPoint){
+            scrollDirection = "down"
+            //console.log('down');
         } else {
-            console.log('0');
+            //console.log('up');
+            scrollDirection = "up"
         }
-    })
-    scrollDetect();
-}
-
-function scrollDetect(){
-    var lastScroll = 0;
-
-    window.onscroll = function() {
-        let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
-
-        if (currentScroll > 0 && lastScroll <= currentScroll){
-            lastScroll = currentScroll;
-            console.log('down')
-        }else{
-            lastScroll = currentScroll;
-            console.log('up')
+        if (window.scrollY >= testBlock.offsetTop) {
+            inFirstAnimBlock = true;
+        } else {
+            inFirstAnimBlock = false;
         }
-    };
+
+        currenrScrolPoint = window.scrollY;
+        if(inFirstAnimBlock == true && scrollDirection=="down") {
+            firstAnimationprocessed = true;
+            document.body.style.cssText =
+                `overflow: hidden;`
+            var myElem = $('.test-block').offset().top;
+            $('html').animate({ scrollTop: myElem }, 0);
+        }
+    });
 }
-
-// body.addEventListener('scroll', () => {
-//     let scrollTop = body.scrollHeight;
-//     console.log(scrollTop);
-// });
-
 
 
 

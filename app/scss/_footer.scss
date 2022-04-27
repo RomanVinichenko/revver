@@ -60,13 +60,6 @@
 
       @include r($lg) {
         margin-right: 15px;
-      }
-
-      @include r($sm) {
-        margin-right: 10px;
-      }
-
-      @include r($lg) {
         font-size: 28px;
         line-height: 36px;
       }

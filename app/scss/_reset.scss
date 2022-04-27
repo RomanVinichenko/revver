@@ -41,12 +41,19 @@ img {
 }
 
 a {
+  outline: none;
   text-decoration: none;
   color: inherit;
 
   &:visited,
   &:active,
   &:target, {
+    outline: none;
+    color: inherit;
+  }
+
+  &:focus {
+    outline: none;
     color: inherit;
   }
 }
