@@ -24,7 +24,7 @@
     @include r($lg) {
       align-items: center;
       justify-self: flex-start;
-      padding: 150px 24px 40px;
+      padding: 24px;
       width: 100vw;
       min-height: fit-content;
       max-width: 100%;
@@ -70,27 +70,6 @@
   }
 
   @include r($lg) {
-    align-items: flex-start;
-    justify-self: center;
     padding: 0;
-  }
-}
-
-.thank__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  max-width: 700px;
-  object-fit: cover;
-
-  @include r($xl) {
-    max-width: 600px;
-  }
-
-  @include r($lg) {
-    right: 50%;
-    width: 100%;
-    max-width: 400px;
-    transform: translateX(50%);
   }
 }
