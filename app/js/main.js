@@ -1,14 +1,4 @@
-LottieInteractivity.create({
-    mode: 'scroll',
-    player: '#firstLottie',
-    actions: [
-        {
-            visibility: [0, 4],
-            type: 'seek',
-            frames: [0, 1000],
-        },
-    ],
-});
+
 
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
@@ -245,6 +235,17 @@ if (testBlock) {
     });
 }
 
+LottieInteractivity.create({
+    mode: 'scroll',
+    player: '#firstLottie',
+    actions: [
+        {
+            visibility: [0, 4],
+            type: 'seek',
+            frames: [0, 1000],
+        },
+    ],
+});
 
 
 

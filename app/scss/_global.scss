@@ -671,6 +671,20 @@ strong {
   //transition: all 2s;
 }
 
-.form__box span {
-  margin-bottom: 10px;
+.copied p {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+
+  &:visited,
+  &:active,
+  &:target, {
+    outline: none;
+    color: inherit;
+  }
+
+  &:focus {
+    outline: none;
+    color: inherit;
+  }
 }

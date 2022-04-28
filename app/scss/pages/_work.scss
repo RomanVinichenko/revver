@@ -3,10 +3,6 @@
   display: flex;
   padding: 72px 0 0;
 
-  @include r($xl) {
-    padding-bottom: 92px;
-  }
-
   @include r($lg) {
     flex-direction: column;
   }
@@ -32,17 +28,6 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-    }
-  }
-
-  .attach-global {
-    display: none;
-
-    @include r($lg) {
-      position: absolute;
-      right: 24px;
-      bottom: 24px;
-      display: block;
     }
   }
 
@@ -357,11 +342,11 @@
   }
 
   @include r($xl) {
-    padding: 105px 50px 0;
+    padding: 105px 50px 24px;
   }
 
   @include r($lg) {
-    padding: 95px 24px 0;
+    padding: 95px 24px 24px;
     max-width: 100%;
   }
 }
