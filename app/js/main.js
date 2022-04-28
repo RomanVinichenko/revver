@@ -1,11 +1,10 @@
-
-
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
 const menuSecond = document.querySelector(".menu__second");
 const header = document.querySelector(".header");
+const footer = document.querySelector(".footer");
 const menuMain = document.querySelector(".menu__main");
-const menuAddress = document.getElementById('menuAddress')
+const menuAddress = document.getElementById('menuAddress');
 const menuSocial = document.querySelector(".menu__social");
 const menuMainList = document.querySelector(".menu__main-list");
 const curMenuText = menuText.innerText;
@@ -42,9 +41,9 @@ function MoveBarItem(x) {
 
 $(".footer-back__mobile, .footer-back, .logo").click(function () {
     jQuery('html,body').animate({scrollTop: 0}, 800);
-})
+});
 
-// HOME PAGES BAR (FOR DEV)
+// HOME PAGES BAR (FOR DEV);
 
 const link = document.querySelector('.links');
 const bunch = document.querySelector('.bunch');
@@ -55,7 +54,7 @@ if (link) {
     });
 }
 
-// HOME-CAROUSEL (ANSWER)
+// HOME-CAROUSEL (ANSWER);
 
 $('.question').slick({
     loop: true,
@@ -84,20 +83,55 @@ $('.question').slick({
 
 // HOME POPUP
 
-const questionButton = document.querySelectorAll('.question__button')
-const questPop = document.querySelector('.quest-pop')
-const questClose = document.querySelector('.quest-pop__close')
-const questUnder = document.querySelector('.quest-pop__under')
+
+const questionButton = document.querySelectorAll('.question__button');
+const questPop = document.querySelector('.quest-pop');
+const questClose = document.querySelector('.quest-pop__close');
+const questUnder = document.querySelector('.quest-pop__under');
+const prevent = ev => ev.preventDefault();
+const body = document.body
+
+function blockScroll(){
+    let div = document.createElement('div');
+    document.body.append(div);
+
+    let paddingRight = window.innerWidth - div.offsetWidth;
+    let scroll = window.scrollY;
+
+    div.remove();
+
+    header.style.right = '19px';
+    footer.style.right = '19px';
+    document.body.classList.add('no-scroll');
+    document.body.style.top = `-${scroll}px`;
+    document.body.style.paddingRight = paddingRight + 'px';
+    document.body.style.setProperty('--p_right', paddingRight+ "px");
+    return paddingRight;
+
+}
+function unblockScroll(){
+    const scrollY = document.body.style.top;
+    header.style.right = '0';
+    footer.style.right = '0';
+    document.body.classList.remove('no-scroll');
+    document.body.style.paddingRight = '';
+    document.body.style.setProperty('--p_right', "0px");
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+}
+
 
 if (questionButton) {
     questionButton.forEach((questionItem) => {
         questionItem.addEventListener('click', function () {
-            event.preventDefault();
-            var myNum = this.getAttribute('data-slide-num');
-            document.getElementById('quest-pop-main-text').innerHTML =
-                document.getElementById('home-slide-answer-' + myNum).innerHTML;
+            // event.preventDefault();
+            // var myNum = this.getAttribute('data-slide-num');
+            // document.getElementById('quest-pop-main-text').innerHTML =
+            //     document.getElementById('home-slide-answer-' + myNum).innerHTML;
             questPop.classList.add('quest-pop--active');
             questUnder.classList.add('quest-pop__under--active');
+            document.addEventListener('wheel', prevent, {passive: false});
+            blockScroll();
+
         });
     });
 }
@@ -113,8 +147,10 @@ if (questUnder) {
 if (questClose) {
     questClose.addEventListener('click', function () {
         questPop.classList.remove('quest-pop--active');
-        questUnder.classList.remove('quest-pop__under--active')
-    })
+        questUnder.classList.remove('quest-pop__under--active');
+        document.removeEventListener('wheel', prevent);
+        unblockScroll();
+    });
 }
 
 // FOOTER ANIMATION
@@ -194,46 +230,46 @@ function storyOut() {
 // HOME PARTICLE BLOCK
 
 function imgIn() {
-    document.querySelector('.particle__img').classList.add('particle__img--active')
+    document.querySelector('.particle__img').classList.add('particle__img--active');
 }
 
 function imgOut() {
-    document.querySelector('.particle__img').classList.remove('particle__img--active')
+    document.querySelector('.particle__img').classList.remove('particle__img--active');
 }
 
-let testBlock = document.getElementById('test-block');
-var currenrScrolPoint = 0;
-var scrollDirection;
-var canScroll = true;
-var inFirstAnimBlock = false;
-var firstAnimationprocessed = false;
-
-if (testBlock) {
-    window.addEventListener('scroll', function MyScroll(e) {
-
-        if (window.scrollY > currenrScrolPoint){
-            scrollDirection = "down"
-            //console.log('down');
-        } else {
-            //console.log('up');
-            scrollDirection = "up"
-        }
-        if (window.scrollY >= testBlock.offsetTop) {
-            inFirstAnimBlock = true;
-        } else {
-            inFirstAnimBlock = false;
-        }
-
-        currenrScrolPoint = window.scrollY;
-        if(inFirstAnimBlock == true && scrollDirection=="down") {
-            firstAnimationprocessed = true;
-            // document.body.style.cssText =
-            //     `overflow: hidden;`
-            var myElem = $('.test-block').offset().top;
-            $('html').animate({ scrollTop: myElem }, 0);
-        }
-    });
-}
+// let testBlock = document.getElementById('test-block');
+// var currenrScrolPoint = 0;
+// var scrollDirection;
+// var canScroll = true;
+// var inFirstAnimBlock = false;
+// var firstAnimationprocessed = false;
+//
+// if (testBlock) {
+//     window.addEventListener('scroll', function MyScroll(e) {
+//
+//         if (window.scrollY > currenrScrolPoint) {
+//             scrollDirection = "down"
+//             //console.log('down');
+//         } else {
+//             //console.log('up');
+//             scrollDirection = "up"
+//         }
+//         if (window.scrollY >= testBlock.offsetTop) {
+//             inFirstAnimBlock = true;
+//         } else {
+//             inFirstAnimBlock = false;
+//         }
+//
+//         currenrScrolPoint = window.scrollY;
+//         if (inFirstAnimBlock == true && scrollDirection == "down") {
+//             firstAnimationprocessed = true;
+//             // document.body.style.cssText =
+//             //     `overflow: hidden;`
+//             var myElem = $('.test-block').offset().top;
+//             $('html').animate({scrollTop: myElem}, 0);
+//         }
+//     });
+// }
 
 
 

@@ -12,6 +12,14 @@ body {
   cursor: default;
 }
 
+.no-scroll {
+  position: fixed;
+  width: 100vw;
+  max-height: 100vh;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 a {
   outline: none;
   text-decoration: none;
@@ -489,10 +497,25 @@ blockquote {
   }
 
   p {
+    outline: none;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
+    text-decoration: none;
+    color: inherit;
+
+    &:visited,
+    &:active,
+    &:target, {
+      outline: none;
+      color: inherit;
+    }
+
+    &:focus {
+      outline: none;
+      color: inherit;
+    }
   }
 
   button {
@@ -669,22 +692,4 @@ strong {
   background-position: center right;
 
   //transition: all 2s;
-}
-
-.copied p {
-  outline: none;
-  text-decoration: none;
-  color: inherit;
-
-  &:visited,
-  &:active,
-  &:target, {
-    outline: none;
-    color: inherit;
-  }
-
-  &:focus {
-    outline: none;
-    color: inherit;
-  }
 }
