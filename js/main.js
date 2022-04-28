@@ -235,17 +235,5 @@ if (testBlock) {
     });
 }
 
-LottieInteractivity.create({
-    mode: 'scroll',
-    player: '#firstLottie',
-    actions: [
-        {
-            visibility: [0, 4],
-            type: 'seek',
-            frames: [0, 1000],
-        },
-    ],
-});
-
 
 
