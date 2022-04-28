@@ -12,6 +12,10 @@ body {
   cursor: default;
 }
 
+button {
+  outline: none;
+}
+
 .no-scroll {
   position: fixed;
   width: 100vw;
