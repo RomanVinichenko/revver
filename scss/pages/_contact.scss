@@ -201,9 +201,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    animation: 1s fade;
 
     span {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     @include r($md) {
