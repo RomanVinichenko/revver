@@ -1,16 +1,14 @@
-// gsap.registerPlugin(ScrollTrigger);
-// gsap.to('.laptop__top', {
-//     scrollTrigger: {
-//         trigger: '.laptop',
-//         start: 'top top',
-//         end: '800px top',
-//         // markers: true,
-//         scrub: 2.5,
-//         pin: true,
-//     },
-//     rotationX: 0,
-//     duration: 5,
-// });
+LottieInteractivity.create({
+    mode: 'scroll',
+    player: '#firstLottie',
+    actions: [
+        {
+            visibility: [0, 4],
+            type: 'seek',
+            frames: [0, 1000],
+        },
+    ],
+});
 
 const menuButton = document.querySelector(".menu__button");
 const menuText = document.querySelector(".menu__text");
@@ -213,8 +211,6 @@ function imgOut() {
     document.querySelector('.particle__img').classList.remove('particle__img--active')
 }
 
-
-
 let testBlock = document.getElementById('test-block');
 var currenrScrolPoint = 0;
 var scrollDirection;
@@ -241,8 +237,8 @@ if (testBlock) {
         currenrScrolPoint = window.scrollY;
         if(inFirstAnimBlock == true && scrollDirection=="down") {
             firstAnimationprocessed = true;
-            document.body.style.cssText =
-                `overflow: hidden;`
+            // document.body.style.cssText =
+            //     `overflow: hidden;`
             var myElem = $('.test-block').offset().top;
             $('html').animate({ scrollTop: myElem }, 0);
         }

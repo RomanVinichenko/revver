@@ -72,7 +72,7 @@
     width: 100%;
     max-width: 340px;
 
-    span {
+    h4 {
       display: block;
       margin-bottom: 9px;
       font-weight: 600;
@@ -103,9 +103,21 @@
       font-size: 24px;
       letter-spacing: -0.02em;
 
+      span {
+        width: calc(100%);
+        background-image: linear-gradient(transparent calc(100% - 2px), $black 2px);
+        background-size: 0 94%;
+        background-repeat: no-repeat;
+        transition: background-size 0.25s ease-in-out;
+      }
+
       &:hover {
         text-decoration: none;
         color: inherit;
+
+        span {
+          background-size: 100% 94%;
+        }
       }
 
       @include r($lg) {
@@ -188,7 +200,11 @@
   label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 46px;
+    margin-bottom: 25px;
+
+    span {
+      margin-bottom: 10px;
+    }
 
     @include r($md) {
       margin-bottom: 38px;
