@@ -9,9 +9,7 @@ const menuSocial = document.querySelector(".menu__social");
 const menuMainList = document.querySelector(".menu__main-list");
 const curMenuText = menuText.innerText;
 
-
 // MENU TOGGLE
-
 
 menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('menu__button--active');
@@ -83,7 +81,6 @@ $('.question').slick({
 
 // HOME POPUP
 
-
 const questionButton = document.querySelectorAll('.question__button');
 const questPop = document.querySelector('.quest-pop');
 const questClose = document.querySelector('.quest-pop__close');
@@ -91,7 +88,7 @@ const questUnder = document.querySelector('.quest-pop__under');
 const prevent = ev => ev.preventDefault();
 const body = document.body
 
-function blockScroll(){
+function blockScroll() {
     let div = document.createElement('div');
     document.body.append(div);
 
@@ -105,11 +102,11 @@ function blockScroll(){
     document.body.classList.add('no-scroll');
     document.body.style.top = `-${scroll}px`;
     document.body.style.paddingRight = paddingRight + 'px';
-    document.body.style.setProperty('--p_right', paddingRight+ "px");
+    document.body.style.setProperty('--p_right', paddingRight + "px");
     return paddingRight;
-
 }
-function unblockScroll(){
+
+function unblockScroll() {
     const scrollY = document.body.style.top;
     header.style.right = '0';
     footer.style.right = '0';
@@ -119,19 +116,17 @@ function unblockScroll(){
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
-
 if (questionButton) {
     questionButton.forEach((questionItem) => {
         questionItem.addEventListener('click', function () {
-            // event.preventDefault();
-            // var myNum = this.getAttribute('data-slide-num');
-            // document.getElementById('quest-pop-main-text').innerHTML =
-            //     document.getElementById('home-slide-answer-' + myNum).innerHTML;
+            event.preventDefault();
+            var myNum = this.getAttribute('data-slide-num');
+            document.getElementById('quest-pop-main-text').innerHTML =
+                document.getElementById('home-slide-answer-' + myNum).innerHTML;
             questPop.classList.add('quest-pop--active');
             questUnder.classList.add('quest-pop__under--active');
             document.addEventListener('wheel', prevent, {passive: false});
             blockScroll();
-
         });
     });
 }
