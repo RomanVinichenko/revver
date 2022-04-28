@@ -882,6 +882,7 @@
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.02em;
+        cursor: pointer;
       }
 
       .question__button {
@@ -1196,12 +1197,12 @@
     transition: transform 0.6s ease-in-out;
   }
 
-  @include r($xl) {
-    padding: 96px 24px;
-  }
-
   @include r($lg) {
     border-radius: 0;
+  }
+
+  @include r($md) {
+    padding: 80px 24px;
   }
 }
 
