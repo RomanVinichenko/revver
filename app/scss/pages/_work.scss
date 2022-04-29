@@ -12,7 +12,7 @@
   padding: 50px;
   width: 100%;
   max-width: 50%;
-  border-radius: 18px;
+  border-radius: 20px;
   background-color: $green;
 
   &__wrapper {
@@ -91,17 +91,16 @@
     display: block;
     margin-bottom: 20px;
 
-    img {
-      position: absolute;
-      right: 0;
-      bottom: 13px;
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-    }
-
     @include r($xl) {
       margin-bottom: 16px;
+    }
+  }
+
+  &__img-black {
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0;
     }
   }
 
@@ -170,6 +169,16 @@
     }
   }
 
+  &__img-black,
+  &__img-white {
+    position: absolute;
+    right: 0;
+    bottom: 13px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
   @include r($lg) {
     display: none;
   }
@@ -178,6 +187,12 @@
 .apply--mobile {
   display: none;
   max-width: 100%;
+
+  .apply__img-black {
+    &:hover {
+      opacity: 1;
+    }
+  }
 
   button {
     margin-right: 0;
@@ -198,7 +213,7 @@
     position: absolute;
     right: 38px;
     top: 34px;
-    padding: 0 0 0 36px;
+    padding: 0 0 0 35px;
     width: fit-content;
     border: 0;
     font-weight: 600;
@@ -216,6 +231,7 @@
       width: 24px;
       height: 24px;
       transform: translateY(-50%);
+      transition: transform 0.15s;
     }
 
     &:visited {
@@ -226,6 +242,10 @@
     &:hover {
       text-decoration: none;
       color: inherit;
+
+      &::before {
+        transform: translate(-10px, -50%);
+      }
     }
 
     @include r($md) {

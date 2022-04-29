@@ -12,19 +12,19 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -19px;
-    width: 20px;
-    height: 20px;
+    bottom: -22px;
+    width: 22px;
+    height: 22px;
   }
 
   &::before {
     right: 0;
-    background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
+    background-image: radial-gradient(circle at 0 100%, transparent 22px, $black 23px);
   }
 
   &::after {
     left: 0;
-    background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
+    background-image: radial-gradient(circle at 100% 100%, transparent 22px, $black 23px);
   }
 
   @include r($lg) {
