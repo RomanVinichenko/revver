@@ -694,6 +694,99 @@ strong {
   max-width: 100%;
   background-image: url("../images/proto1.png");
   background-position: center right;
-
   //transition: all 2s;
+}
+
+.dad-rich-text {
+  color: #0F0F11;
+  font-style: normal;
+  font-family: "Manrope", sans-serif;
+}
+
+.dad-rich-text h1 {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+}
+
+.dad-rich-text h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+
+.dad-rich-text h3 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+}
+
+.dad-rich-text h4 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+.dad-rich-text h5 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.dad-rich-text h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.dad-rich-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.dad-rich-text ol li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.dad-rich-text ol {
+  padding-left: 20px;
+}
+
+.dad-rich-text ol li::marker {
+  font-weight: 700;
+}
+
+.dad-rich-text ul li {
+  position: relative;
+  padding-left: 18px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.dad-rich-text ul li:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 13px;
+  background-color: #2FBA56;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dad-rich-text strong{
+  font-weight: 700;
 }
