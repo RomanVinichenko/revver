@@ -694,13 +694,14 @@ strong {
   max-width: 100%;
   background-image: url("../images/proto1.png");
   background-position: center right;
+
   //transition: all 2s;
 }
 
 .dad-rich-text {
-  color: #0F0F11;
-  font-style: normal;
   font-family: "Manrope", sans-serif;
+  font-style: normal;
+  color: #0f0f11;
 }
 
 .dad-rich-text h1 {
@@ -776,17 +777,17 @@ strong {
   letter-spacing: -0.01em;
 }
 
-.dad-rich-text ul li:before {
-  position: absolute;
+.dad-rich-text ul li::before {
   content: "";
+  position: absolute;
   left: 0;
   top: 13px;
-  background-color: #2FBA56;
   width: 6px;
   height: 6px;
   border-radius: 50%;
+  background-color: #2fba56;
 }
 
-.dad-rich-text strong{
+.dad-rich-text strong {
   font-weight: 700;
 }
