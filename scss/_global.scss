@@ -788,6 +788,10 @@ strong {
   background-color: #2fba56;
 }
 
+.dad-rich-text ul li::after {
+  display: none;
+}
+
 .dad-rich-text strong {
   font-weight: 700;
 }
