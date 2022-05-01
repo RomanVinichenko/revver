@@ -41,6 +41,14 @@ $(".footer-back__mobile, .footer-back, .logo").click(function () {
     jQuery('html,body').animate({scrollTop: 0}, 800);
 });
 
+$(".home-top__wrapper a, .about-top a, .product-top a").on("click", function(e){
+    e.preventDefault();
+    var anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+        scrollTop: $(anchor).offset().top
+    }, 800);
+});
+
 // HOME PAGES BAR (FOR DEV);
 
 const link = document.querySelector('.links');
