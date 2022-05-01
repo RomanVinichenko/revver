@@ -107,28 +107,6 @@ a {
   border-radius: 20px;
   background-color: $grey-white;
 
-  //&::before {
-  //  content: "";
-  //  position: absolute;
-  //  right: 0;
-  //  top: 0;
-  //  z-index: 10;
-  //  width: 20px;
-  //  height: 20px;
-  //  background-image: radial-gradient(circle at 0 100%, transparent 20px, $black 21px);
-  //}
-  //
-  //&::after {
-  //  content: "";
-  //  position: absolute;
-  //  left: 0;
-  //  top: 0;
-  //  z-index: 10;
-  //  width: 20px;
-  //  height: 20px;
-  //  background-image: radial-gradient(circle at 100% 100%, transparent 20px, $black 21px);
-  //}
-
   @include r($lg) {
     border-radius: 20px;
   }
@@ -444,7 +422,7 @@ a {
 
     &:first-child {
       margin: 0 24px 0 0;
-      animation: 1.5s fade;
+      animation: 1s fade;
 
       @include r($md) {
         margin: 0 0 24px;
@@ -452,7 +430,7 @@ a {
     }
 
     &:last-child {
-      animation: 1.9s fade;
+      animation: 1.2s fade;
     }
   }
 

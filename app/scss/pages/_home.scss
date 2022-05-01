@@ -27,7 +27,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: 1.1s fade;
+    animation: 1s fade;
 
     @include r($extra) {
       max-width: 700px;
@@ -80,7 +80,7 @@
     font-size: 56px;
     line-height: 64px;
     letter-spacing: -0.02em;
-    animation: 1s fade;
+    animation: 0.9s fade;
 
     span {
       color: $green;
@@ -135,7 +135,7 @@
 
       &:not(:last-child) {
         margin-right: 20px;
-        animation: 1.4s fade;
+        animation: 1.2s fade;
 
         @include r($md) {
           margin-right: 10px;
@@ -156,7 +156,7 @@
       }
 
       &:last-child {
-        animation: 1.6s fade;
+        animation: 1.3s fade;
       }
 
       @include r($lg) {
@@ -177,8 +177,12 @@
 
   .green-link {
     margin-bottom: 40px;
-    animation: 1.1s fade;
+    animation: 1s fade;
   }
+}
+
+.wow-group {
+  animation: 1s fade;
 }
 
 .cloud {
@@ -202,7 +206,7 @@
     overflow: hidden;
     border-radius: 24px;
     background-color: $white;
-    animation: 1.6s fade;
+    animation: 1s fade;
 
     &:hover {
       .cloud__img {
@@ -391,6 +395,7 @@
     margin-right: 24px;
     max-width: 67%;
     background-position: center left;
+    animation: 1.2s fade;
 
     img {
       left: 28px;
@@ -428,6 +433,7 @@
     justify-content: flex-end;
     max-width: 33%;
     background-position: center right;
+    animation: 1.4s fade;
 
     img {
       right: 28px;
@@ -826,6 +832,7 @@
   padding: 42px 48px;
   border-radius: 24px;
   background-color: $white;
+  animation: 0.8s fade;
 
   h2 {
     margin: 0 auto 20px 0;
@@ -843,6 +850,7 @@
   &__info {
     margin-bottom: 40px;
     border-bottom: 1px solid $black;
+    animation: 1s fade;
 
     @include r($md) {
       margin-bottom: 35px;
@@ -862,7 +870,7 @@
     &__item {
       display: inline-block;
       width: 368px;
-      animation: 1.2s fade;
+      animation: 1.1s fade;
 
       span {
         margin-bottom: 2px;
@@ -942,7 +950,7 @@
 .particle {
   position: relative;
   margin: 0 36px 120px;
-  animation: 1.2s fade;
+  animation: 1s fade;
 
   &__inner {
     height: 864px;
@@ -994,7 +1002,7 @@
     max-width: 684px;
     border-radius: 24px;
     background-color: $green;
-    animation: 1.5s fade;
+    animation: 1.2s fade;
 
     &:hover {
       .particle__main {
