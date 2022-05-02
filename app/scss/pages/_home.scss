@@ -950,7 +950,7 @@
 .particle {
   position: relative;
   margin: 0 36px 120px;
-  animation: 1s fade;
+  animation: 0.8s fade;
 
   &__inner {
     height: 864px;
@@ -1002,7 +1002,7 @@
     max-width: 684px;
     border-radius: 24px;
     background-color: $green;
-    animation: 1.2s fade;
+    animation: 0.9s fade;
 
     &:hover {
       .particle__main {
