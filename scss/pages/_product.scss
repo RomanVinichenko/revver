@@ -150,6 +150,7 @@
     margin: 0 auto 84px;
     max-width: 900px;
     transition: all 0.5s;
+    animation: 1s fade;
 
     &::after {
       content: "";

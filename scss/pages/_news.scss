@@ -121,6 +121,10 @@
       border: 1px solid $green;
       color: $white;
       background-color: $green;
+
+      &:hover {
+        border: 1px solid $green;
+      }
     }
   }
 
