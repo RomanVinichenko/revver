@@ -775,7 +775,14 @@ strong {
 }
 
 #dad-file-name-span {
-  opacity: 0.25;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  transform: translateY(-22px);
+}
+
+#dad-file-name-span-2 {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
