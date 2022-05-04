@@ -1,5 +1,5 @@
 .data-sheets {
-  padding: 180px 0 150px;
+  padding: 180px 0;
 
   a {
     text-decoration: none !important;
@@ -89,6 +89,7 @@
 
     @include r($md) {
       margin-bottom: 55px;
+      max-width: 100%;
     }
   }
 
@@ -113,7 +114,7 @@
         margin-bottom: 24px;
       }
 
-      button {
+      .tab-pane__button-main {
         display: block;
         padding: 0 55px;
         min-height: 56px;
@@ -133,6 +134,21 @@
         @include r($lg) {
           padding: 0 45px;
           min-height: 50px;
+        }
+
+        @include r($md) {
+          display: none;
+        }
+      }
+
+      .tab-pane__button-mobile {
+        display: none;
+        margin-left: 40px;
+        width: 24px;
+        height: 24px;
+
+        @include r($md) {
+          display: block;
         }
       }
 
@@ -157,6 +173,10 @@
         line-height: 24px;
         letter-spacing: -0.01em;
         color: $grey-text;
+      }
+
+      @include r($lg) {
+        padding-bottom: 16px;
       }
     }
 
@@ -188,10 +208,10 @@
   }
 
   @include r($xl) {
-    padding: 152px 0 60px;
+    padding: 152px 0;
   }
 
   @include r($lg) {
-    padding: 140px 0 60px;
+    padding: 140px 0 100px;
   }
 }
