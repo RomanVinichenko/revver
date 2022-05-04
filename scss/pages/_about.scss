@@ -38,6 +38,7 @@
       line-height: 24px;
       letter-spacing: -0.01em;
       text-transform: uppercase;
+      animation: 0.8s fade;
     }
 
     h1 {
@@ -46,6 +47,7 @@
       line-height: 72px;
       letter-spacing: -0.02em;
       text-align: center;
+      animation: 0.9s fade;
 
       @include r($lg) {
         font-size: 50px;
@@ -63,6 +65,7 @@
       left: 50%;
       bottom: 48px;
       transform: translateX(-50%);
+      animation: 1.2s fade-img;
     }
 
     @include r($lg) {
@@ -92,13 +95,13 @@
 
     img {
       display: block;
-      margin: 0 auto 280px;
+      margin: 0 auto 200px;
       width: 100%;
       max-width: 1200px;
       max-height: 654px;
       border-radius: 24px;
       object-fit: cover;
-      animation: about-photo 1.6s forwards 0.4s;
+      animation: about-photo 1.6s forwards;
     }
 
     h4,
@@ -106,6 +109,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
+      z-index: 5;
       opacity: 0;
       color: $white;
       transform: translate(-50%, -50%);
@@ -114,19 +118,19 @@
     h4 {
       margin-bottom: 20px;
       font-size: 46px;
-      animation: about-photo-title 1s forwards 1.6s;
+      animation: about-photo-title 0.8s forwards 0.4s;
     }
 
     p {
       max-width: 600px;
       text-align: center;
-      animation: about-photo-text 1s forwards 1.8s;
+      animation: about-photo-text 0.8s forwards 0.5s;
     }
   }
 }
 
 .approach {
-  padding: 240px 0 272px;
+  padding: 200px 0;
 
   p {
     margin-bottom: 2px;
@@ -232,6 +236,22 @@
         line-height: 24px;
         letter-spacing: -0.01em;
         color: $grey-text;
+      }
+
+      &:first-child {
+        animation: 0.9s fade;
+      }
+
+      &:last-child {
+        animation: 1.2s fade;
+      }
+
+      &:nth-child(2) {
+        animation: 1s fade;
+      }
+
+      &:nth-child(3) {
+        animation: 1.1s fade;
       }
 
       @include r($lg) {
@@ -364,6 +384,7 @@
         margin-bottom: 40px;
         width: 100%;
         max-width: 300px;
+        animation: 1s fade;
         cursor: pointer;
 
         img {
@@ -483,6 +504,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    animation: 0.8s fade;
   }
 
   &__info-inner {
@@ -508,6 +530,7 @@
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.02em;
+    animation: 0.9s fade;
 
     @include r($lg) {
       font-size: 24px;
@@ -524,12 +547,12 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.01em;
+    animation: 1s fade;
   }
 
   &__img {
-    position: relative;
     margin-left: 90px;
-    width: 100%;
+    animation: 1s fade;
 
     img {
       width: 100%;
@@ -566,6 +589,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  animation: 0.7s fade;
 
   &__wrapper {
     display: flex;
@@ -576,6 +600,7 @@
     padding: 160px 0;
     min-height: 900px;
     max-width: 664px;
+    animation: 0.8s fade;
 
     @include r($xl) {
       min-height: 700px;
@@ -598,6 +623,7 @@
     font-size: 56px;
     line-height: 64px;
     letter-spacing: -0.02em;
+    animation: 0.7s fade;
 
     @include r($xl) {
       margin-bottom: 16px;
@@ -706,7 +732,8 @@
 .review {
   @include slick;
 
-  margin-bottom: 208px;
+  margin-bottom: 180px;
+  animation: 0.8s fade;
 
   &__item {
     position: relative;
@@ -859,7 +886,7 @@
   }
 
   @include r($xl) {
-    margin-bottom: 130px;
+    margin-bottom: 120px;
   }
 
   @include r($lg) {
@@ -869,12 +896,16 @@
 
 @keyframes about-photo {
   0% {
+    opacity: 0;
     max-width: 1200px;
+    transform: translateY(100px);
   }
 
   100% {
+    opacity: 1;
     max-width: 96%;
     max-height: 910px;
+    transform: translateY(0);
   }
 }
 
