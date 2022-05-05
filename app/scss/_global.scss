@@ -789,3 +789,28 @@ strong {
   text-align: right;
   transform: translateY(-22px);
 }
+
+.interface__box {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.beforeImage,
+.afterImage {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.afterImage {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+
+  //transform: translateX(-100%);
+}
+
+.afterImage img {
+  //transform: translateX(-100%);
+}
