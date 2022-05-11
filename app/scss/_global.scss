@@ -640,12 +640,6 @@ strong {
   width: 982px;
   height: 670px;
   background-color: #856a6a;
-
-  //&:hover {
-  //  .img-block-two {
-  //    max-width: 0;
-  //  }
-  //}
 }
 
 .img-block-one,
@@ -672,8 +666,6 @@ strong {
   max-width: 100%;
   background-image: url("../images/proto1.png");
   background-position: center right;
-
-  //transition: all 2s;
 }
 
 .dad-rich-text {
@@ -800,7 +792,8 @@ strong {
 .beforeImage,
 .afterImage {
   margin: 0 auto;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .afterImage {
