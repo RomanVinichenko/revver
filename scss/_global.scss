@@ -553,6 +553,30 @@ strong {
   }
 }
 
+@keyframes fade-answer {
+  0% {
+    transform: translateY(80px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-answer-info {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .home-top,
 .product-top,
 .about-top {

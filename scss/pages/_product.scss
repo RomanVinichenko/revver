@@ -579,7 +579,7 @@
 
 .sales {
   margin: 0 0 24px;
-  padding: 56px 65px;
+  max-height: 552px;
   border-radius: 24px;
   color: $white;
   background-color: $black;
@@ -593,6 +593,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 
     @include r($lg) {
       flex-direction: column;
@@ -603,7 +604,7 @@
 
   &__block {
     margin-right: 35px;
-    max-width: 406px;
+    padding: 56px 65px;
 
     @include r($lg) {
       margin-right: 0;
@@ -649,30 +650,17 @@
   }
 
   .tab-pane {
-    text-align: right;
-
-    @include r($lg) {
-      text-align: center;
-    }
+    // dd
   }
 
   .tab-content {
-    margin: 0 auto;
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
     animation: 0.9s fade;
 
     img {
-      width: 100%;
-      max-width: 560px;
-
-      @include r($xl) {
-        max-width: 480px;
-      }
-
-      @include r($lg) {
-        max-width: 500px;
-      }
+      object-fit: contain;
     }
   }
 
@@ -775,28 +763,6 @@
     max-width: 30%;
     animation: 0.8s fade;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-
-      @include r($lg) {
-        margin-top: 0;
-        height: 100%;
-        max-width: 50%;
-        max-height: 400px;
-      }
-
-      @include r($md) {
-        max-width: 100%;
-        max-height: 300px;
-      }
-
-      @include r($sm) {
-        min-height: 250px;
-      }
-    }
-
     .subtitle {
       p {
         margin: 0 0 16px;
@@ -812,6 +778,39 @@
       }
     }
 
+    .bottom__left-wrapper {
+      padding: 32px;
+      animation: 0.9s fade;
+
+      @include r($md) {
+        padding: 22px 28px;
+      }
+    }
+
+    .bottom__left-img {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include r($lg) {
+          margin-top: 0;
+          height: 100%;
+          max-width: 50%;
+          max-height: 400px;
+        }
+
+        @include r($md) {
+          max-width: 100%;
+          max-height: 300px;
+        }
+
+        @include r($sm) {
+          min-height: 250px;
+        }
+      }
+    }
+
     @include r($lg) {
       flex-direction: row;
       margin-right: 0;
@@ -823,15 +822,6 @@
     @include r($md) {
       flex-direction: column;
       height: fit-content;
-    }
-  }
-
-  &__left-wrapper {
-    padding: 32px;
-    animation: 0.9s fade;
-
-    @include r($md) {
-      padding: 22px 28px;
     }
   }
 
@@ -879,20 +869,12 @@
       }
     }
 
-    img {
-      margin-bottom: -30px;
-      width: 100%;
-      height: 100%;
+    &__img {
       max-width: 50%;
-      object-fit: cover;
 
-      @include r($md) {
-        max-width: 100%;
-        max-height: 350px;
-      }
-
-      @include r($sm) {
-        min-height: 300px;
+      img {
+        display: block;
+        object-fit: cover;
       }
     }
 
@@ -934,7 +916,8 @@
   &__right {
     position: relative;
     width: 100%;
-    overflow: hidden;
+
+    //overflow: hidden;
     border-radius: 24px;
     color: $white;
     background-color: $black;
