@@ -1,7 +1,7 @@
 .about {
   .about-top {
     position: relative;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,13 +9,12 @@
     padding: 0 24px;
     min-height: 100vh;
     overflow: hidden;
-    border-radius: 0 0 24px 24px;
     color: $white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #0f0f11;
 
-    &::after,
     &::before {
       content: "";
       position: absolute;
@@ -24,11 +23,7 @@
       top: 0;
       bottom: 0;
       z-index: -1;
-      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0) 100%);
-    }
-
-    &::before {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 151.81%);
     }
 
     p {
@@ -66,10 +61,6 @@
       bottom: 48px;
       transform: translateX(-50%);
       animation: 1.2s fade-img;
-    }
-
-    @include r($lg) {
-      border-radius: 0 0 20px 20px;
     }
   }
 
