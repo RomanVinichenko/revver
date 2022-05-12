@@ -35,48 +35,31 @@
   z-index: 5;
   overflow: hidden;
   color: $white;
-  background: linear-gradient(180deg, rgba(68, 110, 253, 0.0972) 0%, rgba(0, 0, 0, 0) 222.5%), linear-gradient(180deg, #0f0f11 0%, #18181d 71.35%, #262524 100%);
 
-  img {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    z-index: -1;
-    max-width: 1050px;
-    transform: translateX(-50%);
-    animation: 1.1s fade-img;
-
-    @include r($lg) {
-      max-width: 900px;
-    }
-
-    @include r($md) {
-      max-width: 800px;
-    }
-
-    @include r($sm) {
-      max-width: 530px;
-    }
-
-    @include h(800) {
-      max-width: 800px;
-    }
-
-    @include h(700) {
-      max-width: 500px;
-    }
+  video {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: initial;
   }
 
   .green-link {
+    margin: 0 auto;
     animation: 1.2s fade;
   }
 
   &__wrapper {
-    z-index: 6;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 130px 0 0;
+    padding-top: 150px;
     min-height: 100vh;
   }
 
@@ -105,7 +88,7 @@
     animation: 1.1s fade;
 
     p {
-      margin: 0 auto 15px 0;
+      margin: 0 auto 15px;
       max-width: 480px;
       text-align: center;
 
