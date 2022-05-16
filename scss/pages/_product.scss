@@ -815,13 +815,33 @@
 
     @include r($md) {
       flex-direction: column;
-      height: fit-content;
+      min-height: 550px;
     }
   }
 
   &__left-wrapper {
+    position: relative;
     padding: 32px;
+    height: 100%;
     animation: 0.9s fade;
+
+    &::after {
+      content: url("../images/sales-bottom-2.webp");
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      display: none;
+      object-fit: cover;
+
+      @include r($lg) {
+        display: block;
+      }
+    }
+
+    @include r($lg) {
+      width: 100%;
+      max-width: 100%;
+    }
 
     @include r($md) {
       padding: 22px 28px;
@@ -835,17 +855,9 @@
       object-fit: cover;
 
       @include r($lg) {
+        display: none;
         margin-top: 0;
         height: 100%;
-      }
-
-      @include r($md) {
-        max-width: 100%;
-        max-height: 300px;
-      }
-
-      @include r($sm) {
-        min-height: 250px;
       }
     }
   }
@@ -970,7 +982,6 @@
     }
 
     @include r($lg) {
-      min-height: fit-content;
       border-radius: 20px;
     }
   }
