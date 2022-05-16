@@ -9,10 +9,11 @@
   z-index: 1;
   overflow: hidden;
   color: $white;
-  background-color: #0f0f11;
+  background-color: #161618;
 
   video {
     position: relative;
+    z-index: 10;
     width: 100%;
     min-height: 100vh;
     max-width: 100%;
@@ -25,15 +26,19 @@
     left: 0;
     right: 0;
     top: 0;
+    z-index: 15;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
 
     @include r($md) {
+      position: relative;
       flex-direction: column;
       justify-content: flex-start;
       padding-top: 136px;
+      min-height: 100vh;
+      max-height: 100vh;
       text-align: center;
     }
   }
@@ -143,6 +148,22 @@
 
   .green-link {
     animation: 1s fade;
+  }
+
+  &__img-mobile {
+    display: none;
+    margin: auto 0 0 auto;
+    max-width: 500px;
+
+    @include r($md) {
+      display: block;
+    }
+  }
+}
+
+.video-top-section {
+  @include r($md) {
+    display: none;
   }
 }
 
