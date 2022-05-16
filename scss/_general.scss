@@ -380,12 +380,7 @@
   }
 
   &__wrapper {
-    max-width: 100%;
     animation: 1.1s fade;
-  }
-
-  &__lottie {
-    width: 100%;
   }
 
   @include r($xl) {

@@ -577,6 +577,18 @@ strong {
   }
 }
 
+@keyframes anim-header {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home-top,
 .product-top,
 .about-top {

@@ -50,6 +50,10 @@
   .green-link {
     margin: 0 auto;
     animation: 1.2s fade;
+
+    @include r($md) {
+      height: 32px;
+    }
   }
 
   &__wrapper {
@@ -62,6 +66,14 @@
     align-items: center;
     padding-top: 150px;
     min-height: 100vh;
+
+    @include r($md) {
+      padding-top: 120px;
+    }
+
+    @include r($sm) {
+      padding-top: 90px;
+    }
   }
 
   h1 {
@@ -80,8 +92,15 @@
     }
 
     @include r($md) {
-      font-size: 40px;
-      line-height: 48px;
+      margin-bottom: 15px;
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 10px;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 
@@ -95,6 +114,12 @@
 
       @include r($md) {
         margin: 0 auto 15px;
+      }
+
+      @include r($sm) {
+        margin: 0 auto 10px;
+        font-size: 14px;
+        line-height: 22px;
       }
     }
   }
@@ -269,6 +294,7 @@
 
 .management {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 152px;
   animation: 1s fade;
@@ -311,8 +337,9 @@
   }
 
   &__wrapper {
-    margin-left: 20px;
-    max-width: 500px;
+    margin-left: 30px;
+    width: 100%;
+    max-width: 550px;
 
     @include r($lg) {
       margin-left: 0;
@@ -580,7 +607,7 @@
 
 .sales {
   margin: 0 0 24px;
-  max-height: 552px;
+  overflow: hidden;
   border-radius: 24px;
   color: $white;
   background-color: $black;
@@ -592,7 +619,7 @@
 
   &__wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     overflow: hidden;
 
@@ -605,11 +632,12 @@
 
   &__block {
     margin-right: 35px;
-    padding: 56px 65px;
+    padding: 56px 0 56px 65px;
+    min-width: 40%;
 
     @include r($lg) {
       margin-right: 0;
-      margin-bottom: 50px;
+      padding: 28px;
       max-width: 100%;
     }
   }
@@ -655,9 +683,6 @@
   }
 
   .tab-content {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
     animation: 0.9s fade;
 
     img {
@@ -743,12 +768,7 @@
   }
 
   @include r($lg) {
-    padding: 28px;
     border-radius: 20px;
-  }
-
-  @include r($md) {
-    padding: 28px;
   }
 }
 
@@ -760,8 +780,10 @@
   &__left {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-right: 24px;
     max-width: 30%;
+    overflow: hidden;
     animation: 0.8s fade;
 
     .subtitle {
@@ -775,39 +797,6 @@
         &::after,
         &::before {
           content: url("../images/arrow-transform-white.svg");
-        }
-      }
-    }
-
-    .bottom__left-wrapper {
-      padding: 32px;
-      animation: 0.9s fade;
-
-      @include r($md) {
-        padding: 22px 28px;
-      }
-    }
-
-    .bottom__left-img {
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        @include r($lg) {
-          margin-top: 0;
-          height: 100%;
-          max-width: 50%;
-          max-height: 400px;
-        }
-
-        @include r($md) {
-          max-width: 100%;
-          max-height: 300px;
-        }
-
-        @include r($sm) {
-          min-height: 250px;
         }
       }
     }
@@ -826,11 +815,43 @@
     }
   }
 
+  &__left-wrapper {
+    padding: 32px;
+    animation: 0.9s fade;
+
+    @include r($md) {
+      padding: 22px 28px;
+    }
+  }
+
+  &__left-img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include r($lg) {
+        margin-top: 0;
+        height: 100%;
+      }
+
+      @include r($md) {
+        max-width: 100%;
+        max-height: 300px;
+      }
+
+      @include r($sm) {
+        min-height: 250px;
+      }
+    }
+  }
+
   &__right {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     max-width: 70%;
+    overflow: hidden;
     animation: 0.9s fade;
 
     ul {
@@ -891,6 +912,7 @@
   }
 
   &__right-wrapper {
+    align-self: center;
     margin: 0 45px 0 15px;
     width: 100%;
     max-width: 352px;
@@ -917,8 +939,6 @@
   &__right {
     position: relative;
     width: 100%;
-
-    //overflow: hidden;
     border-radius: 24px;
     color: $white;
     background-color: $black;
