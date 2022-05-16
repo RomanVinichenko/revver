@@ -190,7 +190,7 @@
 
   ul {
     margin: 0 20px 0 0;
-    padding: 51px 0 42px 56px;
+    padding: 50px 0 50px 55px;
     max-width: 702px;
     letter-spacing: -0.01em;
 
@@ -204,12 +204,12 @@
         margin-bottom: 37px;
 
         @include r($lg) {
-          margin-bottom: 33px;
+          margin-bottom: 40px;
         }
       }
 
       @include r($lg) {
-        padding: 62px 0 0;
+        padding: 60px 0 0;
         background-position: top center;
         background-size: 48px;
       }
@@ -223,7 +223,7 @@
       letter-spacing: -0.01em;
 
       @include r($lg) {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         text-align: center;
       }
     }
@@ -249,7 +249,7 @@
     @include r($lg) {
       flex-direction: column;
       margin: 10px 0 0;
-      padding: 0 24px 37px;
+      padding: 0 24px 24px;
       max-width: 100%;
     }
   }
