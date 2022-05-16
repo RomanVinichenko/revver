@@ -183,12 +183,9 @@
     </div>
   </section>
 
-  <div class="container">
-    <div class="home-frame__wrapper">
-      <iframe class="home-frame"
-              src="https://player.vimeo.com/video/710342279?h=54906110a1&autoplay=1&title=0&byline=0&portrait=0"
-               frameborder="0" allow="autoplay"></iframe>
-    </div>
+  <div class="home__iframe">
+    <iframe id="homeFrame" src="https://player.vimeo.com/video/710342279?h=54906110a1&title=0&byline=0&portrait=0"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
   </div>
 
   <div class="container">
@@ -606,6 +603,8 @@
 </div>
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
