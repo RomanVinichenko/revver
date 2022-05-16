@@ -45,6 +45,10 @@
     max-height: 100vh;
     object-fit: cover;
     object-position: initial;
+
+    @include r($sm) {
+      top: 50px;
+    }
   }
 
   .green-link {
@@ -339,7 +343,7 @@
   &__wrapper {
     margin-left: 30px;
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
 
     @include r($lg) {
       margin-left: 0;
@@ -853,6 +857,10 @@
     max-width: 70%;
     overflow: hidden;
     animation: 0.9s fade;
+
+    lottie-player {
+      height: auto;
+    }
 
     ul {
       li {
