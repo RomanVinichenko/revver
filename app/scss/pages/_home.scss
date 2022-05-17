@@ -19,6 +19,10 @@
     max-width: 100%;
     max-height: 100vh;
     object-fit: cover;
+
+    @include r($xl) {
+      object-fit: contain;
+    }
   }
 
   &__wrapper {
@@ -32,7 +36,7 @@
     justify-content: center;
     min-height: 100vh;
 
-    @include r($md) {
+    @include r($lg) {
       position: relative;
       flex-direction: column;
       justify-content: flex-start;
@@ -63,13 +67,14 @@
     }
 
     @include r($xl) {
-      max-width: 480px;
+      //max-width: 480px;
       font-size: 44px;
       line-height: 52px;
     }
 
     @include r($lg) {
-      max-width: 350px;
+      //max-width: 350px;
+      max-width: 100%;
       font-size: 32px;
       line-height: 40px;
     }
@@ -148,21 +153,25 @@
 
   .green-link {
     animation: 1s fade;
+
+    @include r($lg) {
+      margin: 0 auto;
+    }
   }
 
   &__img-mobile {
     display: none;
-    margin: auto 0 0 auto;
-    max-width: 500px;
+    margin-left: auto;
+    max-width: 600px;
 
-    @include r($md) {
+    @include r($lg) {
       display: block;
     }
   }
 }
 
 .video__top-main {
-  @include r($md) {
+  @include r($lg) {
     display: none;
   }
 }
