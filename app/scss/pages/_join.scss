@@ -1,13 +1,6 @@
 .join {
   padding: 180px 0 236px;
 
-  .green-link {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
   &__open {
     display: flex;
     justify-content: space-between;
@@ -122,6 +115,17 @@
   margin-left: auto;
   max-width: 992px;
   animation: 0.6s fade;
+
+  .green-link {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include r($sm) {
+      display: none;
+    }
+  }
 
   &__category {
     margin-bottom: 24px;
