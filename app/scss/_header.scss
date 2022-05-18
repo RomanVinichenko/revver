@@ -377,6 +377,10 @@
       @include r($lg) {
         font-size: 44px;
       }
+
+      @include h(500) {
+        font-size: 38px;
+      }
     }
 
     @include r($lg) {
@@ -408,6 +412,11 @@
     flex-wrap: nowrap;
     max-height: fit-content;
     text-align: center;
+  }
+
+  @include h(500) {
+    margin: auto auto 20px;
+    max-height: 200px;
   }
 }
 
