@@ -59,6 +59,7 @@
       position: absolute;
       left: 50%;
       bottom: 48px;
+      min-width: 210px;
       transform: translateX(-50%);
       animation: 1.2s fade-img;
     }
@@ -93,6 +94,10 @@
       border-radius: 24px;
       object-fit: cover;
       animation: about-photo 1.6s forwards;
+
+      @include r($md) {
+        margin: 0 auto 100px;
+      }
     }
 
     h4,
@@ -109,6 +114,7 @@
     h4 {
       margin-bottom: 20px;
       font-size: 46px;
+      text-align: center;
       animation: about-photo-title 0.8s forwards 0.4s;
     }
 
