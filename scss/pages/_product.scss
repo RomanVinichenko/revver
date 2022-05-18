@@ -35,7 +35,7 @@
   z-index: 5;
   overflow: hidden;
   color: $white;
-  background-color: #0f0f11;
+  background-color: #161618;
 
   video {
     position: relative;
@@ -70,6 +70,16 @@
     align-items: center;
     padding-top: 150px;
     min-height: 100vh;
+
+    @include r($lg) {
+      position: relative;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 136px;
+      min-height: 100vh;
+      max-height: 100vh;
+      text-align: center;
+    }
 
     @include r($md) {
       padding-top: 120px;
@@ -125,6 +135,16 @@
         font-size: 14px;
         line-height: 22px;
       }
+    }
+  }
+
+  &__img-mobile {
+    display: none;
+    margin: 0 auto;
+    max-width: 600px;
+
+    @include r($lg) {
+      display: block;
     }
   }
 }
