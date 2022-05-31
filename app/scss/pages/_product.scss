@@ -44,11 +44,6 @@
     max-width: 100%;
     max-height: 100vh;
     object-fit: cover;
-    object-position: initial;
-
-    @include r($sm) {
-      top: 50px;
-    }
   }
 
   .green-link {
@@ -71,22 +66,22 @@
     padding-top: 150px;
     min-height: 100vh;
 
-    @include r($lg) {
-      position: relative;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding-top: 136px;
-      min-height: 100vh;
-      max-height: 100vh;
-      text-align: center;
-    }
+    //@include r($lg) {
+    //  position: relative;
+    //  flex-direction: column;
+    //  justify-content: flex-start;
+    //  padding-top: 136px;
+    //  min-height: 100vh;
+    //  max-height: 100vh;
+    //  text-align: center;
+    //}
 
     @include r($md) {
       padding-top: 120px;
     }
 
     @include r($sm) {
-      padding-top: 90px;
+      padding-top: 150px;
     }
   }
 
@@ -144,7 +139,7 @@
     max-width: 600px;
 
     @include r($lg) {
-      display: block;
+      //display: block;
     }
   }
 }
