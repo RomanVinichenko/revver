@@ -9,7 +9,7 @@
   z-index: 1;
   overflow: hidden;
   color: $white;
-  background-color: #161618;
+  background-color: #131313;
 
   video {
     position: relative;
@@ -21,7 +21,7 @@
     object-fit: cover;
 
     @include r($xl) {
-      object-fit: contain;
+      //object-fit: contain;
     }
   }
 
@@ -38,12 +38,16 @@
 
     @include r($lg) {
       position: relative;
-      flex-direction: column;
+      align-items: center;
       justify-content: flex-start;
-      padding-top: 136px;
-      min-height: 100vh;
-      max-height: 100vh;
-      text-align: center;
+      padding-top: 150px;
+
+      //flex-direction: column;
+      //justify-content: flex-start;
+      //padding-top: 136px;
+      //min-height: 100vh;
+      //max-height: 100vh;
+      //text-align: center;
     }
   }
 
@@ -75,6 +79,7 @@
       max-width: 100%;
       font-size: 32px;
       line-height: 40px;
+      text-align: center;
     }
 
     @include r($md) {
@@ -159,11 +164,19 @@
 
   &__img-mobile {
     display: none;
-    margin-left: auto;
+    margin: 0 auto;
     max-width: 600px;
 
     @include r($lg) {
       display: block;
+    }
+  }
+
+  @include r($lg) {
+    height: 100vh;
+
+    video {
+      display: none;
     }
   }
 }
@@ -195,6 +208,7 @@
 
   &__info {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     overflow: hidden;
     border-radius: 24px;
