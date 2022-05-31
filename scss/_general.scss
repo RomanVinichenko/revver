@@ -51,6 +51,14 @@
 .integration {
   margin-bottom: 200px;
 
+  video {
+    @include r($md) {
+      display: block;
+      margin: 0 auto;
+      max-width: 550px;
+    }
+  }
+
   .category {
     margin: 0 auto 10px 0;
   }
