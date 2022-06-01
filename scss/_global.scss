@@ -875,3 +875,8 @@ strong {
 .menu-link-out a:hover::after {
   background-image: url("../images/arrow-footer-green.svg");
 }
+
+.product-inside {
+  overflow: hidden;
+  border-radius: 24px;
+}
