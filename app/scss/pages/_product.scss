@@ -44,6 +44,10 @@
   color: $white;
   background-color: #131313;
 
+  .green-link {
+    min-width: 215px;
+  }
+
   video {
     position: absolute;
     left: 0;
@@ -72,26 +76,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px;
+    padding: 150px 15px 0;
     min-height: 100vh;
-
-    //@include r($lg) {
-    //  position: relative;
-    //  flex-direction: column;
-    //  justify-content: flex-start;
-    //  padding-top: 136px;
-    //  min-height: 100vh;
-    //  max-height: 100vh;
-    //  text-align: center;
-    //}
-
-    @include r($md) {
-      padding-top: 120px;
-    }
-
-    @include r($sm) {
-      padding-top: 150px;
-    }
   }
 
   h1 {

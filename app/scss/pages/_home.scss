@@ -883,6 +883,10 @@
     width: 100%;
     max-width: 1104px;
 
+    .slick-list {
+      overflow: hidden;
+    }
+
     &__item {
       display: inline-block;
       width: 368px;
