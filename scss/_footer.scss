@@ -34,7 +34,8 @@
       }
 
       @include r($sm) {
-        max-width: 130px;
+        max-width: fit-content;
+        max-height: 100%;
       }
     }
 
@@ -66,6 +67,11 @@
       @include r($md) {
         font-size: 24px;
         line-height: 32px;
+      }
+
+      @include r($sm) {
+        margin-right: 0;
+        min-width: 152px;
       }
     }
 
