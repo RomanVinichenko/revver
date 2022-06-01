@@ -847,3 +847,24 @@ strong {
 .integration-animation {
   display: flex;
 }
+
+.menu-link-out {
+  a {
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background-image: url("../images/arrow-footer.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      object-fit: contain;
+      transform: translateY(-50%);
+    }
+  }
+}
