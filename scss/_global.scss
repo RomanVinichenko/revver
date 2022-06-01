@@ -854,6 +854,7 @@ strong {
     padding-right: 20px;
 
     &::after {
+      content: "";
       position: absolute;
       right: 0;
       top: 50%;
