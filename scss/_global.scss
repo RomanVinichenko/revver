@@ -850,29 +850,14 @@ strong {
 
 .menu-link-out {
   position: relative;
-
-  a {
-    position: relative;
-    padding-right: 20px;
-    transform: translateY(-50%);
-  }
-
-  a::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    background-image: url("../images/arrow-footer.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
-  }
 }
 
-.menu-link-out::after {
+.menu-link-out a {
+  position: relative;
+  padding-right: 25px;
+}
+
+.menu-link-out a::after {
   content: "";
   position: absolute;
   right: 0;
@@ -884,4 +869,9 @@ strong {
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(-50%);
+  transition: background-image 0.2s;
+}
+
+.menu-link-out a:hover::after {
+  background-image: url("../images/arrow-footer-green.svg");
 }
