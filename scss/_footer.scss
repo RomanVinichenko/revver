@@ -48,14 +48,13 @@
       transition: color 0.2s;
 
       a {
+        text-decoration: none;
         transition: color 0.2s;
       }
 
-      &:hover {
-        a {
-          text-decoration: none;
-          color: $green;
-        }
+      a:hover {
+        text-decoration: none;
+        color: $green;
       }
 
       @include r($lg) {
