@@ -90,6 +90,10 @@
     .subtitle {
       padding: 0 15px;
     }
+
+    @include r($sm) {
+      padding: 100px 0 0;
+    }
   }
 
   h1 {
@@ -142,7 +146,6 @@
 
   &__img-mobile {
     display: none;
-    margin-top: auto;
     width: 100%;
 
     img {
@@ -157,6 +160,7 @@
 
     @include r($lg) {
       display: block;
+      margin: auto 0;
     }
   }
 }
