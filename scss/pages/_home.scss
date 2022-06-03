@@ -29,19 +29,18 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    max-height: 100vh;
 
     @include r($lg) {
       position: relative;
       align-items: center;
       justify-content: flex-start;
       padding-top: 150px;
+      overflow: hidden;
+    }
 
-      //flex-direction: column;
-      //justify-content: flex-start;
-      //padding-top: 136px;
-      //min-height: 100vh;
-      //max-height: 100vh;
-      //text-align: center;
+    @include r($sm) {
+      padding-top: 100px;
     }
   }
 
@@ -158,8 +157,14 @@
 
   &__img-mobile {
     display: none;
-    margin: 0 auto;
+    margin: auto;
     max-width: 600px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
 
     @include r($lg) {
       display: block;
