@@ -57,7 +57,7 @@
   }
 
   h1 {
-    margin-bottom: 19px;
+    margin: 0 0 20px;
     max-width: 699px;
     font-weight: 700;
     font-size: 56px;
@@ -81,15 +81,14 @@
     }
 
     @include r($lg) {
-      max-width: 100%;
+      margin: 0 auto;
       font-size: 32px;
       line-height: 40px;
       text-align: center;
     }
 
     @include r($md) {
-      margin-bottom: 15px;
-      max-width: 100%;
+      margin: 0 auto 15px;
       font-size: 35px;
       line-height: 40px;
     }
@@ -190,12 +189,6 @@
     video {
       display: none;
     }
-  }
-}
-
-.video__top-main {
-  @include r($lg) {
-    //display: none;
   }
 }
 
