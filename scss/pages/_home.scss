@@ -31,6 +31,18 @@
     min-height: 100vh;
     max-height: 100vh;
 
+    .container {
+      @include r($lg) {
+        padding: 0 15px;
+      }
+    }
+
+    .container--main {
+      @include r($lg) {
+        padding: 0 15px;
+      }
+    }
+
     @include r($lg) {
       position: relative;
       align-items: center;
@@ -148,6 +160,7 @@
   }
 
   .green-link {
+    min-width: 215px;
     animation: 1s fade;
 
     @include r($lg) {
