@@ -563,7 +563,6 @@
       justify-content: space-between;
       padding: 24px;
       width: 100%;
-      min-height: 328px;
       max-width: 383px;
       border: 1px solid #4a4b54;
       border-radius: 20px;
@@ -614,7 +613,6 @@
 
       @include r($lg) {
         margin: 0;
-        min-height: 250px;
         max-width: 100%;
       }
     }
@@ -632,6 +630,7 @@
     }
 
     img {
+      margin-bottom: 25px;
       width: 36px;
       height: 36px;
     }
@@ -849,7 +848,7 @@
       .move-arrow {
         &::after,
         &::before {
-          content: url("../images/arrow-transform-white.svg");
+          content: url("../images/arrow-transform.svg");
         }
       }
     }

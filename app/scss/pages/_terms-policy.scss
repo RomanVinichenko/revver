@@ -60,10 +60,11 @@
 
     li {
       width: 100%;
-      max-width: 170px;
+      max-width: 200px;
 
       &:not(:last-child) {
-        margin-right: 22px;
+        margin-right: 20px;
+        max-width: 160px;
       }
 
       p {
