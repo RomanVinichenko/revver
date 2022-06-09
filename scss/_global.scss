@@ -226,16 +226,28 @@ a {
     .move-text {
       .letter {
         transform: translateY(-100%);
+
+        @include r($sm) {
+          transform: none;
+        }
       }
     }
 
     .move-arrow {
       &::before {
         transform: translate(0);
+
+        @include r($sm) {
+          transform: translate(-130%, 100%);
+        }
       }
 
       &::after {
         transform: translate(140%, -130%);
+
+        @include r($sm) {
+          transform: none;
+        }
       }
     }
   }
@@ -399,16 +411,28 @@ a {
           .move-text {
             .letter {
               transform: translateY(-100%);
+
+              @include r($sm) {
+                transform: none;
+              }
             }
           }
 
           .move-arrow {
             &::before {
               transform: translate(0);
+
+              @include r($sm) {
+                transform: translate(-130%, 100%);
+              }
             }
 
             &::after {
               transform: translate(140%, -130%);
+
+              @include r($sm) {
+                transform: none;
+              }
             }
           }
         }
@@ -879,4 +903,8 @@ strong {
 .product-inside {
   overflow: hidden;
   border-radius: 24px;
+}
+
+input:-webkit-autofill {
+  transition: all 5000s ease-in-out;
 }
