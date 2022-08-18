@@ -860,12 +860,6 @@ strong {
   position: absolute;
   top: 0;
   overflow: hidden;
-
-  //transform: translateX(-100%);
-}
-
-.afterImage img {
-  //transform: translateX(-100%);
 }
 
 .integration-animation {
@@ -909,9 +903,9 @@ input:-webkit-autofill {
   transition: all 5000s ease-in-out;
 }
 
-.quest-pop-main-text {
+#quest-pop-main-text {
   h2 {
-    @include r($sm) {
+    @include r($lg) {
       padding: 15px 0;
       font-size: 32px;
       line-height: 38px;
