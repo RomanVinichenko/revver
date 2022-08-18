@@ -1210,9 +1210,10 @@
     background-color: transparent;
     transform: rotate(180deg);
     transition: transform 0.6s ease-in-out;
+
     @include r($lg) {
-      border-radius: 0;
       top: 55px !important;
+      border-radius: 0;
     }
   }
 
@@ -1221,7 +1222,7 @@
   }
 
   @include r($lg) {
-    padding: 50px 22px!important;
+    padding: 50px 22px !important;
   }
 }
 
