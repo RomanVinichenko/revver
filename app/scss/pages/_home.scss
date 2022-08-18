@@ -1154,7 +1154,7 @@
   transition: all 0.4s ease-in-out;
 
   &__wrapper {
-    overflow-y: scroll;
+    overflow-y: auto;
 
     h4 {
       margin-bottom: 50px;
@@ -1215,7 +1215,7 @@
   }
 
   @include r($md) {
-    padding: 40px 20px;
+    padding: 80px 22px;
   }
 }
 

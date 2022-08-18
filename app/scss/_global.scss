@@ -860,12 +860,6 @@ strong {
   position: absolute;
   top: 0;
   overflow: hidden;
-
-  //transform: translateX(-100%);
-}
-
-.afterImage img {
-  //transform: translateX(-100%);
 }
 
 .integration-animation {
@@ -911,10 +905,10 @@ input:-webkit-autofill {
 
 .quest-pop-main-text {
   h2 {
-    @include r($sm) {
-      padding: 15px 0;
-      font-size: 32px;
-      line-height: 38px;
+    @include r($md) {
+      padding: 15px 0 !important;
+      font-size: 32px !important;
+      line-height: 38px !important;
     }
   }
 }
