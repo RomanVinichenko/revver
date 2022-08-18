@@ -903,12 +903,12 @@ input:-webkit-autofill {
   transition: all 5000s ease-in-out;
 }
 
-.quest-pop-main-text {
+#quest-pop-main-text {
   h2 {
-    @include r($md) {
-      padding: 15px 0 !important;
-      font-size: 32px !important;
-      line-height: 38px !important;
+    @include r($lg) {
+      padding: 15px 0;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 }
