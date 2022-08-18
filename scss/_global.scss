@@ -908,3 +908,13 @@ strong {
 input:-webkit-autofill {
   transition: all 5000s ease-in-out;
 }
+
+.quest-pop-main-text {
+  h2 {
+    @include r($sm) {
+      padding: 15px 0;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}

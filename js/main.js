@@ -90,7 +90,7 @@ $('.question').slick({
 // HOME POPUP
 
 const questionButton = document.querySelectorAll('.question__button');
-const questionTitle = document.querySelectorAll('.question__title');
+// const questionTitle = document.querySelectorAll('.question__title');
 const questPop = document.querySelector('.quest-pop');
 const questClose = document.querySelector('.quest-pop__close');
 const questUnder = document.querySelector('.quest-pop__under');
@@ -140,20 +140,20 @@ if (questionButton) {
     });
 }
 
-if (questionTitle) {
-    questionTitle.forEach((questionItem) => {
-        questionItem.addEventListener('click', function () {
-            event.preventDefault();
-            var myNum = this.getAttribute('data-slide-num');
-            document.getElementById('quest-pop-main-text').innerHTML =
-                document.getElementById('home-slide-answer-' + myNum).innerHTML;
-            questPop.classList.add('quest-pop--active');
-            questUnder.classList.add('quest-pop__under--active');
-            document.addEventListener('wheel', prevent, {passive: false});
-            blockScroll();
-        });
-    });
-}
+// if (questionTitle) {
+//     questionTitle.forEach((questionItem) => {
+//         questionItem.addEventListener('click', function () {
+//             event.preventDefault();
+//             var myNum = this.getAttribute('data-slide-num');
+//             document.getElementById('quest-pop-main-text').innerHTML =
+//                 document.getElementById('home-slide-answer-' + myNum).innerHTML;
+//             questPop.classList.add('quest-pop--active');
+//             questUnder.classList.add('quest-pop__under--active');
+//             document.addEventListener('wheel', prevent, {passive: false});
+//             blockScroll();
+//         });
+//     });
+// }
 
 if (questUnder) {
     questUnder.addEventListener('click', function () {
